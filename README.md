@@ -177,6 +177,11 @@ Agar tampilan visual tetap simetris, tajam, dan tidak terpotong secara tidak waj
 
 ### 1. Tabel Ringkasan Rasio Konten
 
+> [!NOTE]
+> **Cara Membaca Notasi Rasio:**
+> - Format rasio adalah **`Lebar : Tinggi`** (*Width : Height*).
+> - Tanda garis miring (**`/`**) menunjukkan **opsi pilihan** (misalnya `16:9 / 21:9` artinya Anda dapat memilih menggunakan rasio standar layar lebar `16:9` **atau** rasio bioskop ultrawide `21:9`).
+
 | Komponen / Bagian | Rasio Aspek (*Ratio*) | Resolusi Optimal (*WxH*) | Format Disarankan | File Kode Terkait |
 | :--- | :---: | :---: | :---: | :--- |
 | **Hero Banner Slider** (Beranda) | **16:9** / **21:9** | `1920 × 1080 px` / `2560 × 1440 px` | WebP / JPG | `components/hero-banner.blade.php` |
