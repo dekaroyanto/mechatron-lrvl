@@ -171,6 +171,79 @@ Jika proyek membutuhkan integrasi database dinamis:
 
 ---
 
+## 📐 Panduan Rasio & Dimensi Konten Gambar (Asset Aspect Ratios)
+
+Agar tampilan visual tetap simetris, tajam, dan tidak terpotong secara tidak wajar pada berbagai ukuran layar (*responsive breakpoints*), gunakan panduan rasio aspek (*aspect ratio*) dan dimensi berikut saat mengganti atau menambahkan aset gambar baru:
+
+### 1. Tabel Ringkasan Rasio Konten
+
+| Komponen / Bagian | Rasio Aspek (*Ratio*) | Resolusi Optimal (*WxH*) | Format Disarankan | File Kode Terkait |
+| :--- | :---: | :---: | :---: | :--- |
+| **Hero Banner Slider** (Beranda) | **16:9** / **21:9** | `1920 × 1080 px` / `2560 × 1440 px` | WebP / JPG | `components/hero-banner.blade.php` |
+| **Featured Product Grid** (2-Kolom) | **1:1** / **4:5** | `1200 × 1200 px` / `1000 × 1250 px` | WebP / PNG / JPG | `components/featured-hero-grid.blade.php` |
+| **Layanan Solusi Bisnis** (3-Kolom Vertikal) | **9:16** / **2:3** | `1080 × 1920 px` / `1000 × 1500 px` | WebP / JPG | `components/services-section.blade.php` |
+| **Layanan 3D Carousel** (Kartu Melayang) | **4:5** / **3:4** | `1000 × 1250 px` / `900 × 1200 px` | WebP / JPG | `components/services-section.blade.php` |
+| **Bento Grid Layanan - Kartu Utama** | **4:5** / **1:1** | `1200 × 1500 px` / `1200 × 1200 px` | WebP / JPG | `views/services/index.blade.php` |
+| **Bento Grid Layanan - Kartu Tumpuk** | **16:9** / **2:1** | `1200 × 675 px` / `1400 × 700 px` | WebP / JPG | `views/services/index.blade.php` |
+| **Bento Grid Layanan - Kartu Armada** | **3:4** / **4:5** | `1000 × 1250 px` | WebP / JPG | `views/services/index.blade.php` |
+| **Hero Header Layanan & Blog Detail** | **16:9** / **21:9** | `1920 × 1080 px` / `2560 × 1440 px` | WebP / JPG | `services/show.blade.php`, `blog/show.blade.php` |
+| **Thumbnail Artikel Blog** (Grid 3-Kolom) | **16:9** / **3:2** | `1280 × 720 px` / `1200 × 800 px` | WebP / JPG | `components/latest-articles-section.blade.php` |
+| **Hero Berita Utama** (Halaman Blog) | **16:9** / **4:3** | `1600 × 900 px` / `1600 × 1200 px` | WebP / JPG | `views/blog/index.blade.php` |
+| **Thumbnail Modal Produk** (*Product Modal*) | **1:1** / **4:3** | `800 × 800 px` / `1000 × 1000 px` | WebP / PNG | `components/product-modal.blade.php` |
+| **Avatar Penulis Artikel** (*Author Avatar*) | **1:1** (*Square*) | `200 × 200 px` / `400 × 400 px` | WebP / PNG / JPG | `app/Data/BlogArticles.php` |
+| **Logo Brand** (Navbar & Footer) | **~3:1** s.d. **4:1** | `Tinggi 80 - 120 px` (Lebar proporsional) | SVG / PNG Transparan | `components/navbar.blade.php` |
+| **Favicon / App Icon** | **1:1** (*Square*) | `32 × 32 px`, `192 × 192 px`, `512 × 512 px` | PNG / ICO / SVG | `public/favicon.ico` |
+
+---
+
+### 2. Penjelasan Detail & Aturan Komposisi (*Framing Guide*)
+
+#### A. Hero Banner Slider (`hero-banner.blade.php`)
+- **Rasio:** `16:9` (Landscape Layar Lebar) atau `21:9` (Cinematic Ultrawide).
+- **Karakteristik Tampilan:** Mengisi seluruh tinggi layar (`100vh` dengan batasan `min-height: 640px` s.d. `max-height: 1080px`) menggunakan `object-cover`.
+- **Komposisi & Safe Zone:** Pastikan objek utama (subjek drone/alat) berada di **area tengah 60-70% (*dead-center*)**. Pada layar smartphone, sisi kiri dan kanan gambar akan otomatis terpangkas (*cropped*) untuk mempertahankan tinggi vertikal penuh.
+
+#### B. Showcase Produk 2-Kolom (`featured-hero-grid.blade.php`)
+- **Rasio:** `1:1` (Bujur Sangkar / Kotak) atau `4:5` (Potret Studio).
+- **Karakteristik Tampilan:** Kartu produk minimalis dengan latar belakang terang/putih dan efek hover interaktif.
+- **Komposisi & Safe Zone:** Gunakan foto produk berlatar belakang bersih (studio putih/abu-abu muda atau transparan PNG). Sisakan ruang kosong (*padding*) di sekitar produk sebesar 15–20% agar saat kartu membesar saat di-hover (*scale effect*), produk tidak menabrak batas kartu.
+
+#### C. Layanan Solusi Bisnis & 3D Swiper Carousel (`services-section.blade.php`)
+- **Rasio:** 
+  - Bagian 1 (3 Kolom): `9:16` atau `2:3` (Potret Vertikal Panjang).
+  - Bagian 2 (Carousel Melayang): `4:5` atau `3:4` (Potret Berbingkai Bulat `rounded-[34px]`).
+- **Komposisi & Safe Zone:** Kartu ini menggunakan lapisan gradasi gelap (*dark vignette overlay*) untuk menempatkan teks judul dan deskripsi putih di atasnya. Pastikan area bagian atas dan bawah gambar tidak terlalu padat elemen penting yang dapat mengganggu keterbacaan teks.
+
+#### D. Katalog Layanan Bento Grid (`resources/views/services/index.blade.php`)
+- **Rasio Bento:**
+  - **Kartu Lebar Kiri (7 Kolom)**: `4:5` atau `1:1` (`1200 × 1500 px`). Ideal untuk foto vertikal sinematik resolusi tinggi.
+  - **Kartu Tumpuk Kanan (5 Kolom)**: `16:9` atau `2:1` (`1200 × 675 px`). Ideal untuk lanskap pemetaan atau foto aksi horizontal.
+  - **Kartu Baris Bawah (3 Kolom)**: `3:4` atau `4:5` (`1000 × 1250 px`).
+
+#### E. Berita & Artikel Blog (`resources/views/blog/`)
+- **Rasio Thumbnail:** `16:9` (Lanskap Standar Widescreen, `1280 × 720 px`).
+- **Karakteristik Tampilan:** Menggunakan `aspect-ratio` lanskap untuk memudahkan perataan kisi (*grid alignment*) kartu berita 3-kolom.
+- **Hero Detail Artikel:** Gambar pembuka di halaman baca artikel berdimensi maksimal `1000px` lebar dengan tinggi `540px` (rasio `16:9`), memberikan pengalaman membaca yang fokus dan editorial.
+- **Avatar Penulis:** Wajib berbentuk rasio `1:1` bulat (*circular crop*).
+
+#### F. Modal Spesifikasi Produk (`product-modal.blade.php`)
+- **Rasio:** `1:1` (Kotak) atau `4:3`.
+- **Karakteristik Tampilan:** Gambar drone ditampilkan di kolom kiri modal dengan sudut membulat `rounded-[20px]`.
+- **Komposisi:** Gunakan gambar produk yang menampilkan unit secara utuh dari sudut diagonal 45° (*three-quarter angle*) dengan pencahayaan studio yang jelas.
+
+---
+
+### 3. Tips Optimasi File Gambar (*Performance Best Practices*)
+
+1. **Gunakan Format Modern (WebP):** Konversikan gambar JPG/PNG ke format `.webp`. WebP memberikan reduksi ukuran file hingga 30-50% lebih kecil tanpa menurunkan kualitas visual secara kasat mata.
+2. **Batas Ukuran File Disarankan:**
+   - **Hero Banner:** Maksimal `400 KB - 700 KB`.
+   - **Thumbnail Kartu / Grid:** Maksimal `150 KB - 250 KB`.
+   - **Logo & Ikon:** Di bawah `50 KB` (Gunakan SVG jika memungkinkan untuk ketajaman sempurna di semua resolusi).
+3. **Penyimpanan Aset Lokal:** Simpan file aset baru di folder `public/images/` dan panggil di template Blade menggunakan helper `{{ asset('images/nama-file.webp') }}`.
+
+---
+
 ## 💻 Perintah yang Sering Digunakan (CLI)
 
 | Perintah | Deskripsi |
