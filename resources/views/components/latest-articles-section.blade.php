@@ -1,6 +1,6 @@
 @props(['latestArticles' => []])
 
-<section class="relative w-full py-16 sm:py-20 md:py-24 bg-[#F8FAFC] border-t border-[#E2E8F0]">
+<section id="blog" class="relative w-full py-16 sm:py-20 md:py-24 bg-[#F8FAFC] border-t border-[#E2E8F0]">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 md:mb-14 gap-4">

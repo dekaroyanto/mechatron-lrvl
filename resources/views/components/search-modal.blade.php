@@ -25,11 +25,15 @@
             />
         </div>
         <div class="mt-4 space-y-2 max-h-60 overflow-y-auto">
-            <a href="{{ route('home') }}#products" @click="$store.searchModal.close()" class="block p-3 rounded-xl hover:bg-slate-50 transition-colors">
+            <a href="{{ route('products.index') }}" @click="$store.searchModal.close()" class="block p-3 rounded-xl hover:bg-blue-50/80 transition-colors border border-blue-100">
+                <span class="font-bold text-[14px] text-[#0070D5]">Katalog Produk & Kategori</span>
+                <p class="text-[12px] text-slate-500">Agrikultur, Survey & Pemetaan, Pengiriman, & Suku Cadang</p>
+            </a>
+            <a href="{{ route('products.show', 'agri-h30') }}" @click="$store.searchModal.close()" class="block p-3 rounded-xl hover:bg-slate-50 transition-colors">
                 <span class="font-bold text-[14px] text-slate-900">MECHATRON AGRI H-30</span>
                 <p class="text-[12px] text-slate-500">Drone Pertanian Kapasitas 30L</p>
             </a>
-            <a href="{{ route('home') }}#products" @click="$store.searchModal.close()" class="block p-3 rounded-xl hover:bg-slate-50 transition-colors">
+            <a href="{{ route('products.show', 'agri-h15') }}" @click="$store.searchModal.close()" class="block p-3 rounded-xl hover:bg-slate-50 transition-colors">
                 <span class="font-bold text-[14px] text-slate-900">MECHATRON AGRI H-15</span>
                 <p class="text-[12px] text-slate-500">Drone Pertanian Lipat Kapasitas 15L</p>
             </a>

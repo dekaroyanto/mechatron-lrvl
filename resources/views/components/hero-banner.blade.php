@@ -114,43 +114,49 @@
         </div>
     @endforeach
 
-    <!-- Hero Content - Perfectly Centered in Dead Middle (Desktop & Mobile) -->
-    <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 text-center pointer-events-none">
+    <!-- Hero Content - Positioned higher up (Desktop & Mobile) -->
+    <div class="absolute inset-0 z-20 flex flex-col items-center justify-start pt-24 sm:pt-28 md:pt-32 lg:pt-36 px-4 sm:px-6 md:px-8 text-center pointer-events-none">
         @foreach($slides as $idx => $slide)
             <div
                 x-show="currentIndex === {{ $idx }}"
                 x-transition:enter="transition ease-out duration-700"
                 x-transition:enter-start="opacity-0 translate-y-3"
                 x-transition:enter-end="opacity-100 translate-y-0"
-                class="w-full max-w-2xl mx-auto flex flex-col items-center justify-center text-center pointer-events-auto"
+                class="w-full max-w-3xl mx-auto flex flex-col items-center justify-start text-center pointer-events-auto"
                 style="display: none;"
             >
-                <h1 class="text-[32px] xs:text-[38px] sm:text-[48px] md:text-[58px] lg:text-[64px] font-extrabold text-white tracking-[-0.02em] leading-[1.08] mb-2 sm:mb-2.5 drop-shadow-2xl text-center">
+                <p class="text-[25px] xs:text-[25px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-white tracking-[-0.02em] leading-[1.08] mb-2 sm:mb-2.5 drop-shadow-2xl text-center">
                     {{ $slide['title'] }}
-                </h1>
+                </p>
                 <p class="text-[14px] sm:text-[17px] md:text-[19px] font-medium text-[#EDEDED] tracking-normal mb-5 sm:mb-6 drop-shadow-md max-w-xl leading-relaxed text-center">
                     {{ $slide['tagline'] }}
                 </p>
 
-                <!-- Action Buttons -->
+                <!-- Action Buttons (Style matching DJI Showcase: Transparent with thick white outline, blue on hover) -->
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                    <!-- 1. Learn More Button -->
                     <a
-                        href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya tertarik untuk konsultasi dan pemesanan unit ' . $slide['title'] . '. Mohon informasi ketersediaan unit dan jadwal demo lapangan.') }}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 px-7 sm:px-9 py-2.5 sm:py-3.5 rounded-full bg-[#0070D5] hover:bg-[#005bb5] text-white text-[13px] sm:text-[15px] font-semibold transition-all duration-300 shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"
+                        href="{{ $slide['id'] === 'agri-series' ? route('home') . '#products' : route('products.show', $slide['id']) }}"
+                        class="group inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-transparent hover:bg-[#0070D5] text-white border-2 border-white hover:border-[#0070D5] text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"
                     >
-                        <span>Pesan via WhatsApp</span>
-                        <span>›</span>
+                        <span>Learn More</span>
+                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7" />
+                        </svg>
                     </a>
 
-                    <button
-                        type="button"
-                        @click="$store.productModal.show(slides[{{ $idx }}].productInfo)"
-                        class="inline-flex items-center gap-2 px-7 sm:px-9 py-2.5 sm:py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/40 hover:border-white backdrop-blur-md text-[13px] sm:text-[15px] font-semibold transition-all duration-300 shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                    <!-- 2. Buy Now Button -->
+                    <a
+                        href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya tertarik untuk pemesanan unit ' . $slide['title'] . '. Mohon informasi ketersediaan unit dan penawaran harga resmi.') }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-transparent hover:bg-[#0070D5] text-white border-2 border-white hover:border-[#0070D5] text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"
                     >
-                        <span>Lihat Spesifikasi</span>
-                    </button>
+                        <span>Buy Now</span>
+                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         @endforeach

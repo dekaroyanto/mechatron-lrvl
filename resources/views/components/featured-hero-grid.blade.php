@@ -85,12 +85,12 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }"
-    class="relative w-full bg-[#FFFFFF] py-6 sm:py-8 px-4 sm:px-6 md:px-8"
+    class="relative w-full bg-[#FFFFFF] py-2 sm:py-3 px-1 sm:px-1.5 md:px-2"
 >
     <!-- 2-Column Product Showcase Grid -->
-    <div class="max-w-[1440px] mx-auto space-y-4 sm:space-y-6">
+    <div class="w-full mx-auto space-y-1.5 sm:space-y-2">
         <!-- Top Pair -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-1.5 sm:gap-2">
             @foreach(array_slice($cards, 0, 2) as $card)
                 <div
                     @click="toggleCard('{{ $card['id'] }}')"
@@ -131,14 +131,13 @@
 
                         <!-- Buttons -->
                         <div class="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
-                            <button
-                                type="button"
-                                @click.stop="$store.productModal.show({{ Js::from($card['productInfo']) }})"
-                                class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer bg-white text-[#111111] border border-gray-300 hover:border-[#0070D5] hover:text-[#0070D5]"
+                            <a
+                                href="{{ route('products.show', $card['id']) }}"
+                                class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer bg-white text-[#111111] border border-gray-300 hover:border-[#0070D5] hover:text-[#0070D5] text-decoration-none"
                             >
-                                <span>Lihat Spesifikasi</span>
+                                <span>Lihat Spesifikasi & Detail</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
-                            </button>
+                            </a>
 
                             <a
                                 href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya tertarik untuk konsultasi dan pemesanan ' . ($card['productInfo']['name'] ?? $card['productInfo']['title']) . '. Mohon informasi ketersediaan unit dan jadwal demo lapangan.') }}"
@@ -157,7 +156,7 @@
         </div>
 
         <!-- Bottom Pair -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-1.5 sm:gap-2">
             @foreach(array_slice($cards, 2, 2) as $card)
                 <div
                     @click="toggleCard('{{ $card['id'] }}')"
@@ -198,14 +197,13 @@
 
                         <!-- Buttons -->
                         <div class="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
-                            <button
-                                type="button"
-                                @click.stop="$store.productModal.show({{ Js::from($card['productInfo']) }})"
-                                class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer bg-white text-[#111111] border border-gray-300 hover:border-[#0070D5] hover:text-[#0070D5]"
+                            <a
+                                href="{{ route('products.show', $card['id']) }}"
+                                class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer bg-white text-[#111111] border border-gray-300 hover:border-[#0070D5] hover:text-[#0070D5] text-decoration-none"
                             >
-                                <span>Lihat Spesifikasi</span>
+                                <span>Lihat Spesifikasi & Detail</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
-                            </button>
+                            </a>
 
                             <a
                                 href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya tertarik untuk konsultasi dan pemesanan ' . ($card['productInfo']['name'] ?? $card['productInfo']['title']) . '. Mohon informasi ketersediaan unit dan jadwal demo lapangan.') }}"

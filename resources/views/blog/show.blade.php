@@ -2,6 +2,7 @@
 
 @section('title', $post['title'] . ' | Berita Mechatron')
 @section('meta_description', $post['excerpt'])
+@section('navbar_theme', 'light')
 
 @php
     $whatsappUrl = 'https://wa.me/6281112143111?text=' . urlencode('Halo Mechatron, saya tertarik berdiskusi mengenai topik artikel: "' . $post['title'] . '".');

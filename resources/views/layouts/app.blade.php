@@ -29,7 +29,6 @@
     <x-footer />
 
     <!-- 4. Interactive Modals -->
-    <x-product-modal />
     <x-search-modal />
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 @section('title', 'Berita Terkini | Mechatron Indonesia')
 @section('meta_description', 'Kabar terbaru, perkembangan regulasi, inovasi teknologi drone, dan transformasi modernisasi pertanian Indonesia bersama Mechatron.')
+@section('navbar_theme', 'light')
 
 @section('content')
 <div class="bg-[#F8FAFC] min-h-screen pt-24 sm:pt-28 pb-20 sm:pb-28"

@@ -1,8 +1,24 @@
+@php
+    $navbarTheme = trim($__env->yieldContent('navbar_theme'));
+    if ($navbarTheme === 'light') {
+        $hasDarkHero = false;
+    } elseif ($navbarTheme === 'dark') {
+        $hasDarkHero = true;
+    } else {
+        // Default: Home, Services, About, Contact have dark hero banners.
+        // Blog, Products, and other pages have clean white/light backgrounds.
+        $hasDarkHero = request()->routeIs(['home', 'services.*', 'about', 'contact']);
+    }
+@endphp
+
 <header
     x-data="{
         scrolled: false,
         mobileMenuOpen: false,
-        activeDropdown: null,
+        hasDarkHero: {{ $hasDarkHero ? 'true' : 'false' }},
+        get isLightNav() {
+            return !this.hasDarkHero || this.scrolled;
+        },
         init() {
             this.scrolled = window.scrollY > 20;
             window.addEventListener('scroll', () => {
@@ -10,20 +26,20 @@
             }, { passive: true });
         }
     }"
-    :class="scrolled
+    :class="isLightNav
         ? 'bg-white/95 backdrop-blur-md border-b border-[#E5E7EB] shadow-[0_2px_8px_rgba(0,0,0,0.06)] py-3 text-[#111827]'
-        : 'bg-gradient-to-b from-black/70 via-black/30 to-transparent py-4 text-white'"
+        : 'bg-gradient-to-b from-black/75 via-black/40 to-transparent py-4 text-white'"
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
 >
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <!-- Left: Official Mechatron Brand Logo -->
         <div class="flex items-center">
-            <a href="{{ route('home') }}" class="flex items-center gap-2.5 group focus:outline-none select-none" aria-label="Mechatron Official">
+            <a href="{{ route('home') }}" class="flex items-center gap-2.5 group focus:outline-none select-none text-decoration-none" aria-label="Mechatron Official">
                 <div class="relative w-8 h-8 sm:w-9 sm:h-9 shrink-0 transition-transform duration-200 group-hover:scale-105 shadow-sm rounded-[7px] overflow-hidden">
                     <img src="{{ asset('images/mechatron_logo.png') }}" alt="Mechatron Official Logo" class="w-full h-full object-cover">
                 </div>
                 <span
-                    :class="scrolled ? 'text-[#002B7F] group-hover:text-[#0070D5]' : 'text-white group-hover:text-blue-200'"
+                    :class="isLightNav ? 'text-[#002B7F] group-hover:text-[#0070D5]' : 'text-white group-hover:text-blue-200'"
                     class="font-extrabold tracking-tight text-[17px] sm:text-[19px] transition-colors"
                 >
                     MECHATRON
@@ -31,188 +47,94 @@
             </a>
         </div>
 
-        <!-- Center: Desktop Navigation Links -->
-        <nav class="hidden xl:flex items-center space-x-7" aria-label="Main Navigation">
-            <!-- 1. Produk Drone -->
-            <div class="relative py-2" @mouseenter="activeDropdown = 'products'" @mouseleave="activeDropdown = null">
-                <button type="button" :class="activeDropdown === 'products' ? 'text-[#0070D5]' : (scrolled ? 'text-[#222222] hover:text-[#0070D5]' : 'text-white/90 hover:text-white')" class="text-[14px] font-medium tracking-normal transition-colors flex items-center gap-1 bg-transparent border-0 cursor-pointer">
-                    Produk Drone
-                </button>
-                <div x-show="activeDropdown === 'products'" x-transition.opacity.duration.200ms :class="scrolled ? 'bg-white border border-gray-200' : 'bg-[#111720]/95 backdrop-blur-md border border-white/10'" class="absolute top-full left-1/2 -translate-x-1/2 w-[340px] rounded-md shadow-2xl py-3 px-2 z-50" style="display: none;">
-                    <div :class="scrolled ? 'text-gray-500 border-gray-100' : 'text-[#8B939B] border-white/10'" class="text-[11px] uppercase tracking-wider font-semibold px-3 pb-2 border-b">
-                        Produk Drone
-                    </div>
-                    <div class="mt-2 space-y-1">
-                        <a href="{{ route('home') }}#products" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">MECHATRON AGRI H-30</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Heavy Payload 30L Agricultural Drone</span>
-                        </a>
-                        <a href="{{ route('home') }}#products" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">MECHATRON AGRI H-15</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">High-Efficiency 15L Foldable Drone</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <!-- Center: Desktop Navigation Links (Only 6 Items) -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Main Navigation">
+            <!-- 1. Home -->
+            <a
+                href="{{ route('home') }}"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('home') && !request()->is('*#*') ? 'text-[#0070D5] font-semibold bg-blue-50/90' : 'text-neutral-700 hover:text-[#0070D5] hover:bg-neutral-100/80' }}'
+                    : '{{ request()->routeIs('home') && !request()->is('*#*') ? 'text-white font-semibold bg-white/20' : 'text-white/90 hover:text-white hover:bg-white/10' }}'"
+                class="text-[14px] px-3.5 py-1.5 rounded-full transition-all duration-200 text-decoration-none"
+            >
+                Home
+            </a>
 
-            <!-- 2. Sistem & Ekosistem -->
-            <div class="relative py-2" @mouseenter="activeDropdown = 'ecosystem'" @mouseleave="activeDropdown = null">
-                <button type="button" :class="activeDropdown === 'ecosystem' ? 'text-[#0070D5]' : (scrolled ? 'text-[#222222] hover:text-[#0070D5]' : 'text-white/90 hover:text-white')" class="text-[14px] font-medium tracking-normal transition-colors flex items-center gap-1 bg-transparent border-0 cursor-pointer">
-                    Sistem & Ekosistem
-                </button>
-                <div x-show="activeDropdown === 'ecosystem'" x-transition.opacity.duration.200ms :class="scrolled ? 'bg-white border border-gray-200' : 'bg-[#111720]/95 backdrop-blur-md border border-white/10'" class="absolute top-full left-1/2 -translate-x-1/2 w-[340px] rounded-md shadow-2xl py-3 px-2 z-50" style="display: none;">
-                    <div :class="scrolled ? 'text-gray-500 border-gray-100' : 'text-[#8B939B] border-white/10'" class="text-[11px] uppercase tracking-wider font-semibold px-3 pb-2 border-b">
-                        Sistem & Ekosistem
-                    </div>
-                    <div class="mt-2 space-y-1">
-                        <a href="{{ route('home') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Mechatron AGRI</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Smart Agricultural Drone</span>
-                        </a>
-                        <a href="{{ route('home') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Mechatron Smart GCS Controller</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Ground Control Station Layar Terang & Dual RTK</span>
-                        </a>
-                        <a href="{{ route('home') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Mechatron Power Combo Kit</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Smart Battery & High-Speed Generator Fast Charger</span>
-                        </a>
-                        <a href="{{ route('home') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Suku Cadang & Propeller</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Suku Cadang Orisinil Resmi Mechatron</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <!-- 2. Product -->
+            <a
+                href="{{ route('products.index') }}"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('products.*') ? 'text-[#0070D5] font-semibold bg-blue-50/90' : 'text-neutral-700 hover:text-[#0070D5] hover:bg-neutral-100/80' }}'
+                    : '{{ request()->routeIs('products.*') ? 'text-white font-semibold bg-white/20' : 'text-white/90 hover:text-white hover:bg-white/10' }}'"
+                class="text-[14px] font-medium px-3.5 py-1.5 rounded-full transition-all duration-200 text-decoration-none"
+            >
+                Product
+            </a>
 
-            <!-- 3. Solusi Pertanian -->
-            <div class="relative py-2" @mouseenter="activeDropdown = 'solutions'" @mouseleave="activeDropdown = null">
-                <button type="button" :class="activeDropdown === 'solutions' ? 'text-[#0070D5]' : (scrolled ? 'text-[#222222] hover:text-[#0070D5]' : 'text-white/90 hover:text-white')" class="text-[14px] font-medium tracking-normal transition-colors flex items-center gap-1 bg-transparent border-0 cursor-pointer">
-                    Solusi Pertanian
-                </button>
-                <div x-show="activeDropdown === 'solutions'" x-transition.opacity.duration.200ms :class="scrolled ? 'bg-white border border-gray-200' : 'bg-[#111720]/95 backdrop-blur-md border border-white/10'" class="absolute top-full left-1/2 -translate-x-1/2 w-[340px] rounded-md shadow-2xl py-3 px-2 z-50" style="display: none;">
-                    <div :class="scrolled ? 'text-gray-500 border-gray-100' : 'text-[#8B939B] border-white/10'" class="text-[11px] uppercase tracking-wider font-semibold px-3 pb-2 border-b">
-                        Solusi Pertanian
-                    </div>
-                    <div class="mt-2 space-y-1">
-                        <a href="{{ route('services.show', 'agrikultur') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Penyemprotan Pestisida & Herbisida</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Akurasi Tinggi Tanpa Drift Berlebih</span>
-                        </a>
-                        <a href="{{ route('services.show', 'agrikultur') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Penyebaran Pupuk & Benih</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Penyebaran Granul Rata Kapasitas Besar</span>
-                        </a>
-                        <a href="{{ route('services.show', 'lidar') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Pemetaan & RTK Sentimeter</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Navigasi Otonom Kontur Medan Otomatis</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <!-- 3. Service -->
+            <a
+                href="{{ route('services.index') }}"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('services.*') ? 'text-[#0070D5] font-semibold bg-blue-50/90' : 'text-neutral-700 hover:text-[#0070D5] hover:bg-neutral-100/80' }}'
+                    : '{{ request()->routeIs('services.*') ? 'text-white font-semibold bg-white/20' : 'text-white/90 hover:text-white hover:bg-white/10' }}'"
+                class="text-[14px] px-3.5 py-1.5 rounded-full transition-all duration-200 text-decoration-none"
+            >
+                Service
+            </a>
 
-            <!-- 4. Services & Layanan -->
-            <div class="relative py-2" @mouseenter="activeDropdown = 'services'" @mouseleave="activeDropdown = null">
-                <a href="{{ route('services.index') }}" :class="activeDropdown === 'services' ? 'text-[#0070D5]' : (scrolled ? 'text-[#222222] hover:text-[#0070D5]' : 'text-white/90 hover:text-white')" class="text-[14px] font-medium tracking-normal transition-colors flex items-center gap-1 bg-transparent border-0 cursor-pointer">
-                    Services & Layanan
-                </a>
-                <div x-show="activeDropdown === 'services'" x-transition.opacity.duration.200ms :class="scrolled ? 'bg-white border border-gray-200' : 'bg-[#111720]/95 backdrop-blur-md border border-white/10'" class="absolute top-full left-1/2 -translate-x-1/2 w-[340px] rounded-md shadow-2xl py-3 px-2 z-50" style="display: none;">
-                    <div :class="scrolled ? 'text-gray-500 border-gray-100' : 'text-[#8B939B] border-white/10'" class="text-[11px] uppercase tracking-wider font-semibold px-3 pb-2 border-b">
-                        Services & Layanan
-                    </div>
-                    <div class="mt-2 space-y-1">
-                        <a href="{{ route('services.show', 'fotografi') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Fotografi Drone</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Dokumentasi Udara Kualitas Sinematik</span>
-                        </a>
-                        <a href="{{ route('services.show', 'lidar') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Pemetaan LiDAR</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Survei & Point Cloud 3D Presisi Tinggi</span>
-                        </a>
-                        <a href="{{ route('services.show', 'agrikultur') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Agrikultur & Pertanian</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Penyemprotan Otonom & Analisis Lahan</span>
-                        </a>
-                        <a href="{{ route('services.show', 'sewadrone') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Sewa Drone Profesional</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Rental Armada Drone Sesuai Kebutuhan</span>
-                        </a>
-                        <a href="{{ route('services.show', 'pelatihanpilot') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Pelatihan Pilot Drone</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Akademi Sertifikasi & Lisensi Terbang</span>
-                        </a>
-                        <a href="{{ route('services.show', 'perawatandrone') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Perawatan & Servis Drone</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Kalibrasi, Komponen, & Servis Resmi</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <!-- 4. Blog -->
+            <a
+                href="{{ route('blog.index') }}"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('blog.*') ? 'text-[#0070D5] font-semibold bg-blue-50/90' : 'text-neutral-700 hover:text-[#0070D5] hover:bg-neutral-100/80' }}'
+                    : '{{ request()->routeIs('blog.*') ? 'text-white font-semibold bg-white/20' : 'text-white/90 hover:text-white hover:bg-white/10' }}'"
+                class="text-[14px] px-3.5 py-1.5 rounded-full transition-all duration-200 text-decoration-none"
+            >
+                Blog
+            </a>
 
-            <!-- 5. Layanan & Dukungan -->
-            <div class="relative py-2" @mouseenter="activeDropdown = 'support'" @mouseleave="activeDropdown = null">
-                <button type="button" :class="activeDropdown === 'support' ? 'text-[#0070D5]' : (scrolled ? 'text-[#222222] hover:text-[#0070D5]' : 'text-white/90 hover:text-white')" class="text-[14px] font-medium tracking-normal transition-colors flex items-center gap-1 bg-transparent border-0 cursor-pointer">
-                    Layanan & Dukungan
-                </button>
-                <div x-show="activeDropdown === 'support'" x-transition.opacity.duration.200ms :class="scrolled ? 'bg-white border border-gray-200' : 'bg-[#111720]/95 backdrop-blur-md border border-white/10'" class="absolute top-full left-1/2 -translate-x-1/2 w-[340px] rounded-md shadow-2xl py-3 px-2 z-50" style="display: none;">
-                    <div :class="scrolled ? 'text-gray-500 border-gray-100' : 'text-[#8B939B] border-white/10'" class="text-[11px] uppercase tracking-wider font-semibold px-3 pb-2 border-b">
-                        Layanan & Dukungan
-                    </div>
-                    <div class="mt-2 space-y-1">
-                        <a href="{{ route('services.show', 'perawatandrone') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Garansi Resmi Mechatron</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Perlindungan Garansi Unit & Komponen Utama</span>
-                        </a>
-                        <a href="{{ route('services.show', 'perawatandrone') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Pusat Servis & Kalibrasi</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Teknisi Tersertifikasi & Suku Cadang Ready</span>
-                        </a>
-                        <a href="{{ route('services.show', 'pelatihanpilot') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Panduan & Firmware</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Buku Manual Operasional & Software Update</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <!-- 5. About Us -->
+            <a
+                href="{{ route('about') }}"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('about') ? 'text-[#0070D5] font-semibold bg-blue-50/90' : 'text-neutral-700 hover:text-[#0070D5] hover:bg-neutral-100/80' }}'
+                    : '{{ request()->routeIs('about') ? 'text-white font-semibold bg-white/20' : 'text-white/90 hover:text-white hover:bg-white/10' }}'"
+                class="text-[14px] px-3.5 py-1.5 rounded-full transition-all duration-200 text-decoration-none"
+            >
+                About Us
+            </a>
 
-            <!-- 6. Tentang Mechatron -->
-            <div class="relative py-2" @mouseenter="activeDropdown = 'about'" @mouseleave="activeDropdown = null">
-                <button type="button" :class="activeDropdown === 'about' ? 'text-[#0070D5]' : (scrolled ? 'text-[#222222] hover:text-[#0070D5]' : 'text-white/90 hover:text-white')" class="text-[14px] font-medium tracking-normal transition-colors flex items-center gap-1 bg-transparent border-0 cursor-pointer">
-                    Tentang Mechatron
-                </button>
-                <div x-show="activeDropdown === 'about'" x-transition.opacity.duration.200ms :class="scrolled ? 'bg-white border border-gray-200' : 'bg-[#111720]/95 backdrop-blur-md border border-white/10'" class="absolute top-full left-1/2 -translate-x-1/2 w-[340px] rounded-md shadow-2xl py-3 px-2 z-50" style="display: none;">
-                    <div :class="scrolled ? 'text-gray-500 border-gray-100' : 'text-[#8B939B] border-white/10'" class="text-[11px] uppercase tracking-wider font-semibold px-3 pb-2 border-b">
-                        Tentang Mechatron
-                    </div>
-                    <div class="mt-2 space-y-1">
-                        <a href="{{ route('home') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Profil Mechatron Indonesia</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Pelopor Teknologi Drone Pertanian Terdepan</span>
-                        </a>
-                        <a href="{{ route('home') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Kemitraan & Distributor Resmi</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Jaringan Dealer di Seluruh Indonesia</span>
-                        </a>
-                        <a href="https://wa.me/6281112143111" target="_blank" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Hubungi Tim Sales</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Konsultasi Pembelian & Jadwal Demo Unit</span>
-                        </a>
-                        <a href="{{ route('blog.index') }}" @click="activeDropdown = null" :class="scrolled ? 'hover:bg-gray-100 text-[#222]' : 'hover:bg-white/10 text-white'" class="flex flex-col px-3 py-2 rounded transition-colors group text-decoration-none">
-                            <span class="text-[13px] font-medium group-hover:text-[#0070D5] transition-colors">Berita & Wawasan Drone</span>
-                            <span :class="scrolled ? 'text-gray-500' : 'text-[#9FA3A6]'" class="text-[11px]">Kabar Terkini Drone Pertanian & Agrikultur</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <!-- 6. Contact Us -->
+            <a
+                href="{{ route('contact') }}"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('contact') ? 'text-[#0070D5] font-semibold bg-blue-50/90' : 'text-neutral-700 hover:text-[#0070D5] hover:bg-neutral-100/80' }}'
+                    : '{{ request()->routeIs('contact') ? 'text-white font-semibold bg-white/20' : 'text-white/90 hover:text-white hover:bg-white/10' }}'"
+                class="text-[14px] px-3.5 py-1.5 rounded-full transition-all duration-200 text-decoration-none"
+            >
+                Contact Us
+            </a>
         </nav>
 
-        <!-- Right: Mobile Menu Button & Direct WA -->
-        <div class="flex items-center space-x-4 sm:space-x-5">
+        <!-- Right: Direct WhatsApp CTA & Mobile Hamburger -->
+        <div class="flex items-center space-x-3">
+            <!-- Direct WhatsApp Button (Desktop) -->
+            <a
+                href="https://wa.me/6281112143111?text=Halo%20Mechatron,%20saya%20tertarik%20untuk%20konsultasi%20layanan%20drone."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hidden sm:inline-flex items-center gap-1.5 bg-[#0070D5] hover:bg-[#005bb5] text-white text-[13px] font-semibold px-4 py-2 rounded-full shadow-sm hover:shadow transition-all text-decoration-none"
+            >
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
+            </a>
+
+            <!-- Mobile Hamburger Button -->
             <button
                 type="button"
                 @click="mobileMenuOpen = !mobileMenuOpen"
-                :class="scrolled ? 'text-[#111] hover:text-[#0070D5]' : 'text-white hover:text-[#0070D5]'"
-                class="xl:hidden p-1.5 transition-colors focus:outline-none"
+                :class="isLightNav ? 'text-[#111] hover:text-[#0070D5]' : 'text-white hover:text-[#0070D5]'"
+                class="md:hidden p-1.5 transition-colors focus:outline-none"
                 aria-label="Toggle Menu"
             >
                 <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,7 +147,7 @@
         </div>
     </div>
 
-    <!-- Mobile Drawer -->
+    <!-- Mobile Drawer (Only 6 Items) -->
     <div
         x-show="mobileMenuOpen"
         x-transition:enter="transition ease-out duration-200"
@@ -234,51 +156,93 @@
         x-transition:leave="transition ease-in duration-150"
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-2"
-        :class="scrolled ? 'bg-white border-gray-200 text-gray-900' : 'bg-[#0F151F]/98 border-white/10 text-white'"
-        class="xl:hidden border-t px-5 py-4 space-y-4 max-h-[85vh] overflow-y-auto"
+        :class="isLightNav ? 'bg-white border-gray-200 text-gray-900 shadow-xl' : 'bg-[#0F151F]/98 border-white/10 text-white shadow-2xl'"
+        class="md:hidden border-t px-6 py-5 space-y-3 max-h-[85vh] overflow-y-auto"
         style="display: none;"
     >
-        <div class="border-b pb-3" :class="scrolled ? 'border-gray-100' : 'border-white/10'">
-            <div class="text-[14px] font-semibold mb-2" :class="scrolled ? 'text-gray-900' : 'text-white'">
-                Produk Drone
-            </div>
-            <div class="space-y-1.5 pl-2">
-                <a href="{{ route('home') }}#products" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">MECHATRON AGRI H-30</a>
-                <a href="{{ route('home') }}#products" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">MECHATRON AGRI H-15</a>
-            </div>
+        <div class="space-y-1">
+            <!-- 1. Home -->
+            <a
+                href="{{ route('home') }}"
+                @click="mobileMenuOpen = false"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('home') && !request()->is('*#*') ? 'text-[#0070D5] font-semibold bg-blue-50' : 'text-gray-800 hover:text-[#0070D5]' }}'
+                    : '{{ request()->routeIs('home') && !request()->is('*#*') ? 'text-white font-semibold bg-white/15' : 'text-white/90 hover:text-white' }}'"
+                class="block text-[15px] py-2 px-3 rounded-lg transition-colors text-decoration-none"
+            >
+                Home
+            </a>
+
+            <!-- 2. Product -->
+            <a
+                href="{{ route('products.index') }}"
+                @click="mobileMenuOpen = false"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('products.*') ? 'text-[#0070D5] font-semibold bg-blue-50' : 'text-gray-800 hover:text-[#0070D5]' }}'
+                    : '{{ request()->routeIs('products.*') ? 'text-white font-semibold bg-white/15' : 'text-white/90 hover:text-white' }}'"
+                class="block text-[15px] font-medium py-2 px-3 rounded-lg transition-colors text-decoration-none"
+            >
+                Product
+            </a>
+
+            <!-- 3. Service -->
+            <a
+                href="{{ route('services.index') }}"
+                @click="mobileMenuOpen = false"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('services.*') ? 'text-[#0070D5] font-semibold bg-blue-50' : 'text-gray-800 hover:text-[#0070D5]' }}'
+                    : '{{ request()->routeIs('services.*') ? 'text-white font-semibold bg-white/15' : 'text-white/90 hover:text-white' }}'"
+                class="block text-[15px] py-2 px-3 rounded-lg transition-colors text-decoration-none"
+            >
+                Service
+            </a>
+
+            <!-- 4. Blog -->
+            <a
+                href="{{ route('blog.index') }}"
+                @click="mobileMenuOpen = false"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('blog.*') ? 'text-[#0070D5] font-semibold bg-blue-50' : 'text-gray-800 hover:text-[#0070D5]' }}'
+                    : '{{ request()->routeIs('blog.*') ? 'text-white font-semibold bg-white/15' : 'text-white/90 hover:text-white' }}'"
+                class="block text-[15px] py-2 px-3 rounded-lg transition-colors text-decoration-none"
+            >
+                Blog
+            </a>
+
+            <!-- 5. About Us -->
+            <a
+                href="{{ route('about') }}"
+                @click="mobileMenuOpen = false"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('about') ? 'text-[#0070D5] font-semibold bg-blue-50' : 'text-gray-800 hover:text-[#0070D5]' }}'
+                    : '{{ request()->routeIs('about') ? 'text-white font-semibold bg-white/15' : 'text-white/90 hover:text-white' }}'"
+                class="block text-[15px] py-2 px-3 rounded-lg transition-colors text-decoration-none"
+            >
+                About Us
+            </a>
+
+            <!-- 6. Contact Us -->
+            <a
+                href="{{ route('contact') }}"
+                @click="mobileMenuOpen = false"
+                :class="isLightNav
+                    ? '{{ request()->routeIs('contact') ? 'text-[#0070D5] font-semibold bg-blue-50' : 'text-gray-800 hover:text-[#0070D5]' }}'
+                    : '{{ request()->routeIs('contact') ? 'text-white font-semibold bg-white/15' : 'text-white/90 hover:text-white' }}'"
+                class="block text-[15px] py-2 px-3 rounded-lg transition-colors text-decoration-none"
+            >
+                Contact Us
+            </a>
         </div>
 
-        <div class="border-b pb-3" :class="scrolled ? 'border-gray-100' : 'border-white/10'">
-            <div class="text-[14px] font-semibold mb-2" :class="scrolled ? 'text-gray-900' : 'text-white'">
-                Services & Layanan
-            </div>
-            <div class="space-y-1.5 pl-2">
-                <a href="{{ route('services.show', 'fotografi') }}" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">Fotografi Drone</a>
-                <a href="{{ route('services.show', 'lidar') }}" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">Pemetaan LiDAR</a>
-                <a href="{{ route('services.show', 'agrikultur') }}" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">Agrikultur & Pertanian</a>
-                <a href="{{ route('services.show', 'sewadrone') }}" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">Sewa Drone Profesional</a>
-                <a href="{{ route('services.show', 'pelatihanpilot') }}" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">Pelatihan Pilot Drone</a>
-                <a href="{{ route('services.show', 'perawatandrone') }}" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">Perawatan & Servis Drone</a>
-            </div>
-        </div>
-
-        <div class="border-b pb-3" :class="scrolled ? 'border-gray-100' : 'border-white/10'">
-            <div class="text-[14px] font-semibold mb-2" :class="scrolled ? 'text-gray-900' : 'text-white'">
-                Berita & Wawasan
-            </div>
-            <div class="space-y-1.5 pl-2">
-                <a href="{{ route('blog.index') }}" @click="mobileMenuOpen = false" :class="scrolled ? 'text-gray-700 hover:text-[#0070D5]' : 'text-white/80 hover:text-[#0070D5]'" class="block text-[13px] py-1">Berita Drone & Agrikultur</a>
-            </div>
-        </div>
-
-        <div class="pt-2 flex flex-col gap-2">
+        <div class="pt-3 border-t" :class="isLightNav ? 'border-gray-100' : 'border-white/10'">
             <a
                 href="https://wa.me/6281112143111?text=Halo%20Mechatron,%20saya%20tertarik%20untuk%20konsultasi%20layanan%20drone."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="bg-[#0070D5] text-white text-center py-2.5 rounded-full text-[14px] font-medium shadow-md"
+                class="w-full bg-[#0070D5] text-white text-center py-3 rounded-xl text-[14px] font-semibold shadow-md flex items-center justify-center gap-2 text-decoration-none"
             >
-                Hubungi Mechatron via WhatsApp
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Hubungi via WhatsApp</span>
             </a>
         </div>
     </div>
