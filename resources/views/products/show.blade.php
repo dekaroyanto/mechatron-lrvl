@@ -7,6 +7,10 @@
 @php
     $whatsappText = urlencode('Halo Mechatron Indonesia, saya tertarik untuk konsultasi dan pemesanan unit ' . $product['name'] . ' (' . $product['modelCode'] . '). Mohon informasi ketersediaan unit, harga, serta jadwal demo lapangan.');
     $whatsappUrl = 'https://wa.me/' . ($product['whatsappNumber'] ?? '6281112143111') . '?text=' . $whatsappText;
+    $gallery = $product['gallery'] ?? [$product['image']];
+    if (empty($gallery)) {
+        $gallery = [$product['image']];
+    }
 @endphp
 
 @section('content')
@@ -23,28 +27,185 @@
 
         <!-- 2. Top Product Showcase Grid -->
         <div class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-12 mb-12 sm:mb-16">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-                <!-- Left: Studio Image Display -->
-                <div class="lg:col-span-6">
-                    <div class="relative w-full h-[320px] sm:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden bg-slate-900 shadow-md group">
-                        <img
-                            src="{{ asset($product['image']) }}"
-                            alt="{{ $product['name'] }}"
-                            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
+                <!-- Left: E-commerce Multiple Image Gallery Display -->
+                <div
+                    x-data="{
+                        activeIdx: 0,
+                        images: {{ Js::from(array_map(fn($img) => asset($img), $gallery)) }},
+                        zoomModal: false,
+                        nextImage() {
+                            this.activeIdx = (this.activeIdx + 1) % this.images.length;
+                        },
+                        prevImage() {
+                            this.activeIdx = (this.activeIdx - 1 + this.images.length) % this.images.length;
+                        },
+                        setImage(idx) {
+                            this.activeIdx = idx;
+                        }
+                    }"
+                    class="lg:col-span-6 flex flex-col gap-3 sm:gap-4 select-none"
+                >
+                    <!-- Main Stage Image Box -->
+                    <div class="relative w-full h-[320px] sm:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden bg-slate-950 shadow-md group">
+                        <!-- Dynamic Image Display with smooth transition -->
+                        <template x-for="(imgSrc, idx) in images" :key="idx">
+                            <div
+                                x-show="activeIdx === idx"
+                                x-transition:enter="transition ease-out duration-300"
+                                x-transition:enter-start="opacity-0 scale-[0.98]"
+                                x-transition:enter-end="opacity-100 scale-100"
+                                x-transition:leave="transition ease-in duration-150"
+                                x-transition:leave-start="opacity-100"
+                                x-transition:leave-end="opacity-0"
+                                class="absolute inset-0 w-full h-full cursor-zoom-in"
+                                @click="zoomModal = true"
+                            >
+                                <img
+                                    :src="imgSrc"
+                                    alt="{{ $product['name'] }}"
+                                    class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                            </div>
+                        </template>
 
-                        <!-- Model Badge -->
-                        <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[12px] font-bold text-slate-900 shadow-sm border border-slate-200">
+                        <!-- Top-Left: Model Badge -->
+                        <div class="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[12px] font-bold text-slate-900 shadow-sm border border-slate-200 pointer-events-none">
                             {{ $product['modelCode'] }}
                         </div>
 
-                        <!-- Capacity / Key spec badge -->
+                        <!-- Top-Right: Image Counter Indicator (e.g. 1 / 5) -->
+                        <div class="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-semibold text-white/95 shadow-sm border border-white/10 pointer-events-none">
+                            <span x-text="activeIdx + 1"></span> / <span x-text="images.length"></span>
+                        </div>
+
+                        <!-- Bottom-Left: Capacity / Key Spec Badge -->
                         @if(!empty($product['capacity']))
-                            <div class="absolute bottom-4 left-4 bg-[#0070D5] text-white px-3.5 py-1.5 rounded-full text-[12px] font-bold shadow-md">
+                            <div class="absolute bottom-4 left-4 z-20 bg-[#0070D5] text-white px-3.5 py-1.5 rounded-full text-[12px] font-bold shadow-md pointer-events-none">
                                 {{ $product['capacity'] }}
                             </div>
                         @endif
+
+                        <!-- Slide Navigation Arrow: Previous -->
+                        <button
+                            type="button"
+                            @click.stop="prevImage()"
+                            aria-label="Foto Sebelumnya"
+                            x-show="images.length > 1"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/45 hover:bg-black/80 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 cursor-pointer shadow-lg hover:scale-110 active:scale-95"
+                        >
+                            <svg class="w-5 h-5 -translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                        </button>
+
+                        <!-- Slide Navigation Arrow: Next -->
+                        <button
+                            type="button"
+                            @click.stop="nextImage()"
+                            aria-label="Foto Selanjutnya"
+                            x-show="images.length > 1"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/45 hover:bg-black/80 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 cursor-pointer shadow-lg hover:scale-110 active:scale-95"
+                        >
+                            <svg class="w-5 h-5 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+
+                        <!-- Bottom-Right: Zoom Icon Button -->
+                        <button
+                            type="button"
+                            @click.stop="zoomModal = true"
+                            aria-label="Perbesar Foto"
+                            class="absolute bottom-4 right-4 z-20 w-8 h-8 rounded-full bg-black/50 hover:bg-black/80 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 cursor-pointer hover:scale-105"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- E-commerce Thumbnail Strip -->
+                    <div x-show="images.length > 1" class="flex items-center gap-2.5 sm:gap-3 overflow-x-auto pb-1.5 pt-0.5 scrollbar-none">
+                        <template x-for="(imgSrc, idx) in images" :key="idx">
+                            <button
+                                type="button"
+                                @click="setImage(idx)"
+                                @mouseenter="setImage(idx)"
+                                :class="activeIdx === idx
+                                    ? 'ring-2 ring-[#0070D5] ring-offset-2 border-transparent scale-[1.03] shadow-md opacity-100'
+                                    : 'border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400'"
+                                class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-slate-900 border shrink-0 transition-all duration-200 cursor-pointer p-0 focus:outline-none"
+                            >
+                                <img
+                                    :src="imgSrc"
+                                    alt="{{ $product['name'] }} thumbnail"
+                                    class="w-full h-full object-cover object-center"
+                                />
+                                <span
+                                    x-show="activeIdx === idx"
+                                    class="absolute inset-0 bg-[#0070D5]/15 pointer-events-none"
+                                ></span>
+                            </button>
+                        </template>
+                    </div>
+
+                    <!-- Lightbox Zoom Modal -->
+                    <div
+                        x-show="zoomModal"
+                        x-transition.opacity.duration.250ms
+                        @keydown.escape.window="zoomModal = false"
+                        class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md select-none"
+                        style="display: none;"
+                        @click="zoomModal = false"
+                    >
+                        <div class="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center" @click.stop>
+                            <!-- Close Modal Button -->
+                            <button
+                                type="button"
+                                @click="zoomModal = false"
+                                class="absolute -top-12 right-0 sm:right-2 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors cursor-pointer"
+                                aria-label="Tutup Preview"
+                            >
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            </button>
+
+                            <!-- Large Preview Stage -->
+                            <div class="relative w-full max-h-[75vh] flex items-center justify-center overflow-hidden rounded-2xl bg-black/40">
+                                <img
+                                    :src="images[activeIdx]"
+                                    alt="{{ $product['name'] }}"
+                                    class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl"
+                                />
+
+                                <!-- Prev Button in Modal -->
+                                <button
+                                    type="button"
+                                    @click="prevImage()"
+                                    class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center transition-all cursor-pointer shadow-lg hover:scale-105"
+                                >
+                                    <svg class="w-6 h-6 -translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                                </button>
+
+                                <!-- Next Button in Modal -->
+                                <button
+                                    type="button"
+                                    @click="nextImage()"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center transition-all cursor-pointer shadow-lg hover:scale-105"
+                                >
+                                    <svg class="w-6 h-6 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                                </button>
+                            </div>
+
+                            <!-- Modal Thumbnail Bar -->
+                            <div class="flex items-center gap-2 mt-4 overflow-x-auto max-w-full px-2 py-1 scrollbar-none">
+                                <template x-for="(imgSrc, idx) in images" :key="idx">
+                                    <button
+                                        type="button"
+                                        @click="setImage(idx)"
+                                        :class="activeIdx === idx ? 'ring-2 ring-[#0070D5] scale-105 opacity-100 shadow-md' : 'opacity-50 hover:opacity-100'"
+                                        class="w-14 h-14 rounded-lg overflow-hidden bg-black/50 shrink-0 transition-all cursor-pointer p-0"
+                                    >
+                                        <img :src="imgSrc" class="w-full h-full object-cover object-center" />
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

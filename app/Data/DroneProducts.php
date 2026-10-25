@@ -58,6 +58,13 @@ class DroneProducts
                 'tagline' => 'Smart Solutions for Every Mission — Heavy Payload 30L untuk Efisiensi Perkebunan Skala Besar.',
                 'capacity' => '30 Liter / 35 kg',
                 'image' => '/images/featured_drone_h30.jpg',
+                'gallery' => [
+                    '/images/featured_drone_h30.jpg',
+                    '/images/heromecha1.jpg',
+                    '/images/agrikultur-drone-spraying.jpg',
+                    '/images/featured_remote_kit.jpg',
+                    '/images/smart_battery_b30.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'BMT-1525 H30'],
@@ -121,6 +128,13 @@ class DroneProducts
                 'tagline' => 'Smart Solutions for Every Mission — Ringkas, Lincah, & Efisiensi Maksimal untuk Segala Medan Pertanian.',
                 'capacity' => '15 Liter / 18 kg',
                 'image' => '/images/featured_drone_h15.jpg',
+                'gallery' => [
+                    '/images/featured_drone_h15.jpg',
+                    '/images/heromecha2.jpg',
+                    '/images/agrikultur-drone-sunset.jpg',
+                    '/images/carbon_propellers.jpg',
+                    '/images/featured_remote_kit.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'BMT-1323 H15'],
@@ -176,6 +190,13 @@ class DroneProducts
                 'tagline' => 'Unrivaled Capacity & Giant Field Coverage — Kapasitas Raksasa 50L untuk Korporasi Perkebunan.',
                 'capacity' => '50 Liter / 60 kg',
                 'image' => '/images/agras-t100.jpg',
+                'gallery' => [
+                    '/images/agras-t100.jpg',
+                    '/images/heromecha3.jpg',
+                    '/images/agrikultur-drone-spraying.jpg',
+                    '/images/featured_combo_kit.jpg',
+                    '/images/smart_battery_b30.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'BMT-2050 T100 MAX'],
@@ -229,6 +250,12 @@ class DroneProducts
                 'tagline' => 'Millimeter Precision Aerial Mapping — Solusi Survei Topografi, Kadaster, & Konstruksi Sipil.',
                 'capacity' => 'Akurasi 1 cm RTK',
                 'image' => '/images/matrice-400-hero.png',
+                'gallery' => [
+                    '/images/matrice-400-hero.png',
+                    '/images/dji-lito-series.jpg',
+                    '/images/featured_remote_kit.jpg',
+                    '/images/carbon_propellers.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'Mechatron Survey M-400 RTK'],
@@ -280,6 +307,12 @@ class DroneProducts
                 'tagline' => 'Penetrate Deep Forest Canopies — Pemetaan Laser 3D Real-Time untuk Kehutanan & Infrastruktur.',
                 'capacity' => '240.000 pts/detik',
                 'image' => '/images/dji-lito-series.jpg',
+                'gallery' => [
+                    '/images/dji-lito-series.jpg',
+                    '/images/matrice-400-hero.png',
+                    '/images/featured_remote_kit.jpg',
+                    '/images/osmo-pocket-4.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'Mechatron LiDAR Scanner V-1 (MLS-3D)'],
@@ -331,6 +364,12 @@ class DroneProducts
                 'tagline' => 'Heavy-Lift Logistics Everywhere — Pengiriman Logistik Industri & Bantuan Medis Lintas Medan Sulit.',
                 'capacity' => 'Payload 50 kg / 30 km',
                 'image' => '/images/cargo_drone_c50.jpg',
+                'gallery' => [
+                    '/images/cargo_drone_c50.jpg',
+                    '/images/heromecha1.jpg',
+                    '/images/featured_combo_kit.jpg',
+                    '/images/carbon_propellers.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'Mechatron Cargo C-50 (MC-50)'],
@@ -382,6 +421,12 @@ class DroneProducts
                 'tagline' => 'Fast, Silent, & Direct Delivery — Pengiriman Paket Ekspres Cepat Antar Fasilitas Bisnis.',
                 'capacity' => 'Payload 10 kg / 15 km',
                 'image' => '/images/card_avata_360.jpg',
+                'gallery' => [
+                    '/images/card_avata_360.jpg',
+                    '/images/avata_360_drone.jpg',
+                    '/images/smart_battery_b30.jpg',
+                    '/images/featured_remote_kit.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'Mechatron Air Courier X-10'],
@@ -433,6 +478,12 @@ class DroneProducts
                 'tagline' => 'Precision Control in Your Hands — Kendali Penuh Armada Drone Pertanian dalam Satu Genggaman.',
                 'capacity' => 'Layar 5.5" 1000 nits',
                 'image' => '/images/featured_remote_kit.jpg',
+                'gallery' => [
+                    '/images/featured_remote_kit.jpg',
+                    '/images/featured_drone_h30.jpg',
+                    '/images/matrice-400-hero.png',
+                    '/images/smart_battery_b30.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'Mechatron Smart GCS Pro (V2)'],
@@ -478,6 +529,11 @@ class DroneProducts
                 'tagline' => 'Non-Stop Agricultural Flight Mission — Pengisian Daya Ultra Cepat 10 Menit untuk Rotasi Terbang Tanpa Jeda.',
                 'capacity' => 'Fast Charge 10 Menit',
                 'image' => '/images/featured_combo_kit.jpg',
+                'gallery' => [
+                    '/images/featured_combo_kit.jpg',
+                    '/images/smart_battery_b30.jpg',
+                    '/images/featured_drone_h30.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'Mechatron Power Combo Kit 9000W'],
@@ -519,6 +575,11 @@ class DroneProducts
                 'tagline' => 'High-Density Power for Extreme Demands — Ketahanan Hingga 1.500 Siklus Terbang Bergaransi.',
                 'capacity' => '30.000 mAh / 51.8V',
                 'image' => '/images/smart_battery_b30.jpg',
+                'gallery' => [
+                    '/images/smart_battery_b30.jpg',
+                    '/images/featured_combo_kit.jpg',
+                    '/images/featured_drone_h30.jpg',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'Mechatron Smart Battery B-30'],
@@ -560,6 +621,11 @@ class DroneProducts
                 'tagline' => 'Aerodynamic Efficiency & Quiet Operation — Serat Karbon Aviasi Ringan, Kuat, & Tahan Benturan.',
                 'capacity' => 'Carbon Fiber 33 Inci',
                 'image' => '/images/carbon_propellers.jpg',
+                'gallery' => [
+                    '/images/carbon_propellers.jpg',
+                    '/images/featured_drone_h30.jpg',
+                    '/images/matrice-400-hero.png',
+                ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'Mechatron Carbon Propeller Kit CF-30'],
@@ -619,45 +685,40 @@ class DroneProducts
         $id = strtolower(trim($id));
         $all = self::all();
 
+        $product = null;
+
         if (isset($all[$id])) {
-            return $all[$id];
+            $product = $all[$id];
+        } elseif (str_contains($id, 't100') || str_contains($id, '2050')) {
+            $product = $all['agri-t100'] ?? null;
+        } elseif (str_contains($id, 'h30') || str_contains($id, '1525')) {
+            $product = $all['agri-h30'] ?? null;
+        } elseif (str_contains($id, 'h15') || str_contains($id, '1323')) {
+            $product = $all['agri-h15'] ?? null;
+        } elseif (str_contains($id, 'm400') || str_contains($id, 'matrice') || str_contains($id, 'survey-m400')) {
+            $product = $all['survey-m400'] ?? null;
+        } elseif (str_contains($id, 'lidar')) {
+            $product = $all['survey-lidar-v1'] ?? null;
+        } elseif (str_contains($id, 'cargo') || str_contains($id, 'c50')) {
+            $product = $all['cargo-c50'] ?? null;
+        } elseif (str_contains($id, 'courier') || str_contains($id, 'delivery') || str_contains($id, 'x10')) {
+            $product = $all['delivery-x10'] ?? null;
+        } elseif (str_contains($id, 'battery') || str_contains($id, 'b30')) {
+            $product = $all['smart-battery-b30'] ?? null;
+        } elseif (str_contains($id, 'propeller') || str_contains($id, 'baling')) {
+            $product = $all['carbon-propeller-kit'] ?? null;
+        } elseif (str_contains($id, 'ground') || str_contains($id, 'gcs') || str_contains($id, 'remote')) {
+            $product = $all['mechatron-ground-station'] ?? null;
+        } elseif (str_contains($id, 'power') || str_contains($id, 'combo') || str_contains($id, 'kit') || str_contains($id, 'generator')) {
+            $product = $all['mechatron-power-kit'] ?? null;
         }
 
-        // Fuzzy matching for various slug formats
-        if (str_contains($id, 't100') || str_contains($id, '2050')) {
-            return $all['agri-t100'] ?? null;
-        }
-        if (str_contains($id, 'h30') || str_contains($id, '1525')) {
-            return $all['agri-h30'];
-        }
-        if (str_contains($id, 'h15') || str_contains($id, '1323')) {
-            return $all['agri-h15'];
-        }
-        if (str_contains($id, 'm400') || str_contains($id, 'matrice') || str_contains($id, 'survey-m400')) {
-            return $all['survey-m400'] ?? null;
-        }
-        if (str_contains($id, 'lidar')) {
-            return $all['survey-lidar-v1'] ?? null;
-        }
-        if (str_contains($id, 'cargo') || str_contains($id, 'c50')) {
-            return $all['cargo-c50'] ?? null;
-        }
-        if (str_contains($id, 'courier') || str_contains($id, 'delivery') || str_contains($id, 'x10')) {
-            return $all['delivery-x10'] ?? null;
-        }
-        if (str_contains($id, 'battery') || str_contains($id, 'b30')) {
-            return $all['smart-battery-b30'] ?? null;
-        }
-        if (str_contains($id, 'propeller') || str_contains($id, 'baling')) {
-            return $all['carbon-propeller-kit'] ?? null;
-        }
-        if (str_contains($id, 'ground') || str_contains($id, 'gcs') || str_contains($id, 'remote')) {
-            return $all['mechatron-ground-station'];
-        }
-        if (str_contains($id, 'power') || str_contains($id, 'combo') || str_contains($id, 'kit') || str_contains($id, 'generator')) {
-            return $all['mechatron-power-kit'];
+        if ($product) {
+            if (empty($product['gallery'])) {
+                $product['gallery'] = [$product['image']];
+            }
         }
 
-        return null;
+        return $product;
     }
 }
