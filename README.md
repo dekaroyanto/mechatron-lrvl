@@ -8,18 +8,24 @@ Template ini mengadopsi estetika desain minimalis, modern, dan presisi tinggi (t
 
 ## 🚀 Fitur Unggulan
 
-- **Arsitektur Blade Component Modular**: Komponen UI terpisah rapi (`navbar`, `hero-banner`, `featured-hero-grid`, `services-section`, `latest-articles`, `footer`, dan modal interaktif).
+- **Arsitektur Blade Component Modular**: Komponen UI terpisah rapi (`navbar`, `hero-banner`, `product-hero-banner`, `featured-hero-grid`, `services-section`, `latest-articles`, `footer`, dan modal pencarian cepat).
 - **Tailwind CSS v4 Engine**: Menggunakan konfigurasi `@theme` modern dengan variabel warna khusus (`--color-dji-*`), tipografi bersih, dan utilitas responsif.
 - **Micro-Interactions dengan Alpine.js**:
-  - Modal detail produk dinamis (*Product Modal*) dengan *backdrop blur* & *body scroll lock*.
-  - Modal pencarian cepat (*Quick Search Modal*).
-  - Menu navigasi mobile responsif dan dropdown interaktif.
+  - Galeri preview produk e-commerce interaktif (*main stage viewer*, *thumbnail strip selector*, *slide counter indicator*, dan *fullscreen lightbox zoom*).
+  - Modal pencarian cepat (*Quick Search Modal*) dengan link langsung ke katalog produk dan artikel.
+  - Navbar adaptif cerdas (*smart backdrop blur*, transparan di atas hero banner gelap, dan solid putih di halaman detail/baca).
+  - Filter kategori produk zero-reload (*Agrikultur, Survey & Pemetaan, Pengiriman, Suku Cadang*) dengan sinkronisasi parameter URL (`?kategori=slug`).
+  - Menu navigasi mobile responsif dengan drawer interaktif.
 - **Struktur Halaman Lengkap**:
-  - **Beranda (`/`)**: Hero carousel, produk unggulan 2-kolom, sorotan layanan & teknologi, serta 3 artikel wawasan terbaru.
-  - **Layanan (`/services` & `/services/{slug}`)**: Direktori solusi bisnis & armada dengan filter kategori serta halaman detail lengkap.
-  - **Artikel / Blog (`/blog` & `/blog/{slug}`)**: Daftar artikel wawasan, kategori, estimasi waktu baca, serta pembaca artikel mendalam.
-- **Data Layer Modular (`App\Data`)**: Konten katalog produk, layanan, dan artikel tersimpan dalam kelas data PHP terstruktur, sehingga template dapat langsung digunakan tanpa setup database awal dan sangat mudah dimigrasikan ke Eloquent ORM / database jika diperlukan.
-- **SEO & Performa Siap Pakai**: Struktur semantic HTML5, Open Graph / Meta tags dinamis di setiap view, dan optimasi aset via Vite.
+  - **Beranda (`/`)**: Hero carousel sinematik (AGRI H-30, AGRI H-15, AGRI SERIES), showcase produk unggulan 2-kolom rapat, sorotan layanan & teknologi, serta 3 artikel wawasan terbaru.
+  - **Katalog Produk (`/products`)**: Dedicated product hero banner 4 kategori dengan animasi mouse scroll, tab filter kategori, kartu spesifikasi produk dengan CTA WhatsApp, dan banner konsultasi pengadaan korporasi.
+  - **Detail Produk (`/products/{slug}`)**: Halaman produk tersendiri (bukan modal pop-up) dengan galeri multi-foto e-commerce, badge spesifikasi komprehensif, rekomendasi armada terkait, dan tombol pemesanan WhatsApp langsung.
+  - **Layanan (`/services` & `/services/{slug}`)**: Direktori solusi bisnis & armada dengan bento grid interaktif dan halaman detail kapabilitas teknis.
+  - **Artikel / Blog (`/blog` & `/blog/{slug}`)**: Portal wawasan & berita drone, filter topik, estimasi waktu baca, serta pembaca artikel mendalam berformat editorial.
+  - **Tentang Kami (`/about`)**: Profil perusahaan, metrik pencapaian (50.000+ hektar, 99.8% akurasi RTK), visi, misi, dan pilar teknologi Mechatron.
+  - **Hubungi Kami (`/contact`)**: Formulir konsultasi interaktif terhubung langsung ke WhatsApp API, saluran komunikasi resmi, serta alamat kantor & workshop terverifikasi.
+- **Data Layer Modular (`App\Data`)**: Konten katalog produk (`DroneProducts.php`), layanan (`ServicesData.php`), dan artikel (`BlogArticles.php`) tersimpan dalam kelas data PHP terstruktur, sehingga template dapat langsung digunakan tanpa setup database awal dan sangat mudah dimigrasikan ke Eloquent ORM.
+- **SEO & Performa Siap Pakai**: Struktur semantic HTML5, Open Graph / Meta tags dinamis di setiap view, optimasi aset via Vite, dan panduan lengkap rasio aset visual ([IMAGE_GUIDE.md](file:///d:/deka-app/mechatron-lrvl/IMAGE_GUIDE.md)).
 
 ---
 
@@ -101,27 +107,34 @@ mechatron-lrvl/
 ├── app/
 │   ├── Data/                     # Data statis & repository mock (Produk, Layanan, Blog)
 │   │   ├── BlogArticles.php      # Data artikel, kategori, dan fungsi pencarian/slug
-│   │   ├── DroneProducts.php     # Katalog data produk, spesifikasi, dan galeri
+│   │   ├── DroneProducts.php     # Katalog data produk, galeri multi-foto, & 4 kategori
 │   │   └── ServicesData.php      # Daftar solusi bisnis dan layanan armada
 │   └── Http/Controllers/
-│       ├── HomeController.php    # Logika controller halaman utama
-│       ├── ServiceController.php # Controller katalog & detail layanan
-│       └── BlogController.php    # Controller katalog & detail artikel
+│       ├── HomeController.php    # Controller halaman muka (Beranda)
+│       ├── ProductController.php # Controller katalog produk & detail galeri multi-foto
+│       ├── ServiceController.php # Controller direktori & detail layanan
+│       ├── BlogController.php    # Controller katalog artikel & pembaca blog
+│       ├── AboutController.php   # Controller profil perusahaan Tentang Kami
+│       └── ContactController.php # Controller formulir & kontak Hubungi Kami
 ├── resources/
 │   ├── css/
 │   │   └── app.css               # Desain token, tema Tailwind v4, & custom typography
 │   ├── js/
-│   │   └── app.js                # Inisialisasi Alpine.js & global store (modal)
+│   │   └── app.js                # Inisialisasi Alpine.js & global store
 │   └── views/
 │       ├── blog/                 # Halaman index & detail artikel blog
-│       ├── components/           # Blade components (Navbar, Hero, Grid, Footer, Modal)
+│       ├── components/           # Blade components (Navbar, Hero, Product Hero, Grid, Footer, Modal)
 │       ├── layouts/              # Layout master (app.blade.php)
-│       ├── services/             # Halaman index & detail layanan
-│       └── home.blade.php        # Halaman muka (Homepage)
+│       ├── products/             # Halaman index katalog & detail produk multi-galeri
+│       ├── services/             # Halaman index bento grid & detail layanan
+│       ├── about.blade.php       # Halaman Tentang Kami (Company Profile & Stats)
+│       ├── contact.blade.php     # Halaman Hubungi Kami (Formulir & Kantor)
+│       └── home.blade.php        # Halaman Beranda (Homepage)
 ├── public/
-│   └── images/                   # Asset gambar produk, logo, dan banner
+│   └── images/                   # 27 Aset gambar produk, logo, dan banner lokal
 ├── routes/
 │   └── web.php                   # Definisi route aplikasi web
+├── IMAGE_GUIDE.md                # Panduan rasio, resolusi, inventaris, & optimasi gambar
 ├── vite.config.js                # Konfigurasi bundler Vite & Tailwind v4
 └── composer.json / package.json  # Manifest dependensi PHP dan Javascript
 ```
@@ -155,9 +168,9 @@ Template ini menggunakan Tailwind CSS v4 dengan CSS Variables di `resources/css/
 ### 3. Mengubah atau Menambah Konten (Katalog / Layanan / Blog)
 
 #### Menggunakan Data Statis (`app/Data/`):
-- **Produk**: Buka `app/Data/DroneProducts.php` untuk mengubah judul, spesifikasi, harga, badge (`Baru`, `Unggulan`), serta path gambar.
-- **Layanan**: Buka `app/Data/ServicesData.php` untuk mengatur kelompok layanan, poin kapabilitas, dan detail per layanan.
-- **Artikel Blog**: Buka `app/Data/BlogArticles.php` untuk mengubah artikel, kategori, estimasi durasi baca, dan konten markdown/HTML.
+- **Katalog Produk**: Buka [DroneProducts.php](file:///d:/deka-app/mechatron-lrvl/app/Data/DroneProducts.php) untuk mengubah nama produk, spesifikasi, badge kapasitas, kategori (`agrikultur`, `survey-pemetaan`, `pengiriman`, `suku-cadang`), serta galeri multi-foto e-commerce (`gallery`).
+- **Layanan & Solusi**: Buka [ServicesData.php](file:///d:/deka-app/mechatron-lrvl/app/Data/ServicesData.php) untuk mengatur kelompok layanan, poin kapabilitas teknis, dan armada pendukung.
+- **Artikel Blog**: Buka [BlogArticles.php](file:///d:/deka-app/mechatron-lrvl/app/Data/BlogArticles.php) untuk mengubah artikel berita, kategori, estimasi durasi baca, dan konten blok editorial.
 
 #### Migrasi ke Database (Eloquent Model):
 Jika proyek membutuhkan integrasi database dinamis:
@@ -166,8 +179,14 @@ Jika proyek membutuhkan integrasi database dinamis:
 3. Ganti panggilan `DroneProducts::all()` pada controller dengan query Eloquent `Product::all()`.
 
 ### 4. Mengubah Navigasi & Footer
-- **Navbar Links**: Edit `resources/views/components/navbar.blade.php` untuk mengubah menu utama, link dropdown, atau menambahkan tautan baru.
-- **Footer Links & Kontak**: Edit `resources/views/components/footer.blade.php` untuk mengubah nomor kontak, email, alamat kantor, akun media sosial, dan tautan kebijakan privasi.
+- **Navbar (6 Menu Utama)**: Edit [navbar.blade.php](file:///d:/deka-app/mechatron-lrvl/resources/views/components/navbar.blade.php) untuk menyesuaikan 6 tautan utama (`Home`, `Product`, `Service`, `Blog`, `About Us`, `Contact Us`). Navbar dilengkapi deteksi tema pintar (*transparent* di atas hero banner gelap, dan *frosted white* pada halaman artikel & detail produk).
+- **Footer 3-Kolom & Kontak Kantor**: Edit [footer.blade.php](file:///d:/deka-app/mechatron-lrvl/resources/views/components/footer.blade.php) untuk mengubah navigasi cepat, nomor WhatsApp, email resmi, serta alamat kantor pusat & workshop:
+  ```text
+  Ruko Magna Commercial Area, Blok MC-08
+  Komplek Summarecon Bandung
+  Kecamatan Gedebage, Kota Bandung
+  Jawa Barat, 40294
+  ```
 
 ---
 
@@ -211,38 +230,44 @@ Agar tampilan visual tetap simetris, tajam, dan tidak terpotong secara tidak waj
 
 ### 2. Penjelasan Detail & Aturan Komposisi (*Framing Guide*)
 
-#### A. Hero Banner Slider (`hero-banner.blade.php`)
+#### A. Hero Banner Beranda (`hero-banner.blade.php`)
 - **Rasio:** `16:9` (Landscape Layar Lebar) atau `21:9` (Cinematic Ultrawide).
 - **Karakteristik Tampilan:** Mengisi seluruh tinggi layar (`100vh` dengan batasan `min-height: 640px` s.d. `max-height: 1080px`) menggunakan `object-cover`.
-- **Komposisi & Safe Zone:** Pastikan objek utama (subjek drone/alat) berada di **area tengah 60-70% (*dead-center*)**. Pada layar smartphone, sisi kiri dan kanan gambar akan otomatis terpangkas (*cropped*) untuk mempertahankan tinggi vertikal penuh.
+- **Tipografi & Komposisi:** Menggunakan tipografi ramping (`text-[20px]` s.d. `text-[42px]` untuk title, `text-[12px]` s.d. `text-[15px]` untuk tagline) yang diposisikan di sepertiga atas layar. Dilengkapi tombol aksi outline putih tebal transparan ala DJI yang berubah biru saat di-hover. Subjek drone utama wajib berada di **area tengah 60-70% (*dead-center safe zone*)**.
 
-#### B. Showcase Produk 2-Kolom (`featured-hero-grid.blade.php`)
+#### B. Hero Banner Kategori Produk (`product-hero-banner.blade.php`)
+- **Rasio:** `16:9` atau `21:9`.
+- **Karakteristik Tampilan:** Mengisi layar dengan 4 slide berbasis kategori (`AGRIKULTUR SERIES`, `SURVEY & PEMETAAN SERIES`, `PENGIRIMAN SERIES`, `SUKU CADANG`) dengan kata *SERIES* berbobot tipis (*font-light*).
+- **Interaksi Khusus:** Tidak menggunakan tombol aksi, melainkan dilengkapi indikator animasi mouse scroll yang dapat diklik untuk meluncur mulus (*smooth scroll*) langsung ke `#catalog`.
+
+#### C. Showcase Produk 2-Kolom Beranda (`featured-hero-grid.blade.php`)
 - **Rasio:** `1:1` (Bujur Sangkar / Kotak) atau `4:5` (Potret Studio).
-- **Karakteristik Tampilan:** Kartu produk minimalis dengan latar belakang terang/putih dan efek hover interaktif.
-- **Komposisi & Safe Zone:** Gunakan foto produk berlatar belakang bersih (studio putih/abu-abu muda atau transparan PNG). Sisakan ruang kosong (*padding*) di sekitar produk sebesar 15–20% agar saat kartu membesar saat di-hover (*scale effect*), produk tidak menabrak batas kartu.
+- **Karakteristik Tampilan:** Kartu produk minimalis berlatar terang dengan margin sisi luar rapat (`px-1 sm:px-1.5 md:px-2`) sehingga menyatu presisi dengan lebar halaman.
+- **Komposisi:** Gunakan foto produk berlatar belakang bersih (studio putih/abu-abu netral). Sisakan ruang kosong (*padding*) di sekitar produk sebesar 15–20% agar saat kartu membesar saat di-hover (*scale effect*), ujung baling-baling tidak menabrak batas kartu.
 
-#### C. Layanan Solusi Bisnis & 3D Swiper Carousel (`services-section.blade.php`)
-- **Rasio:** 
-  - Bagian 1 (3 Kolom): `9:16` atau `2:3` (Potret Vertikal Panjang).
-  - Bagian 2 (Carousel Melayang): `4:5` atau `3:4` (Potret Berbingkai Bulat `rounded-[34px]`).
-- **Komposisi & Safe Zone:** Kartu ini menggunakan lapisan gradasi gelap (*dark vignette overlay*) untuk menempatkan teks judul dan deskripsi putih di atasnya. Pastikan area bagian atas dan bawah gambar tidak terlalu padat elemen penting yang dapat mengganggu keterbacaan teks.
+#### D. Detail Produk & Galeri Multi-Foto E-Commerce (`products/show.blade.php`)
+- **Rasio Panggung Utama:** `4:3` atau `1:1` (`1200 × 900 px` s.d. `1600 × 1200 px`).
+- **Karakteristik Tampilan:** Mengadopsi sistem galeri toko online modern kelas dunia:
+  - **Main Stage Viewer**: Menampilkan foto utama dengan panah slide dan badge kapasitas/model.
+  - **Thumbnail Strip Selector**: Deretan foto thumbnail di bawahnya dengan cincin biru aktif `ring-2 ring-[#0070D5]`.
+  - **Slide Counter Indicator**: Indikator nomor foto aktif (contoh: `1 / 5`).
+  - **Fullscreen Lightbox Zoom**: Modal zoom resolusi tinggi dengan dismiss tombol ESC untuk inspeksi detail tekstur & komponen drone.
 
-#### D. Katalog Layanan Bento Grid (`resources/views/services/index.blade.php`)
+#### E. Katalog Produk Grid (`products/index.blade.php`)
+- **Rasio Kartu:** `4:3` atau `1:1` (`1200 × 900 px`).
+- **Karakteristik Tampilan:** Grid produk responsif dengan tab filter kategori zero-reload (*Agrikultur, Survey & Pemetaan, Pengiriman, Suku Cadang*), spesifikasi ringkas, serta tautan langsung ke detail produk dan pemesanan WhatsApp.
+
+#### F. Layanan Solusi Bisnis & Bento Grid (`views/services/`)
 - **Rasio Bento:**
   - **Kartu Lebar Kiri (7 Kolom)**: `4:5` atau `1:1` (`1200 × 1500 px`). Ideal untuk foto vertikal sinematik resolusi tinggi.
   - **Kartu Tumpuk Kanan (5 Kolom)**: `16:9` atau `2:1` (`1200 × 675 px`). Ideal untuk lanskap pemetaan atau foto aksi horizontal.
   - **Kartu Baris Bawah (3 Kolom)**: `3:4` atau `4:5` (`1000 × 1250 px`).
 
-#### E. Berita & Artikel Blog (`resources/views/blog/`)
+#### G. Berita & Artikel Blog (`views/blog/`)
 - **Rasio Thumbnail:** `16:9` (Lanskap Standar Widescreen, `1280 × 720 px`).
 - **Karakteristik Tampilan:** Menggunakan `aspect-ratio` lanskap untuk memudahkan perataan kisi (*grid alignment*) kartu berita 3-kolom.
-- **Hero Detail Artikel:** Gambar pembuka di halaman baca artikel berdimensi maksimal `1000px` lebar dengan tinggi `540px` (rasio `16:9`), memberikan pengalaman membaca yang fokus dan editorial.
+- **Hero Detail Artikel:** Gambar pembuka di halaman baca artikel berdimensi maksimal `1000px` lebar dengan tinggi `540px` (rasio `16:9`).
 - **Avatar Penulis:** Wajib berbentuk rasio `1:1` bulat (*circular crop*).
-
-#### F. Modal Spesifikasi Produk (`product-modal.blade.php`)
-- **Rasio:** `1:1` (Kotak) atau `4:3`.
-- **Karakteristik Tampilan:** Gambar drone ditampilkan di kolom kiri modal dengan sudut membulat `rounded-[20px]`.
-- **Komposisi:** Gunakan gambar produk yang menampilkan unit secara utuh dari sudut diagonal 45° (*three-quarter angle*) dengan pencahayaan studio yang jelas.
 
 ---
 
