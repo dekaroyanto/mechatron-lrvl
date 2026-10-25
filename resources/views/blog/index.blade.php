@@ -34,32 +34,6 @@
 
     <!-- Blog Listing Content -->
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Search Bar Only -->
-        <div class="mb-10 sm:mb-14 max-w-xl mx-auto pb-6 border-b border-slate-200">
-            <div class="relative w-full">
-                <input
-                    type="text"
-                    placeholder="Cari berita drone & agrikultur..."
-                    x-model="searchQuery"
-                    class="w-full pl-11 pr-10 py-3 rounded-full bg-white border border-slate-200 text-[14px] sm:text-[15px] focus:outline-none focus:ring-2 focus:ring-[#0070D5] focus:border-transparent transition-all placeholder:text-slate-400 shadow-sm"
-                />
-                <svg class="w-5 h-5 text-slate-400 absolute left-4 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <button
-                    x-show="searchQuery"
-                    @click="searchQuery = ''"
-                    class="absolute right-3.5 top-3 text-slate-400 hover:text-slate-600 p-1 rounded-full transition-colors"
-                    aria-label="Hapus pencarian"
-                    style="display: none;"
-                >
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-
         <!-- Featured Article Hero (Shown only when no search query) -->
         <template x-if="searchQuery === '' && articles.length > 0">
             <div class="mb-12 sm:mb-16">
