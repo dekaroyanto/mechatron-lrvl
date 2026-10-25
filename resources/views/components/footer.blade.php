@@ -15,12 +15,6 @@
                 <p class="text-[13px] sm:text-[14px] text-neutral-400 leading-relaxed max-w-sm">
                     Pelopor solusi teknologi drone pertanian cerdas, pemetaan LiDAR presisi tinggi, dan otomasi aerial tangguh untuk modernisasi agribisnis Indonesia.
                 </p>
-                <div class="pt-1 flex items-center gap-2">
-                    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                        Layanan Siap di Seluruh Indonesia
-                    </span>
-                </div>
             </div>
 
             <!-- Col 2: Quick Navigation (3 cols on md) -->
@@ -70,7 +64,12 @@
                 <div class="space-y-2.5 text-[13px] text-neutral-400">
                     <div class="flex items-start gap-2.5">
                         <svg class="w-4 h-4 text-[#0070D5] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                        <span>Jakarta, Indonesia</span>
+                        <span class="leading-relaxed">
+                            Ruko Magna Commercial Area, Blok MC-08<br>
+                            Komplek Summarecon Bandung<br>
+                            Kecamatan Gedebage, Kota Bandung<br>
+                            Jawa Barat, 40294
+                        </span>
                     </div>
                     <div class="flex items-center gap-2.5">
                         <svg class="w-4 h-4 text-[#0070D5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>

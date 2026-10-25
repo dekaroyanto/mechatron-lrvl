@@ -88,7 +88,12 @@
                         Pusat Servis & Kalibrasi
                     </span>
                     <h3 class="text-[20px] font-bold text-gray-900 mb-2">Kantor & Workshop</h3>
-                    <p class="text-[14px] text-gray-500 mb-4">Jakarta, Indonesia.<br>Melayani pengiriman unit & suku cadang ke seluruh nusantara.</p>
+                    <p class="text-[14px] text-gray-500 mb-4 leading-relaxed">
+                        Ruko Magna Commercial Area, Blok MC-08<br>
+                        Komplek Summarecon Bandung<br>
+                        Kecamatan Gedebage, Kota Bandung<br>
+                        Jawa Barat, 40294
+                    </p>
                 </div>
                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-gray-700 font-semibold text-[14px]">
                     <span>Senin – Sabtu (08.00 – 18.00 WIB)</span>

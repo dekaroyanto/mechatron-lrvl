@@ -2,8 +2,6 @@
 
 @section('title', 'Katalog Produk Drone & Ekosistem Teknologi | Mechatron')
 @section('meta_description', 'Eksplorasi lini produk drone pertanian Mechatron Agri, drone survey pemetaan LiDAR, armada drone kargo pengiriman logistik, dan suku cadang resmi.')
-@section('navbar_theme', 'light')
-
 @php
     $categories = \App\Data\DroneProducts::categories();
     $allProducts = \App\Data\DroneProducts::all();
@@ -14,7 +12,12 @@
 @endphp
 
 @section('content')
+<!-- 1. Dedicated Category Hero Banner -->
+<x-product-hero-banner />
+
+<!-- 2. Interactive Product Catalogue & Category Filters -->
 <div
+    id="catalog"
     x-data="{
         activeCategory: '{{ $initialCategory }}',
         categories: {{ Js::from($categories) }},
@@ -29,7 +32,7 @@
             window.history.replaceState({}, '', url);
         }
     }"
-    class="bg-[#F8FAFC] min-h-screen pt-24 sm:pt-28 pb-20"
+    class="bg-[#F8FAFC] min-h-screen py-14 sm:py-20 scroll-mt-16"
 >
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- 1. Breadcrumbs -->
@@ -47,10 +50,6 @@
 
         <!-- 2. Header Section -->
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#0070D5] text-[12px] font-bold uppercase tracking-wider mb-4 shadow-2xs">
-                <span class="w-2 h-2 rounded-full bg-[#0070D5] animate-pulse"></span>
-                <span>Katalog Resmi Mechatron</span>
-            </div>
             <h1 class="text-[32px] sm:text-[42px] md:text-[50px] font-extrabold text-slate-950 tracking-tight leading-[1.12] mb-4">
                 Ekosistem Drone & Teknologi Otonom
             </h1>
@@ -286,9 +285,6 @@
         <div class="mt-16 sm:mt-20 bg-slate-900 rounded-3xl p-8 sm:p-12 md:p-16 text-center text-white relative overflow-hidden shadow-xl border border-slate-800">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-indigo-600/20 pointer-events-none"></div>
             <div class="relative z-10 max-w-2xl mx-auto">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[12px] font-bold tracking-wider uppercase mb-4 border border-blue-500/20">
-                    Layanan Demo & Pengadaan Korporasi
-                </span>
                 <h2 class="text-[28px] sm:text-[36px] md:text-[42px] font-extrabold tracking-tight leading-tight mb-4">
                     Butuh Solusi Drone Khusus untuk Bisnis Anda?
                 </h2>

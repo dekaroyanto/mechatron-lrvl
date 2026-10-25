@@ -125,10 +125,10 @@
                 class="w-full max-w-3xl mx-auto flex flex-col items-center justify-start text-center pointer-events-auto"
                 style="display: none;"
             >
-                <p class="text-[25px] xs:text-[25px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-white tracking-[-0.02em] leading-[1.08] mb-2 sm:mb-2.5 drop-shadow-2xl text-center">
+                <h1 class="text-[20px] xs:text-[22px] sm:text-[30px] md:text-[36px] lg:text-[42px] font-extrabold text-white tracking-[-0.015em] leading-[1.12] mb-2 sm:mb-2.5 drop-shadow-2xl text-center">
                     {{ $slide['title'] }}
-                </p>
-                <p class="text-[14px] sm:text-[17px] md:text-[19px] font-medium text-[#EDEDED] tracking-normal mb-5 sm:mb-6 drop-shadow-md max-w-xl leading-relaxed text-center">
+                </h1>
+                <p class="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] font-medium text-[#EDEDED] tracking-normal mb-5 sm:mb-6 drop-shadow-md max-w-lg leading-relaxed text-center">
                     {{ $slide['tagline'] }}
                 </p>
 
@@ -136,7 +136,7 @@
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                     <!-- 1. Learn More Button -->
                     <a
-                        href="{{ $slide['id'] === 'agri-series' ? route('home') . '#products' : route('products.show', $slide['id']) }}"
+                        href="{{ $slide['id'] === 'agri-series' ? (request()->routeIs('products.*') ? '#catalog' : route('home') . '#products') : route('products.show', $slide['id']) }}"
                         class="group inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-transparent hover:bg-[#0070D5] text-white border-2 border-white hover:border-[#0070D5] text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"
                     >
                         <span>Learn More</span>

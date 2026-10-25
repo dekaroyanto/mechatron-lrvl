@@ -185,19 +185,27 @@ Agar tampilan visual tetap simetris, tajam, dan tidak terpotong secara tidak waj
 | Komponen / Bagian | Rasio Aspek (*Ratio*) | Resolusi Optimal (*WxH*) | Format Disarankan | File Kode Terkait |
 | :--- | :---: | :---: | :---: | :--- |
 | **Hero Banner Slider** (Beranda) | **16:9** / **21:9** | `1920 × 1080 px` / `2560 × 1440 px` | WebP / JPG | `components/hero-banner.blade.php` |
+| **Hero Banner Kategori Produk** | **16:9** / **21:9** | `1920 × 1080 px` / `2560 × 1440 px` | WebP / JPG | `components/product-hero-banner.blade.php` |
 | **Featured Product Grid** (2-Kolom) | **1:1** / **4:5** | `1200 × 1200 px` / `1000 × 1250 px` | WebP / PNG / JPG | `components/featured-hero-grid.blade.php` |
+| **Katalog Produk Grid** (Semua Produk) | **4:3** / **1:1** | `1200 × 900 px` / `1000 × 1000 px` | WebP / PNG / JPG | `views/products/index.blade.php` |
+| **Detail Produk - Main Stage Viewer** | **4:3** / **1:1** | `1200 × 900 px` / `1600 × 1200 px` | WebP / PNG / JPG | `views/products/show.blade.php` |
+| **Detail Produk - Thumbnail Strip** | **1:1** (*Square*) | `160 × 160 px` / `200 × 200 px` | WebP / PNG / JPG | `views/products/show.blade.php` |
+| **Detail Produk - Lightbox Zoom** | **16:9** / **4:3** / **1:1** | `2000 × 1500 px` / `2560 × 1440 px` | WebP / PNG / JPG | `views/products/show.blade.php` |
 | **Layanan Solusi Bisnis** (3-Kolom Vertikal) | **9:16** / **2:3** | `1080 × 1920 px` / `1000 × 1500 px` | WebP / JPG | `components/services-section.blade.php` |
 | **Layanan 3D Carousel** (Kartu Melayang) | **4:5** / **3:4** | `1000 × 1250 px` / `900 × 1200 px` | WebP / JPG | `components/services-section.blade.php` |
 | **Bento Grid Layanan - Kartu Utama** | **4:5** / **1:1** | `1200 × 1500 px` / `1200 × 1200 px` | WebP / JPG | `views/services/index.blade.php` |
 | **Bento Grid Layanan - Kartu Tumpuk** | **16:9** / **2:1** | `1200 × 675 px` / `1400 × 700 px` | WebP / JPG | `views/services/index.blade.php` |
 | **Bento Grid Layanan - Kartu Armada** | **3:4** / **4:5** | `1000 × 1250 px` | WebP / JPG | `views/services/index.blade.php` |
 | **Hero Header Layanan & Blog Detail** | **16:9** / **21:9** | `1920 × 1080 px` / `2560 × 1440 px` | WebP / JPG | `services/show.blade.php`, `blog/show.blade.php` |
+| **Hero Header About Us & Contact Us** | **16:9** | `1920 × 1080 px` | WebP / JPG | `views/about.blade.php`, `views/contact.blade.php` |
 | **Thumbnail Artikel Blog** (Grid 3-Kolom) | **16:9** / **3:2** | `1280 × 720 px` / `1200 × 800 px` | WebP / JPG | `components/latest-articles-section.blade.php` |
 | **Hero Berita Utama** (Halaman Blog) | **16:9** / **4:3** | `1600 × 900 px` / `1600 × 1200 px` | WebP / JPG | `views/blog/index.blade.php` |
-| **Thumbnail Modal Produk** (*Product Modal*) | **1:1** / **4:3** | `800 × 800 px` / `1000 × 1000 px` | WebP / PNG | `components/product-modal.blade.php` |
 | **Avatar Penulis Artikel** (*Author Avatar*) | **1:1** (*Square*) | `200 × 200 px` / `400 × 400 px` | WebP / PNG / JPG | `app/Data/BlogArticles.php` |
 | **Logo Brand** (Navbar & Footer) | **~3:1** s.d. **4:1** | `Tinggi 80 - 120 px` (Lebar proporsional) | SVG / PNG Transparan | `components/navbar.blade.php` |
 | **Favicon / App Icon** | **1:1** (*Square*) | `32 × 32 px`, `192 × 192 px`, `512 × 512 px` | PNG / ICO / SVG | `public/favicon.ico` |
+
+> [!TIP]
+> **Panduan Inventaris Lengkap**: Untuk melihat daftar seluruh 27 file aset gambar di `public/images/`, aturan safe zone, serta panduan menambah gambar baru, silakan baca dokumen khusus: **[IMAGE_GUIDE.md](file:///d:/deka-app/mechatron-lrvl/IMAGE_GUIDE.md)**.
 
 ---
 
