@@ -281,7 +281,7 @@
         </div>
 
         <!-- 6. Bottom Enterprise CTA -->
-        <div class="mt-16 sm:mt-20 bg-slate-900 rounded-3xl p-8 sm:p-12 md:p-16 text-center text-white relative overflow-hidden shadow-xl border border-slate-800">
+        <div class="mt-16 mb-10 sm:mt-20 bg-slate-900 rounded-3xl p-8 sm:p-12 md:p-16 text-center text-white relative overflow-hidden shadow-xl border border-slate-800">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-indigo-600/20 pointer-events-none"></div>
             <div class="relative z-10 max-w-2xl mx-auto">
                 <h2 class="text-[28px] sm:text-[36px] md:text-[42px] font-extrabold tracking-tight leading-tight mb-4">

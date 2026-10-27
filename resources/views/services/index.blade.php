@@ -139,7 +139,7 @@
 </div>
 
     <!-- Bottom Banner Penutup Khas DJI -->
-    <section class="py-20 sm:py-24 bg-[#141416] text-white text-center">
+    <section class="py-10 sm:py-24 bg-[#141416] text-white text-center mt-10">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-[28px] sm:text-[40px] font-bold tracking-tight mb-4">
                 Mulai Proyek Drone Anda Bersama Mechatron
