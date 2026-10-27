@@ -2,6 +2,8 @@
 
 @section('title', 'Katalog Produk Drone & Ekosistem Teknologi | Mechatron')
 @section('meta_description', 'Eksplorasi lini produk drone pertanian Mechatron Agri, drone survey pemetaan LiDAR, armada drone kargo pengiriman logistik, dan suku cadang resmi.')
+@section('navbar_theme', 'light')
+
 @php
     $categories = \App\Data\DroneProducts::categories();
     $allProducts = \App\Data\DroneProducts::all();
@@ -12,10 +14,7 @@
 @endphp
 
 @section('content')
-<!-- 1. Dedicated Category Hero Banner -->
-<x-product-hero-banner />
-
-<!-- 2. Interactive Product Catalogue & Category Filters -->
+<!-- Interactive Product Catalogue & Category Filters -->
 <div
     id="catalog"
     x-data="{
@@ -32,7 +31,7 @@
             window.history.replaceState({}, '', url);
         }
     }"
-    class="bg-[#F8FAFC] min-h-screen py-14 sm:py-20 scroll-mt-16"
+    class="bg-[#F8FAFC] min-h-screen pt-24 sm:pt-28 pb-16 sm:pb-24 scroll-mt-16"
 >
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- 1. Breadcrumbs -->
@@ -282,7 +281,7 @@
         </div>
 
         <!-- 6. Bottom Enterprise CTA -->
-        <div class="mt-16 sm:mt-20 bg-slate-900 rounded-3xl p-8 sm:p-12 md:p-16 text-center text-white relative overflow-hidden shadow-xl border border-slate-800">
+        <div class="mt-16 mb-10 sm:mt-20 bg-slate-900 rounded-3xl p-8 sm:p-12 md:p-16 text-center text-white relative overflow-hidden shadow-xl border border-slate-800">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-indigo-600/20 pointer-events-none"></div>
             <div class="relative z-10 max-w-2xl mx-auto">
                 <h2 class="text-[28px] sm:text-[36px] md:text-[42px] font-extrabold tracking-tight leading-tight mb-4">
