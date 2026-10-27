@@ -2,78 +2,30 @@
 
 @section('title', 'Mechatron Services - Solusi Drone Profesional')
 @section('meta_description', 'Jelajahi seluruh layanan drone profesional Mechatron: Fotografi sinematik, Pemetaan LiDAR, Agrikultur presisi, Sewa Drone, Pelatihan Pilot Berlisensi, dan Perawatan Drone.')
+@section('navbar_theme', 'light')
 
 @section('content')
-    <!-- Hero Section (Full Viewport Screen, Gambar 1 Desktop & Gambar 2 Mobile) -->
-    <section class="relative w-full h-screen min-h-[100dvh] flex items-center justify-center overflow-hidden bg-neutral-950">
-        <!-- Desktop Background -->
-        <div class="hidden md:block absolute inset-0 z-0">
-            <img
-                src="{{ asset('images/agrikultur-drone-sunset.jpg') }}"
-                alt="Mechatron Aerial Services"
-                class="w-full h-full object-cover object-center"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/65"></div>
-        </div>
+<div class="bg-[#F8FAFC] min-h-screen pt-24 sm:pt-28 pb-20 sm:pb-28">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 1. Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[12px] sm:text-[13px] text-slate-500 font-medium mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap scrollbar-none">
+            <a href="{{ route('home') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">Home</a>
+            <span>/</span>
+            <span class="text-slate-900 font-semibold">Services</span>
+        </nav>
 
-        <!-- Mobile Background -->
-        <div class="block md:hidden absolute inset-0 z-0">
-            <img
-                src="{{ asset('images/agrikultur-drone-spraying.jpg') }}"
-                alt="Mechatron Aerial Services"
-                class="w-full h-full object-cover object-center"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/65"></div>
-        </div>
-
-        <!-- Teks di Langit Tengah -->
-        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center pt-16 sm:pt-20">
-            <p class="text-[13px] sm:text-[16px] md:text-[18px] font-normal text-white/90 tracking-wide mb-2 sm:mb-3">
-                Solusi Drone Profesional & Rekayasa Presisi
-            </p>
-
-            <h1 class="text-[38px] sm:text-[58px] md:text-[72px] lg:text-[80px] font-extrabold text-white tracking-tight leading-none uppercase mb-2 sm:mb-3">
-                MECHATRON SERVICES
+        <!-- 2. Header Section -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <h1 class="text-[32px] sm:text-[42px] md:text-[50px] font-extrabold text-slate-950 tracking-tight leading-[1.12] mb-4">
+                Layanan Drone Profesional
             </h1>
-
-            <p class="text-[17px] sm:text-[22px] md:text-[26px] font-medium text-white/95 tracking-tight mb-8 sm:mb-10">
-                Wonders in Every Flight
-            </p>
-
-            <!-- Dual Pill Buttons -->
-            <div class="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
-                <a
-                    href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya tertarik untuk konsultasi mengenai Layanan Drone Mechatron.') }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="bg-white hover:bg-gray-100 text-[#111111] font-medium text-[13px] sm:text-[15px] px-7 sm:px-9 py-2.5 sm:py-3 rounded-full transition-all shadow-md text-decoration-none"
-                >
-                    Konsultasi Sekarang
-                </a>
-
-                <a
-                    href="#katalog-bento"
-                    class="bg-white/25 hover:bg-white/35 backdrop-blur-md text-white font-medium text-[13px] sm:text-[15px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition-all inline-flex items-center gap-2 text-decoration-none"
-                >
-                    <span>Jelajahi Layanan</span>
-                    <span class="text-[10px]">▶</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Editorial Narrative Text Block -->
-    <section class="py-16 sm:py-20 md:py-24 bg-white">
-        <div class="max-w-[860px] mx-auto px-6 text-center">
-            <p class="text-[15px] sm:text-[17px] md:text-[18px] text-[#222222] font-normal leading-[1.7] tracking-[-0.01em]">
-                Hadirkan keunggulan operasional dan nilai tambah bisnis Anda dengan rangkaian solusi drone enterprise terintegrasi dari Mechatron. Dari dokumentasi visual sinematik beresolusi 50MP dan 4K HDR, pemetaan LiDAR dengan akurasi sentimeter, drone pertanian presisi berkapasitas besar, hingga armada rental siap pakai, pelatihan pilot resmi FASI, dan perawatan terakreditasi pabrikan. Kami menghadirkan teknologi mutakhir dengan presisi terbaik untuk setiap kebutuhan kerja Anda.
+            <p class="text-[15px] sm:text-[17px] md:text-[18px] text-slate-600 font-normal leading-relaxed">
+                Hadirkan keunggulan operasional dan nilai tambah bisnis Anda dengan rangkaian solusi drone enterprise terintegrasi dari Mechatron. Dari dokumentasi visual sinematik beresolusi 50MP dan 4K HDR, pemetaan LiDAR dengan akurasi sentimeter, hingga drone pertanian presisi berkapasitas besar.
             </p>
         </div>
-    </section>
 
-    <!-- Asymmetric Bento Grid -->
-    <section id="katalog-bento" class="pb-24 sm:pb-32 bg-white">
-        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <!-- 3. Asymmetric Bento Grid -->
+        <div id="katalog-bento" class="space-y-16">
             <!-- GRUP 1: TEKNOLOGI BARU UNTUK BISNIS ANDA -->
             <div>
                 <div class="mb-8">
@@ -182,9 +134,9 @@
                         </a>
                     </div>
                 </div>
-            </div>
         </div>
-    </section>
+    </div>
+</div>
 
     <!-- Bottom Banner Penutup Khas DJI -->
     <section class="py-20 sm:py-24 bg-[#141416] text-white text-center">

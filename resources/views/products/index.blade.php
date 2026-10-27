@@ -2,6 +2,8 @@
 
 @section('title', 'Katalog Produk Drone & Ekosistem Teknologi | Mechatron')
 @section('meta_description', 'Eksplorasi lini produk drone pertanian Mechatron Agri, drone survey pemetaan LiDAR, armada drone kargo pengiriman logistik, dan suku cadang resmi.')
+@section('navbar_theme', 'light')
+
 @php
     $categories = \App\Data\DroneProducts::categories();
     $allProducts = \App\Data\DroneProducts::all();
@@ -12,10 +14,7 @@
 @endphp
 
 @section('content')
-<!-- 1. Dedicated Category Hero Banner -->
-<x-product-hero-banner />
-
-<!-- 2. Interactive Product Catalogue & Category Filters -->
+<!-- Interactive Product Catalogue & Category Filters -->
 <div
     id="catalog"
     x-data="{
@@ -32,7 +31,7 @@
             window.history.replaceState({}, '', url);
         }
     }"
-    class="bg-[#F8FAFC] min-h-screen py-14 sm:py-20 scroll-mt-16"
+    class="bg-[#F8FAFC] min-h-screen pt-24 sm:pt-28 pb-16 sm:pb-24 scroll-mt-16"
 >
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- 1. Breadcrumbs -->

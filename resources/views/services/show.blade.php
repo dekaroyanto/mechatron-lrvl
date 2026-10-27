@@ -22,6 +22,15 @@
 
         <!-- Teks di Langit Tengah -->
         <div class="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center pt-16 sm:pt-20">
+            <!-- Breadcrumbs -->
+            <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[12px] sm:text-[13px] text-white/75 font-medium mb-4 overflow-x-auto whitespace-nowrap scrollbar-none">
+                <a href="{{ route('home') }}" class="hover:text-white transition-colors text-decoration-none text-inherit">Home</a>
+                <span class="text-white/40">/</span>
+                <a href="{{ route('services.index') }}" class="hover:text-white transition-colors text-decoration-none text-inherit">Services</a>
+                <span class="text-white/40">/</span>
+                <span class="text-white font-semibold">{{ $service['title'] }}</span>
+            </nav>
+
             <p class="text-[13px] sm:text-[16px] md:text-[18px] font-normal text-white/90 tracking-wide mb-2 sm:mb-3">
                 {{ $service['category'] }}
             </p>
