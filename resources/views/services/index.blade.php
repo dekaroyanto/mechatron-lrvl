@@ -12,9 +12,6 @@
             <h1 class="text-[32px] sm:text-[42px] md:text-[50px] font-extrabold text-slate-950 tracking-tight leading-[1.12] mb-4">
                 Layanan Drone Profesional
             </h1>
-            <p class="text-[15px] sm:text-[17px] md:text-[18px] text-slate-600 font-normal leading-relaxed">
-                Tiga pilar layanan terpadu dari Mechatron untuk memastikan kesiapan armada, keahlian penerbang bersertifikat, dan fleksibilitas operasional bisnis Anda.
-            </p>
         </div>
 
         <!-- 2. The 3 Official Services: Bento Grid (DJI Style Showcase) -->

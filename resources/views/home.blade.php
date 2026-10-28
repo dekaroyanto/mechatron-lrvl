@@ -10,9 +10,12 @@
     <!-- 2. Featured 2-Column Minimalist Studio Showcase -->
     <x-featured-hero-grid :products="$products" />
 
-    <!-- 3. Sertifikat Resmi Mechatron -->
+    <!-- 3. Layanan Drone Mechatron (DJI Style 3-Column Showcase) -->
+    <x-services-section :services="$services" />
+
+    <!-- 4. Sertifikat Resmi Mechatron -->
     <x-certificates-section />
 
-    <!-- 4. Artikel & Wawasan Terbaru (3 Artikel Terkini) -->
+    <!-- 5. Artikel & Wawasan Terbaru (3 Artikel Terkini) -->
     <x-latest-articles-section :latestArticles="$latestArticles" />
 @endsection
