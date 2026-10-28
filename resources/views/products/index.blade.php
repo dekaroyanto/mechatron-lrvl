@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Katalog Produk Drone & Ekosistem Teknologi | Mechatron')
-@section('meta_description', 'Eksplorasi lini produk drone pertanian Mechatron Agri, drone survey pemetaan LiDAR, armada drone kargo pengiriman logistik, dan suku cadang resmi.')
+@section('meta_description', 'Eksplorasi lini produk drone pertanian Mechatron Agri, drone fotografi udara resolusi tinggi, armada drone kargo pengiriman logistik, dan suku cadang resmi.')
 @section('navbar_theme', 'light')
 
 @php
@@ -53,7 +53,7 @@
                 Ekosistem Drone & Teknologi Otonom
             </h1>
             <p class="text-[15px] sm:text-[17px] md:text-[18px] text-slate-600 font-normal leading-relaxed">
-                Temukan lini produk drone presisi tinggi untuk sektor agrikultur, pemetaan topografi, transportasi kargo, hingga suku cadang dan aksesori orisinal.
+                Temukan lini produk drone presisi tinggi untuk sektor agrikultur, fotografi sinematik, transportasi pengiriman kargo, hingga suku cadang dan aksesori orisinal.
             </p>
         </div>
 
@@ -102,24 +102,25 @@
                     </span>
                 </button>
 
-                <!-- Tab 2: Survey & Pemetaan -->
+                <!-- Tab 2: Fotografi -->
                 <button
                     type="button"
-                    @click="setCategory('survey-pemetaan')"
-                    :class="activeCategory === 'survey-pemetaan'
+                    @click="setCategory('fotografi')"
+                    :class="activeCategory === 'fotografi'
                         ? 'bg-[#0070D5] text-white shadow-sm font-semibold'
                         : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium'"
                     class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-[13px] sm:text-[14px] transition-all duration-200 whitespace-nowrap cursor-pointer flex items-center gap-2"
                 >
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <span>Survey & Pemetaan</span>
+                    <span>Fotografi</span>
                     <span
-                        :class="activeCategory === 'survey-pemetaan' ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-600'"
+                        :class="activeCategory === 'fotografi' ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-600'"
                         class="text-[11px] px-2 py-0.5 rounded-full font-bold ml-0.5"
                     >
-                        {{ count(\App\Data\DroneProducts::byCategory('survey-pemetaan')) }}
+                        {{ count(\App\Data\DroneProducts::byCategory('fotografi')) }}
                     </span>
                 </button>
 

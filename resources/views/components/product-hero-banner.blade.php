@@ -13,12 +13,12 @@
                 'image' => asset('images/heromecha1.jpg'),
             ],
             [
-                'id' => 'survey-pemetaan',
-                'categorySlug' => 'survey-pemetaan',
-                'tickerLabel' => 'SURVEY & PEMETAAN',
-                'titlePrefix' => 'SURVEY & PEMETAAN ',
+                'id' => 'fotografi',
+                'categorySlug' => 'fotografi',
+                'tickerLabel' => 'FOTOGRAFI',
+                'titlePrefix' => 'FOTOGRAFI ',
                 'titleSuffix' => 'SERIES',
-                'tagline' => 'Fotogrametri Udara RTK Sentimeter & Pemindaian Laser LiDAR 3D Topografi.',
+                'tagline' => 'Drone Kamera Resolusi Tinggi 45MP & Gimbal Sinematik untuk Visual Udara Terbaik.',
                 'image' => asset('images/matrice-400-hero.png'),
             ],
             [

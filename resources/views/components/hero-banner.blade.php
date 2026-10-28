@@ -31,17 +31,17 @@
             ],
         ],
         [
-            'id' => 'agri-series',
-            'tickerLabel' => 'MECHATRON AGRI',
-            'title' => 'MECHATRON AGRI SERIES',
-            'tagline' => 'AGRI H-30 & AGRI H-15: Inovasi Pertanian Modern',
-            'image' => asset('images/heromecha3.jpg'),
-            'productInfo' => $products['agri-h30'] ?? [
-                'id' => 'agri-h30',
-                'modelCode' => 'BMT-1525',
-                'title' => 'MECHATRON AGRI SERIES (H-30 & H-15)',
-                'tagline' => 'Solusi Drone Pertanian Presisi Menyeluruh Masa Depan Indonesia',
-                'image' => asset('images/heromecha3.jpg'),
+            'id' => 'sewa-drone',
+            'tickerLabel' => 'Sewa Drone',
+            'title' => 'SEWA DRONE',
+            'tagline' => 'Temukan Solusi Penyewaan Drone yang Tepat untuk Kebutuhan Anda',
+            'image' => asset('images/service_sewa_drone.jpg'),
+            'productInfo' => $products['sewa-drone'] ?? [
+                'id' => 'sewa-drone',
+                'modelCode' => 'sewa-drone',
+                'title' => 'Sewa Drone',
+                'tagline' => 'Temukan Solusi Penyewaan Drone yang Tepat untuk Kebutuhan Anda',
+                'image' => asset('images/service_sewa_drone.jpg'),
             ],
         ],
     ];

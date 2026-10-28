@@ -2,12 +2,12 @@
 
 @section('title', 'About Us | Mechatron - Pelopor Solusi Drone Indonesia')
 @section('meta_description', 'Mengenal Mechatron: Perusahaan pelopor inovasi teknologi drone pertanian, sistem kendali darat pintar (GCS), dan otomasi aerial presisi tinggi di Indonesia.')
+@section('navbar_theme', 'light')
 
 @section('content')
 <div class="bg-[#F8FAFC] min-h-screen">
     <!-- 1. Hero Section -->
-    <section class="relative w-full bg-neutral-950 py-24 sm:py-32 overflow-hidden text-white">
-        <!-- Background Ambient Image with Overlay -->
+    <!-- <section class="relative w-full bg-neutral-950 py-24 sm:py-32 overflow-hidden text-white">
         <div class="absolute inset-0 z-0 opacity-30">
             <img
                 src="{{ asset('images/agrikultur-drone-sunset.jpg') }}"
@@ -30,7 +30,6 @@
         </div>
     </section>
 
-    <!-- 2. Numbers / Key Stats -->
     <section class="relative -mt-10 z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 sm:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-gray-100 text-center">
             <div class="pt-4 lg:pt-0">
@@ -54,22 +53,18 @@
                 <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Kesiapan suku cadang orisinil dan teknisi ahli lapangan.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- 3. Our Story & Purpose -->
     <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-                <span class="text-[13px] font-bold text-[#0070D5] uppercase tracking-wider">Dedikasi Untuk Indonesia</span>
+                <span class="text-[13px] font-bold text-[#0070D5] uppercase tracking-wider">Tentang Kami</span>
                 <h2 class="text-[30px] sm:text-[40px] font-bold text-gray-900 tracking-tight leading-tight mt-2 mb-6">
-                    Membangun Kedaulatan Pangan Melalui Otomasi Udara Cerdas
+                   Mengenal BMT dan Inovasi Teknologi Kami
                 </h2>
                 <div class="space-y-4 text-[15px] sm:text-[16px] text-gray-600 leading-relaxed">
                     <p>
-                        Berdiri dengan tekad memajukan sektor agrikultur nasional, <strong>Mechatron</strong> hadir sebagai pionir manufaktur dan penyedia solusi drone berkapasitas muat tinggi di Indonesia. Kami memadukan riset avionik, material komposit serat karbon berkekuatan tinggi, dan perangkat lunak navigasi cerdas.
-                    </p>
-                    <p>
-                        Kami memahami tantangan geografis Indonesia — mulai dari perkebunan kelapa sawit skala masif di Sumatera dan Kalimantan, persawahan terasering berlereng di Jawa dan Bali, hingga lahan komoditas pangan di Indonesia Timur. Armada Mechatron dirancang tahan debu, air (IP67), dan terik matahari khatulistiwa.
+                        BMT didirikan pada tahun 2022 oleh Bapak Hermanu. Awalnya, bisnis ini berfokus pada konsultasi keteknikan, pelatihan manajemen, dan pengadaan suku cadang mekatronika. Kami menerima paling banyak pesanan suku cadang untuk drone dan kendaraan listrik, sehingga kami fokus mengembangkan serta memproduksi drone dan sepeda listrik dengan merek dagang Mechatron dan BMT. Seiring perkembangan waktu, pengembangan drone BMT diperluas untuk berbagai sektor seperti pertanian, perkebunan, perikanan, survei pemetaan, dan bidang lain sesuai kebutuhan pengguna.
                     </p>
                 </div>
 
@@ -98,62 +93,52 @@
             <div class="relative">
                 <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
                     <img
-                        src="{{ asset('images/featured_drone_h30.jpg') }}"
+                        src="{{ asset('images/mechatron_kantor_gedung.jpg') }}"
                         alt="Mechatron Drone In Action"
                         class="w-full h-[400px] sm:h-[500px] object-cover object-center"
                     />
                 </div>
                 <div class="absolute -bottom-6 -left-6 bg-[#0070D5] text-white p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
-                    <p class="text-[14px] font-bold">Mechatron AGRI H-30</p>
-                    <p class="text-[12px] text-blue-100 mt-1">Armada andalan muatan 30 liter dengan efisiensi semprot hingga 20 Ha per jam.</p>
+                    <p class="text-[14px] font-bold">Kantor Mechatron</p>
+                    <p class="text-[12px] text-blue-100 mt-1">Berlokasi di Ruko Magna Commercial Area, Blok MC-08
+Komplek Summarecon Bandung
+Kecamatan Gedebage, Kota Bandung
+Jawa Barat, 40294.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 4. Vision & Mission -->
-    <section class="bg-white py-20 border-y border-gray-200">
+    <section class="bg-white py-16 sm:py-24 border-y border-gray-200">
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[13px] font-bold text-[#0070D5] uppercase tracking-wider">Arah & Komitmen</span>
-                <h2 class="text-[30px] sm:text-[40px] font-bold text-gray-900 tracking-tight mt-2">Visi & Misi Kami</h2>
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+               
+                <h2 class="text-[30px] sm:text-[40px] font-bold text-gray-900 tracking-tight mt-1">Visi & Misi Kami</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-gray-100 hover:border-blue-200 transition-all hover:shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-[#0070D5] text-white flex items-center justify-center text-xl font-bold mb-6">
-                        01
-                    </div>
-                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Inovasi Robotika Mandiri</h3>
-                    <p class="text-[14px] text-gray-600 leading-relaxed">
-                        Mengembangkan ekosistem drone pertanian, sistem Ground Control Station (GCS), dan baterai cerdas yang handal, tahan banting, serta mudah dioperasikan di segala kondisi lapangan.
-                    </p>
-                </div>
-
-                <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-gray-100 hover:border-blue-200 transition-all hover:shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-[#0070D5] text-white flex items-center justify-center text-xl font-bold mb-6">
-                        02
-                    </div>
-                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Edukasi & Standardisasi</h3>
-                    <p class="text-[14px] text-gray-600 leading-relaxed">
-                        Mencetak talenta pilot drone pertanian bersertifikasi resmi melalui pelatihan intensif, pemahaman regulasi penerbangan sipil, dan tata kelola keselamatan aviasi.
-                    </p>
-                </div>
-
-                <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-gray-100 hover:border-blue-200 transition-all hover:shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-[#0070D5] text-white flex items-center justify-center text-xl font-bold mb-6">
-                        03
-                    </div>
-                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Layanan Purna Jual Terdepan</h3>
-                    <p class="text-[14px] text-gray-600 leading-relaxed">
-                        Menjamin ketersediaan suku cadang cepat, teknisi servis berpengalaman, dan pembaruan firmware berkala agar investasi operasional Anda terus menghasilkan keuntungan maksimal.
-                    </p>
+            <!-- Kartu Utama Visi & Misi BMT -->
+            <div class="max-w-4xl mx-auto bg-gradient-to-br from-[#F8FAFC] via-white to-blue-50/40 border border-blue-100 rounded-3xl p-8 sm:p-12 shadow-sm text-center relative overflow-hidden">
+                
+                <blockquote class="text-[17px] sm:text-[21px] md:text-[23px] font-semibold text-gray-900 leading-relaxed tracking-tight max-w-3xl mx-auto">
+                    “BMT berkomitmen untuk menciptakan solusi cerdas yang dapat diakses oleh berbagai kalangan, dengan tujuan memberikan kontribusi nyata terhadap modernisasi dan otomatisasi teknologi yang ramah lingkungan.”
+                </blockquote>
+                <div class="mt-6 flex items-center justify-center gap-2">
+                    <span class="w-6 h-0.5 rounded-full bg-[#0070D5]"></span>
+                    <span class="text-[12px] sm:text-[13px] font-bold text-gray-600 uppercase tracking-wider">PT. Bandung Mekatronika Teknologi</span>
+                    <span class="w-6 h-0.5 rounded-full bg-[#0070D5]"></span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. CTA Section -->
+    <!-- 5. Slide Gallery: Kantor & Pabrik Drone Mechatron -->
+    <x-facility-gallery />
+
+    <!-- 6. 3D Image Pageflip: Lookbook & Profil Interaktif Mechatron -->
+    <x-pageflip-gallery />
+
+    <!-- 7. CTA Section -->
     <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div class="bg-gradient-to-r from-neutral-900 via-neutral-950 to-neutral-900 text-white rounded-3xl p-10 sm:p-16 relative overflow-hidden shadow-2xl">
             <h2 class="text-[28px] sm:text-[40px] font-extrabold tracking-tight mb-4">
