@@ -1,161 +1,276 @@
 @extends('layouts.app')
 
-@section('title', 'Mechatron Services - Solusi Drone Profesional')
-@section('meta_description', 'Jelajahi seluruh layanan drone profesional Mechatron: Fotografi sinematik, Pemetaan LiDAR, Agrikultur presisi, Sewa Drone, Pelatihan Pilot Berlisensi, dan Perawatan Drone.')
+@section('title', 'Layanan Drone Profesional | Mechatron')
+@section('meta_description', 'Layanan drone profesional Mechatron: Pelatihan Pilot Drone berlisensi resmi, Perawatan Drone standar pabrikan, dan Sewa Drone armada terlengkap.')
 @section('navbar_theme', 'light')
 
 @section('content')
-<div class="bg-[#F8FAFC] min-h-screen pt-24 sm:pt-28 pb-20 sm:pb-28">
+<div class="bg-[#F8FAFC] min-h-screen pt-24 sm:pt-28 pb-16 sm:pb-24">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- 1. Breadcrumbs -->
-        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[12px] sm:text-[13px] text-slate-500 font-medium mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap scrollbar-none">
-            <a href="{{ route('home') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">Home</a>
-            <span>/</span>
-            <span class="text-slate-900 font-semibold">Services</span>
-        </nav>
-
-        <!-- 2. Header Section -->
+        <!-- 1. Header Section -->
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span class="inline-block text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-[#0070D5] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/60 mb-3 sm:mb-4">
+                Layanan Resmi Mechatron
+            </span>
             <h1 class="text-[32px] sm:text-[42px] md:text-[50px] font-extrabold text-slate-950 tracking-tight leading-[1.12] mb-4">
                 Layanan Drone Profesional
             </h1>
             <p class="text-[15px] sm:text-[17px] md:text-[18px] text-slate-600 font-normal leading-relaxed">
-                Hadirkan keunggulan operasional dan nilai tambah bisnis Anda dengan rangkaian solusi drone enterprise terintegrasi dari Mechatron. Dari dokumentasi visual sinematik beresolusi 50MP dan 4K HDR, pemetaan LiDAR dengan akurasi sentimeter, hingga drone pertanian presisi berkapasitas besar.
+                Tiga pilar layanan terpadu dari Mechatron untuk memastikan kesiapan armada, keahlian penerbang bersertifikat, dan fleksibilitas operasional bisnis Anda.
             </p>
         </div>
 
-        <!-- 3. Asymmetric Bento Grid -->
-        <div id="katalog-bento" class="space-y-16">
-            <!-- GRUP 1: TEKNOLOGI BARU UNTUK BISNIS ANDA -->
-            <div>
-                <div class="mb-8">
-                    <span class="text-[12px] font-semibold uppercase tracking-wider text-[#0070D5] block mb-1">
-                        Solusi Bisnis & Pemetaan
-                    </span>
-                    <h2 class="text-[26px] sm:text-[32px] font-bold text-[#111111] tracking-tight">
-                        Teknologi Baru Untuk Bisnis Anda
-                    </h2>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
-                    <!-- KARTU 1 (Kiri Besar / Tall Card): FOTOGRAFI -->
-                    <a
-                        href="{{ route('services.show', 'fotografi') }}"
-                        class="group lg:col-span-7 rounded-[24px] sm:rounded-[32px] overflow-hidden relative min-h-[480px] sm:min-h-[560px] lg:min-h-[620px] flex flex-col justify-start transition-all duration-500 hover:shadow-2xl block border border-gray-100/80 bg-neutral-900 text-decoration-none"
-                    >
-                        <div class="absolute inset-0 z-0">
-                            <img
-                                src="https://images.unsplash.com/photo-1533063319369-0de118afe00a?q=80&w=1221&auto=format&fit=crop"
-                                alt="Layanan Fotografi Drone"
-                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/25 to-black/45 group-hover:from-black/85 transition-opacity duration-500"></div>
-                        </div>
-
-                        <div class="relative z-10 p-7 sm:p-10 text-white">
-                            <span class="text-[11px] font-semibold uppercase tracking-wider text-[#60A5FA] mb-2 block">
-                                Creative Aerial & Media
-                            </span>
-                            <h3 class="text-[24px] sm:text-[30px] lg:text-[36px] font-bold text-white tracking-tight leading-tight max-w-md">
-                                Fotografi Sinematik, Sudut Pandang Presisi
+        <!-- 2. The 3 Official Services: Modern 3-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 mb-16 sm:mb-20">
+            <!-- SERVICE 1: PELATIHAN PILOT DRONE -->
+            <div class="group bg-white rounded-[26px] sm:rounded-[30px] overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <!-- Image Card Header -->
+                    <div class="relative h-[240px] sm:h-[260px] lg:h-[280px] w-full overflow-hidden bg-slate-900">
+                        <img
+                            src="{{ asset('images/service_pelatihan_pilot.jpg') }}"
+                            alt="Pelatihan Pilot Drone Mechatron"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-wider text-white bg-blue-600/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                            Akademi & Sertifikasi
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[12px] text-blue-200 font-semibold block">Layanan 01</span>
+                            <h3 class="text-[20px] sm:text-[22px] font-bold tracking-tight text-white leading-snug">
+                                Pelatihan Pilot Drone
                             </h3>
-                            <p class="text-[14px] sm:text-[15px] text-white/90 mt-2.5 max-w-sm leading-relaxed">
-                                Dokumentasi udara kualitas sinematik 50MP RAW dan video 4K HDR untuk profil proyek & event komersial.
-                            </p>
-                            <div class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-medium text-white mt-4 group-hover:text-blue-300 transition-colors">
-                                <span>Pelajari Lebih Lanjut</span>
-                                <span class="group-hover:translate-x-1.5 transition-transform">›</span>
-                            </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <!-- KOLOM KANAN: DUA KARTU BERTUMPUK (LIDAR & AGRIKULTUR) -->
-                    <div class="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
-                        <!-- KARTU 2: LIDAR -->
-                        <a
-                            href="{{ route('services.show', 'lidar') }}"
-                            class="group rounded-[24px] sm:rounded-[32px] overflow-hidden relative min-h-[260px] sm:min-h-[295px] flex flex-col justify-start transition-all duration-500 hover:shadow-2xl block border border-gray-100/80 bg-neutral-900 text-decoration-none"
-                        >
-                            <div class="absolute inset-0 z-0">
-                                <img
-                                    src="https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=1400&q=85"
-                                    alt="Pemetaan LiDAR Drone"
-                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                                />
-                                <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/25 group-hover:from-black/85 transition-opacity duration-500"></div>
-                            </div>
+                    <!-- Content Body -->
+                    <div class="p-6 sm:p-7 space-y-4">
+                        <p class="text-[14px] text-slate-600 leading-relaxed font-normal">
+                            Program pelatihan terstruktur untuk mencetak penerbang drone kompeten dan berlisensi resmi. Membekali peserta dengan pemahaman regulasi udara, simulator, hingga praktik terbang lapangan.
+                        </p>
 
-                            <div class="relative z-10 p-6 sm:p-8 text-white">
-                                <span class="text-[11px] font-semibold uppercase tracking-wider text-[#60A5FA] mb-1.5 block">
-                                    Geospatial & Surveying
-                                </span>
-                                <h3 class="text-[20px] sm:text-[24px] font-bold text-white tracking-tight leading-snug max-w-xs">
-                                    Pemetaan LiDAR & Point Cloud 3D
-                                </h3>
-                                <p class="text-[13px] text-white/90 mt-2 max-w-xs leading-relaxed">
-                                    Akurasi topografi tingkat sentimeter dengan penetrasi kanopi vegetasi lebat.
-                                </p>
-                                <div class="inline-flex items-center gap-1 text-[13px] font-medium text-white mt-3 group-hover:text-blue-300 transition-colors">
-                                    <span>Pelajari Lebih Lanjut</span>
-                                    <span class="group-hover:translate-x-1.5 transition-transform">›</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- KARTU 3: AGRIKULTUR -->
-                        <a
-                            href="{{ route('services.show', 'agrikultur') }}"
-                            class="group rounded-[24px] sm:rounded-[32px] overflow-hidden relative min-h-[260px] sm:min-h-[295px] flex flex-col justify-start transition-all duration-500 hover:shadow-2xl block border border-gray-100/80 bg-neutral-900 text-decoration-none"
-                        >
-                            <div class="absolute inset-0 z-0">
-                                <img
-                                    src="{{ asset('images/agrikultur-drone-sunset.jpg') }}"
-                                    alt="Agrikultur Drone Pintar"
-                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                                />
-                                <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/25 group-hover:from-black/85 transition-opacity duration-500"></div>
-                            </div>
-
-                            <div class="relative z-10 p-6 sm:p-8 text-white">
-                                <span class="text-[11px] font-semibold uppercase tracking-wider text-[#60A5FA] mb-1.5 block">
-                                    Smart Agriculture & Farming
-                                </span>
-                                <h3 class="text-[20px] sm:text-[24px] font-bold text-white tracking-tight leading-snug max-w-xs">
-                                    Agrikultur & Pertanian Pintar
-                                </h3>
-                                <p class="text-[13px] text-white/90 mt-2 max-w-xs leading-relaxed">
-                                    Penyemprotan otonom kapasitas 30L & pemetaan multispektral NDVI presisi.
-                                </p>
-                                <div class="inline-flex items-center gap-1 text-[13px] font-medium text-white mt-3 group-hover:text-blue-300 transition-colors">
-                                    <span>Pelajari Lebih Lanjut</span>
-                                    <span class="group-hover:translate-x-1.5 transition-transform">›</span>
-                                </div>
-                            </div>
-                        </a>
+                        <!-- Highlights Bullets -->
+                        <ul class="space-y-2 p-0 m-0 list-none text-[13px] text-slate-700">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-[#0070D5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Kurikulum mengacu DKUPPU & FASI</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-[#0070D5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Instruktur senior & flight simulator</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-[#0070D5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Tersedia kelas corporate in-house</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+
+                <!-- Card Footer Button -->
+                <div class="p-6 sm:p-7 pt-0">
+                    <a
+                        href="{{ route('services.show', 'pelatihanpilot') }}"
+                        class="w-full inline-flex items-center justify-center gap-2 bg-[#0070D5] hover:bg-[#005bb5] text-white font-semibold text-[14px] py-3 rounded-full shadow-sm hover:shadow-md transition-all text-decoration-none group-hover:gap-3"
+                    >
+                        <span>Pelajari Lebih Lanjut</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SERVICE 2: PERAWATAN DRONE -->
+            <div class="group bg-white rounded-[26px] sm:rounded-[30px] overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <!-- Image Card Header -->
+                    <div class="relative h-[240px] sm:h-[260px] lg:h-[280px] w-full overflow-hidden bg-slate-900">
+                        <img
+                            src="{{ asset('images/service_perawatan_drone.jpg') }}"
+                            alt="Perawatan Drone Mechatron"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-wider text-white bg-emerald-600/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                            Servis & Kalibrasi Pabrikan
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[12px] text-emerald-200 font-semibold block">Layanan 02</span>
+                            <h3 class="text-[20px] sm:text-[22px] font-bold tracking-tight text-white leading-snug">
+                                Perawatan Drone
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Content Body -->
+                    <div class="p-6 sm:p-7 space-y-4">
+                        <p class="text-[14px] text-slate-600 leading-relaxed font-normal">
+                            Layanan servis berkala dan perbaikan menyeluruh armada drone untuk menjaga keandalan terbang prima. Ditangani teknisi berpengalaman dengan suku cadang original dan uji terbang resmi.
+                        </p>
+
+                        <!-- Highlights Bullets -->
+                        <ul class="space-y-2 p-0 m-0 list-none text-[13px] text-slate-700">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>24-Point Comprehensive Inspection</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Kalibrasi presisi IMU, Kompas, & Gimbal</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Suku cadang resmi & garansi perbaikan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Footer Button -->
+                <div class="p-6 sm:p-7 pt-0">
+                    <a
+                        href="{{ route('services.show', 'perawatandrone') }}"
+                        class="w-full inline-flex items-center justify-center gap-2 bg-[#0070D5] hover:bg-[#005bb5] text-white font-semibold text-[14px] py-3 rounded-full shadow-sm hover:shadow-md transition-all text-decoration-none group-hover:gap-3"
+                    >
+                        <span>Pelajari Lebih Lanjut</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SERVICE 3: SEWA DRONE -->
+            <div class="group bg-white rounded-[26px] sm:rounded-[30px] overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <!-- Image Card Header -->
+                    <div class="relative h-[240px] sm:h-[260px] lg:h-[280px] w-full overflow-hidden bg-slate-900">
+                        <img
+                            src="{{ asset('images/service_sewa_drone.jpg') }}"
+                            alt="Sewa Drone Mechatron"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-wider text-white bg-indigo-600/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                            Rental Armada Lengkap
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[12px] text-indigo-200 font-semibold block">Layanan 03</span>
+                            <h3 class="text-[20px] sm:text-[22px] font-bold tracking-tight text-white leading-snug">
+                                Sewa Drone
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Content Body -->
+                    <div class="p-6 sm:p-7 space-y-4">
+                        <p class="text-[14px] text-slate-600 leading-relaxed font-normal">
+                            Solusi rental armada drone industri dan pertanian dengan opsi harian, mingguan, hingga bulanan. Didukung unit terawat prima, set baterai cadangan melimpah, dan opsi pilot standby.
+                        </p>
+
+                        <!-- Highlights Bullets -->
+                        <ul class="space-y-2 p-0 m-0 list-none text-[13px] text-slate-700">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Drone Pertanian & Drone Fotografi</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Pilihan Dry Rental atau Wet Rental (Pilot)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Paket baterai cadangan & fast charging</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Footer Button -->
+                <div class="p-6 sm:p-7 pt-0">
+                    <a
+                        href="{{ route('services.show', 'sewadrone') }}"
+                        class="w-full inline-flex items-center justify-center gap-2 bg-[#0070D5] hover:bg-[#005bb5] text-white font-semibold text-[14px] py-3 rounded-full shadow-sm hover:shadow-md transition-all text-decoration-none group-hover:gap-3"
+                    >
+                        <span>Pelajari Lebih Lanjut</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Why Choose Mechatron Services -->
+        <div class="bg-white rounded-[32px] p-8 sm:p-12 border border-slate-200/80 shadow-sm mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+                <h2 class="text-[24px] sm:text-[30px] font-bold text-slate-900 tracking-tight">
+                    Komitmen Keunggulan Layanan Mechatron
+                </h2>
+                <p class="text-[14px] sm:text-[15px] text-slate-600 mt-2">
+                    Kami memastikan setiap investasi dan kebutuhan operasional drone Anda terlindungi dengan standar keselamatan dan mutu tertinggi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#0070D5] flex items-center justify-center mb-3.5">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-[16px] font-bold text-slate-900 mb-1">Standar Legalitas & Lisensi</h3>
+                    <p class="text-[13px] text-slate-600 leading-relaxed">
+                        Instruktur dan teknisi bersertifikasi DKUPPU/FASI dengan kepatuhan penuh pada regulasi penerbangan sipil.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-3.5">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="text-[16px] font-bold text-slate-900 mb-1">Bengkel & Lab Servis Resmi</h3>
+                    <p class="text-[13px] text-slate-600 leading-relaxed">
+                        Fasilitas servis in-house lengkap dengan instrumen kalibrasi sensor, test bench motor, dan suku cadang asli.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-3.5">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <h3 class="text-[16px] font-bold text-slate-900 mb-1">Armada Siap Pakai & Backup</h3>
+                    <p class="text-[13px] text-slate-600 leading-relaxed">
+                        Jaminan kelancaran misi proyek Anda dengan dukungan ketersediaan armada cadangan dan genset pengisi daya cepat.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-3.5">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    </div>
+                    <h3 class="text-[16px] font-bold text-slate-900 mb-1">Dukungan Responsif 24/7</h3>
+                    <p class="text-[13px] text-slate-600 leading-relaxed">
+                        Tim teknis standby memberikan konsultasi cepat serta solusi troubleshooting saat kendala lapangan terjadi.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-    <!-- Bottom Banner Penutup Khas DJI -->
-    <section class="py-10 sm:py-24 bg-[#141416] text-white text-center mt-10">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-[28px] sm:text-[40px] font-bold tracking-tight mb-4">
-                Mulai Proyek Drone Anda Bersama Mechatron
-            </h2>
-            <p class="text-[15px] sm:text-[17px] text-white/70 max-w-xl mx-auto mb-8">
-                Konsultasikan spesifikasi teknis dan kebutuhan armada bersama tim ahli kami.
-            </p>
-            <a
-                href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya tertarik untuk konsultasi mengenai Layanan Drone Mechatron.') }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 bg-[#0070D5] hover:bg-[#005bb5] text-white text-[14px] sm:text-[15px] font-medium px-8 py-3.5 rounded-full shadow-lg transition-all text-decoration-none"
-            >
-                <span>Hubungi Kami via WhatsApp: +62 811 1214 3111</span>
-                <span>›</span>
-            </a>
-        </div>
-    </section>
+<!-- Bottom Banner Penutup WhatsApp CTA -->
+<section class="py-14 sm:py-20 bg-[#141416] text-white text-center">
+    <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-[28px] sm:text-[38px] font-bold tracking-tight mb-4">
+            Konsultasikan Kebutuhan Drone Anda Bersama Kami
+        </h2>
+        <p class="text-[15px] sm:text-[17px] text-white/70 max-w-xl mx-auto mb-8">
+            Hubungi tim ahli Mechatron untuk informasi jadwal pelatihan, estimasi servis berkala, atau ketersediaan unit sewa.
+        </p>
+        <a
+            href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya ingin konsultasi mengenai Layanan Pelatihan Pilot, Perawatan, atau Sewa Drone.') }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-[#0070D5] hover:bg-[#005bb5] text-white text-[14px] sm:text-[15px] font-semibold px-8 py-3.5 rounded-full shadow-lg transition-all text-decoration-none hover:scale-105 active:scale-95"
+        >
+            <span>Hubungi Kami via WhatsApp: +62 811 1214 3111</span>
+            <span>›</span>
+        </a>
+    </div>
+</section>
 @endsection

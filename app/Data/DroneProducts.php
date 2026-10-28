@@ -17,17 +17,17 @@ class DroneProducts
             ],
             'agrikultur' => [
                 'slug' => 'agrikultur',
-                'name' => 'Agrikultur',
+                'name' => 'Drone Agrikultur',
                 'description' => 'Solusi drone semprot dan sebar presisi tinggi untuk perkebunan kelapa sawit, persawahan, dan lahan hortikultura.',
             ],
-            'survey-pemetaan' => [
-                'slug' => 'survey-pemetaan',
-                'name' => 'Survey & Pemetaan',
-                'description' => 'Drone fotogrametri udara dan sensor LiDAR 3D untuk pemodelan kontur topografi tingkat sentimeter.',
+            'fotografi' => [
+                'slug' => 'fotografi',
+                'name' => 'Drone Fotografi',
+                'description' => 'Drone kamera resolusi tinggi 45MP dan gimbal sinematik untuk dokumentasi visual, videografi udara, dan inspeksi detail.',
             ],
             'pengiriman' => [
                 'slug' => 'pengiriman',
-                'name' => 'Pengiriman',
+                'name' => 'Drone Pengiriman',
                 'description' => 'Drone kargo logistik muatan berat dan kurir otonom untuk transportasi cepat di area terpencil dan darurat medis.',
             ],
             'suku-cadang' => [
@@ -237,115 +237,60 @@ class DroneProducts
             ],
 
             // ==========================================
-            // KATEGORI 2: SURVEY & PEMETAAN
+            // KATEGORI 2: DRONE FOTOGRAFI
             // ==========================================
-            'survey-m400' => [
-                'id' => 'survey-m400',
-                'modelCode' => 'MS-400-RTK',
-                'name' => 'MECHATRON SURVEY M-400 RTK',
-                'category' => 'Survey & Pemetaan',
-                'categorySlug' => 'survey-pemetaan',
-                'categoryDetail' => 'Enterprise RTK Mapping & Photogrammetry Drone',
-                'subtitle' => 'Drone Pemetaan Topografi & Fotogrametri Presisi Sentimeter',
-                'tagline' => 'Millimeter Precision Aerial Mapping — Solusi Survei Topografi, Kadaster, & Konstruksi Sipil.',
-                'capacity' => 'Akurasi 1 cm RTK',
+            'photo-m400' => [
+                'id' => 'photo-m400',
+                'modelCode' => 'MF-400-PRO',
+                'name' => 'MECHATRON FOTOGRAFI M-400 PRO',
+                'category' => 'Drone Fotografi',
+                'categorySlug' => 'fotografi',
+                'categoryDetail' => 'Enterprise Cinematic & Aerial Photography Drone',
+                'subtitle' => 'Drone Fotografi Sinematik Resolusi Tinggi Full-Frame 45MP',
+                'tagline' => 'Cinematic Vision from Above — Solusi Dokumentasi Visual Sinematik 4K HDR & Inspeksi Visual Presisi.',
+                'capacity' => 'Kamera 45MP / 4K 60fps HDR',
                 'image' => '/images/matrice-400-hero.png',
                 'gallery' => [
                     '/images/matrice-400-hero.png',
-                    '/images/dji-lito-series.jpg',
+                    '/images/card_avata_360.jpg',
+                    '/images/avata_360_drone.jpg',
                     '/images/featured_remote_kit.jpg',
-                    '/images/carbon_propellers.jpg',
                 ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron Survey M-400 RTK'],
-                    ['label' => 'Kategori Produk', 'value' => 'Survey & Pemetaan (Geospasial)'],
+                    ['label' => 'Model Unit', 'value' => 'Mechatron Fotografi M-400 Pro'],
+                    ['label' => 'Kategori Produk', 'value' => 'Drone Fotografi & Sinematik'],
                     ['label' => 'Modul Navigasi', 'value' => 'Dual RTK + GNSS Multi-Konstelasi (GPS/GLONASS/BeiDou/Galileo)'],
                     ['label' => 'Akurasi Penentuan Posisi', 'value' => 'Horizontal 1 cm + 1 ppm, Vertikal 1.5 cm + 1 ppm'],
-                    ['label' => 'Sensor Kamera Bawaan', 'value' => '45MP Full-Frame Mechanical Shutter (Anti-Jello Distortion)'],
+                    ['label' => 'Sensor Kamera Bawaan', 'value' => '45MP Full-Frame Mechanical Shutter (Video 4K 60fps HDR)'],
                     ['label' => 'Waktu Terbang (Flight Time)', 'value' => 'Hingga 45 Menit per Baterai'],
-                    ['label' => 'Cakupan Survei Sekali Terbang', 'value' => 'Hingga 250 Hektar pada GSD 3 cm/pixel'],
-                    ['label' => 'Jarak Kendali & Video HD', 'value' => 'Hingga 8 km LOS (O3 Enterprise Transmission)'],
-                    ['label' => 'Dukungan Payload Eksternal', 'value' => 'Kamera Multispektral 5-Band, Sensor Termal, & LiDAR Modular'],
-                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP55 Tahan Hujan Ringan & Debu Konstruksi'],
+                    ['label' => 'Jangkauan Transmisi Video', 'value' => 'Hingga 15 km Video Transmisi Full HD 1080p 60fps'],
+                    ['label' => 'Jarak Kendali Jarak Jauh', 'value' => 'Hingga 8-15 km LOS (O3 Enterprise Transmission)'],
+                    ['label' => 'Dukungan Payload Eksternal', 'value' => 'Kamera Sinematik 45MP, Sensor Termal, & Lensa Telefoto Ultra-Zoom'],
+                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP55 Tahan Hujan Ringan & Angin Kencang'],
                 ],
                 'features' => [
-                    ['title' => 'Sensor Full-Frame 45 MP', 'desc' => 'Mechanical shutter berkecepatan 1/2000 detik menghasilkan foto ortofoto tajam bebas blur gerak.'],
-                    ['title' => 'Akurasi Sentimeter Bebas GCP', 'desc' => 'Dukungan RTK real-time meminimalkan kebutuhan titik kontrol tanah (GCP) hingga 80%.'],
-                    ['title' => 'Durasi Terbang Ekstra 45 Menit', 'desc' => 'Waktu terbang panjang memastikan efisiensi pemetaan blok wilayah luas tanpa sering mendarat.'],
-                    ['title' => 'Misi Jalur 3D Otomatis', 'desc' => 'Perencanaan misi koridor sungai, jalan tol, dan topografi berbukit dengan kontur adaptif.'],
+                    ['title' => 'Sensor Full-Frame 45 MP 4K HDR', 'desc' => 'Mechanical shutter berkecepatan 1/2000 detik menghasilkan foto detail tinggi dan rekaman sinematik bebas distorsi.'],
+                    ['title' => 'Gimbal Stabilizer 3-Axis Ultra-Smooth', 'desc' => 'Peredam getaran motor mikro menghasilkan rekaman super stabil bahkan saat berhadapan dengan hembusan angin kencang.'],
+                    ['title' => 'Durasi Terbang Ekstra 45 Menit', 'desc' => 'Waktu terbang panjang memastikan sesi pengambilan gambar visual udara selesai tuntas tanpa sering mendarat.'],
+                    ['title' => 'Jalur Terbang Sinematik Cerdas', 'desc' => 'Fitur waypoints otomatis, orbit melingkar, dan tracking subjek bergerak untuk angle sinematik spektakuler.'],
                 ],
                 'packageIncludes' => [
-                    'Unit Drone Mechatron Survey M-400 RTK',
-                    'Kamera Full-Frame 45MP dengan Lensa Pemetaan Khusus',
+                    'Unit Drone Mechatron Fotografi M-400 Pro',
+                    'Kamera Sinematik Full-Frame 45MP dengan Gimbal 3-Axis',
                     'Base Station RTK Portabel & Tripod Karbon Presisi',
                     'Smart Controller Enterprise dengan Layar 7" Ultra-Terang',
                     '4x Intelligent Flight Battery & Charging Hub',
-                    'Lisensi Perangkat Lunak Mechatron OrthoMap 3D (1 Tahun)',
                     'Hardcase Standar Penerbangan Anti-Air',
                 ],
                 'fieldApplications' => [
                     [
-                        'title' => 'Pemetaan Batas Kadaster & Agraria',
-                        'desc' => 'Pemetaan batas kepemilikan tanah dan sertifikasi lahan dengan koordinat geospasial presisi hukum resmi.',
+                        'title' => 'Produksi Video Komersial & Dokumenter',
+                        'desc' => 'Pengambilan visual udara berskala sinematik untuk iklan komersial, promosi pariwisata, dan profil perusahaan.',
                     ],
                     [
-                        'title' => 'Monitoring Konstruksi Sipil & Tambang',
-                        'desc' => 'Perhitungan volume cut & fill galian tambang, progres proyek jalan tol, dan model elevasi digital (DEM/DSM).',
-                    ],
-                ],
-            ],
-
-            'survey-lidar-v1' => [
-                'id' => 'survey-lidar-v1',
-                'modelCode' => 'MLS-3D-SCAN',
-                'name' => 'MECHATRON LIDAR SCANNER V-1',
-                'category' => 'Survey & Pemetaan',
-                'categorySlug' => 'survey-pemetaan',
-                'categoryDetail' => 'Airborne Laser LiDAR & 3D Point Cloud System',
-                'subtitle' => 'Sensor LiDAR Udara Pemindai Kanopi Hutan & Kontur Tanah',
-                'tagline' => 'Penetrate Deep Forest Canopies — Pemetaan Laser 3D Real-Time untuk Kehutanan & Infrastruktur.',
-                'capacity' => '240.000 pts/detik',
-                'image' => '/images/dji-lito-series.jpg',
-                'gallery' => [
-                    '/images/dji-lito-series.jpg',
-                    '/images/matrice-400-hero.png',
-                    '/images/featured_remote_kit.jpg',
-                    '/images/osmo-pocket-4.jpg',
-                ],
-                'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron LiDAR Scanner V-1 (MLS-3D)'],
-                    ['label' => 'Kategori Produk', 'value' => 'Survey & Pemetaan (Sensor Laser 3D)'],
-                    ['label' => 'Kecepatan Titik Laser (Point Rate)', 'value' => '240.000 titik/detik (Hingga 3 Target Pantulan Ganda)'],
-                    ['label' => 'Jangkauan Deteksi Laser', 'value' => 'Hingga 250 Meter pada Reflektifitas 80%'],
-                    ['label' => 'Akurasi Ketinggian Vertikal', 'value' => '± 3 cm pada Ketinggian Terbang 100 Meter'],
-                    ['label' => 'Sensor IMU Internal', 'value' => 'Tingkat Industri Navigasi Inersial Presisi 0.05°'],
-                    ['label' => 'Kamera RGB Terintegrasi', 'value' => '20MP untuk Pewarnaan Point Cloud 3D Real-Time (True Color)'],
-                    ['label' => 'Kompatibilitas Wahana', 'value' => 'Mechatron Survey M-400 & Wahana Drone Multirotor Enterprise'],
-                    ['label' => 'Format Output Data', 'value' => 'LAS, LAZ, PLY, PCD, GeoTIFF, & CAD DXF'],
-                ],
-                'features' => [
-                    ['title' => 'Penetrasi Kanopi Lebat', 'desc' => 'Sinar laser berulang mampu menembus celah rimbun dedaunan hingga merekam permukaan tanah asli (DTM).'],
-                    ['title' => 'Point Cloud Warna Nyata (True Color)', 'desc' => 'Kamera RGB 20MP secara otomatis mewarnai setiap titik laser dengan warna objek foto sebenarnya.'],
-                    ['title' => 'Pemrosesan Cepat Satu Klik', 'desc' => 'Hasil survei langsung diproses menjadi model 3D, kontur tanah, dan garis elevasi tanpa software rumit.'],
-                    ['title' => 'Bobot Ringan & Efisien', 'desc' => 'Desain kompak aerodinamis hemat daya tidak mengorbankan durasi terbang wahana drone pembawa.'],
-                ],
-                'packageIncludes' => [
-                    'Modul Sensor Mechatron LiDAR Scanner V-1',
-                    'Gimbal Stabilizer 3-Axis Khusus Kalibrasi Pabrik',
-                    'Kabel Interkoneksi Daya & Telemetri Enterprise',
-                    'Lisensi Software Mechatron LiDAR Studio Pro',
-                    'Hard Pelindung Busa Khusus & Perlengkapan Kalibrasi',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Inventarisasi Hutan & Perkebunan',
-                        'desc' => 'Menghitung tinggi pohon, kerapatan biomassa, dan volume kayu tanpa harus menebang atau menyusuri hutan lebat.',
-                    ],
-                    [
-                        'title' => 'Inspeksi Jalur Transmisi SUTET & Saluran Pipa',
-                        'desc' => 'Mendeteksi jarak bahaya dahan pohon ke kabel listrik tegangan tinggi secara otomatis berakurasi sentimeter.',
+                        'title' => 'Inspeksi Visual Infrastruktur & Bangunan Tinggi',
+                        'desc' => 'Dokumentasi detail visual resolusi tinggi untuk memantau jembatan, tower transmisi, dan atap gedung industri.',
                     ],
                 ],
             ],
@@ -443,7 +388,7 @@ class DroneProducts
                     ['title' => 'Pengantaran Cepat Tanpa Macet', 'desc' => 'Menghubungkan kantor pusat dan pabrik manufaktur dalam hitungan menit tanpa hambatan lalu lintas darat.'],
                     ['title' => 'Kompartemen Pendingin Medis', 'desc' => 'Suhu ruang kargo dapat distabilkan untuk menjaga integritas sampel darah dan vaksin sensitif suhu.'],
                     ['title' => 'Suara Senyap Ramah Lingkungan', 'desc' => 'Baling-baling akustik generasi baru meminimalisir kebisingan sehingga aman terbang di dekat permukiman.'],
-                    ['title' => 'Sensor LiDAR Hindar Kabel Listrik', 'desc' => 'Sensor optik canggih mendeteksi kabel tiang listrik dan pohon secara otomatis dalam radius 30 meter.'],
+                    ['title' => 'Sensor Radar & Optik Pintar Hindar Kabel', 'desc' => 'Sensor optik dan radar canggih mendeteksi kabel tiang listrik dan pohon secara otomatis dalam radius 30 meter.'],
                 ],
                 'packageIncludes' => [
                     'Unit Drone Mechatron Air Courier X-10',
@@ -695,10 +640,8 @@ class DroneProducts
             $product = $all['agri-h30'] ?? null;
         } elseif (str_contains($id, 'h15') || str_contains($id, '1323')) {
             $product = $all['agri-h15'] ?? null;
-        } elseif (str_contains($id, 'm400') || str_contains($id, 'matrice') || str_contains($id, 'survey-m400')) {
-            $product = $all['survey-m400'] ?? null;
-        } elseif (str_contains($id, 'lidar')) {
-            $product = $all['survey-lidar-v1'] ?? null;
+        } elseif (str_contains($id, 'm400') || str_contains($id, 'matrice') || str_contains($id, 'photo') || str_contains($id, 'foto') || str_contains($id, 'survey-m400')) {
+            $product = $all['photo-m400'] ?? ($all['survey-m400'] ?? null);
         } elseif (str_contains($id, 'cargo') || str_contains($id, 'c50')) {
             $product = $all['cargo-c50'] ?? null;
         } elseif (str_contains($id, 'courier') || str_contains($id, 'delivery') || str_contains($id, 'x10')) {

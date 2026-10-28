@@ -5,9 +5,9 @@
     } elseif ($navbarTheme === 'dark') {
         $hasDarkHero = true;
     } else {
-        // Default: Home, Services Detail, About, Contact have dark hero banners.
-        // Blog, Product, Services Index, and other pages have clean white/light backgrounds.
-        $hasDarkHero = request()->routeIs(['home', 'services.show', 'about', 'contact']);
+        // Default: Home, Services Detail have dark hero banners.
+        // Blog, Product, Services Index, About Us, Contact Us have clean white/light backgrounds.
+        $hasDarkHero = request()->routeIs(['home', 'services.show']);
     }
 @endphp
 

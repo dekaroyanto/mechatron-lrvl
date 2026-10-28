@@ -33,21 +33,27 @@ Berikut adalah daftar lengkap 27 file aset gambar lokal yang tersimpan di direkt
 | `heromecha3.jpg` | 1.08 MB | JPG | Formasi armada drone pertanian di atas perkebunan nusantara | Slide 3 Hero Banner Beranda, Galeri `agras-t100`, Galeri `cargo-c50` |
 | `featured_drone_h30.jpg` | 95 KB | JPG | Foto studio bersih unit Mechatron Agri H-30 (BMT-1525) | Kartu 1 Featured Grid Beranda, Thumbnail & Galeri `agri-h30`, Galeri aksesoris |
 | `featured_drone_h15.jpg` | 159 KB | JPG | Foto studio bersih unit Mechatron Agri H-15 (BMT-1323) | Kartu 2 Featured Grid Beranda, Thumbnail & Galeri `agri-h15`, Galeri baling-baling |
-| `agrikultur-drone-sunset.jpg` | 209 KB | JPG | Drone agrikultur terbang siluet dramatis berlatar senja keemasan | Slide 1 Hero Banner Produk (Agrikultur Series), Hero Ambient About Us, Layanan Agrikultur, Blog #1 |
-| `matrice-400-hero.png` | 800 KB | PNG | Drone industri multi-rotor pemetaan LiDAR dengan antena RTK ganda | Slide 2 Hero Banner Produk (Survey & Pemetaan Series), Thumbnail & Galeri `survey-m400` |
+| `agrikultur-drone-sunset.jpg` | 209 KB | JPG | Drone agrikultur terbang siluet dramatis berlatar senja keemasan | Slide 1 Hero Banner Produk (Agrikultur Series), Hero Ambient About Us, Blog #1 |
+| `matrice-400-hero.png` | 800 KB | PNG | Drone fotografi sinematik resolusi tinggi dengan kamera 45MP | Slide 2 Hero Banner Produk (Fotografi Series), Thumbnail & Galeri `photo-m400` |
 | `cargo_drone_c50.jpg` | 505 KB | JPG | Drone heavy-lift cargo pengiriman logistik dengan kait kargo | Slide 3 Hero Banner Produk (Pengiriman Series), Thumbnail & Galeri `cargo-c50` |
 | `featured_combo_kit.jpg` | 117 KB | JPG | Hardcase enterprise koper box baterai, genset charger, & perlengkapan terbang | Slide 4 Hero Banner Produk (Suku Cadang), Thumbnail & Galeri `agri-combo-kit`, Galeri cadang |
 | `smart_battery_b30.jpg` | 576 KB | JPG | Baterai cerdas Li-Po 30.000mAh berdensitas energi tinggi | Thumbnail & Galeri `smart-battery-b30`, Galeri `agri-h30`, Galeri `agras-t100` |
-| `carbon_propellers.jpg` | 525 KB | JPG | Set baling-baling lipat serat karbon aerodinamis presisi | Thumbnail & Galeri `carbon-propeller-set`, Galeri `agri-h15`, Galeri `survey-m400` |
+| `carbon_propellers.jpg` | 525 KB | JPG | Set baling-baling lipat serat karbon aerodinamis presisi | Thumbnail & Galeri `carbon-propeller-set`, Galeri `agri-h15` |
 | `featured_remote_kit.jpg` | 165 KB | JPG | Remote controller pintar GCS dengan layar ultra-bright 7 inci | Thumbnail & Galeri `smart-controller-gcs`, Galeri `agri-h30`, Galeri `agri-h15`, Galeri M400 |
 | `agras-t100.jpg` | 800 KB | JPG | Drone agrikultur hexacopter kapasitas ultra-besar di hamparan padi | Thumbnail & Galeri `agras-t100`, Galeri `agri-h30` |
-| `agrikultur-drone-spraying.jpg` | 217 KB | JPG | Kabut atomisasi halus penyemprotan drone di atas kanopi daun padi | Hero Ambient Contact Us, Hero Ambient Services, Blog #2, Galeri `agri-h30` |
-| `card_avata_360.jpg` | 134 KB | JPG | Drone inspeksi ruang sempit & indoor dengan pelindung propeler | Thumbnail `survey-fpv-360`, Galeri `survey-m400` |
-| `avata_360_drone.jpg` | 61 KB | JPG | Close-up drone 360 sensor inspeksi infrastruktur | Galeri `survey-fpv-360`, Galeri `survey-m400` |
-| `dji-lito-series.jpg` | 457 KB | JPG | Modul kamera fotogrametri resolusi tinggi & sensor LiDAR | Thumbnail `survey-lidar-l2`, Galeri `survey-m400` |
-| `osmo-pocket-4.jpg` | 431 KB | JPG | Kamera sensor handheld gimbal pemantau lapangan | Galeri `survey-lidar-l2` |
+| `agrikultur-drone-spraying.jpg` | 217 KB | JPG | Kabut atomisasi halus penyemprotan drone di atas kanopi daun padi | Hero Ambient Contact Us, Blog #2, Galeri `agri-h30` |
+| `card_avata_360.jpg` | 134 KB | JPG | Drone inspeksi ruang sempit & indoor dengan pelindung propeler | Thumbnail `delivery-x10`, Galeri `photo-m400` |
+| `avata_360_drone.jpg` | 61 KB | JPG | Close-up drone 360 sensor inspeksi infrastruktur | Galeri `delivery-x10`, Galeri `photo-m400` |
 | `card_mic_mini_2s.jpg` | 123 KB | JPG | Perangkat audio transmitter nirkabel pilot & observer | Arsip aset pendukung |
-| `mic_mini_2s.jpg` | 61 KB | JPG | Modul mikrofon transceiver nirkabel | Arsip aset pendukung |
+| `service_pelatihan_pilot.jpg` | 213 KB | JPG | Foto asli instruktur & tim Mechatron praktik terbang drone lapangan (Gambar 1) | Layanan Pelatihan Pilot Drone (`ServicesData`, `services/index`, `services/show`) |
+| `service_perawatan_drone.jpg` | 234 KB | JPG | Foto asli teknisi servis membongkar motherboard dan komponen drone (Gambar 2) | Layanan Perawatan Drone (`ServicesData`, `services/index`, `services/show`) |
+| `service_sewa_drone.jpg` | 421 KB | JPG | Foto asli tim Mechatron & kelompok tani bersama drone BMT-14 di sawah (Gambar 3) | Layanan Sewa Drone (`ServicesData`, `services/index`, `services/show`) |
+| `sertifikat_sni_alsintan.jpg` | 998 KB | JPG | Dokumen sertifikat resmi Standar Nasional Indonesia (SNI) & Alsintan Kementan RI | 3D Carousel Sertifikat Beranda (`certificates-section`) |
+| `sertifikat_dkuppu_kemenhub.jpg` | 1.12 MB | JPG | Dokumen sertifikat kelaikan terbang sistem pesawat tanpa awak DKUPPU Kemenhub RI | 3D Carousel Sertifikat Beranda (`certificates-section`) |
+| `sertifikat_fasi_pilot.jpg` | 1.04 MB | JPG | Dokumen sertifikat akreditasi akademi & lisensi remote pilot FASI | 3D Carousel Sertifikat Beranda (`certificates-section`) |
+| `mechatron_kantor_gedung.jpg` | 83 KB | JPG | Foto tampak depan gedung kantor Mechatron (Summarecon Bandung) | Galeri Fasilitas About Us (`facility-gallery`, `pageflip-gallery`) |
+| `mechatron_kantor_interior.jpg` | 99 KB | JPG | Foto interior lobi & ruang kantor PT Bandung Mekatronika Teknologi | Galeri Fasilitas About Us (`facility-gallery`, `pageflip-gallery`) |
+| `mechatron_pabrik_gudang.jpg` | 119 KB | JPG | Foto area fasilitas gudang & workshop Mechatron | Galeri Fasilitas About Us (`facility-gallery`, `pageflip-gallery`) |
 | `hq_heromecha1.jpg` s/d `hq_heromecha3.jpg` | ~1.3 MB | JPG | Versi resolusi tinggi tidak terkompresi dari slide hero | Master file cadangan |
 | `orig_heromecha1.jpg` s/d `orig_heromecha3.jpg` | ~140 KB | JPG | Versi asli awal sebelum remastering resolusi | Master file cadangan |
 
@@ -117,6 +123,7 @@ Halaman detail produk menggunakan galeri preview interaktif e-commerce tingkat l
 | Elemen UI | Rasio Aspek | Resolusi Disarankan | Format | Keterangan & CSS Styling |
 | :--- | :---: | :---: | :---: | :--- |
 | **Hero Ambient About Us** (`views/about.blade.php`) | **16:9** | `1920 × 1080 px` | WebP / JPG | Grayscale 30% dengan lapisan hitam `from-neutral-950/80`. |
+| **Cool Slide Gallery Fasilitas & Pabrik** (`components/facility-gallery.blade.php`) | **16:9** | `1920 × 1080 px` | JPG / WebP | Slider interaktif Alpine.js dengan progress timer, tab kategori, thumbnail strip, dan modal fullscreen lightbox. |
 | **Hero Ambient Contact Us** (`views/contact.blade.php`) | **16:9** | `1920 × 1080 px` | WebP / JPG | Grayscale 25% dengan lapisan gradasi gelap. |
 
 ---
