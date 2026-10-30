@@ -35,15 +35,15 @@
         <!-- Left: Official Mechatron Brand Logo -->
         <div class="flex items-center">
             <a href="{{ route('home') }}" class="flex items-center gap-2.5 group focus:outline-none select-none text-decoration-none" aria-label="Mechatron Official">
-                <div class="relative w-8 h-8 sm:w-9 sm:h-9 shrink-0 transition-transform duration-200 group-hover:scale-105 shadow-sm rounded-[7px] overflow-hidden">
-                    <img src="{{ asset('images/mechatron_logo.png') }}" alt="Mechatron Official Logo" class="w-full h-full object-cover">
+                <div class="relative h-8 sm:h-9 w-auto shrink-0 transition-transform duration-200 group-hover:scale-105">
+                    <img :src="isLightNav ? '{{ asset('images/logo_light.png') }}' : '{{ asset('images/logo_dark.png') }}'" alt="Mechatron Official Logo" class="h-full w-auto object-contain">
                 </div>
-                <span
+                {{-- <span
                     :class="isLightNav ? 'text-[#002B7F] group-hover:text-[#0070D5]' : 'text-white group-hover:text-blue-200'"
                     class="font-extrabold tracking-tight text-[17px] sm:text-[19px] transition-colors"
                 >
                     MECHATRON
-                </span>
+                </span> --}}
             </a>
         </div>
 
