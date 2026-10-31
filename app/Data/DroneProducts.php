@@ -50,7 +50,7 @@ class DroneProducts
             'agri-h30' => [
                 'id' => 'agri-h30',
                 'modelCode' => 'BMT-1525',
-                'name' => 'MECHATRON AGRI H-30',
+                'name' => 'Mechatron AGRI H-30',
                 'category' => 'Agrikultur',
                 'categorySlug' => 'agrikultur',
                 'categoryDetail' => '30-Litre Hexacopter Agriculture Drone',
@@ -120,7 +120,7 @@ class DroneProducts
             'agri-h15' => [
                 'id' => 'agri-h15',
                 'modelCode' => 'BMT-1323',
-                'name' => 'MECHATRON AGRI H-15',
+                'name' => 'Mechatron AGRI H-15',
                 'category' => 'Agrikultur',
                 'categorySlug' => 'agrikultur',
                 'categoryDetail' => '15-Litre Hexacopter Agriculture Drone',
@@ -182,7 +182,7 @@ class DroneProducts
             'agri-t100' => [
                 'id' => 'agri-t100',
                 'modelCode' => 'BMT-2050',
-                'name' => 'MECHATRON AGRI T-100 MAX',
+                'name' => 'Mechatron AGRI T-100 MAX',
                 'category' => 'Agrikultur',
                 'categorySlug' => 'agrikultur',
                 'categoryDetail' => '50-Litre Enterprise Ultra-Heavy Sprayer Drone',
