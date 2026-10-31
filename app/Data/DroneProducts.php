@@ -50,7 +50,7 @@ class DroneProducts
             'agri-h30' => [
                 'id' => 'agri-h30',
                 'modelCode' => 'BMT-1525',
-                'name' => 'Mechatron AGRI H-30',
+                'name' => 'Mechatron AGRI H30',
                 'category' => 'Agrikultur',
                 'categorySlug' => 'agrikultur',
                 'categoryDetail' => '30-Litre Hexacopter Agriculture Drone',
@@ -458,7 +458,7 @@ class DroneProducts
                 'fieldApplications' => [
                     [
                         'title' => 'Kendali Terbang Otonom Penuh',
-                        'desc' => 'Mengoperasikan armada Mechatron Agri H-30, H-15, dan Survey Series secara otomatis dengan telemetri visual real-time.',
+                        'desc' => 'Mengoperasikan armada Mechatron Agri H30, H15, dan Survey Series secara otomatis dengan telemetri visual real-time.',
                     ],
                 ],
             ],
@@ -550,7 +550,7 @@ class DroneProducts
                 'fieldApplications' => [
                     [
                         'title' => 'Baterai Cadangan Rotasi Terbang',
-                        'desc' => 'Memastikan armada drone Mechatron Agri H-30 dan Cargo C-50 bekerja nonstop tanpa jeda menunggu pengisian.',
+                        'desc' => 'Memastikan armada drone Mechatron Agri H30 dan Cargo C-50 bekerja nonstop tanpa jeda menunggu pengisian.',
                     ],
                 ],
             ],
@@ -577,7 +577,7 @@ class DroneProducts
                     ['label' => 'Kategori Produk', 'value' => 'Suku Cadang & Propeller'],
                     ['label' => 'Material Bilah', 'value' => '100% Toray Carbon Fiber T700 dengan Resin Tahan UV'],
                     ['label' => 'Ukuran Diameter', 'value' => '33 x 11 Inci (Bilah Lipat Foldable)'],
-                    ['label' => 'Kompatibilitas Unit', 'value' => 'Mechatron Agri H-30, Agri H-15, dan Drone Heavy-Lift'],
+                    ['label' => 'Kompatibilitas Unit', 'value' => 'Mechatron Agri H30, Agri H-15, dan Drone Heavy-Lift'],
                     ['label' => 'Keseimbangan Dinamis', 'value' => 'Kalibrasi Presisi Tinggi Pabrik (Zero Vibration Balancing)'],
                     ['label' => 'Mekanisme Pemasangan', 'value' => 'Quick-Release Lock Paduan Aluminium Aviasi CNC'],
                     ['label' => 'Ketahanan Suhu', 'value' => '-20°C hingga +65°C Cuaca Tropis'],
