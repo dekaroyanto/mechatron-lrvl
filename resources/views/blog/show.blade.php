@@ -44,7 +44,10 @@
 
         <!-- Featured Hero Image -->
         <div class="relative w-full h-[320px] sm:h-[460px] md:h-[540px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-slate-900 shadow-lg mb-10 sm:mb-14 border border-slate-200/80">
-            <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}" class="w-full h-full object-cover object-center" />
+            <!-- Blurred background fill matching the image src -->
+            <img src="{{ $post['image'] }}" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90" />
+            <!-- Foreground image -->
+            <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}" class="relative w-full h-full object-contain object-center" />
         </div>
 
         <!-- Article Body Content -->
