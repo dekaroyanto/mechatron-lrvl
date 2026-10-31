@@ -1,0 +1,36 @@
+# Dependencies & build output (rebuilt inside the image)
+/vendor
+/node_modules
+/public/build
+/public/hot
+
+# Local env: .env IS copied into the image so build-time config:cache works.
+# If you prefer injecting env at runtime (docker run --env-file), uncomment:
+# .env
+# .env.*
+# !.env.example
+
+# Version control & IDE
+.git
+.gitignore
+.gitattributes
+.idea
+.vscode
+.fleet
+
+# Laravel runtime / caches (keep the directories, drop generated files)
+/storage/logs/*.log
+bootstrap/cache/*.php
+
+# Tests & tooling
+/tests
+phpunit.xml
+.phpunit.result.cache
+/.github
+
+# Docker & misc
+Dockerfile
+.dockerignore
+docker-compose*.yml
+README.md
+*.log

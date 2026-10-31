@@ -1,25 +1,25 @@
 @php
     $certificates = [
         [
-            'id' => 'sni-alsintan',
-            'title' => 'Sertifikasi SNI & Uji Mutu Alsintan',
+            'id' => 'sni-mechatron',
+            'title' => 'Sertifikasi SNI Drone Mechatron',
             'issuer' => 'Badan Standardisasi Nasional & Kementan RI',
-            'regNo' => 'SNI 8920:2021 | Alsintan BPSIP',
-            'image' => asset('images/sertifikat_sni_alsintan.jpg'),
+            'regNo' => 'SNI 9199:2023',
+            'image' => asset('images/sertifikat/sertifikat_sni.jpg'),
         ],
         [
-            'id' => 'dkuppu-kemenhub',
-            'title' => 'Kelaikan Terbang Drone DKUPPU',
-            'issuer' => 'Direktorat Kelaikudaraan Kemenhub RI (DGCA)',
-            'regNo' => 'CAD-AFA/2024/07-152 | CASR Part 107',
-            'image' => asset('images/sertifikat_dkuppu_kemenhub.jpg'),
+            'id' => 'tkdn-hexa',
+            'title' => 'Sertifikasi TKDN Drone Hexacopter Mechatron',
+            'issuer' => 'Kementerian Perindustrian RI',
+            'regNo' => 'Kode HS: 88062400',
+            'image' => asset('images/sertifikat/sertifikat_tkdn_hexa.jpg'),
         ],
         [
-            'id' => 'fasi-pilot',
-            'title' => 'Akreditasi Akademi & Pilot FASI',
-            'issuer' => 'Federasi Aero Sport Indonesia (FASI)',
-            'regNo' => 'Akreditasi No. FDA-2024-RPAL-088',
-            'image' => asset('images/sertifikat_fasi_pilot.jpg'),
+            'id' => 'tkdn-quad',
+            'title' => 'Sertifikasi TKDN Drone Quadcopter Mechatron',
+            'issuer' => 'Kementerian Perindustrian RI',
+            'regNo' => 'Kode HS: 88062400',
+            'image' => asset('images/sertifikat/sertifikat_tkdn_quad.jpg'),
         ],
     ];
 @endphp

@@ -188,7 +188,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 </svg>
                                 <p class="m-0">
-                                    Tegalluar, Kabupaten Bandung, Jawa Barat
+                                    Jalan Sapan No.7 , RT 01, RW 01 Desa Tegal Luar, Kecamatan Bojong SoangKabupaten Bandung, Jawa Barat, 40287
                                 </p>
                             </div>
                         </div>

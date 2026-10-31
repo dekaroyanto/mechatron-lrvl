@@ -4,28 +4,28 @@
     $slides = [
         [
             'id' => 'agri-h30',
-            'tickerLabel' => 'AGRI H-30',
-            'title' => 'MECHATRON AGRI H-30',
+            'tickerLabel' => 'AGRI H30',
+            'title' => 'Mechatron AGRI H30',
             'tagline' => 'Heavy Payload, Maximum Field Productivity.',
             'image' => asset('images/heromecha1.jpg'),
             'productInfo' => $products['agri-h30'] ?? [
                 'id' => 'agri-h30',
                 'modelCode' => 'BMT-1525',
-                'title' => 'MECHATRON AGRI H-30 (BMT-1525)',
+                'title' => 'Mechatron AGRI H30 (BMT-1525)',
                 'tagline' => '30-Litre Hexacopter Agriculture Drone',
                 'image' => asset('images/heromecha1.jpg'),
             ],
         ],
         [
             'id' => 'agri-h15',
-            'tickerLabel' => 'AGRI H-15',
-            'title' => 'MECHATRON AGRI H-15',
-            'tagline' => 'Agile, Foldable & High Efficiency.',
+            'tickerLabel' => 'AGRI H15',
+            'title' => 'Mechatron AGRI H15',
+            'tagline' => 'Agile, Foldable & Compact Design.',
             'image' => asset('images/heromecha2.jpg'),
             'productInfo' => $products['agri-h15'] ?? [
                 'id' => 'agri-h15',
                 'modelCode' => 'BMT-1323',
-                'title' => 'MECHATRON AGRI H-15 (BMT-1323)',
+                'title' => 'Mechatron AGRI H15 (BMT-1323)',
                 'tagline' => '15-Litre Hexacopter Agriculture Drone',
                 'image' => asset('images/heromecha2.jpg'),
             ],
@@ -33,7 +33,7 @@
         [
             'id' => 'sewa-drone',
             'tickerLabel' => 'Sewa Drone',
-            'title' => 'SEWA DRONE',
+            'title' => 'Sewa Drone, Panen Maksimal',
             'tagline' => 'Temukan Solusi Penyewaan Drone yang Tepat untuk Kebutuhan Anda',
             'image' => asset('images/service_sewa_drone.jpg'),
             'productInfo' => $products['sewa-drone'] ?? [
@@ -152,7 +152,7 @@
                         rel="noopener noreferrer"
                         class="group inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-transparent hover:bg-[#0070D5] text-white border-2 border-white hover:border-[#0070D5] text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"
                     >
-                        <span>Buy Now</span>
+                        <span>Contact Us</span>
                         <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7" />
                         </svg>

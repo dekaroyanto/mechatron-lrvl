@@ -224,7 +224,7 @@ class ServicesData
                 'headline' => 'Armada Profesional Siap Pakai',
                 'tagline' => 'Fleksibilitas Sewa Harian, Mingguan, dan Bulanan dengan Dukungan Unit Prima',
                 'description' => 'Sewa drone untuk pengguna profesional dengan pilihan spesifikasi yang sesuai kebutuhan kerja Anda',
-                'longDescription' => 'Kebutuhan proyek seringkali membutuhkan drone berspesifikasi khusus tanpa harus mengeluarkan investasi kapital besar di awal. Mechatron menyediakan rental armada drone terlengkap — mulai dari drone pertanian berkapasitas tangki besar (Mechatron Agri H-30 & H-15) hingga drone fotografi profesional — lengkap dengan set baterai cadangan, generator, dan opsi operator standby.',
+                'longDescription' => 'Kebutuhan proyek seringkali membutuhkan drone berspesifikasi khusus tanpa harus mengeluarkan investasi kapital besar di awal. Mechatron menyediakan rental armada drone terlengkap — mulai dari drone pertanian berkapasitas tangki besar (Mechatron Agri H30 & H15) hingga drone fotografi profesional — lengkap dengan set baterai cadangan, generator, dan opsi operator standby.',
                 'image' => '/images/service_sewa_drone.jpg',
                 'highlights' => [
                     [
@@ -295,7 +295,7 @@ class ServicesData
                     ],
                 ],
                 'specs' => [
-                    ['label' => 'Pilihan Unit Pertanian', 'value' => 'Mechatron Agri H-30 (Tangki 30L) & Agri H-15 (Tangki 15L)'],
+                    ['label' => 'Pilihan Unit Pertanian', 'value' => 'Mechatron Agri H30 (Tangki 30L) & Agri H15 (Tangki 15L)'],
                     ['label' => 'Pilihan Unit Foto / Video', 'value' => 'Drone Kamera 4K / 50MP Sinematik dengan Gimbal Stabilizer'],
                     ['label' => 'Kelengkapan Baterai', 'value' => 'Termasuk 3–6 Smart Battery Pack + Hub Fast Charger'],
                     ['label' => 'Pilihan Skema', 'value' => 'Dry Hire (Unit Saja) / Wet Hire (Include Pilot & Asisten)'],

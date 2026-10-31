@@ -16,24 +16,24 @@ class DroneProducts
                 'description' => 'Seluruh jajaran armada drone industri, sensor pemetaan presisi, kargo otonom, dan ekosistem suku cadang Mechatron.',
             ],
             'agrikultur' => [
-                'slug' => 'agrikultur',
-                'name' => 'Drone Agrikultur',
-                'description' => 'Solusi drone semprot dan sebar presisi tinggi untuk perkebunan kelapa sawit, persawahan, dan lahan hortikultura.',
+                'slug' => 'pertanian',
+                'name' => 'Drone Pertanian',
+                'description' => 'Solusi Cerdas untuk Pertanian Presisi.',
             ],
-            'fotografi' => [
-                'slug' => 'fotografi',
-                'name' => 'Drone Fotografi',
-                'description' => 'Drone kamera resolusi tinggi 45MP dan gimbal sinematik untuk dokumentasi visual, videografi udara, dan inspeksi detail.',
+            'pengawasan' => [
+                'slug' => 'pengawasan',
+                'name' => 'Drone Pengawasan',
+                'description' => 'Pemantauan Keamanan Udara Real-time',
             ],
             'pengiriman' => [
-                'slug' => 'pengiriman',
+                'slug' => 'Pengiriman',
                 'name' => 'Drone Pengiriman',
-                'description' => 'Drone kargo logistik muatan berat dan kurir otonom untuk transportasi cepat di area terpencil dan darurat medis.',
+                'description' => 'Pengiriman Cepat dan Efisien Melalui Udara.',
             ],
             'suku-cadang' => [
                 'slug' => 'suku-cadang',
                 'name' => 'Suku Cadang',
-                'description' => 'Baterai cerdas, generator fast charger, remote kontrol RTK, baling-baling karbon, dan aksesoris resmi Mechatron.',
+                'description' => 'Suku Cadang Asli dan Berkualitas.',
             ],
         ];
     }
@@ -50,8 +50,8 @@ class DroneProducts
             'agri-h30' => [
                 'id' => 'agri-h30',
                 'modelCode' => 'BMT-1525',
-                'name' => 'MECHATRON AGRI H-30',
-                'category' => 'Agrikultur',
+                'name' => 'Mechatron AGRI H30',
+                'category' => 'Pertanian',
                 'categorySlug' => 'agrikultur',
                 'categoryDetail' => '30-Litre Hexacopter Agriculture Drone',
                 'subtitle' => 'Drone Pertanian Kapasitas Besar 30 Liter',
@@ -68,7 +68,7 @@ class DroneProducts
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [
                     ['label' => 'Model Unit', 'value' => 'BMT-1525 H30'],
-                    ['label' => 'Kategori Produk', 'value' => 'Agrikultur (Sprayer & Spreader)'],
+                    ['label' => 'Kategori Produk', 'value' => 'Pertanian (Sprayer & Spreader)'],
                     ['label' => 'Kapasitas Tangki Semprot', 'value' => '30 Liter (Cairan Pupuk & Pestisida)'],
                     ['label' => 'Kapasitas Tangki Sebar', 'value' => '40 Liter / 35 kg (Pupuk Granular & Benih)'],
                     ['label' => 'Konfigurasi Rangka', 'value' => '6-Rotor Hexacopter (High-Grade Carbon Fiber Arms)'],
@@ -120,8 +120,8 @@ class DroneProducts
             'agri-h15' => [
                 'id' => 'agri-h15',
                 'modelCode' => 'BMT-1323',
-                'name' => 'MECHATRON AGRI H-15',
-                'category' => 'Agrikultur',
+                'name' => 'Mechatron AGRI H15',
+                'category' => 'Pertanian',
                 'categorySlug' => 'agrikultur',
                 'categoryDetail' => '15-Litre Hexacopter Agriculture Drone',
                 'subtitle' => 'Drone Pertanian Lipat Efisiensi Tinggi 15 Liter',
@@ -179,62 +179,7 @@ class DroneProducts
                 ],
             ],
 
-            'agri-t100' => [
-                'id' => 'agri-t100',
-                'modelCode' => 'BMT-2050',
-                'name' => 'MECHATRON AGRI T-100 MAX',
-                'category' => 'Agrikultur',
-                'categorySlug' => 'agrikultur',
-                'categoryDetail' => '50-Litre Enterprise Ultra-Heavy Sprayer Drone',
-                'subtitle' => 'Drone Pertanian Ultra-Kapasitas 50 Liter Enterprise',
-                'tagline' => 'Unrivaled Capacity & Giant Field Coverage — Kapasitas Raksasa 50L untuk Korporasi Perkebunan.',
-                'capacity' => '50 Liter / 60 kg',
-                'image' => '/images/agras-t100.jpg',
-                'gallery' => [
-                    '/images/agras-t100.jpg',
-                    '/images/heromecha3.jpg',
-                    '/images/agrikultur-drone-spraying.jpg',
-                    '/images/featured_combo_kit.jpg',
-                    '/images/smart_battery_b30.jpg',
-                ],
-                'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'BMT-2050 T100 MAX'],
-                    ['label' => 'Kategori Produk', 'value' => 'Agrikultur (Heavy Industrial Enterprise)'],
-                    ['label' => 'Kapasitas Tangki Semprot', 'value' => '50 Liter (Dual Pressure High-Flow Pump)'],
-                    ['label' => 'Kapasitas Tangki Sebar', 'value' => '70 Liter / 60 kg (High-Speed Rotary Disc)'],
-                    ['label' => 'Konfigurasi Rangka', 'value' => '8-Rotor Coaxial Octocopter Heavy-Duty'],
-                    ['label' => 'Produktivitas Lahan', 'value' => '12 - 16 Hektar / Jam'],
-                    ['label' => 'Waktu Terbang (Flight Time)', 'value' => '12 - 18 Menit'],
-                    ['label' => 'Lebar Semprot Efektif', 'value' => '8 - 12 Meter'],
-                    ['label' => 'Sistem Sensor & Radar', 'value' => 'Active Phased Array Radar 360° + Binocular Vision'],
-                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP67 Waterproof & Anti-Corrosion'],
-                ],
-                'features' => [
-                    ['title' => 'Kapasitas Raksasa 50 Liter', 'desc' => 'Volume muatan terbesar untuk menyelesaikan blok perkebunan sawit dan tebu dalam rotasi minimal.'],
-                    ['title' => 'Pompa Tekanan Ganda High-Flow', 'desc' => 'Aliran semprot mencapai 24 L/menit dengan partikel atomisasi yang menembus kanopi rapat.'],
-                    ['title' => 'Radar Active Phased Array', 'desc' => 'Deteksi kontur medan 3D dan rintangan kabel listrik hingga jarak 50 meter secara akurat.'],
-                    ['title' => 'Sistem Pengisian Otomatis', 'desc' => 'Dukungan stasiun pengisian cepat dan dok cairan otomatis di bak kendaraan operasional.'],
-                ],
-                'packageIncludes' => [
-                    'Unit Drone Coaxial Octocopter BMT-2050 T100 MAX',
-                    'Tangki Semprot Cairan 50L & Tangki Sebar Butiran 70L',
-                    'Mechatron Enterprise GCS Touchscreen Remote Controller',
-                    '4x Ultra-High Capacity Smart Flight Battery',
-                    'Generator Inverter Dual-Fast Charging 12000W',
-                    'Sertifikat Kalibrasi Pabrik & Layanan Pelatihan Operator Lapangan',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Perkebunan Kelapa Sawit & Karet Luas',
-                        'desc' => 'Optimal untuk konsesi ratusan hektar dengan efisiensi semprotan yang merata dari puncak hingga tajuk tengah.',
-                    ],
-                    [
-                        'title' => 'Perkebunan Tebu & Hutan Tanaman Industri',
-                        'desc' => 'Menuntaskan pemupukan dan pengendalian hama skala masif dengan kecepatan terbang konstan berjarak jelajah tinggi.',
-                    ],
-                ],
-            ],
+           
 
             // ==========================================
             // KATEGORI 2: DRONE FOTOGRAFI
@@ -243,8 +188,8 @@ class DroneProducts
                 'id' => 'photo-m400',
                 'modelCode' => 'MF-400-PRO',
                 'name' => 'MECHATRON FOTOGRAFI M-400 PRO',
-                'category' => 'Drone Fotografi',
-                'categorySlug' => 'fotografi',
+                'category' => 'Drone Pengawasan',
+                'categorySlug' => 'pengawasan',
                 'categoryDetail' => 'Enterprise Cinematic & Aerial Photography Drone',
                 'subtitle' => 'Drone Fotografi Sinematik Resolusi Tinggi Full-Frame 45MP',
                 'tagline' => 'Cinematic Vision from Above — Solusi Dokumentasi Visual Sinematik 4K HDR & Inspeksi Visual Presisi.',
@@ -458,7 +403,7 @@ class DroneProducts
                 'fieldApplications' => [
                     [
                         'title' => 'Kendali Terbang Otonom Penuh',
-                        'desc' => 'Mengoperasikan armada Mechatron Agri H-30, H-15, dan Survey Series secara otomatis dengan telemetri visual real-time.',
+                        'desc' => 'Mengoperasikan armada Mechatron Agri H30, H15, dan Survey Series secara otomatis dengan telemetri visual real-time.',
                     ],
                 ],
             ],
@@ -550,7 +495,7 @@ class DroneProducts
                 'fieldApplications' => [
                     [
                         'title' => 'Baterai Cadangan Rotasi Terbang',
-                        'desc' => 'Memastikan armada drone Mechatron Agri H-30 dan Cargo C-50 bekerja nonstop tanpa jeda menunggu pengisian.',
+                        'desc' => 'Memastikan armada drone Mechatron Agri H30 dan Cargo C-50 bekerja nonstop tanpa jeda menunggu pengisian.',
                     ],
                 ],
             ],
@@ -577,7 +522,7 @@ class DroneProducts
                     ['label' => 'Kategori Produk', 'value' => 'Suku Cadang & Propeller'],
                     ['label' => 'Material Bilah', 'value' => '100% Toray Carbon Fiber T700 dengan Resin Tahan UV'],
                     ['label' => 'Ukuran Diameter', 'value' => '33 x 11 Inci (Bilah Lipat Foldable)'],
-                    ['label' => 'Kompatibilitas Unit', 'value' => 'Mechatron Agri H-30, Agri H-15, dan Drone Heavy-Lift'],
+                    ['label' => 'Kompatibilitas Unit', 'value' => 'Mechatron Agri H30, Agri H-15, dan Drone Heavy-Lift'],
                     ['label' => 'Keseimbangan Dinamis', 'value' => 'Kalibrasi Presisi Tinggi Pabrik (Zero Vibration Balancing)'],
                     ['label' => 'Mekanisme Pemasangan', 'value' => 'Quick-Release Lock Paduan Aluminium Aviasi CNC'],
                     ['label' => 'Ketahanan Suhu', 'value' => '-20°C hingga +65°C Cuaca Tropis'],
