@@ -5,12 +5,9 @@
             <!-- Col 1: Brand & Identity + Social Icons (4 cols on md) -->
             <div class="sm:col-span-2 md:col-span-4 space-y-4">
                 <a href="{{ route('home') }}" class="inline-flex items-center gap-2.5 group select-none text-decoration-none">
-                    <div class="w-8 h-8 rounded-lg overflow-hidden shadow-sm shrink-0">
-                        <img src="{{ asset('images/mechatron_logo.png') }}" alt="Mechatron Logo" class="w-full h-full object-cover">
+                    <div class="h-9 w-auto shrink-0 transition-transform duration-200 group-hover:scale-105">
+                        <img src="{{ asset('images/logo_dark.png') }}" alt="Mechatron Logo" class="h-full w-auto object-contain">
                     </div>
-                    <span class="font-extrabold text-[18px] text-white tracking-tight group-hover:text-[#0070D5] transition-colors">
-                        MECHATRON
-                    </span>
                 </a>
                 <p class="text-[13px] sm:text-[14px] text-neutral-400 leading-relaxed max-w-sm">
                     Pelopor inovasi teknologi drone agrikultur cerdas, drone fotografi presisi tinggi, dan armada pengiriman tangguh untuk modernisasi industri Indonesia.
