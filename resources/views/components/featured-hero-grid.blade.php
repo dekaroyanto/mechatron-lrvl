@@ -7,7 +7,7 @@
             'category' => 'Drone Pertanian',
             'titlePrefix' => 'MECHATRON ',
             'titleSuffix' => 'AGRI SERIES',
-            'tagline' => 'Smart Solutions for Every Mission.',
+            'tagline' => 'Solusi Cerdas untuk Pertanian Presisi.',
             'image' => asset('images/featured_drone_h30.jpg'),
             'productInfo' => $products['agri-h30'] ?? [
                 'id' => 'agri-h30',
@@ -27,7 +27,7 @@
             'productInfo' => $products['agri-h15'] ?? [
                 'id' => 'agri-h15',
                 'modelCode' => 'BMT-1323',
-                'title' => 'MECHATRON AGRI H-15 (BMT-1323)',
+                'title' => 'MECHATRON AGRI H15 (BMT-1323)',
                 'tagline' => 'Drone Lipat Efisiensi Tinggi dengan Kapasitas Muatan 15 Liter',
                 'image' => asset('images/drone_delivery.jpeg'),
             ],
@@ -52,12 +52,12 @@
             'titlePrefix' => 'ORIGINAL ',
             'titleSuffix' => 'PARTS',
             'tagline' => 'Suku Cadang Asli dan Berkualitas',
-            'image' => asset('images/featured_combo_kit.jpg'),
+            'image' => asset('images/sparepart.jpeg'),
             'productInfo' => [
                 'id' => 'mechatron-power-kit',
                 'title' => 'Mechatron Enterprise Power & Flight Combo Kit',
                 'tagline' => 'Paket Lengkap Hardcase, Baterai Cerdas, Smart Charger & Remote Kontrol',
-                'image' => asset('images/featured_combo_kit.jpg'),
+                'image' => asset('images/sparepart.jpeg'),
             ],
         ],
     ];
