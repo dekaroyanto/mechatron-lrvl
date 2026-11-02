@@ -4,9 +4,9 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-neutral-800">
             <!-- Col 1: Brand & Identity + Social Icons (4 cols on md) -->
             <div class="sm:col-span-2 md:col-span-4 space-y-4">
-                <a href="{{ route('home') }}" class="inline-flex items-center gap-2.5 group select-none text-decoration-none">
-                    <div class="h-9 w-auto shrink-0 transition-transform duration-200 group-hover:scale-105">
-                        <img src="{{ asset('images/logo_dark.png') }}" alt="Mechatron Logo" class="h-full w-auto object-contain">
+                <a href="{{ route('home') }}" class="flex w-full max-w-sm items-center gap-2.5 group select-none text-decoration-none">
+                    <div class="w-full transition-transform duration-200 group-hover:scale-105">
+                        <img src="{{ asset('images/logo_bmt_dark.png') }}" alt="Mechatron Logo" class="w-full h-auto object-contain">
                     </div>
                 </a>
                 <p class="text-[13px] sm:text-[14px] text-neutral-400 leading-relaxed max-w-sm">
