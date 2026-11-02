@@ -42,9 +42,10 @@
                     class="group block relative rounded-[28px] sm:rounded-[36px] overflow-hidden bg-slate-900 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-500 text-decoration-none"
                 >
                     <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[420px] lg:min-h-[480px]">
-                        <div class="lg:col-span-7 relative h-[280px] sm:h-[360px] lg:h-auto overflow-hidden">
-                            <img :src="articles[0].image" :alt="articles[0].title" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-slate-950/80"></div>
+                        <div class="lg:col-span-7 relative h-[280px] sm:h-[360px] lg:h-auto overflow-hidden bg-slate-900">
+                            <img :src="articles[0].image" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90" />
+                            <img :src="articles[0].image" :alt="articles[0].title" class="relative z-10 w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                            <div class="absolute inset-0 z-20 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-slate-950/80"></div>
                         </div>
 
                         <div class="lg:col-span-5 p-7 sm:p-10 lg:p-12 flex flex-col justify-between bg-slate-950 text-white">
@@ -89,8 +90,9 @@
                 <template x-for="article in filteredArticles" :key="article.id">
                     <article class="group flex flex-col bg-white rounded-[24px] overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <a :href="'/blog/' + article.slug" class="relative block w-full h-[220px] sm:h-[240px] overflow-hidden bg-slate-900 text-decoration-none">
-                            <img :src="article.image" :alt="article.title" class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-50 group-hover:opacity-30 transition-opacity"></div>
+                            <img :src="article.image" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90" />
+                            <img :src="article.image" :alt="article.title" class="relative z-10 w-full h-full object-contain object-center transition-transform duration-700 ease-out group-hover:scale-105" />
+                            <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-50 group-hover:opacity-30 transition-opacity"></div>
                         </a>
 
                         <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">

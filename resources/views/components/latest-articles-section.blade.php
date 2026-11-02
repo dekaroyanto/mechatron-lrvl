@@ -29,8 +29,9 @@
             @foreach($latestArticles as $article)
                 <article class="group flex flex-col bg-white rounded-[24px] overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <a href="{{ route('blog.show', $article['slug']) }}" class="relative block w-full h-[220px] sm:h-[240px] overflow-hidden bg-slate-900">
-                        <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}" class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                        <img src="{{ $article['image'] }}" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90" />
+                        <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}" class="relative z-10 w-full h-full object-contain object-center transition-transform duration-700 ease-out group-hover:scale-105" />
+                        <div class="absolute inset-0 z-20 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
                     </a>
 
                     <div class="p-6 sm:p-7 flex flex-col flex-grow justify-between">

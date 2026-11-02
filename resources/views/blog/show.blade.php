@@ -166,8 +166,9 @@
                 @foreach($relatedPosts as $related)
                     <article class="group flex flex-col bg-white rounded-[22px] overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-lg transition-all duration-300">
                         <a href="{{ route('blog.show', $related['slug']) }}" class="relative block w-full h-[190px] overflow-hidden bg-slate-900 text-decoration-none">
-                            <img src="{{ $related['image'] }}" alt="{{ $related['title'] }}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
-                            <div class="absolute top-3.5 left-3.5">
+                            <img src="{{ $related['image'] }}" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90" />
+                            <img src="{{ $related['image'] }}" alt="{{ $related['title'] }}" class="relative z-10 w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500" />
+                            <div class="absolute z-20 top-3.5 left-3.5">
                                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-white/95 text-slate-900 shadow-sm">
                                     {{ $related['category'] }}
                                 </span>
