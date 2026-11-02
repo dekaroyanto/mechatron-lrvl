@@ -13,7 +13,7 @@ class DroneProducts
             'all' => [
                 'slug' => 'all',
                 'name' => 'Semua Kategori',
-                'description' => 'Seluruh jajaran armada drone industri, sensor pemetaan presisi, kargo otonom, dan ekosistem suku cadang Mechatron.',
+                'description' => 'Jelajahi seluruh solusi teknologi udara Mechatron, mulai dari armada drone pertanian, logistik cerdas, sistem pengawasan presisi, hingga suku cadang orisinal.',
             ],
             'agrikultur' => [
                 'slug' => 'pertanian',
@@ -48,125 +48,163 @@ class DroneProducts
             // KATEGORI 1: AGRIKULTUR
             // ==========================================
             'agri-h30' => [
-                'id' => 'agri-h30',
-                'modelCode' => 'BMT-1525',
-                'name' => 'Mechatron AGRI H30',
-                'category' => 'Pertanian',
-                'categorySlug' => 'agrikultur',
-                'categoryDetail' => '30-Litre Hexacopter Agriculture Drone',
-                'subtitle' => 'Drone Pertanian Kapasitas Besar 30 Liter',
-                'tagline' => 'Smart Solutions for Every Mission — Heavy Payload 30L untuk Efisiensi Perkebunan Skala Besar.',
-                'capacity' => '30 Liter / 35 kg',
-                'image' => '/images/featured_drone_h30.jpg',
-                'gallery' => [
-                    '/images/featured_drone_h30.jpg',
-                    '/images/heromecha1.jpg',
-                    '/images/agrikultur-drone-spraying.jpg',
-                    '/images/featured_remote_kit.jpg',
-                    '/images/smart_battery_b30.jpg',
-                ],
-                'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'BMT-1525 H30'],
-                    ['label' => 'Kategori Produk', 'value' => 'Pertanian (Sprayer & Spreader)'],
-                    ['label' => 'Kapasitas Tangki Semprot', 'value' => '30 Liter (Cairan Pupuk & Pestisida)'],
-                    ['label' => 'Kapasitas Tangki Sebar', 'value' => '40 Liter / 35 kg (Pupuk Granular & Benih)'],
-                    ['label' => 'Konfigurasi Rangka', 'value' => '6-Rotor Hexacopter (High-Grade Carbon Fiber Arms)'],
-                    ['label' => 'Fungsi Utama (Function)', 'value' => 'Sprayer & Spreader (Dual-Purpose Modular)'],
-                    ['label' => 'Waktu Terbang (Flight Time)', 'value' => '10 - 15 Menit (Muatan Penuh)'],
-                    ['label' => 'Kecepatan Terbang Maksimal', 'value' => '7 m/s (25 km/jam)'],
-                    ['label' => 'Produktivitas Lahan', 'value' => '6.5 - 8.0 Hektar / Jam'],
-                    ['label' => 'Jarak Kendali (Remote Distance)', 'value' => '2 - 5 km LOS (Frekuensi Ganda)'],
-                    ['label' => 'Sistem Sensor & Radar', 'value' => 'Radar Penghindar Rintangan 360° & Terrain Following'],
-                    ['label' => 'Lebar Semprot Efektif', 'value' => '6 - 9 Meter'],
-                    ['label' => 'Dimensi Terlipat (Folded)', 'value' => '1104 x 1147 x 806 mm'],
-                    ['label' => 'Dimensi Terbuka (Unfolded)', 'value' => '2058 x 1484 x 806 mm'],
-                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP67 Tahan Air, Debu, & Kimia Pertanian'],
-                ],
-                'features' => [
-                    ['title' => 'Muatan Besar 30 Liter', 'desc' => 'Kapasitas muatan optimal untuk operasional cepat di perkebunan kelapa sawit dan persawahan luas.'],
-                    ['title' => 'Cakupan Cepat 6.5 Ha/Jam', 'desc' => 'Kecepatan semprot terarah menghemat waktu operasional hingga 40x dibanding metode manual.'],
-                    ['title' => 'Dual-Purpose Modular', 'desc' => 'Dapat diganti dengan cepat antara tangki semprot cairan dan tangki penyebar butiran pupuk/benih.'],
-                    ['title' => 'Radar 360° & Terrain Follow', 'desc' => 'Sensor kontur medan real-time dan radar anti tabrak otomatis mendeteksi pepohonan dan tiang.'],
-                    ['title' => 'Navigasi RTK Sentimeter', 'desc' => 'Sistem pemetaan otonom dengan presisi jalur terbang tingkat sentimeter tanpa tumpang tindih.'],
-                    ['title' => 'Rangka Karbon Ultra Tangguh', 'desc' => 'Struktur serat karbon aviasi dengan lengan yang dapat dilipat untuk transportasi mudah di lapangan.'],
-                ],
-                'packageIncludes' => [
-                    'Unit Drone Hexacopter BMT-1525 H30 Lengkap',
-                    'Heavy-Duty Flight Case Logam Khusus Transportasi Lahan',
-                    'Sprayer Tank 30L dengan Nozel Sentrifugal Atomisasi Halus',
-                    'Spreader Tank 40L untuk Butiran Pupuk & Benih',
-                    'Mechatron Smart GCS Remote Controller dengan Layar HD Ultra-Bright',
-                    '2 Unit Baterai Cerdas High-Capacity Quick Swap',
-                    'Generator Smart Fast Charger Station',
-                    'Toolkit Perawatan, Suku Cadang Baling-Baling Cadangan, & Buku Manual Resmi',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Penyemprotan Kelapa Sawit & Perkebunan',
-                        'desc' => 'Penyemprotan herbisida, fungisida, dan pupuk cair daun di tajuk tanaman perkebunan secara merata berkat downwash propeller bertenaga tinggi.',
+                    'id' => 'agri-h30',
+                    'modelCode' => 'Agri H30',
+                    'name' => 'Mechatron AGRI H30',
+                    'category' => 'Pertanian',
+                    'categorySlug' => 'agrikultur',
+                    'categoryDetail' => 'Drone Pertanian Hexacopter 30 Liter',
+                    'subtitle' => 'Drone Pertanian Kapasitas 30 Liter', // Diambil dari image_5a9266.jpg
+                    'tagline' => 'Dirancang dengan stabilitas 6 rotor dan teknologi penyemprotan presisi untuk memaksimalkan efisiensi kerja harian di lahan pertanian.', // Diambil dari image_5a9266.jpg
+                    'capacity' => '30 Liter', // Disesuaikan dengan image_5a92a6.jpg
+                    'image' => '/images/featured_drone_h30.jpg',
+                    'gallery' => [
+                        '/images/featured_drone_h30.jpg',
+                        '/images/featured_remote_kit.jpg',
                     ],
-                    [
-                        'title' => 'Penebaran Pupuk Granular & Benih Padi',
-                        'desc' => 'Penebaran pupuk urea/NPK butiran atau penebaran benih padi di hamparan sawah tanpa merusak tanaman yang sudah tumbuh.',
+                    'whatsappNumber' => '6281112143111',
+                    
+                    // PEMBARUAN SPESIFIKASI BERDASARKAN BROSUR (image_5a8f7d.jpg)
+                    'specifications' => [
+                        ['label' => 'Fungsi', 'value' => 'Penyemprot & Penebar'],
+                        ['label' => 'Waktu Terbang', 'value' => 'Hingga 10 menit'],
+                        ['label' => 'Kecepatan Maksimal', 'value' => 'Hingga 7 m/s'],
+                        ['label' => 'Produktivitas', 'value' => 'Hingga 6.5 ha/jam'],
+                        ['label' => 'Jarak Jangkauan Kendali', 'value' => 'Hingga 2 km LOS'],
+                        ['label' => 'Sensor', 'value' => 'Laju Aliran, Pendeteksi Kontur Tanah, Penghindar Halangan'],
+                        ['label' => 'Dosis Penyemprotan', 'value' => '40 - 60 L/ha'],
+                        ['label' => 'Dimensi Lipat (mm)', 'value' => '1104 x 1147 x 806'],
+                        ['label' => 'Dimensi Terbuka (mm)', 'value' => '2058 x 1484'], 
                     ],
-                    [
-                        'title' => 'Navigasi Medan Berbukit & Terasering',
-                        'desc' => 'Radar terrain-following otomatis menjaga ketinggian konstan dari permukaan tanah berlereng untuk hasil semprot yang konsisten.',
-                    ],
-                ],
-            ],
 
-            'agri-h15' => [
+                    // PEMBARUAN FITUR (Merujuk pada ikon image_5a92a6.jpg dan detail image_5a8f9e.jpg)
+                    'features' => [
+                                    [
+                                        'title' => 'Rangka Karbon Kokoh & Ringan', 
+                                        'desc' => 'Dibuat dari serat karbon berkualitas tinggi. Sangat tangguh dan awet untuk pemakaian jangka panjang, namun tetap ringan saat bermanuver di udara.'
+                                    ],
+                                    [
+                                        'title' => 'Desain Lipat, Muat di Bagasi Mobil', 
+                                        'desc' => 'Lengan drone dirancang agar mudah dilipat menjadi sangat ringkas. Lebih praktis dibawa ke lahan mana saja hanya dengan mobil biasa.'
+                                    ],
+                                    [
+                                        'title' => 'Fungsi 2-in-1 (Semprot & Tebar)', 
+                                        'desc' => 'Beli 1 drone, dapat 2 fungsi! Tangki dirancang agar sangat mudah dibongkar-pasang dan diganti secara bergantian untuk menyemprot cairan maupun menebar pupuk butiran.'
+                                    ],
+                                    [
+                                        'title' => 'Kerja Otomatis (Auto Spray & Spread)', 
+                                        'desc' => 'Cukup atur pola di layar, drone akan terbang dan bekerja secara otomatis. Cairan atau pupuk tersebar jauh lebih merata ke seluruh area lahan.'
+                                    ],
+                                    [
+                                        'title' => 'Radar Pintar Anti-Nabrak', 
+                                        'desc' => 'Terbang lebih tenang dan aman. Dilengkapi sensor cerdas yang otomatis mendeteksi rintangan seperti pohon atau tiang, lalu menghindarinya sendiri.'
+                                    ],
+                                    [
+                                        'title' => 'Sangat Mudah Dioperasikan', 
+                                        'desc' => 'Menggunakan remote kontrol pintar dengan tampilan layar dan bahasa yang sangat simpel. Pemula sekalipun bisa dengan cepat belajar menerbangkannya.'
+                                    ],
+                                ],
+
+                    // PEMBARUAN ISI PAKET BERDASARKAN BROSUR (image_5a8f7d.jpg)
+                    'packageIncludes' => [
+                        'Unit Drone (termasuk Kotak Penyimpanan)',
+                        'Pengendali Jarak Jauh (Remote Control) & Tas Pelindung',
+                        '2 Buah Baterai', // Disertakan 2 PCS baterai berdasarkan gambar
+                        'Set Pengisi Daya',
+                        '2 Buah Antena Jarak Jauh',
+                        'Aksesori Pendukung',
+                    ],
+                    
+                    // PEMBARUAN GAMBARAN PENGGUNAAN LAPANGAN (image_5a8f9e.jpg)
+                    'fieldApplications' => [
+                        [
+                            'title' => 'Penyemprotan Tanaman Presisi',
+                            'desc' => 'Penyemprotan cairan pupuk dan pestisida secara merata di area perkebunan atau persawahan dengan dosis terukur 40-60 L/ha.',
+                        ],
+                        [
+                            'title' => 'Penyebaran Butiran & Benih',
+                            'desc' => 'Penyebaran pupuk butiran (granular) atau benih tanaman secara cepat dan merata tanpa merusak area lahan.',
+                        ],
+                        [
+                            'title' => 'Operasi Mengikuti Kontur Lahan',
+                            'desc' => 'Penerbangan otomatis yang mengikuti kontur bukit atau perbukitan untuk menjaga konsistensi jarak semprot dari tajuk tanaman.',
+                        ],
+                        [
+                            'title' => 'Penghindaran Rintangan Otomatis',
+                            'desc' => 'Navigasi aman di lahan terbuka yang memiliki pepohonan, tiang listrik, atau struktur lain secara otomatis.',
+                        ],
+                        [
+                            'title' => 'Efisiensi Skala Besar',
+                            'desc' => 'Pengerjaan lahan seluas 4,1 hingga 6,5 hektar hanya dalam waktu satu jam, menghemat waktu dan biaya tenaga kerja secara signifikan.',
+                        ],
+                    ],
+                ],
+
+           'agri-h15' => [
                 'id' => 'agri-h15',
-                'modelCode' => 'BMT-1323',
+                'modelCode' => 'Agri H15',
                 'name' => 'Mechatron AGRI H15',
                 'category' => 'Pertanian',
-                'categorySlug' => 'agrikultur',
-                'categoryDetail' => '15-Litre Hexacopter Agriculture Drone',
-                'subtitle' => 'Drone Pertanian Lipat Efisiensi Tinggi 15 Liter',
-                'tagline' => 'Smart Solutions for Every Mission — Ringkas, Lincah, & Efisiensi Maksimal untuk Segala Medan Pertanian.',
-                'capacity' => '15 Liter / 18 kg',
+                'categorySlug' => 'agrikultur', 
+                'categoryDetail' => 'Drone Pertanian Hexacopter 15 Liter', // Diubah ke bahasa Indonesia
+                'subtitle' => 'Drone Pertanian Kapasitas 15 Liter',
+                'tagline' => 'Solusi Cerdas untuk Setiap Misi — Ringkas, Lincah, & Efisiensi Maksimal untuk Segala Medan Pertanian.', // Diubah ke bahasa Indonesia
+                'capacity' => '15 Liter',
                 'image' => '/images/featured_drone_h15.jpg',
                 'gallery' => [
                     '/images/featured_drone_h15.jpg',
-                    '/images/heromecha2.jpg',
-                    '/images/agrikultur-drone-sunset.jpg',
                     '/images/carbon_propellers.jpg',
-                    '/images/featured_remote_kit.jpg',
                 ],
                 'whatsappNumber' => '6281112143111',
+                
                 'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'BMT-1323 H15'],
-                    ['label' => 'Kategori Produk', 'value' => 'Agrikultur (Sprayer & Spreader)'],
-                    ['label' => 'Kapasitas Tangki Semprot', 'value' => '15 Liter (Cairan Pupuk & Pestisida)'],
-                    ['label' => 'Kapasitas Tangki Sebar', 'value' => '20 Liter / 18 kg (Pupuk Granular & Benih)'],
-                    ['label' => 'Konfigurasi Rangka', 'value' => '6-Rotor Hexacopter (Carbon Fiber Arms)'],
-                    ['label' => 'Fungsi Utama (Function)', 'value' => 'Sprayer & Spreader (Dual-Purpose)'],
-                    ['label' => 'Waktu Terbang (Flight Time)', 'value' => '10 - 12 Menit'],
-                    ['label' => 'Kecepatan Maksimal', 'value' => '5.5 m/s (20 km/jam)'],
-                    ['label' => 'Produktivitas Lahan', 'value' => '4.1 Hektar / Jam'],
-                    ['label' => 'Jarak Kendali (Remote Distance)', 'value' => '2 km LOS'],
-                    ['label' => 'Lebar Semprot Efektif', 'value' => '4.5 - 6 Meter'],
-                    ['label' => 'Dimensi Terlipat (Folded)', 'value' => '803 x 884 x 718 mm'],
-                    ['label' => 'Dimensi Terbuka (Unfolded)', 'value' => '1700 x 1484 x 718 mm'],
-                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP67 Tahan Cuaca Ekstrem & Debu Lapangan'],
+                    ['label' => 'Fungsi', 'value' => 'Penyemprot & Penebar'], // Disederhanakan ke bahasa Indonesia
+                    ['label' => 'Waktu Terbang', 'value' => 'Hingga 10 menit'],
+                    ['label' => 'Kecepatan Maksimal', 'value' => 'Hingga 5.5 m/s'],
+                    ['label' => 'Produktivitas', 'value' => 'Hingga 4.1 ha/jam'], // Penyesuaian ejaan baku
+                    ['label' => 'Jarak Jangkauan Kendali', 'value' => 'Hingga 2 km LOS'], // Penyesuaian bahasa Indonesia
+                    ['label' => 'Sensor', 'value' => 'Laju Aliran, Pendeteksi Kontur Tanah, Penghindar Halangan'],
+                    ['label' => 'Dosis Penyemprotan', 'value' => '40 - 60 L/ha'], // Mengubah 'Spraying' menjadi 'Penyemprotan'
+                    ['label' => 'Dimensi Lipat (mm)', 'value' => '803 x 884 x 718'],
+                    ['label' => 'Dimensi Terbuka (mm)', 'value' => '1700 x 1484 x 718'], 
                 ],
+
                 'features' => [
-                    ['title' => 'Desain Ringkas & Mudah Dibawa', 'desc' => 'Dapat dilipat cepat hingga berukuran kompak, muat di bagasi mobil atau bak motor operasional.'],
-                    ['title' => 'Produktivitas 4.1 Ha/Jam', 'desc' => 'Cocok untuk lahan pertanian hortikultura, persawahan terasering, dan kebun sayur buah.'],
-                    ['title' => 'Atomisasi Kabut Halus', 'desc' => 'Nozel semprot presisi memastikan cairan obat menempel sempurna di kedua sisi daun tanpa boros air.'],
-                    ['title' => 'Sensor Terrain & Anti Rintangan', 'desc' => 'Menjaga jarak semprot stabil otomatis pada kontur berbukit dan menghindari halangan pohon.'],
-                ],
+                                [
+                                    'title' => 'Rangka Karbon Kokoh & Ringan', 
+                                    'desc' => 'Dibuat dari serat karbon berkualitas tinggi. Sangat tangguh dan awet untuk pemakaian jangka panjang, namun tetap ringan saat bermanuver di udara.'
+                                ],
+                                [
+                                    'title' => 'Desain Lipat, Muat di Bagasi Mobil', 
+                                    'desc' => 'Lengan drone dirancang agar mudah dilipat menjadi sangat ringkas. Lebih praktis dibawa ke lahan mana saja hanya dengan mobil biasa.'
+                                ],
+                                [
+                                    'title' => 'Fungsi 2-in-1 (Semprot & Tebar)', 
+                                    'desc' => 'Beli 1 drone, dapat 2 fungsi! Tangki dirancang agar sangat mudah dibongkar-pasang dan diganti secara bergantian untuk menyemprot cairan maupun menebar pupuk butiran.'
+                                ],
+                                [
+                                    'title' => 'Kerja Otomatis (Auto Spray & Spread)', 
+                                    'desc' => 'Cukup atur pola di layar, drone akan terbang dan bekerja secara otomatis. Cairan atau pupuk tersebar jauh lebih merata ke seluruh area lahan.'
+                                ],
+                                [
+                                    'title' => 'Radar Pintar Anti-Nabrak', 
+                                    'desc' => 'Terbang lebih tenang dan aman. Dilengkapi sensor cerdas yang otomatis mendeteksi rintangan seperti pohon atau tiang, lalu menghindarinya sendiri.'
+                                ],
+                                [
+                                    'title' => 'Sangat Mudah Dioperasikan', 
+                                    'desc' => 'Menggunakan remote kontrol pintar dengan tampilan layar dan bahasa yang sangat simpel. Pemula sekalipun bisa dengan cepat belajar menerbangkannya.'
+                                ],
+                            ],
+
                 'packageIncludes' => [
-                    'Unit Drone Hexacopter BMT-1323 H15 Lengkap',
-                    'Heavy-Duty Flight Box Logam Portabel',
-                    'Sprayer Tank 15L & Sistem Selang Presisi',
-                    'Spreader Tank 20L untuk Pupuk Butiran',
-                    'Smart Drone Remote Controller dengan Display HD Terang',
-                    '2 Unit Baterai Cerdas High-Capacity',
-                    'Smart Charger Set Cepat',
+                    'Unit Drone (termasuk Kotak Penyimpanan)', // Penyesuaian ke bahasa Indonesia
+                    'Pengendali Jarak Jauh (Remote Control) & Tas Pelindung', // Penyesuaian bahasa Indonesia
+                    '4 Buah Baterai', // Pcs diubah menjadi Buah
+                    'Set Pengisi Daya',
+                    '2 Buah Antena Jarak Jauh', // Pcs dan Longrange diubah
+                    'Aksesori Pendukung', // Accesories diubah ke ejaan baku Aksesori
                 ],
+                
                 'fieldApplications' => [
                     [
                         'title' => 'Lahan Persawahan & Tanaman Pangan',
@@ -184,58 +222,82 @@ class DroneProducts
             // ==========================================
             // KATEGORI 2: DRONE FOTOGRAFI
             // ==========================================
-            'photo-m400' => [
-                'id' => 'photo-m400',
-                'modelCode' => 'MF-400-PRO',
-                'name' => 'MECHATRON FOTOGRAFI M-400 PRO',
-                'category' => 'Drone Pengawasan',
+            'surveillance-q1' => [
+                'id' => 'surveillance-q1',
+                'modelCode' => 'Survey Q1',
+                'name' => 'Mechatron Survey Q1',
+                'category' => 'Pengawasan',
                 'categorySlug' => 'pengawasan',
-                'categoryDetail' => 'Enterprise Cinematic & Aerial Photography Drone',
-                'subtitle' => 'Drone Fotografi Sinematik Resolusi Tinggi Full-Frame 45MP',
-                'tagline' => 'Cinematic Vision from Above — Solusi Dokumentasi Visual Sinematik 4K HDR & Inspeksi Visual Presisi.',
-                'capacity' => 'Kamera 45MP / 4K 60fps HDR',
-                'image' => '/images/matrice-400-hero.png',
+                'categoryDetail' => 'Drone Pengawasan Data Real-Time',
+                'subtitle' => 'Drone Pengawasan Real-Time Siang dan Malam',
+                'tagline' => 'Solusi Pengawasan Cerdas — Pemantauan udara dengan data real-time dan kemudahan pengoperasian.',
+                'capacity' => 'Radius 3 km / 20 Menit',
+                'image' => '/images/drone_survei.jpeg', // Sesuaikan gambar jika ada yang baru
                 'gallery' => [
-                    '/images/matrice-400-hero.png',
-                    '/images/card_avata_360.jpg',
-                    '/images/avata_360_drone.jpg',
-                    '/images/featured_remote_kit.jpg',
+                    '/images/surv-Q1-2.jpg', // Sesuaikan gambar jika ada yang baru
+                    '/images/surv-Q1-1.jpg', // Sesuaikan gambar jika ada yang baru
+                    '/images/surv-Q1-3.png', // Sesuaikan gambar jika ada yang baru
+                    '/images/surv-Q1-4.jpg', // Sesuaikan gambar jika ada yang baru
                 ],
                 'whatsappNumber' => '6281112143111',
+                
                 'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron Fotografi M-400 Pro'],
-                    ['label' => 'Kategori Produk', 'value' => 'Drone Fotografi & Sinematik'],
-                    ['label' => 'Modul Navigasi', 'value' => 'Dual RTK + GNSS Multi-Konstelasi (GPS/GLONASS/BeiDou/Galileo)'],
-                    ['label' => 'Akurasi Penentuan Posisi', 'value' => 'Horizontal 1 cm + 1 ppm, Vertikal 1.5 cm + 1 ppm'],
-                    ['label' => 'Sensor Kamera Bawaan', 'value' => '45MP Full-Frame Mechanical Shutter (Video 4K 60fps HDR)'],
-                    ['label' => 'Waktu Terbang (Flight Time)', 'value' => 'Hingga 45 Menit per Baterai'],
-                    ['label' => 'Jangkauan Transmisi Video', 'value' => 'Hingga 15 km Video Transmisi Full HD 1080p 60fps'],
-                    ['label' => 'Jarak Kendali Jarak Jauh', 'value' => 'Hingga 8-15 km LOS (O3 Enterprise Transmission)'],
-                    ['label' => 'Dukungan Payload Eksternal', 'value' => 'Kamera Sinematik 45MP, Sensor Termal, & Lensa Telefoto Ultra-Zoom'],
-                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP55 Tahan Hujan Ringan & Angin Kencang'],
+                    ['label' => 'Tipe', 'value' => 'BMT-31'], //[cite: 10]
+                    ['label' => 'Sensor Gambar', 'value' => 'Ketinggian, kecepatan, Jarak'], //[cite: 10]
+                    ['label' => 'Resolusi Gambar', 'value' => '1080p'], //[cite: 10]
+                    ['label' => 'Konektivitas', 'value' => '5.8 GHz'], //[cite: 10]
+                    ['label' => 'Kapasitas Baterai', 'value' => '10 000mAh'], //[cite: 10]
+                    ['label' => 'Penyimpanan (Storage)', 'value' => '32GB'], //[cite: 10]
+                    ['label' => 'Radius Jangkauan', 'value' => '3 Km'], //[cite: 10]
+                    ['label' => 'Waktu Terbang (Flight time)', 'value' => '20 menit'], //[cite: 10]
+                    ['label' => 'Kecepatan Terbang', 'value' => '80 k m/h'], //[cite: 10]
+                    ['label' => 'Dimensi per Produk', 'value' => 'P 55 cm x L 55 cm x T 40 cm'], //[cite: 10]
+                    ['label' => 'Berat per Produk', 'value' => '5.000,00 gr'], //[cite: 10]
                 ],
+
                 'features' => [
-                    ['title' => 'Sensor Full-Frame 45 MP 4K HDR', 'desc' => 'Mechanical shutter berkecepatan 1/2000 detik menghasilkan foto detail tinggi dan rekaman sinematik bebas distorsi.'],
-                    ['title' => 'Gimbal Stabilizer 3-Axis Ultra-Smooth', 'desc' => 'Peredam getaran motor mikro menghasilkan rekaman super stabil bahkan saat berhadapan dengan hembusan angin kencang.'],
-                    ['title' => 'Durasi Terbang Ekstra 45 Menit', 'desc' => 'Waktu terbang panjang memastikan sesi pengambilan gambar visual udara selesai tuntas tanpa sering mendarat.'],
-                    ['title' => 'Jalur Terbang Sinematik Cerdas', 'desc' => 'Fitur waypoints otomatis, orbit melingkar, dan tracking subjek bergerak untuk angle sinematik spektakuler.'],
-                ],
-                'packageIncludes' => [
-                    'Unit Drone Mechatron Fotografi M-400 Pro',
-                    'Kamera Sinematik Full-Frame 45MP dengan Gimbal 3-Axis',
-                    'Base Station RTK Portabel & Tripod Karbon Presisi',
-                    'Smart Controller Enterprise dengan Layar 7" Ultra-Terang',
-                    '4x Intelligent Flight Battery & Charging Hub',
-                    'Hardcase Standar Penerbangan Anti-Air',
-                ],
-                'fieldApplications' => [
                     [
-                        'title' => 'Produksi Video Komersial & Dokumenter',
-                        'desc' => 'Pengambilan visual udara berskala sinematik untuk iklan komersial, promosi pariwisata, dan profil perusahaan.',
+                        'title' => 'Pengawasan Data Real-Time',
+                        'desc' => 'Drone ini dirancang khusus untuk memberikan data pengawasan secara real-time, memastikan pemantauan yang cepat dan akurat.' //[cite: 10]
                     ],
                     [
-                        'title' => 'Inspeksi Visual Infrastruktur & Bangunan Tinggi',
-                        'desc' => 'Dokumentasi detail visual resolusi tinggi untuk memantau jembatan, tower transmisi, dan atap gedung industri.',
+                        'title' => 'Radius & Kecepatan Optimal',
+                        'desc' => 'Mampu menjangkau radius hingga 3 km dengan kecepatan tetap 80 km/jam, ideal untuk mencakup area luas dengan cepat.' //[cite: 10]
+                    ],
+                    [
+                        'title' => 'Fleksibilitas Operasional',
+                        'desc' => 'Dapat beroperasi selama 20 menit dan menawarkan fleksibilitas pengendalian baik secara manual maupun otomatis sesuai kebutuhan misi.' //[cite: 10]
+                    ],
+                    [
+                        'title' => 'Operasi Siang & Malam',
+                        'desc' => 'Dirancang untuk dapat beroperasi optimal baik pada siang hari maupun malam hari, mendukung pengawasan 24 jam.' //[cite: 10]
+                    ],
+                    [
+                        'title' => 'Aplikasi Remote Kontrol Mandiri',
+                        'desc' => 'Menggunakan software aplikasi remote control yang dikembangkan sendiri, sehingga sangat familier dan mudah digunakan bahkan oleh operator awam.' //[cite: 10]
+                    ],
+                    [
+                        'title' => 'Resolusi Gambar Tajam',
+                        'desc' => 'Dilengkapi dengan resolusi gambar 1080p, memastikan detail visual yang jelas untuk keperluan identifikasi dan analisis.' //[cite: 10]
+                    ],
+                ],
+
+                'packageIncludes' => [
+                    'Unit drone', //[cite: 10]
+                    'Remote kontrol', //[cite: 10]
+                    'Baterai', //[cite: 10]
+                    'Charger', //[cite: 10]
+                    'Hardcase box unit', //[cite: 10]
+                ],
+                
+                'fieldApplications' => [
+                    [
+                        'title' => 'Pemantauan Keamanan Area',
+                        'desc' => 'Patroli udara untuk memantau batas wilayah, fasilitas penting, atau area publik dengan penyampaian informasi situasi secara seketika.',
+                    ],
+                    [
+                        'title' => 'Inspeksi & Pemetaan Cepat',
+                        'desc' => 'Melakukan inspeksi visual awal pada area yang sulit dijangkau atau berbahaya bagi personel darat dalam waktu singkat.',
                     ],
                 ],
             ],
@@ -243,308 +305,249 @@ class DroneProducts
             // ==========================================
             // KATEGORI 3: PENGIRIMAN (LOGISTIK & KARGO)
             // ==========================================
-            'cargo-c50' => [
-                'id' => 'cargo-c50',
-                'modelCode' => 'MC-50-HEAVY',
-                'name' => 'MECHATRON CARGO C-50',
-                'category' => 'Pengiriman',
-                'categorySlug' => 'pengiriman',
-                'categoryDetail' => 'Heavy-Lift Autonomous Logistics & Delivery Drone',
-                'subtitle' => 'Drone Kargo Logistik Berat & Bantuan Darurat 50 kg',
-                'tagline' => 'Heavy-Lift Logistics Everywhere — Pengiriman Logistik Industri & Bantuan Medis Lintas Medan Sulit.',
-                'capacity' => 'Payload 50 kg / 30 km',
-                'image' => '/images/cargo_drone_c50.jpg',
-                'gallery' => [
-                    '/images/cargo_drone_c50.jpg',
-                    '/images/heromecha1.jpg',
-                    '/images/featured_combo_kit.jpg',
-                    '/images/carbon_propellers.jpg',
-                ],
-                'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron Cargo C-50 (MC-50)'],
-                    ['label' => 'Kategori Produk', 'value' => 'Pengiriman (Heavy Logistics)'],
-                    ['label' => 'Kapasitas Muatan Beban (Payload)', 'value' => 'Maksimal 50 kg (Box Kargo Logistik / Winch Cable)'],
-                    ['label' => 'Volume Boks Kargo', 'value' => '70 Liter (Weatherproof Seal & Quick Release)'],
-                    ['label' => 'Jarak Tempuh Jelajah (Range)', 'value' => 'Hingga 30 km (Muatan 30 kg) / 20 km (Muatan 50 kg)'],
-                    ['label' => 'Kecepatan Jelajah Operasional', 'value' => 'Hingga 72 km/jam (20 m/s)'],
-                    ['label' => 'Mekanisme Penurunan Muatan', 'value' => 'Smart Winch Cable Otomatis (Penurunan Tanpa Mendarat) / Pendaratan Langsung'],
-                    ['label' => 'Sistem Tenaga & Baterai', 'value' => 'Dual Redundant Battery System (Pemberitahuan Darurat Fail-Safe)'],
-                    ['label' => 'Navigasi & Komunikasi', 'value' => 'Koneksi Seluler 4G/5G LTE + Radio Link 20 km + Parasut Darurat'],
-                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP66 Tahan Angin Kencang (Level 7) & Hujan Tropis Deras'],
-                ],
-                'features' => [
-                    ['title' => 'Muatan Angkut Hingga 50 kg', 'desc' => 'Daya angkut masif untuk suku cadang mesin tambang, suplai medis mendesak, dan logistik perairan pulau.'],
-                    ['title' => 'Sistem Smart Winch Otomatis', 'desc' => 'Menurunkan boks barang secara lembut dengan tali kawat otomatis tanpa perlu drone menyentuh tanah.'],
-                    ['title' => 'Dual Sistem Redundansi Aman', 'desc' => 'Dilengkapi baterai ganda, motor redundan, dan parasut balistik darurat otomatis demi keselamatan maksimal.'],
-                    ['title' => 'Operasi Otonom Jarak Jauh', 'desc' => 'Rute terbang terjadwal dari titik A ke titik B dengan stasiun pendaratan presisi berpemandu optik.'],
-                ],
-                'packageIncludes' => [
-                    'Unit Wahana Heavy-Lift Cargo Drone C-50 Lengkap',
-                    'Boks Kargo Aerodinamis Logam Tertutup Anti-Air',
-                    'Modul Smart Winch Cable System dengan Sensor Berat Otomatis',
-                    'Stasiun Kontrol GCS Jarak Jauh dengan Konektivitas Satelit & 4G',
-                    '4 Unit Smart Flight Battery High-Discharge',
-                    'Generator Inverter Pengisian Daya Cepat Khusus',
-                    'Parasut Balistik Keselamatan Darurat Terpasang',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Logistik Pertambangan & Anjungan Lepas Pantai',
-                        'desc' => 'Mengirimkan sampel laboratorium batuan, suku cadang alat berat, dan peralatan kritis melintasi area tambang raksasa.',
+            'delivery-h2' => [
+                'id' => 'delivery-h2',
+               'modelCode' => 'Deliv H2',
+                    'name' => 'Mechatron Deliv H2',
+                    'category' => 'Pengiriman',
+                    'categorySlug' => 'pengiriman',
+                    'categoryDetail' => 'Drone Hexacopter Pengiriman Point to Point',
+                    'subtitle' => 'Drone Kurir Point-to-Point Otomatis',
+                    'tagline' => 'Solusi Logistik Cepat dan Akurat — Pengiriman paket otomatis berbasis koordinat dengan kecepatan tinggi.',
+                    'capacity' => '1.5 kg / 3 km',
+                    'image' => '/images/drone_delivery.jpeg',
+                    'gallery' => [
+                        '/images/delivH2-1.jpeg',
+                        '/images/delivH2-2.jpeg',
+                        '/images/delivH2-3.jpeg',
                     ],
-                    [
-                        'title' => 'Bantuan Medis Darurat Bencana Alam',
-                        'desc' => 'Menembus desa terisolir akibat jembatan putus atau tanah longsor untuk mendrop darah, obat, dan plasma penyelamat nyawa.',
+                    'whatsappNumber' => '6281112143111',
+                    
+                    'specifications' => [
+                        ['label' => 'Tipe', 'value' => 'BMT-41'], //[cite: 10]
+                        ['label' => 'Kapasitas Beban Maksimal', 'value' => '1,5 kg'], //[cite: 10]
+                        ['label' => 'Radius Jelajah', 'value' => '3 km'], //[cite: 10]
+                        ['label' => 'Kecepatan Terbang', 'value' => '80 km/h'], //[cite: 10]
+                        ['label' => 'Waktu Terbang (Maksimal)', 'value' => '12 menit'], //[cite: 10]
+                        ['label' => 'Konfigurasi', 'value' => 'Hexacopter'], //[cite: 10]
+                        ['label' => 'Sensor Gambar', 'value' => 'GPRS'], //[cite: 10]
+                        ['label' => 'Konektivitas', 'value' => '2,4 dan 5.8 GHz'], //[cite: 10]
+                        ['label' => 'Kapasitas Baterai', 'value' => '19000 mAh'], //[cite: 10]
+                        ['label' => 'Dimensi per Produk', 'value' => '110 cm x 45 cm x 35 cm'], //[cite: 10]
+                        ['label' => 'Berat per Produk', 'value' => '6.000,00 gr'], //[cite: 10]
                     ],
-                ],
+
+                    'features' => [
+                        [
+                            'title' => 'Pengiriman Point-to-Point Otomatis',
+                            'desc' => 'Drone beroperasi secara otomatis untuk mengantarkan barang tepat sasaran sesuai dengan titik koordinat pada sistem GPRS.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Kecepatan Tinggi',
+                            'desc' => 'Mampu terbang dengan kecepatan tetap hingga 80 km/jam, memastikan paket tiba di tujuan dengan cepat dan efisien.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Performa Hexacopter Stabil',
+                            'desc' => 'Desain 6 rotor (hexacopter) memberikan stabilitas ekstra saat membawa beban maksimal 1,5 kg selama penerbangan.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Aplikasi Remote Kontrol Mandiri',
+                            'desc' => 'Dilengkapi dengan perangkat lunak (software) aplikasi remote kontrol yang dikembangkan secara internal untuk keamanan dan keandalan optimal.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Kapasitas Baterai Besar',
+                            'desc' => 'Didukung oleh baterai berkapasitas 19000 mAh yang memungkinkan waktu terbang maksimal hingga 12 menit per misi pengiriman.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Penyimpanan Internal 64 GB',
+                            'desc' => 'Memiliki kapasitas penyimpanan bawaan sebesar 64 GB untuk mendukung kebutuhan sistem operasional.' //[cite: 10]
+                        ],
+                    ],
+
+                    'packageIncludes' => [
+                        'Unit Drone BMT-41', //[cite: 10]
+                        'Remote Kontrol', //[cite: 10]
+                        'Baterai', //[cite: 10]
+                        'Charger', //[cite: 10]
+                        'Hardcase Box Unit', //[cite: 10]
+                    ],
+                    
+                    'fieldApplications' => [
+                        [
+                            'title' => 'Pengiriman Barang Darurat & Medis',
+                            'desc' => 'Cocok untuk mengirimkan suplai medis ringan atau komponen kritis dengan cepat antar fasilitas dalam radius 3 km.',
+                        ],
+                        [
+                            'title' => 'Logistik Antar Gedung Perkantoran',
+                            'desc' => 'Solusi cepat untuk memindahkan dokumen atau paket kecil antar gedung tanpa terjebak hambatan lalu lintas.',
+                        ],
+                    ],
             ],
 
-            'delivery-x10' => [
-                'id' => 'delivery-x10',
-                'modelCode' => 'MAX-10-AIR',
-                'name' => 'MECHATRON AIR COURIER X-10',
-                'category' => 'Pengiriman',
-                'categorySlug' => 'pengiriman',
-                'categoryDetail' => 'Autonomous Rapid Courier & Parcel Delivery Drone',
-                'subtitle' => 'Drone Kurir Ekspres Otonom Jarak Jauh 15 km',
-                'tagline' => 'Fast, Silent, & Direct Delivery — Pengiriman Paket Ekspres Cepat Antar Fasilitas Bisnis.',
-                'capacity' => 'Payload 10 kg / 15 km',
-                'image' => '/images/card_avata_360.jpg',
-                'gallery' => [
-                    '/images/card_avata_360.jpg',
-                    '/images/avata_360_drone.jpg',
-                    '/images/smart_battery_b30.jpg',
-                    '/images/featured_remote_kit.jpg',
-                ],
-                'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron Air Courier X-10'],
-                    ['label' => 'Kategori Produk', 'value' => 'Pengiriman (Autonomous Courier)'],
-                    ['label' => 'Kapasitas Muatan Beban', 'value' => '10 kg (Kompartemen Kargo Bersuhu Terkendali)'],
-                    ['label' => 'Jarak Tempuh Operasional', 'value' => '15 km (Perjalanan Pulang-Pergi)'],
-                    ['label' => 'Kecepatan Terbang Maksimal', 'value' => '60 km/jam'],
-                    ['label' => 'Waktu Terbang (Flight Time)', 'value' => '25 - 30 Menit'],
-                    ['label' => 'Tingkat Kebisingan Suara', 'value' => '< 58 dB (Propeller Desain Senyap untuk Lingkungan Perkotaan)'],
-                    ['label' => 'Kompartemen Khusus', 'value' => 'Insulasi Termal untuk Sampel Medis & Makanan Panas/Dingin'],
-                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP55 Tahan Hujan Sedang & Angin Kencang'],
-                ],
-                'features' => [
-                    ['title' => 'Pengantaran Cepat Tanpa Macet', 'desc' => 'Menghubungkan kantor pusat dan pabrik manufaktur dalam hitungan menit tanpa hambatan lalu lintas darat.'],
-                    ['title' => 'Kompartemen Pendingin Medis', 'desc' => 'Suhu ruang kargo dapat distabilkan untuk menjaga integritas sampel darah dan vaksin sensitif suhu.'],
-                    ['title' => 'Suara Senyap Ramah Lingkungan', 'desc' => 'Baling-baling akustik generasi baru meminimalisir kebisingan sehingga aman terbang di dekat permukiman.'],
-                    ['title' => 'Sensor Radar & Optik Pintar Hindar Kabel', 'desc' => 'Sensor optik dan radar canggih mendeteksi kabel tiang listrik dan pohon secara otomatis dalam radius 30 meter.'],
-                ],
-                'packageIncludes' => [
-                    'Unit Drone Mechatron Air Courier X-10',
-                    'Kompartemen Kargo Pintar dengan Kunci Digital QR Code',
-                    'Smart Controller Ground Base Station',
-                    '2 Unit Baterai Cerdas Li-Ion Kerapatan Tinggi',
-                    'Stasiun Pengisi Daya Dinding Cepat (Fast Wall Charger)',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Pengiriman Antar Cabang Rumah Sakit',
-                        'desc' => 'Pengantaran sampel darah, reagen uji lab, dan berkas donor antar gedung rumah sakit dalam hitungan 5 menit.',
+            'delivery-h1' => [
+                    'id' => 'delivery-h1',
+                    'modelCode' => 'Deliv H1',
+                    'name' => 'Mechatron Deliv H1',
+                    'category' => 'Pengiriman',
+                    'categorySlug' => 'pengiriman',
+                    'categoryDetail' => 'Drone Hexacopter Pengiriman Point to Point',
+                    'subtitle' => 'Drone Kurir Point-to-Point Otomatis',
+                    'tagline' => 'Solusi Logistik Cepat dan Akurat — Pengiriman paket otomatis berbasis koordinat dengan kecepatan tinggi.',
+                    'capacity' => '1.5 kg / 3 km',
+                    'image' => '/images/h1-1.jpeg',
+                    'gallery' => [
+                        '/images/h1-1.jpeg',
+                        '/images/h1-2.jpeg',
+                        '/images/h1-3.jpeg',
                     ],
-                    [
-                        'title' => 'Distribusi Dokumen & Perkakas Industri',
-                        'desc' => 'Menghubungkan fasilitas pelabuhan, gudang logistik, dan kapal sandar secara cepat dan efisien.',
+                    'whatsappNumber' => '6281112143111',
+                    
+                    'specifications' => [
+                        ['label' => 'Tipe', 'value' => 'BMT-41'], //[cite: 10]
+                        ['label' => 'Kapasitas Beban Maksimal', 'value' => '1,5 kg'], //[cite: 10]
+                        ['label' => 'Radius Jelajah', 'value' => '3 km'], //[cite: 10]
+                        ['label' => 'Kecepatan Terbang', 'value' => '80 km/h'], //[cite: 10]
+                        ['label' => 'Waktu Terbang (Maksimal)', 'value' => '12 menit'], //[cite: 10]
+                        ['label' => 'Konfigurasi', 'value' => 'Hexacopter'], //[cite: 10]
+                        ['label' => 'Sensor Gambar', 'value' => 'GPRS'], //[cite: 10]
+                        ['label' => 'Konektivitas', 'value' => '2,4 dan 5.8 GHz'], //[cite: 10]
+                        ['label' => 'Kapasitas Baterai', 'value' => '19000 mAh'], //[cite: 10]
+                        ['label' => 'Dimensi per Produk', 'value' => '110 cm x 45 cm x 35 cm'], //[cite: 10]
+                        ['label' => 'Berat per Produk', 'value' => '6.000,00 gr'], //[cite: 10]
+                    ],
+
+                    'features' => [
+                        [
+                            'title' => 'Pengiriman Point-to-Point Otomatis',
+                            'desc' => 'Drone beroperasi secara otomatis untuk mengantarkan barang tepat sasaran sesuai dengan titik koordinat pada sistem GPRS.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Kecepatan Tinggi',
+                            'desc' => 'Mampu terbang dengan kecepatan tetap hingga 80 km/jam, memastikan paket tiba di tujuan dengan cepat dan efisien.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Performa Hexacopter Stabil',
+                            'desc' => 'Desain 6 rotor (hexacopter) memberikan stabilitas ekstra saat membawa beban maksimal 1,5 kg selama penerbangan.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Aplikasi Remote Kontrol Mandiri',
+                            'desc' => 'Dilengkapi dengan perangkat lunak (software) aplikasi remote kontrol yang dikembangkan secara internal untuk keamanan dan keandalan optimal.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Kapasitas Baterai Besar',
+                            'desc' => 'Didukung oleh baterai berkapasitas 19000 mAh yang memungkinkan waktu terbang maksimal hingga 12 menit per misi pengiriman.' //[cite: 10]
+                        ],
+                        [
+                            'title' => 'Penyimpanan Internal 64 GB',
+                            'desc' => 'Memiliki kapasitas penyimpanan bawaan sebesar 64 GB untuk mendukung kebutuhan sistem operasional.' //[cite: 10]
+                        ],
+                    ],
+
+                    'packageIncludes' => [
+                        'Unit Drone BMT-41', //[cite: 10]
+                        'Remote Kontrol', //[cite: 10]
+                        'Baterai', //[cite: 10]
+                        'Charger', //[cite: 10]
+                        'Hardcase Box Unit', //[cite: 10]
+                    ],
+                    
+                    'fieldApplications' => [
+                        [
+                            'title' => 'Pengiriman Barang Darurat & Medis',
+                            'desc' => 'Cocok untuk mengirimkan suplai medis ringan atau komponen kritis dengan cepat antar fasilitas dalam radius 3 km.',
+                        ],
+                        [
+                            'title' => 'Logistik Antar Gedung Perkantoran',
+                            'desc' => 'Solusi cepat untuk memindahkan dokumen atau paket kecil antar gedung tanpa terjebak hambatan lalu lintas.',
+                        ],
                     ],
                 ],
-            ],
 
             // ==========================================
             // KATEGORI 4: SUKU CADANG & AKSESORIS
             // ==========================================
-            'mechatron-ground-station' => [
-                'id' => 'mechatron-ground-station',
-                'modelCode' => 'GCS-PRO-RTK',
-                'name' => 'MECHATRON SMART GCS CONTROLLER',
+            'original-parts' => [
+                'id' => 'original-parts',
+                'modelCode' => 'PARTS-ORIGINAL',
+                'name' => 'Suku Cadang & Komponen Drone Original',
                 'category' => 'Suku Cadang',
                 'categorySlug' => 'suku-cadang',
-                'categoryDetail' => 'Dual-RTK High-Brightness Ground Station Remote',
-                'subtitle' => 'Ground Control Station dengan Layar Ultra-Terang & Dual RTK',
-                'tagline' => 'Precision Control in Your Hands — Kendali Penuh Armada Drone Pertanian dalam Satu Genggaman.',
-                'capacity' => 'Layar 5.5" 1000 nits',
-                'image' => '/images/featured_remote_kit.jpg',
+                'categoryDetail' => 'Komponen Asli Impor Langsung dari Pabrikan',
+                'subtitle' => 'Jaminan 100% Barang Original & Stok Ready di Indonesia',
+                'tagline' => 'Impor Langsung dari Pabrikan Utama — Kami menyetok komponen asli untuk memastikan perbaikan dan perawatan armada drone Anda berjalan tanpa inden.',
+                'capacity' => 'Stok Lokal Siap Kirim',
+                'image' => '/images/sparepart.jpeg',
                 'gallery' => [
-                    '/images/featured_remote_kit.jpg',
-                    '/images/featured_drone_h30.jpg',
-                    '/images/matrice-400-hero.png',
-                    '/images/smart_battery_b30.jpg',
+                    '/images/sparepart.jpeg',
                 ],
                 'whatsappNumber' => '6281112143111',
+                
+                // DETAIL KETERANGAN BARANG & LAYANAN (Bukan Spesifikasi Drone)
                 'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron Smart GCS Pro (V2)'],
-                    ['label' => 'Kategori Produk', 'value' => 'Suku Cadang & Kontroler'],
-                    ['label' => 'Spesifikasi Layar', 'value' => '5.5 Inci Full HD IPS (1000 nits Ultra-Bright)'],
-                    ['label' => 'Sistem Operasi', 'value' => 'Mechatron Agriculture OS (Android Custom Secure)'],
-                    ['label' => 'Jarak Transmisi', 'value' => 'Hingga 5 km LOS (Sistem Dual-Antena Frekuensi Ganda)'],
-                    ['label' => 'Kapasitas Baterai', 'value' => 'Baterai Internal 5000 mAh + Eksternal Quick Swap (Hingga 8 Jam)'],
-                    ['label' => 'Modul Navigasi RTK', 'value' => 'Dual RTK Sentimeter Terintegrasi'],
-                    ['label' => 'Konektivitas Eksternal', 'value' => 'USB Type-C, Slot MicroSD, Port HDMI Out, Slot SIM Card 4G LTE'],
-                    ['label' => 'Ketahanan Fisik', 'value' => 'IP54 Tahan Cipratan Air, Debu, & Jatuh Ringan'],
+                    ['label' => 'Asal Barang', 'value' => 'Impor Langsung dari Pabrikan Resmi (Direct OEM)'],
+                    ['label' => 'Jaminan Kualitas', 'value' => '100% Original & Baru (Bukan Rekondisi)'],
+                    ['label' => 'Ketersediaan', 'value' => 'Stok Ready di Gudang Indonesia (Tanpa Inden)'],
+                    ['label' => 'Kategori Komponen', 'value' => 'Propulsi, Elektronik, Sensor, Gimbal, & Mekanikal'],
+                    ['label' => 'Material Utama', 'value' => 'Serat Karbon Aviasi & Logam Presisi Tinggi'],
+                    ['label' => 'Dukungan Armada', 'value' => 'Drone Pertanian, Pengiriman, & Pengawasan'],
                 ],
+
+                // 6 CARD SALES POINT SUKU CADANG
                 'features' => [
-                    ['title' => 'Layar Super Terang 1000 Nits', 'desc' => 'Tetap terlihat sangat jelas dan tajam di bawah terik sinar matahari langsung tanpa tudung pelindung.'],
-                    ['title' => 'Perencanaan Jalur Otomatis', 'desc' => 'Tandai sudut-sudut lahan di peta satelit, rute semprot otomatis dihitung dalam hitungan detik.'],
-                    ['title' => 'Transmisi Stabil Jarak 5 Km', 'desc' => 'Teknologi frekuensi ganda tahan interferensi sinyal di area perkebunan terpencil.'],
-                    ['title' => 'Baterai Hot-Swap Tahan Seharian', 'desc' => 'Dapat diganti baterai tambahan tanpa perlu mematikan kontroler saat sedang beroperasi.'],
+                    [
+                        'title' => 'Impor Langsung dari Pabrikan', 
+                        'desc' => 'Seluruh komponen dijamin 100% original langsung dari produsen resmi. Bebas dari barang palsu atau kualitas rakitan lokal yang berisiko.'
+                    ],
+                    [
+                        'title' => 'Stok Ready di Indonesia (Tanpa Inden)', 
+                        'desc' => 'Kami menyetok spare part secara berkala di gudang lokal. Saat drone Anda butuh penggantian part, barang siap dikirim hari itu juga.'
+                    ],
+                    [
+                        'title' => 'Baling-Baling & Motor Karbon Tangguh', 
+                        'desc' => 'Tersedia baling-baling serat karbon asli dan motor brushless berkekuatan tinggi yang tahan terhadap beban kerja ekstrem.'
+                    ],
+                    [
+                        'title' => 'Modul Sensor & Kamera Gimbal Asli', 
+                        'desc' => 'Menyediakan replacement part untuk sistem kamera, sensor optik, hingga modul navigasi dengan tingkat presisi sesuai bawaan pabrik.'
+                    ],
+                    [
+                        'title' => 'Sistem Kontrol Terbang & Board Utama', 
+                        'desc' => 'Komponen vital seperti Flight Controller, ESC, dan Power Board tersedia lengkap dan siap pasang (plug and play).'
+                    ],
+                    [
+                        'title' => 'Dukungan Konsultasi & Garansi Part', 
+                        'desc' => 'Tim teknisi kami siap membantu memastikan kompatibilitas suku cadang yang Anda butuhkan sebelum proses pembelian.'
+                    ],
                 ],
+
+                // DAFTAR KATEGORI PART YANG DIBERIKAN DI GAMBAR
                 'packageIncludes' => [
-                    'Unit Smart GCS Remote Controller Mechatron',
-                    'Hard Carrying Case Khusus dengan Bantalan Busa Presisi',
-                    '2x Baterai Eksternal Tambahan',
-                    'Dual Antena High-Gain Ekstra',
-                    'Charger Cepat USB Type-C & Kabel Data Industri',
-                    'Tali Lanyard Leher Ergonomis & Penutup Port Silikon',
+                    'Baling-Baling (Propeller) Serat Karbon',
+                    'Motor Brushless & ESC Module',
+                    'Kamera Gimbal & Modul Sensor Visual',
+                    'Flight Controller & Modul GPS/Navigasi',
+                    'Servo Motors & Kabel Kelistrikan (Wiring)',
+                    'Rangkaian Frame Karbon & Aksesori Baut Presisi',
                 ],
+                
+                // MANFAAT BAGI PEMBELI
                 'fieldApplications' => [
                     [
-                        'title' => 'Kendali Terbang Otonom Penuh',
-                        'desc' => 'Mengoperasikan armada Mechatron Agri H30, H15, dan Survey Series secara otomatis dengan telemetri visual real-time.',
+                        'title' => 'Perawatan Rutin Tanpa Hambatan',
+                        'desc' => 'Menjaga armada drone selalu aman terbang dengan mengganti part wear-and-tear tepat waktu menggunakan barang original.',
+                    ],
+                    [
+                        'title' => 'Perbaikan Cepat Saat Terjadi Kerusakan',
+                        'desc' => 'Meminimalisir waktu henti kerja (downtime) operasional proyek berkat ketersediaan stok komponen yang selalu siap kirim.',
+                    ],
+                    [
+                        'title' => 'Kebutuhan Komponen Cadangan Tim Lapangan',
+                        'desc' => 'Kemudahan bagi tim operasional untuk menyetok part mandiri (seperti baling-baling cadangan) langsung dari distributor resmi.',
                     ],
                 ],
             ],
 
-            'mechatron-power-kit' => [
-                'id' => 'mechatron-power-kit',
-                'modelCode' => 'PCK-GEN-9000',
-                'name' => 'MECHATRON POWER COMBO KIT',
-                'category' => 'Suku Cadang',
-                'categorySlug' => 'suku-cadang',
-                'categoryDetail' => '9000W Inverter Generator & Fast Charging Station',
-                'subtitle' => 'Generator Fast Charging 9000W & Smart Battery System',
-                'tagline' => 'Non-Stop Agricultural Flight Mission — Pengisian Daya Ultra Cepat 10 Menit untuk Rotasi Terbang Tanpa Jeda.',
-                'capacity' => 'Fast Charge 10 Menit',
-                'image' => '/images/featured_combo_kit.jpg',
-                'gallery' => [
-                    '/images/featured_combo_kit.jpg',
-                    '/images/smart_battery_b30.jpg',
-                    '/images/featured_drone_h30.jpg',
-                ],
-                'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron Power Combo Kit 9000W'],
-                    ['label' => 'Kategori Produk', 'value' => 'Suku Cadang & Catu Daya'],
-                    ['label' => 'Tipe Mesin Generator', 'value' => 'Inverter Bensin 4-Tak Khusus Drone Pertanian'],
-                    ['label' => 'Daya Output Maksimal', 'value' => '9000 Watt / 220V Pure Sine Wave Stabil'],
-                    ['label' => 'Waktu Pengisian Baterai', 'value' => '10 - 12 Menit per Baterai (Fast Charge)'],
-                    ['label' => 'Saluran Pengisian Daya', 'value' => 'Dual Channel (Sanggup Mengisi 2 Baterai Sekaligus)'],
-                    ['label' => 'Sistem Pendingin Baterai', 'value' => 'Air-Cooling Heat Sink Otomatis Selama Pengisian'],
-                    ['label' => 'Kapasitas Tangki Bahan Bakar', 'value' => '25 Liter (Konsumsi Efisien hingga 10 Jam Kerja)'],
-                ],
-                'features' => [
-                    ['title' => 'Fast Charging 10 Menit', 'desc' => 'Baterai terisi penuh dalam 10 menit, seimbang dengan durasi terbang drone sehingga kerja tanpa jeda.'],
-                    ['title' => 'Dual Channel Pengisian', 'desc' => 'Dua baterai dapat dicharge berbarengan dengan manajemen arus pintar individual.'],
-                    ['title' => 'Hemat Bahan Bakar Hingga 30%', 'desc' => 'Teknologi inverter secara otomatis menyesuaikan putaran mesin dengan beban kebutuhan daya baterai.'],
-                ],
-                'packageIncludes' => [
-                    'Unit Generator Inverter 9000W Heavy-Duty Beroda',
-                    'Stasiun Dual-Channel Smart Fast Charger Mechatron',
-                    'Kabel Koneksi Daya Baterai Tahan Panas Tinggi',
-                    'Corong Bahan Bakar, Toolset Perawatan Mesin, & Buku Panduan',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Operasi di Perkebunan Terpencil',
-                        'desc' => 'Menyediakan pasokan listrik mandiri di tengah kebun sawit atau sawah yang jauh dari jaringan listrik PLN.',
-                    ],
-                ],
-            ],
-
-            'smart-battery-b30' => [
-                'id' => 'smart-battery-b30',
-                'modelCode' => 'BAT-30K-SMART',
-                'name' => 'MECHATRON SMART BATTERY B-30',
-                'category' => 'Suku Cadang',
-                'categorySlug' => 'suku-cadang',
-                'categoryDetail' => 'High-Density 30,000mAh Intelligent Li-Po Flight Battery',
-                'subtitle' => 'Baterai Cerdas 30000mAh Tahan Siklus Tinggi & Quick-Swap',
-                'tagline' => 'High-Density Power for Extreme Demands — Ketahanan Hingga 1.500 Siklus Terbang Bergaransi.',
-                'capacity' => '30.000 mAh / 51.8V',
-                'image' => '/images/smart_battery_b30.jpg',
-                'gallery' => [
-                    '/images/smart_battery_b30.jpg',
-                    '/images/featured_combo_kit.jpg',
-                    '/images/featured_drone_h30.jpg',
-                ],
-                'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron Smart Battery B-30'],
-                    ['label' => 'Kategori Produk', 'value' => 'Suku Cadang & Baterai'],
-                    ['label' => 'Kapasitas Nominal', 'value' => '30.000 mAh (1554 Wh)'],
-                    ['label' => 'Tegangan Nominal', 'value' => '51.8 V (Konfigurasi Sel 14S Li-Po High-Discharge)'],
-                    ['label' => 'Siklus Pengisian Daya (Life Cycles)', 'value' => 'Hingga 1.500 Siklus dengan Kapasitas Terjaga > 80%'],
-                    ['label' => 'Sistem Manajemen Baterai (BMS)', 'value' => 'BMS Pintar dengan Proteksi Overcharge, Overheat, & Sel Seimbang'],
-                    ['label' => 'Fitur Heat Sink Pendingin', 'value' => 'Aluminium Casing Heatsink Terintegrasi Aliran Udara Cepat'],
-                    ['label' => 'Waktu Pengisian Fast Charging', 'value' => '9 - 12 Menit dengan Mechatron Generator Fast Charger'],
-                    ['label' => 'Sertifikasi Proteksi', 'value' => 'IP67 Tahan Cairan Kimia, Air, & Debu Pertanian'],
-                ],
-                'features' => [
-                    ['title' => 'Daya Tahan 1.500 Siklus', 'desc' => 'Sel kimia kelas industri memberikan investasi hemat biaya operasional jangka panjang.'],
-                    ['title' => 'BMS Cerdas Berlayar LED', 'desc' => 'Lampu LED indikator menampilkan level kapasitas baterai dan deteksi kesehatan sel baterai.'],
-                    ['title' => 'Mekanisme Kunci Quick Swap', 'desc' => 'Pelepasan dan pemasangan baterai ke unit drone selesai dalam waktu kurang dari 15 detik.'],
-                ],
-                'packageIncludes' => [
-                    'Unit Baterai Cerdas Mechatron Smart Battery B-30',
-                    'Tutup Pelindung Terminal Emas Anti-Debu & Korosi',
-                    'Kartu Garansi Resmi Mechatron 1.000 Siklus',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Baterai Cadangan Rotasi Terbang',
-                        'desc' => 'Memastikan armada drone Mechatron Agri H30 dan Cargo C-50 bekerja nonstop tanpa jeda menunggu pengisian.',
-                    ],
-                ],
-            ],
-
-            'carbon-propeller-kit' => [
-                'id' => 'carbon-propeller-kit',
-                'modelCode' => 'PROP-CF-30',
-                'name' => 'MECHATRON CARBON PROPELLER KIT',
-                'category' => 'Suku Cadang',
-                'categorySlug' => 'suku-cadang',
-                'categoryDetail' => 'High-Grade Folding Carbon Fiber Propeller & Motor Set',
-                'subtitle' => 'Set Baling-Baling Serat Karbon Lipat & Motor Brushless',
-                'tagline' => 'Aerodynamic Efficiency & Quiet Operation — Serat Karbon Aviasi Ringan, Kuat, & Tahan Benturan.',
-                'capacity' => 'Carbon Fiber 33 Inci',
-                'image' => '/images/carbon_propellers.jpg',
-                'gallery' => [
-                    '/images/carbon_propellers.jpg',
-                    '/images/featured_drone_h30.jpg',
-                    '/images/matrice-400-hero.png',
-                ],
-                'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Model Unit', 'value' => 'Mechatron Carbon Propeller Kit CF-30'],
-                    ['label' => 'Kategori Produk', 'value' => 'Suku Cadang & Propeller'],
-                    ['label' => 'Material Bilah', 'value' => '100% Toray Carbon Fiber T700 dengan Resin Tahan UV'],
-                    ['label' => 'Ukuran Diameter', 'value' => '33 x 11 Inci (Bilah Lipat Foldable)'],
-                    ['label' => 'Kompatibilitas Unit', 'value' => 'Mechatron Agri H30, Agri H-15, dan Drone Heavy-Lift'],
-                    ['label' => 'Keseimbangan Dinamis', 'value' => 'Kalibrasi Presisi Tinggi Pabrik (Zero Vibration Balancing)'],
-                    ['label' => 'Mekanisme Pemasangan', 'value' => 'Quick-Release Lock Paduan Aluminium Aviasi CNC'],
-                    ['label' => 'Ketahanan Suhu', 'value' => '-20°C hingga +65°C Cuaca Tropis'],
-                ],
-                'features' => [
-                    ['title' => 'Serat Karbon Toray 100%', 'desc' => 'Bobot sangat ringan namun memiliki keteguhan struktural luar biasa menghadapi dorongan angin kencang.'],
-                    ['title' => 'Bebas Getaran (Zero Vibration)', 'desc' => 'Setiap bilah telah melewati penyeimbangan dinamis laser untuk penerbangan halus dan motor awet.'],
-                    ['title' => 'Desain Bilah Lipat Kompak', 'desc' => 'Mudah dilipat saat pengangkutan sehingga tidak memakan ruang dan meminimalisir risiko patah.'],
-                ],
-                'packageIncludes' => [
-                    '2x Pasang Baling-Baling Karbon CW (Clockwise)',
-                    '2x Pasang Baling-Baling Karbon CCW (Counter-Clockwise)',
-                    'Set Dudukan Adaptor Quick-Release CNC Aluminium',
-                    'Baut Pemasangan Titanium Tahan Karat & Kunci L Presisi',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Suku Cadang Rutin Lapangan',
-                        'desc' => 'Penggantian cepat di lapangan saat bilah propeller terkena ranting atau benda keras selama misi operasional.',
-                    ],
-                ],
-            ],
+          
         ];
     }
 

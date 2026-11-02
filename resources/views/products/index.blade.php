@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Katalog Produk Drone & Ekosistem Teknologi | Mechatron')
-@section('meta_description', 'Eksplorasi lini produk drone pertanian Mechatron Agri, drone fotografi udara resolusi tinggi, armada drone kargo pengiriman logistik, dan suku cadang resmi.')
+@section('meta_description', 'Eksplorasi lini produk drone pertanian Mechatron Agri, drone pengawasan, armada drone kargo pengiriman logistik, dan suku cadang resmi.')
 @section('navbar_theme', 'light')
 
 @php
@@ -53,7 +53,7 @@
                 Ekosistem Drone & Teknologi Otonom
             </h1>
             <p class="text-[15px] sm:text-[17px] md:text-[18px] text-slate-600 font-normal leading-relaxed">
-                Temukan lini produk drone presisi tinggi untuk sektor agrikultur, fotografi sinematik, transportasi pengiriman kargo, hingga suku cadang dan aksesori orisinal.
+                Temukan lini produk drone presisi tinggi untuk sektor pertanian, logistik udara, sistem pengawasan (surveillance), hingga suku cadang orisinal.
             </p>
         </div>
 
@@ -102,11 +102,11 @@
                     </span>
                 </button>
 
-                <!-- Tab 2: Fotografi -->
+                <!-- Tab 2: pengawasan -->
                 <button
                     type="button"
-                    @click="setCategory('fotografi')"
-                    :class="activeCategory === 'fotografi'
+                    @click="setCategory('pengawasan')"
+                    :class="activeCategory === 'pengawasan'
                         ? 'bg-[#0070D5] text-white shadow-sm font-semibold'
                         : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium'"
                     class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-[13px] sm:text-[14px] transition-all duration-200 whitespace-nowrap cursor-pointer flex items-center gap-2"
@@ -117,10 +117,10 @@
                     </svg>
                     <span>Pengawasan</span>
                     <span
-                        :class="activeCategory === 'fotografi' ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-600'"
+                        :class="activeCategory === 'pengawasan' ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-600'"
                         class="text-[11px] px-2 py-0.5 rounded-full font-bold ml-0.5"
                     >
-                        {{ count(\App\Data\DroneProducts::byCategory('fotografi')) }}
+                        {{ count(\App\Data\DroneProducts::byCategory('pengawasan')) }}
                     </span>
                 </button>
 
