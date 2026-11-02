@@ -18,8 +18,8 @@
             ],
         ],
         [
-            'id' => 'agri-h15',
-            'category' => 'Drone Delivery',
+            'id' => 'delivery-h2',
+            'category' => 'Drone Pengiriman',
             'titlePrefix' => 'MECHATRON ',
             'titleSuffix' => 'AERO LOGISTIK',
             'tagline' => 'Pengiriman Cepat dan Efisien Melalui Udara',
@@ -33,8 +33,8 @@
             ],
         ],
         [
-            'id' => 'mechatron-ground-station',
-            'category' => 'Drone Surveillance',
+            'id' => 'surveillance-q1',
+            'category' => 'Drone Pengawasan',
             'titlePrefix' => 'MECHATRON ',
             'titleSuffix' => 'SENTINEL',
             'tagline' => 'Pemantauan Keamanan Udara Real-time',
@@ -47,8 +47,8 @@
             ],
         ],
         [
-            'id' => 'mechatron-power-kit',
-            'category' => 'Sparepart Drone',
+            'id' => 'original-parts',
+            'category' => 'Suku Cadang',
             'titlePrefix' => 'ORIGINAL ',
             'titleSuffix' => 'PARTS',
             'tagline' => 'Suku Cadang Asli dan Berkualitas',
@@ -135,11 +135,11 @@
                                 href="{{ route('products.show', $card['id']) }}"
                                 class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer bg-white text-[#111111] border border-gray-300 hover:border-[#0070D5] hover:text-[#0070D5] text-decoration-none"
                             >
-                                <span>Lihat Spesifikasi & Detail</span>
+                                <span>Lihat Detail</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
                             </a>
 
-                            <a
+                            <!-- <a
                                 href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya tertarik untuk konsultasi dan pemesanan ' . ($card['productInfo']['name'] ?? $card['productInfo']['title']) . '. Mohon informasi ketersediaan unit dan jadwal demo lapangan.') }}"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -148,7 +148,7 @@
                             >
                                 <span>Pesan via WhatsApp</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -201,11 +201,11 @@
                                 href="{{ route('products.show', $card['id']) }}"
                                 class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer bg-white text-[#111111] border border-gray-300 hover:border-[#0070D5] hover:text-[#0070D5] text-decoration-none"
                             >
-                                <span>Lihat Spesifikasi & Detail</span>
+                                <span>Lihat Detail</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
                             </a>
 
-                            <a
+                            <!-- <a
                                 href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron, saya tertarik untuk konsultasi dan pemesanan ' . ($card['productInfo']['name'] ?? $card['productInfo']['title']) . '. Mohon informasi ketersediaan unit dan jadwal demo lapangan.') }}"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -214,7 +214,7 @@
                             >
                                 <span>Pesan via WhatsApp</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>

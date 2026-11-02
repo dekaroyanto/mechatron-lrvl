@@ -29,8 +29,11 @@
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-14">
             <h2 class="text-[28px] sm:text-[36px] md:text-[42px] font-bold text-[#111111] tracking-tight leading-tight">
-                Sertifikat Resmi Mechatron
+                Sertifikasi
             </h2>
+            <p class="mt-4 text-[15px] sm:text-[16px] md:text-[17px] text-[#555555] leading-relaxed">
+                Setiap drone Mechatron sudah mengantongi Sertifikat SNI dan TKDN. Lebih dari sekadar dokumen, sertifikat ini menjadi bukti bahwa produk kami benar-benar teruji dan bangga dibuat dengan komponen dalam negeri.
+            </p>
         </div>
 
         <!-- Interactive 3D Carousel (Alpine.js) - Animasi Card Asli Tetap Dijaga Penuh -->

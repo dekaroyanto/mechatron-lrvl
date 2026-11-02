@@ -30,7 +30,7 @@
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <h2 class="text-[28px] sm:text-[36px] md:text-[42px] font-bold text-slate-950 tracking-tight leading-tight mb-3">
-                Layanan Drone Mechatron
+                Layanan Kami
             </h2>
         </div>
 

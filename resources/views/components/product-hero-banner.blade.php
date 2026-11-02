@@ -13,12 +13,12 @@
                 'image' => asset('images/heromecha1.jpg'),
             ],
             [
-                'id' => 'fotografi',
-                'categorySlug' => 'fotografi',
-                'tickerLabel' => 'FOTOGRAFI',
-                'titlePrefix' => 'FOTOGRAFI ',
+                'id' => 'pengawasan',
+                'categorySlug' => 'pengawasan',
+                'tickerLabel' => 'PENGAWASAN',
+                'titlePrefix' => 'PENGAWASAN ',
                 'titleSuffix' => 'SERIES',
-                'tagline' => 'Drone Kamera Resolusi Tinggi 45MP & Gimbal Sinematik untuk Visual Udara Terbaik.',
+                'tagline' => 'Pemantauan Keamanan Udara Real-time',
                 'image' => asset('images/matrice-400-hero.png'),
             ],
             [

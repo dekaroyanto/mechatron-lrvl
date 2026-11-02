@@ -162,7 +162,7 @@
                     <div class="rounded-[24px] sm:rounded-[32px] overflow-hidden relative bg-neutral-900 min-h-[260px] sm:min-h-[295px] flex flex-col justify-start border border-gray-100/80 shadow-sm">
                         <div class="absolute inset-0 z-0">
                             <img
-                                src="{{ $service['image'] }}"
+                                src="{{ $service['deepFeatures'][2]['image'] ?? $service['image'] }}"
                                 alt="{{ $service['title'] }}"
                                 class="w-full h-full object-cover object-center"
                             />
@@ -171,13 +171,13 @@
 
                         <div class="p-6 sm:p-8 z-10 relative text-white">
                             <span class="text-[11px] font-semibold uppercase tracking-wider text-[#60A5FA] mb-1.5 block">
-                                Regulasi & Keselamatan
+                                Keandalan Sistem
                             </span>
                             <h2 class="text-[20px] sm:text-[24px] font-bold text-white tracking-tight leading-snug max-w-xs">
-                                {{ $service['highlights'][1]['title'] ?? 'Spesifikasi & Keamanan Regulasi' }}
+                                {{ $service['deepFeatures'][2]['title'] ?? $service['highlights'][0]['title'] ?? 'Keandalan & Standar Mutu' }}
                             </h2>
                             <p class="text-[13px] text-white/90 mt-2 max-w-xs leading-relaxed">
-                                {{ $service['highlights'][1]['desc'] ?? 'Didukung sertifikasi resmi pilot FASI dan jaminan prosedur keselamatan standar CASR.' }}
+                                {{ $service['deepFeatures'][2]['description'] ?? $service['highlights'][0]['desc'] ?? '' }}
                             </p>
                         </div>
                     </div>

@@ -36,16 +36,22 @@ RUN git config --global --add safe.directory /var/www/html \
 COPY . /var/www/html
 COPY --from=assets /var/www/html/public/build /var/www/html/public/build
 
+# A throwaway .env so build-time artisan can boot. Real values (APP_URL, DB,
+# APP_KEY, ...) are injected at runtime via `docker run --env-file` and win over
+# this file, because env is NOT cached at build (see entrypoint).
+RUN cp .env.example .env
+
 # Finish composer setup (autoloader + package discovery) now that code is present
 RUN composer dump-autoload --optimize --no-dev \
-    && php artisan package:discover --ansi
-
-# Cache config/routes/views and link storage
-RUN php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache \
+    && php artisan package:discover --ansi \
     && php artisan storage:link \
     && chown -R www-data:www-data storage bootstrap/cache
 
+# NOTE: config/route/view caching is intentionally deferred to the entrypoint so
+# that per-environment runtime variables are reflected in the cached config.
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 EXPOSE 8882
+ENTRYPOINT ["entrypoint.sh"]
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8882"]

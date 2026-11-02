@@ -351,6 +351,65 @@ class BlogArticles
                     ],
                 ],
             ],
+            [
+                'id' => 7,
+                'slug' => 'mechatron-siap-hadir-di-bandung-innovation-week-2026',
+                'title' => 'Mendorong Ekosistem Teknologi: Mechatron Siap Hadir di Bandung Innovation Week 2026',
+                'excerpt' => 'PT Bandung Mekatronika Teknologi (Mechatron) akan hadir dalam Bandung Innovation Week (BIW) 2026 di Summarecon Mall Bandung. Mechatron siap memamerkan teknologi drone pertanian buatan dalam negeri yang berstandar nasional dan didukung sistem kendali terintegrasi.',
+                'date' => '2 November 2026',
+                'readTime' => '2 menit baca',
+                'category' => 'Pameran & Inovasi',
+                'author' => [
+                    'name' => 'TIM MECHATRON',
+                    'role' => 'Divisi Publikasi',
+                    'avatar' => '/images/mechatron_logo.png',
+                ],
+                'image' => '/images/biw.jpeg',
+                'tags' => ['Bandung Innovation Week 2026', 'Drone Pertanian', 'TKDN & SNI', 'Otomasi Industri', 'Summarecon Mall Bandung'],
+                'content' => [
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Dalam upaya terus mendorong adopsi teknologi di sektor industri dan publik, PT Bandung Mekatronika Teknologi (Mechatron) dengan bangga mengumumkan partisipasinya dalam ajang Bandung Innovation Week (BIW) 2026. Pameran teknologi bergengsi ini akan diselenggarakan di Summarecon Mall Bandung pada tanggal 12 hingga 15 November 2026 mendatang.',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Diinisiasi oleh Teknovasi Robotika Seluruh Indonesia, BIW 2026 mengusung semangat "Innovate, Collaborate, Elevate" sebagai wadah pertemuan strategis antara inovator, pelaku industri, akademisi, dan pemerintah. Acara ini dirancang untuk menunjukkan bahwa inovasi teknologi bukan sekadar konsep, melainkan solusi nyata yang memberikan dampak positif bagi masyarakat.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Fokus Inovasi Agrikultur di Koridor Ageung',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Sebagai salah satu pionir teknologi drone di tanah air, Mechatron diundang secara khusus untuk tampil dalam pameran berskala nasional ini. Para pengunjung dapat menemukan booth Mechatron di area Koridor Ageung, yang secara khusus didedikasikan sebagai zona Innovation Expo & Creative Showcase.',
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            'Melihat Langsung Drone Pertanian Karya Anak Bangsa: Armada drone penyemprot dan penebar pupuk yang dirancang khusus untuk karakter medan pertanian Nusantara, mengedepankan kemandirian teknologi (TKDN) serta kepatuhan terhadap standar mutu dan keamanan nasional (SNI).',
+                            'Integrasi Perangkat & Sistem Kendali Terpadu: Pengembangan ekosistem kendali penerbangan yang terintegrasi secara internal untuk antarmuka pengoperasian yang intuitif, kemudahan navigasi, serta jaminan keamanan sistem operasional.',
+                            'Sesi Konsultasi Terbuka: Tim ahli dan teknisi Mechatron siap berdiskusi langsung, menjawab kebutuhan teknis, hingga memberikan panduan modernisasi lahan pertanian berbasis teknologi drone.',
+                        ],
+                    ],
+                    [
+                        'type' => 'quote',
+                        'text' => 'Kehadiran Mechatron di BIW 2026 adalah cerminan dari semangat kami untuk terus tumbuh bersama ekosistem teknologi di Indonesia serta mendorong kemandirian inovasi agrikultur nasional.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Membuka Ruang Kolaborasi Lintas Sektor',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Bagi Mechatron, kehadiran di BIW 2026 adalah cerminan dari semangat kami untuk terus tumbuh bersama ekosistem teknologi di Indonesia. Kami percaya bahwa modernisasi di sektor pertanian dapat dipercepat melalui sinergi yang kuat antar-pemangku kepentingan.',
+                    ],
+                    [
+                        'type' => 'takeaway',
+                        'title' => 'Kunjungi Booth Mechatron di BIW 2026',
+                        'text' => 'Mari bersama-sama mengeksplorasi potensi teknologi dan mewujudkan masa depan pertanian Indonesia yang lebih efisien dan mandiri di booth Mechatron (Koridor Ageung, Summarecon Mall Bandung) pada 12–15 November 2026.',
+                    ],
+                ],
+            ],
         ];
     }
 
@@ -366,9 +425,37 @@ class BlogArticles
         return null;
     }
 
+    public static function sorted(): array
+    {
+        $articles = self::all();
+
+        usort($articles, fn($a, $b) => self::dateValue($b['date']) <=> self::dateValue($a['date']));
+
+        return $articles;
+    }
+
     public static function latest(int $limit = 3): array
     {
-        return array_slice(self::all(), 0, $limit);
+        return array_slice(self::sorted(), 0, $limit);
+    }
+
+    private static function dateValue(string $date): int
+    {
+        $months = [
+            'januari' => 1, 'februari' => 2, 'maret' => 3, 'april' => 4,
+            'mei' => 5, 'juni' => 6, 'juli' => 7, 'agustus' => 8,
+            'september' => 9, 'oktober' => 10, 'november' => 11, 'desember' => 12,
+        ];
+
+        $parts = preg_split('/\s+/', trim($date));
+        if (count($parts) !== 3) {
+            return 0;
+        }
+
+        [$day, $month, $year] = $parts;
+        $monthNum = $months[strtolower($month)] ?? 0;
+
+        return ((int) $year) * 10000 + $monthNum * 100 + ((int) $day);
     }
 
     public static function related(string $currentSlug, int $limit = 3): array

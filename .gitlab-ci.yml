@@ -1,47 +1,90 @@
 stages:
-  - build-container
-  - deploy
+  - build
+  - deploy-staging
+  - deploy-production
 
 variables:
   TAG_IMAGE: $CI_COMMIT_SHA
 
+# ---------------------------------------------------------------------------
+# Build the Docker image and push :latest + :<commit sha> to the registry.
+# ---------------------------------------------------------------------------
 build-app:
+  stage: build
   image: docker:29
-  stage: build-container
   services:
     - docker:dind
   before_script:
-    - cp .env.example .env
-    - echo "DB_CONNECTION=${DB_CONNECTION}" >> .env
-    - echo "DB_HOST=${DB_HOST}" >> .env
-    - echo "DB_PORT=${DB_PORT}" >> .env
-    - echo "DB_DATABASE=${DB_DATABASE}" >> .env
-    - echo "DB_USERNAME=${DB_USERNAME}" >> .env
-    - echo "DB_PASSWORD=${DB_PASSWORD}" >> .env
-    - cat .env
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   script:
-    - docker build -t "$CI_REGISTRY_IMAGE:latest" .
-    - docker build -t "$CI_REGISTRY_IMAGE:$TAG_IMAGE" .
+    - docker build -t "$CI_REGISTRY_IMAGE:latest" -t "$CI_REGISTRY_IMAGE:$TAG_IMAGE" .
     - docker push "$CI_REGISTRY_IMAGE" --all-tags
-  only:
-    - main
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
 
-deploy-production:
-  stage: deploy
+# ---------------------------------------------------------------------------
+# Shared SSH deploy logic. Concrete jobs set DEPLOY_HOST / ENV_FILE /
+# CONTAINER_NAME / APP_PORT and reuse this via `extends`.
+# ---------------------------------------------------------------------------
+.deploy:
   image: alpine:latest
   before_script:
-    - "which ssh-agent || ( apk update && apk add --no-cache openssh )"
-    - mkdir -p ~/.ssh
+    - which ssh-agent || ( apk update && apk add --no-cache openssh-client )
+    - mkdir -p ~/.ssh && chmod 700 ~/.ssh
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-    - chmod 700 ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
     - eval "$(ssh-agent -s)"
     - ssh-add ~/.ssh/id_rsa
-    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - printf "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   script:
-    - ssh -o StrictHostKeyChecking=no ${SSH_USER}@${SSH_PRODUCTION} "sudo docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY && sudo docker pull $CI_REGISTRY_IMAGE:$TAG_IMAGE && docker stop $CONATINER_NAME && docker container rm $CONATINER_NAME && $DOCKER_RUN_CMD $CI_REGISTRY_IMAGE:$TAG_IMAGE"
+    - |
+      ssh "${SSH_USER}@${DEPLOY_HOST}" "
+        set -e
+        docker login -u '$CI_REGISTRY_USER' -p '$CI_REGISTRY_PASSWORD' '$CI_REGISTRY'
+        docker pull '$CI_REGISTRY_IMAGE:$TAG_IMAGE'
+        docker stop '$CONTAINER_NAME' 2>/dev/null || true
+        docker rm '$CONTAINER_NAME' 2>/dev/null || true
+        docker run -d \
+          --name '$CONTAINER_NAME' \
+          --restart unless-stopped \
+          --env-file '$ENV_FILE' \
+          -p '$APP_PORT':8882 \
+          '$CI_REGISTRY_IMAGE:$TAG_IMAGE' \
+          sh -c 'php artisan optimize:clear && php artisan serve --host=0.0.0.0 --port=8882'
+        docker image prune -f || true
+      "
+
+# ---------------------------------------------------------------------------
+# Auto-deploy to staging on every main build.
+# ---------------------------------------------------------------------------
+deploy-staging:
+  extends: .deploy
+  stage: deploy-staging
+  variables:
+    DEPLOY_HOST: $STAGING_HOST
+    ENV_FILE: $STAGING_ENV_FILE
+    CONTAINER_NAME: $STAGING_CONTAINER
+    APP_PORT: $STAGING_PORT
+  environment:
+    name: staging
+    url: https://wip.mechatron.id
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+# ---------------------------------------------------------------------------
+# Promote to production manually (click ▶ in the pipeline) after verifying staging.
+# ---------------------------------------------------------------------------
+deploy-production:
+  extends: .deploy
+  stage: deploy-production
+  variables:
+    DEPLOY_HOST: $PRODUCTION_HOST
+    ENV_FILE: $PRODUCTION_ENV_FILE
+    CONTAINER_NAME: $PRODUCTION_CONTAINER
+    APP_PORT: $PRODUCTION_PORT
   environment:
     name: production
-  when: manual
-  only:
-    - main
+    url: https://mechatron.id
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
