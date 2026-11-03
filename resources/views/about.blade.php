@@ -133,7 +133,7 @@
     <x-facility-strip-carousel />
 
     <!-- 6. 3D Image Pageflip: Lookbook & Profil Interaktif Mechatron -->
-    <x-pageflip-gallery />
+    {{-- <x-pageflip-gallery /> --}}
 
     <!-- 7. CTA Section -->
     <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
