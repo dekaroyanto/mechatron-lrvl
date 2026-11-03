@@ -6,7 +6,7 @@
             'id' => 'agri-h30',
             'tickerLabel' => 'AGRI H30',
             'title' => 'Mechatron AGRI H30',
-            'tagline' => 'Kapasitas muatan ekstra untuk produktivitas lahan yang lebih optimal',
+            'tagline' => __('Kapasitas muatan ekstra untuk produktivitas lahan yang lebih optimal'),
             'image' => asset('images/heromecha1.jpg'),
             'productInfo' => $products['agri-h30'] ?? [
                 'id' => 'agri-h30',
@@ -20,7 +20,7 @@
             'id' => 'agri-h15',
             'tickerLabel' => 'AGRI H15',
             'title' => 'Mechatron AGRI H15',
-            'tagline' => 'Desain ringkas dan mudah dilipat, andal bermanuver di lahan terbatas',
+            'tagline' => __('Desain ringkas dan mudah dilipat, andal bermanuver di lahan terbatas'),
             'image' => asset('images/heromecha2.jpg'),
             'productInfo' => $products['agri-h15'] ?? [
                 'id' => 'agri-h15',
@@ -32,15 +32,15 @@
         ],
         [
             'id' => 'sewa-drone',
-            'tickerLabel' => 'Sewa Drone',
-            'title' => 'Sewa Drone, Panen Maksimal',
-            'tagline' => 'Tingkatkan hasil panen dengan solusi sewa drone yang praktis dan siap pakai',
+            'tickerLabel' => __('Sewa Drone'),
+            'title' => __('Sewa Drone, Panen Maksimal'),
+            'tagline' => __('Tingkatkan hasil panen dengan solusi sewa drone yang praktis dan siap pakai'),
             'image' => asset('images/service_sewa_drone.jpg'),
             'productInfo' => $products['sewa-drone'] ?? [
                 'id' => 'sewa-drone',
                 'modelCode' => 'sewa-drone',
-                'title' => 'Sewa Drone',
-                'tagline' => 'Temukan Solusi Penyewaan Drone yang Tepat untuk Kebutuhan Anda',
+                'title' => __('Sewa Drone'),
+                'tagline' => __('Temukan Solusi Penyewaan Drone yang Tepat untuk Kebutuhan Anda'),
                 'image' => asset('images/service_sewa_drone.jpg'),
             ],
         ],
@@ -139,7 +139,7 @@
                         href="{{ $slide['id'] === 'agri-series' ? (request()->routeIs('products.*') ? '#catalog' : route('home') . '#products') : route('products.show', $slide['id']) }}"
                         class="group inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-transparent hover:bg-[#0070D5] text-white border-2 border-white hover:border-[#0070D5] text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"
                     >
-                        <span>Pelajari Detailnya</span>
+                        <span>{{ __('Pelajari Detailnya') }}</span>
                         <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7" />
                         </svg>
@@ -152,7 +152,7 @@
                         rel="noopener noreferrer"
                         class="group inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-transparent hover:bg-[#0070D5] text-white border-2 border-white hover:border-[#0070D5] text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"
                     >
-                        <span>Konsultasi via WhatsApp</span>
+                        <span>{{ __('Konsultasi via WhatsApp') }}</span>
                         <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7" />
                         </svg>

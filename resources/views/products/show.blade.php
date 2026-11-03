@@ -18,9 +18,9 @@
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- 1. Breadcrumbs -->
         <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[12px] sm:text-[13px] text-slate-500 font-medium mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap scrollbar-none">
-            <a href="{{ route('home') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">Home</a>
+            <a href="{{ route('home') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">{{ __('Beranda') }}</a>
             <span>/</span>
-            <a href="{{ route('products.index') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">Product</a>
+            <a href="{{ route('products.index') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">{{ __('Produk') }}</a>
             <span>/</span>
             <span class="text-slate-900 font-semibold">{{ $product['name'] }}</span>
         </nav>
@@ -230,16 +230,16 @@
                     <!-- Mini Highlights Badges -->
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8 pt-4 border-t border-slate-100">
                         <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                            <span class="block text-[11px] font-bold uppercase text-slate-400">Garansi</span>
-                            <span class="text-[13px] font-bold text-slate-800">Resmi Mechatron</span>
+                            <span class="block text-[11px] font-bold uppercase text-slate-400">{{ __('Garansi') }}</span>
+                            <span class="text-[13px] font-bold text-slate-800">{{ __('Resmi Mechatron') }}</span>
                         </div>
                         <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                            <span class="block text-[11px] font-bold uppercase text-slate-400">Proteksi</span>
-                            <span class="text-[13px] font-bold text-slate-800">Tahan Cuaca IP67</span>
+                            <span class="block text-[11px] font-bold uppercase text-slate-400">{{ __('Proteksi') }}</span>
+                            <span class="text-[13px] font-bold text-slate-800">{{ __('Tahan Cuaca IP67') }}</span>
                         </div>
                         <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 col-span-2 sm:col-span-1">
-                            <span class="block text-[11px] font-bold uppercase text-slate-400">Suku Cadang</span>
-                            <span class="text-[13px] font-bold text-slate-800">Ready Stock Indonesia</span>
+                            <span class="block text-[11px] font-bold uppercase text-slate-400">{{ __('Suku Cadang') }}</span>
+                            <span class="text-[13px] font-bold text-slate-800">{{ __('Ready Stock Indonesia') }}</span>
                         </div>
                     </div>
 
@@ -252,7 +252,7 @@
                             class="inline-flex items-center justify-center gap-2 bg-[#0070D5] hover:bg-[#005bb5] text-white px-7 py-3.5 rounded-full text-[14px] sm:text-[15px] font-semibold shadow-lg shadow-blue-500/25 transition-all hover:scale-[1.02] active:scale-95 text-decoration-none"
                         >
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                            <span>Pesan via WhatsApp</span>
+                            <span>{{ __('Pesan via WhatsApp') }}</span>
                             <span>›</span>
                         </a>
 
@@ -260,7 +260,7 @@
                             href="{{ route('contact') }}"
                             class="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 px-6 py-3.5 rounded-full text-[14px] sm:text-[15px] font-semibold transition-all hover:scale-[1.02] active:scale-95 text-decoration-none"
                         >
-                            <span>Jadwalkan Demo Unit</span>
+                            <span>{{ __('Jadwalkan Demo Unit') }}</span>
                         </a>
                     </div>
                 </div>
@@ -271,12 +271,12 @@
         @if(!empty($product['features']))
             <section id="fitur" class="mb-16 sm:mb-20 scroll-mt-32">
                 <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">Teknologi Mutakhir</span>
+                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Teknologi Mutakhir') }}</span>
                     <h2 class="text-[28px] sm:text-[38px] font-bold text-slate-900 tracking-tight mt-1">
-                        Keunggulan & Fitur Utama
+                        {{ __('Keunggulan & Fitur Utama') }}
                     </h2>
                     <p class="text-[14px] sm:text-[16px] text-slate-500 mt-2">
-                        Dirancang secara khusus dengan ketahanan tinggi untuk memenuhi tuntutan kerja keras di lahan pertanian dan perkebunan Indonesia.
+                        {{ __('Dirancang secara khusus dengan ketahanan tinggi untuk memenuhi tuntutan kerja keras di lahan pertanian dan perkebunan Indonesia.') }}
                     </p>
                 </div>
 
@@ -302,12 +302,12 @@
         @if(!empty($product['specifications']))
             <section id="spesifikasi" class="mb-16 sm:mb-20 scroll-mt-32">
                 <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">Data Teknis</span>
+                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Data Teknis') }}</span>
                     <h2 class="text-[28px] sm:text-[38px] font-bold text-slate-900 tracking-tight mt-1">
-                        Spesifikasi Teknis Lengkap
+                        {{ __('Spesifikasi Teknis Lengkap') }}
                     </h2>
                     <p class="text-[14px] sm:text-[16px] text-slate-500 mt-2">
-                        Parameter rekayasa presisi standar aviasi dan sistem navigasi otonom Mechatron.
+                        {{ __('Parameter rekayasa presisi standar aviasi dan sistem navigasi otonom Mechatron.') }}
                     </p>
                 </div>
 
@@ -332,12 +332,12 @@
         @if(!empty($product['packageIncludes']))
             <section id="paket" class="mb-16 sm:mb-20 scroll-mt-32">
                 <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">In The Box</span>
+                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('In The Box') }}</span>
                     <h2 class="text-[28px] sm:text-[38px] font-bold text-slate-900 tracking-tight mt-1">
-                        Kelengkapan Paket Penjualan
+                        {{ __('Kelengkapan Paket Penjualan') }}
                     </h2>
                     <p class="text-[14px] sm:text-[16px] text-slate-500 mt-2">
-                        Setiap unit Mechatron siap terbang (*Ready to Fly*) lengkap dengan perlengkapan operasional standar.
+                        {{ __('Setiap unit Mechatron siap terbang (Ready to Fly) lengkap dengan perlengkapan operasional standar.') }}
                     </p>
                 </div>
 
@@ -362,12 +362,12 @@
         @if(!empty($product['fieldApplications']))
             <section id="aplikasi" class="mb-16 sm:mb-20 scroll-mt-32">
                 <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">Skenario Operasional</span>
+                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Skenario Operasional') }}</span>
                     <h2 class="text-[28px] sm:text-[38px] font-bold text-slate-900 tracking-tight mt-1">
-                        Aplikasi & Penerapan Lapangan
+                        {{ __('Aplikasi & Penerapan Lapangan') }}
                     </h2>
                     <p class="text-[14px] sm:text-[16px] text-slate-500 mt-2">
-                        Solusi teruji pada beragam variasi komoditas perkebunan dan medan lahan nusantara.
+                        {{ __('Solusi teruji pada beragam variasi komoditas perkebunan dan medan lahan nusantara.') }}
                     </p>
                 </div>
 
@@ -391,13 +391,13 @@
             <section class="mb-16 sm:mb-20">
                 <div class="flex items-end justify-between mb-8">
                     <div>
-                        <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">Katalog Terkait</span>
+                        <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Katalog Terkait') }}</span>
                         <h2 class="text-[24px] sm:text-[30px] font-bold text-slate-900 tracking-tight mt-1">
-                            Produk & Ekosistem Mechatron Lainnya
+                            {{ __('Produk & Ekosistem Mechatron Lainnya') }}
                         </h2>
                     </div>
                     <a href="{{ route('home') }}#products" class="hidden sm:inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#0070D5] hover:text-[#005bb5] transition-colors text-decoration-none">
-                        <span>Lihat Semua Produk</span>
+                        <span>{{ __('Lihat Semua Produk') }}</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -431,7 +431,7 @@
                                     href="{{ route('products.show', $related['id']) }}"
                                     class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-[#0070D5] text-slate-800 hover:text-white font-semibold text-[13px] transition-all text-decoration-none"
                                 >
-                                    <span>Lihat Spesifikasi & Detail</span>
+                                    <span>{{ __('Lihat Spesifikasi & Detail') }}</span>
                                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </a>
                             </div>
@@ -445,10 +445,10 @@
         <section class="text-center">
             <div class="bg-gradient-to-r from-neutral-900 via-neutral-950 to-neutral-900 text-white rounded-3xl p-10 sm:p-14 shadow-2xl relative overflow-hidden">
                 <h2 class="text-[26px] sm:text-[36px] font-extrabold tracking-tight mb-3">
-                    Konsultasikan Pengadaan {{ $product['name'] }}
+                    {{ __('Konsultasikan Pengadaan') }} {{ $product['name'] }}
                 </h2>
                 <p class="text-[14px] sm:text-[16px] text-gray-300 max-w-xl mx-auto mb-8 font-light">
-                    Dapatkan penawaran harga resmi, skema pembiayaan, serta demonstrasi uji terbang langsung di lahan perkebunan Anda.
+                    {{ __('Dapatkan penawaran harga resmi, skema pembiayaan, serta demonstrasi uji terbang langsung di lahan perkebunan Anda.') }}
                 </p>
                 <div class="flex flex-wrap items-center justify-center gap-4">
                     <a
@@ -457,13 +457,13 @@
                         rel="noopener noreferrer"
                         class="bg-[#0070D5] hover:bg-[#005bb5] text-white font-semibold px-8 py-3.5 rounded-full text-[14px] sm:text-[15px] shadow-lg transition-all hover:scale-105 text-decoration-none"
                     >
-                        Hubungi via WhatsApp
+                        {{ __('Hubungi via WhatsApp') }}
                     </a>
                     <a
                         href="{{ route('contact') }}"
                         class="bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-3.5 rounded-full text-[14px] sm:text-[15px] border border-white/20 transition-all text-decoration-none"
                     >
-                        Formulir Kontak Resmi
+                        {{ __('Formulir Kontak Resmi') }}
                     </a>
                 </div>
             </div>

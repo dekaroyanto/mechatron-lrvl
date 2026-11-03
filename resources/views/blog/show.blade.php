@@ -13,9 +13,9 @@
     <article class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Breadcrumbs -->
         <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[12px] sm:text-[13px] text-slate-500 font-medium mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap scrollbar-none">
-            <a href="{{ route('home') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">Beranda</a>
+            <a href="{{ route('home') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">{{ __('Beranda') }}</a>
             <span>/</span>
-            <a href="{{ route('blog.index') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">Berita</a>
+            <a href="{{ route('blog.index') }}" class="hover:text-[#0070D5] transition-colors text-decoration-none text-inherit">{{ __('Berita') }}</a>
             <span>/</span>
             <span class="text-slate-400">{{ $post['category'] }}</span>
         </nav>
@@ -97,7 +97,7 @@
             <!-- Tags Pill List -->
             @if(!empty($post['tags']))
                 <div class="mt-10 sm:mt-12 pt-6 border-t border-slate-200 flex items-center gap-2 flex-wrap">
-                    <span class="text-[13px] font-semibold text-slate-500 mr-2">Topik Terkait:</span>
+                    <span class="text-[13px] font-semibold text-slate-500 mr-2">{{ __('Topik Terkait:') }}</span>
                     @foreach($post['tags'] as $tag)
                         <span class="text-[12px] font-medium px-3 py-1 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
                             #{{ $tag }}
@@ -112,10 +112,10 @@
                     <img src="{{ $post['author']['avatar'] }}" alt="{{ $post['author']['name'] }}" class="w-full h-full object-cover" />
                 </div>
                 <div>
-                    <span class="text-[11px] font-bold uppercase tracking-wider text-[#0070D5]">Tentang Penulis</span>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-[#0070D5]">{{ __('Tentang Penulis') }}</span>
                     <h4 class="text-[17px] font-bold text-slate-900 mt-0.5">{{ $post['author']['name'] }}</h4>
                     <p class="text-[13px] text-slate-600 mt-1 leading-relaxed">
-                        Tim riset, jurnalisme agrikultur, dan spesialis drone Mechatron Indonesia. Berdedikasi menghadirkan liputan terkini seputar uji coba lapangan, inovasi alsintan, dan percepatan mekanisasi pertanian modern di seluruh Nusantara.
+                        {{ __('Tim riset, jurnalisme agrikultur, dan spesialis drone Mechatron Indonesia. Berdedikasi menghadirkan liputan terkini seputar uji coba lapangan, inovasi alsintan, dan percepatan mekanisasi pertanian modern di seluruh Nusantara.') }}
                     </p>
                 </div>
             </div>
@@ -124,10 +124,10 @@
             <div class="mt-10 sm:mt-12 p-8 rounded-[26px] bg-gradient-to-r from-[#002B7F] to-[#0070D5] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
                 <div>
                     <h3 class="text-[20px] sm:text-[22px] font-bold leading-snug">
-                        Tertarik Mengimplementasikan Solusi Ini?
+                        {{ __('Tertarik Mengimplementasikan Solusi Ini?') }}
                     </h3>
                     <p class="text-[14px] text-blue-100 mt-1">
-                        Konsultasikan jadwal demo unit, sewa armada, atau survei bersama tim kami.
+                        {{ __('Konsultasikan jadwal demo unit, sewa armada, atau survei bersama tim kami.') }}
                     </p>
                 </div>
                 <a
@@ -136,7 +136,7 @@
                     rel="noopener noreferrer"
                     class="shrink-0 bg-white hover:bg-slate-100 text-[#002B7F] font-bold text-[14px] px-7 py-3.5 rounded-full shadow-md transition-all inline-flex items-center gap-2 text-decoration-none"
                 >
-                    <span>Hubungi via WhatsApp</span>
+                    <span>{{ __('Hubungi via WhatsApp') }}</span>
                     <span>›</span>
                 </a>
             </div>
@@ -144,7 +144,7 @@
             <!-- Back to Blog Navigation -->
             <div class="mt-8 text-center sm:text-left">
                 <a href="{{ route('blog.index') }}" class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#0070D5] hover:text-[#005bb5] transition-colors text-decoration-none">
-                    <span>← Kembali ke Semua Berita</span>
+                    <span>{{ __('← Kembali ke Semua Berita') }}</span>
                 </a>
             </div>
         </div>
@@ -155,10 +155,10 @@
         <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mt-20 sm:mt-24 pt-16 border-t border-slate-200">
             <div class="flex items-center justify-between mb-8">
                 <h2 class="text-[22px] sm:text-[28px] font-bold text-[#0F172A] tracking-tight">
-                    Berita Terkait Lainnya
+                    {{ __('Berita Terkait Lainnya') }}
                 </h2>
                 <a href="{{ route('blog.index') }}" class="text-[14px] font-semibold text-[#0070D5] hover:underline hidden sm:inline text-decoration-none">
-                    Lihat Semua Berita ›
+                    {{ __('Lihat Semua Berita ›') }}
                 </a>
             </div>
 
@@ -192,7 +192,7 @@
 
                             <div class="mt-4 pt-3 border-t border-slate-100">
                                 <a href="{{ route('blog.show', $related['slug']) }}" class="text-[13px] font-semibold text-[#0070D5] inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform text-decoration-none">
-                                    <span>Baca Selengkapnya</span>
+                                    <span>{{ __('Baca Selengkapnya') }}</span>
                                     <span>→</span>
                                 </a>
                             </div>

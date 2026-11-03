@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Layanan Drone Profesional | Mechatron')
-@section('meta_description', 'Layanan drone profesional Mechatron: Pelatihan Pilot Drone berlisensi resmi, Perawatan Drone standar pabrikan, dan Sewa Drone armada terlengkap.')
+@section('title', __('Layanan Drone Profesional | Mechatron'))
+@section('meta_description', __('Layanan drone profesional Mechatron: Pelatihan Pilot Drone berlisensi resmi, Perawatan Drone standar pabrikan, dan Sewa Drone armada terlengkap.'))
 @section('navbar_theme', 'light')
 
 @section('content')
@@ -10,10 +10,10 @@
         <!-- 1. Header Section -->
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <h1 class="text-[32px] sm:text-[42px] md:text-[50px] font-extrabold text-slate-950 tracking-tight leading-[1.12] mb-4">
-                Layanan Drone Profesional
+                {{ __('Layanan Drone Profesional') }}
             </h1>
             <p class="text-[15px] sm:text-[17px] md:text-[18px] text-slate-600 font-normal leading-relaxed">
-                Dukungan menyeluruh untuk kebutuhan drone Anda, mulai dari pelatihan pilot drone berlisensi resmi, perawatan unit standar pabrikan, hingga penyewaan armada drone terlengkap.
+                {{ __('Dukungan menyeluruh untuk kebutuhan drone Anda, mulai dari pelatihan pilot drone berlisensi resmi, perawatan unit standar pabrikan, hingga penyewaan armada drone terlengkap.') }}
             </p>
         </div>
 
@@ -37,9 +37,6 @@
 
                 <!-- Content -->
                 <div class="absolute inset-0 z-10 flex flex-col justify-end p-7 sm:p-9 lg:p-10">
-                    <span class="inline-flex self-start items-center text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-blue-300 bg-white/10 px-3 py-1 rounded-full mb-3 backdrop-blur-xs">
-                        {{ $s['category'] ?? 'Professional Academy' }}
-                    </span>
                     <h2 class="text-2xl sm:text-3xl lg:text-[32px] font-bold text-white group-hover:text-blue-400 tracking-tight leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)] transition-colors duration-200 mb-2.5">
                         {{ $s['title'] ?? 'Pelatihan Pilot Drone' }}
                     </h2>
@@ -54,7 +51,7 @@
                         @endforeach
                     </div>
                     <span class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold text-white">
-                        <span>Selengkapnya</span>
+                        <span>{{ __('Selengkapnya') }}</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
                     </span>
                 </div>
@@ -80,21 +77,14 @@
 
                     <!-- Content -->
                     <div class="absolute inset-0 z-10 p-7 sm:p-9 h-full flex flex-col justify-end max-w-[340px] sm:max-w-[400px]">
-                        <span class="inline-flex self-start items-center text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-blue-300 bg-white/10 px-2.5 py-1 rounded-full mb-2.5 backdrop-blur-xs">
-                            {{ $s['category'] ?? 'Engineering & Maintenance' }}
-                        </span>
                         <h2 class="text-xl sm:text-2xl lg:text-[26px] font-bold text-white group-hover:text-blue-400 tracking-tight leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)] transition-colors duration-200 mb-2">
                             {{ $s['title'] ?? 'Perawatan Drone' }}
                         </h2>
-                        <div class="flex flex-wrap items-center gap-2 mb-3">
-                            @foreach(array_slice($s['highlights'] ?? [], 0, 2) as $h)
-                                <span class="inline-flex items-center text-[11px] font-semibold text-white bg-white/15 border border-white/15 px-2.5 py-1 rounded-full backdrop-blur-xs">
-                                    {{ $h['stat'] }}
-                                </span>
-                            @endforeach
-                        </div>
+                         <p class="text-[13px] sm:text-[14px] text-slate-200 font-normal leading-relaxed max-w-md mb-4 line-clamp-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+                        {{ $s['description'] ?? '' }}
+                        </p>
                         <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-white">
-                            <span>Selengkapnya</span>
+                            <span>{{ __('Selengkapnya') }}</span>
                             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -118,21 +108,15 @@
 
                     <!-- Content -->
                     <div class="absolute inset-0 z-10 p-7 sm:p-9 h-full flex flex-col justify-end max-w-[340px] sm:max-w-[400px]">
-                        <span class="inline-flex self-start items-center text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-blue-300 bg-white/10 px-2.5 py-1 rounded-full mb-2.5 backdrop-blur-xs">
-                            {{ $s['category'] ?? 'Fleet Rental & Equipment' }}
-                        </span>
+                       
                         <h2 class="text-xl sm:text-2xl lg:text-[26px] font-bold text-white group-hover:text-blue-400 tracking-tight leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)] transition-colors duration-200 mb-2">
                             {{ $s['title'] ?? 'Sewa Drone' }}
                         </h2>
-                        <div class="flex flex-wrap items-center gap-2 mb-3">
-                            @foreach(array_slice($s['highlights'] ?? [], 0, 2) as $h)
-                                <span class="inline-flex items-center text-[11px] font-semibold text-white bg-white/15 border border-white/15 px-2.5 py-1 rounded-full backdrop-blur-xs">
-                                    {{ $h['stat'] }}
-                                </span>
-                            @endforeach
-                        </div>
+                         <p class="text-[13px] sm:text-[14px] text-slate-200 font-normal leading-relaxed max-w-md mb-4 line-clamp-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+                        {{ $s['description'] ?? '' }}
+                        </p>
                         <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-white">
-                            <span>Selengkapnya</span>
+                            <span>{{ __('Selengkapnya') }}</span>
                             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -146,10 +130,10 @@
             <div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 lg:gap-8">
                 <div class="max-w-xl text-center lg:text-left">
                     <h2 class="text-[20px] sm:text-[24px] font-extrabold tracking-tight leading-tight mb-1.5">
-                        Butuh Layanan Drone yang Sesuai Kebutuhan Anda?
+                        {{ __('Butuh Layanan Drone yang Sesuai Kebutuhan Anda?') }}
                     </h2>
                     <p class="text-[13px] sm:text-[14px] text-slate-300 font-light leading-relaxed">
-                        Tim instruktur dan teknisi Mechatron siap membantu kebutuhan pelatihan, perawatan, hingga penyewaan drone Anda.
+                        {{ __('Tim instruktur dan teknisi Mechatron siap membantu kebutuhan pelatihan, perawatan, hingga penyewaan drone Anda.') }}
                     </p>
                 </div>
                 <div class="flex items-center justify-center gap-3 flex-wrap shrink-0">
@@ -159,14 +143,14 @@
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0070D5] hover:bg-[#005bb5] text-white text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer text-decoration-none whitespace-nowrap"
                     >
-                        <span>Konsultasikan Layanan Anda</span>
+                        <span>{{ __('Konsultasikan Layanan Anda') }}</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
                     <a
                         href="{{ route('contact') }}"
                         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white text-[13px] sm:text-[14px] font-semibold transition-all duration-300 backdrop-blur-md cursor-pointer text-decoration-none whitespace-nowrap"
                     >
-                        <span>Hubungi Kami</span>
+                        <span>{{ __('Hubungi Kami') }}</span>
                     </a>
                 </div>
             </div>

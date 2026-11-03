@@ -6,10 +6,10 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 md:mb-14 gap-4">
             <div>
                 <h2 class="text-[26px] sm:text-[34px] md:text-[40px] font-extrabold text-[#0F172A] tracking-tight leading-tight">
-                    Berita Terkini
+                    {{ __('Berita Terkini') }}
                 </h2>
                 <p class="text-[14px] sm:text-[16px] text-[#64748B] mt-2 max-w-xl">
-                    Ikuti perkembangan terbaru inovasi drone pertanian, uji coba lapangan, dan transformasi modernisasi agribisnis di seluruh Indonesia.
+                    {{ __('Ikuti perkembangan terbaru inovasi drone pertanian, uji coba lapangan, dan transformasi modernisasi agribisnis di seluruh Indonesia.') }}
                 </p>
             </div>
 
@@ -18,7 +18,7 @@
                     href="{{ route('blog.index') }}"
                     class="inline-flex items-center gap-2 text-[14px] sm:text-[15px] font-semibold text-[#0070D5] hover:text-[#005bb5] bg-white hover:bg-blue-50 border border-blue-200/80 px-6 py-2.5 rounded-full shadow-sm hover:shadow transition-all group text-decoration-none"
                 >
-                    <span>Lihat Semua Berita</span>
+                    <span>{{ __('Lihat Semua Berita') }}</span>
                     <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -69,7 +69,7 @@
                                 class="inline-flex items-center gap-1 text-[13px] font-semibold text-[#0070D5] group-hover:translate-x-1 transition-transform text-decoration-none"
                                 aria-label="Baca artikel: {{ $article['title'] }}"
                             >
-                                <span>Baca</span>
+                                <span>{{ __('Baca') }}</span>
                                 <span>→</span>
                             </a>
                         </div>
@@ -84,7 +84,7 @@
                 href="{{ route('blog.index') }}"
                 class="inline-flex items-center justify-center gap-2 w-full max-w-xs text-[14px] font-semibold text-[#0070D5] bg-white border border-blue-200 px-6 py-3 rounded-full shadow-sm text-decoration-none"
             >
-                <span>Lihat Semua Berita</span>
+                <span>{{ __('Lihat Semua Berita') }}</span>
                 <span>›</span>
             </a>
         </div>

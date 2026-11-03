@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Berita Terkini | Mechatron Indonesia')
-@section('meta_description', 'Kabar terbaru, perkembangan regulasi, inovasi teknologi drone, dan transformasi modernisasi pertanian Indonesia bersama Mechatron.')
+@section('title', __('Berita Terkini | Mechatron Indonesia'))
+@section('meta_description', __('Kabar terbaru, perkembangan regulasi, inovasi teknologi drone, dan transformasi modernisasi pertanian Indonesia bersama Mechatron.'))
 @section('navbar_theme', 'light')
 
 @section('content')
@@ -24,10 +24,10 @@
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14">
         <div class="max-w-3xl">
             <h1 class="text-[32px] sm:text-[44px] md:text-[52px] font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-4">
-                Berita Terkini
+                {{ __('Berita Terkini') }}
             </h1>
             <p class="text-[15px] sm:text-[18px] text-[#64748B] leading-relaxed">
-                Kabar terbaru, uji coba lapangan, inovasi teknologi drone pertanian, dan transformasi modernisasi agribisnis di seluruh Indonesia.
+                {{ __('Kabar terbaru, uji coba lapangan, inovasi teknologi drone pertanian, dan transformasi modernisasi agribisnis di seluruh Indonesia.') }}
             </p>
         </div>
     </div>
@@ -52,7 +52,7 @@
                             <div>
                                 <div class="flex items-center gap-2 mb-3 sm:mb-4">
                                     <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#0070D5] text-white">
-                                        Berita Utama
+                                        {{ __('Berita Utama') }}
                                     </span>
                                     <span class="text-[12px] text-slate-400 font-medium" x-text="articles[0].date"></span>
                                 </div>
@@ -74,7 +74,7 @@
                                 </div>
 
                                 <span class="text-[13px] font-semibold text-[#0070D5] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                                    <span>Baca Berita</span>
+                                    <span>{{ __('Baca Berita') }}</span>
                                     <span>→</span>
                                 </span>
                             </div>
@@ -122,7 +122,7 @@
                                 </div>
 
                                 <a :href="'/blog/' + article.slug" class="inline-flex items-center gap-1 text-[13px] font-semibold text-[#0070D5] group-hover:translate-x-1 transition-transform text-decoration-none">
-                                    <span>Baca</span>
+                                    <span>{{ __('Baca') }}</span>
                                     <span>→</span>
                                 </a>
                             </div>
@@ -135,14 +135,14 @@
         <template x-if="filteredArticles.length === 0">
             <div class="text-center py-16 bg-white rounded-[24px] border border-slate-200">
                 <p class="text-[16px] text-slate-600 font-medium">
-                    Tidak ada berita yang cocok dengan pencarian "<span x-text="searchQuery"></span>".
+                    {{ __('Tidak ada berita yang cocok dengan pencarian') }} "<span x-text="searchQuery"></span>".
                 </p>
                 <button
                     type="button"
                     @click="searchQuery = ''"
                     class="mt-4 px-5 py-2 rounded-full bg-[#0070D5] text-white text-[13px] font-semibold hover:bg-[#005bb5] cursor-pointer"
                 >
-                    Reset Pencarian
+                    {{ __('Reset Pencarian') }}
                 </button>
             </div>
         </template>
@@ -152,13 +152,13 @@
             <div class="relative rounded-[28px] sm:rounded-[36px] overflow-hidden bg-gradient-to-br from-[#0B1528] via-[#0F172A] to-[#1E293B] text-white p-8 sm:p-12 md:p-16 text-center border border-slate-700/50 shadow-xl">
                 <div class="max-w-2xl mx-auto">
                     <span class="text-[12px] font-bold uppercase tracking-widest text-[#60A5FA] mb-2 block">
-                        Solusi Enterprise Terintegrasi
+                        {{ __('Solusi Enterprise Terintegrasi') }}
                     </span>
                     <h2 class="text-[26px] sm:text-[34px] md:text-[40px] font-extrabold tracking-tight mb-4">
-                        Punya Pertanyaan Seputar Kebutuhan Drone Anda?
+                        {{ __('Punya Pertanyaan Seputar Kebutuhan Drone Anda?') }}
                     </h2>
                     <p class="text-[14px] sm:text-[16px] text-slate-300 leading-relaxed mb-8">
-                        Diskusikan tantangan pemetaan, pertanian, sewa armada, atau pelatihan tim perusahaan Anda bersama spesialis teknis Mechatron.
+                        {{ __('Diskusikan tantangan pemetaan, pertanian, sewa armada, atau pelatihan tim perusahaan Anda bersama spesialis teknis Mechatron.') }}
                     </p>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
@@ -167,14 +167,14 @@
                             rel="noopener noreferrer"
                             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0070D5] hover:bg-[#005bb5] text-white font-semibold text-[14px] sm:text-[15px] px-8 py-3.5 rounded-full shadow-lg transition-all text-decoration-none"
                         >
-                            <span>Konsultasi WhatsApp Gratis</span>
+                            <span>{{ __('Konsultasi WhatsApp Gratis') }}</span>
                             <span>›</span>
                         </a>
                         <a
                             href="{{ route('services.index') }}"
                             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-[14px] sm:text-[15px] px-7 py-3.5 rounded-full transition-all text-decoration-none"
                         >
-                            <span>Lihat Layanan Mechatron</span>
+                            <span>{{ __('Lihat Layanan Mechatron') }}</span>
                         </a>
                     </div>
                 </div>
