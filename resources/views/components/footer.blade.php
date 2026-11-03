@@ -3,7 +3,7 @@
         <!-- Main Footer Content: 4 Columns (Brand + Socials, Menu, Hubungi Kami, Media Sosial Detail) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-neutral-800">
             <!-- Col 1: Brand & Identity + Social Icons (4 cols on md) -->
-            <div class="sm:col-span-2 md:col-span-4 space-y-4">
+            <div class="sm:col-span-5 md:col-span-5 space-y-4">
                 <a href="{{ route('home') }}" class="flex w-full max-w-sm items-center gap-2.5 group select-none text-decoration-none">
                     <div class="w-full transition-transform duration-200 group-hover:scale-105">
                         <img src="{{ asset('images/logo_bmt_dark.png') }}" alt="Mechatron Logo" class="w-full h-auto object-contain">
@@ -14,7 +14,7 @@
                 </p>
 
                 <!-- Media Sosial Icons Row di bawah deskripsi -->
-                <div class="pt-1">
+                {{-- <div class="pt-1">
                     <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-500 block mb-2.5">
                         Ikuti Kami
                     </span>
@@ -71,11 +71,11 @@
                             </svg>
                         </a>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <!-- Col 2: Quick Navigation (2 cols on md) -->
-            <div class="md:col-span-2">
+            {{-- <div class="md:col-span-2">
                 <h4 class="text-[12px] font-bold text-white uppercase tracking-wider mb-4">
                     Menu
                 </h4>
@@ -111,10 +111,10 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
 
             <!-- Col 3: Contact & Channels (3 cols on md) -->
-            <div class="md:col-span-3 space-y-4">
+            <div class="md:col-span-4 space-y-4">
                 <h4 class="text-[12px] font-bold text-white uppercase tracking-wider mb-4">
                     Hubungi Kami
                 </h4>
