@@ -55,7 +55,7 @@ build-app:
       "
 
 # ---------------------------------------------------------------------------
-# Auto-deploy to staging on every main build.
+# Auto-deploy to staging on every dev-siswo build.
 # ---------------------------------------------------------------------------
 deploy-staging:
   extends: .deploy
@@ -69,7 +69,7 @@ deploy-staging:
     name: staging
     url: https://wip.mechatron.id
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_COMMIT_BRANCH == "dev-siswo"'
 
 # ---------------------------------------------------------------------------
 # Promote to production manually (click ▶ in the pipeline) after verifying staging.
@@ -86,5 +86,5 @@ deploy-production:
     name: production
     url: https://mechatron.id
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_COMMIT_BRANCH == "dev-siswo"'
       when: manual
