@@ -4,10 +4,10 @@
     $cards = [
         [
             'id' => 'agri-h30',
-            'category' => 'Drone Pertanian',
+            'category' => __('Drone Pertanian'),
             'titlePrefix' => 'MECHATRON ',
             'titleSuffix' => 'AGRI SERIES',
-            'tagline' => 'Solusi Cerdas untuk Pertanian Presisi.',
+            'tagline' => __('Solusi Cerdas untuk Pertanian Presisi.'),
             'image' => asset('images/featured_drone_h30.jpg'),
             'productInfo' => $products['agri-h30'] ?? [
                 'id' => 'agri-h30',
@@ -19,10 +19,10 @@
         ],
         [
             'id' => 'delivery-h2',
-            'category' => 'Drone Pengiriman',
+            'category' => __('Drone Pengiriman'),
             'titlePrefix' => 'MECHATRON ',
-            'titleSuffix' => 'AERO LOGISTIK',
-            'tagline' => 'Pengiriman Cepat dan Efisien Melalui Udara',
+            'titleSuffix' => __('AERO LOGISTIK'),
+            'tagline' => __('Pengiriman Cepat dan Efisien Melalui Udara'),
             'image' => asset('images/drone_delivery.jpeg'),
             'productInfo' => $products['agri-h15'] ?? [
                 'id' => 'agri-h15',
@@ -34,10 +34,10 @@
         ],
         [
             'id' => 'surveillance-q1',
-            'category' => 'Drone Pengawasan',
+            'category' => __('Drone Pengawasan'),
             'titlePrefix' => 'MECHATRON ',
             'titleSuffix' => 'SENTINEL',
-            'tagline' => 'Pemantauan Keamanan Udara Real-time',
+            'tagline' => __('Pemantauan Keamanan Udara Real-time'),
             'image' => asset('images/drone_survei.jpeg'),
             'productInfo' => [
                 'id' => 'mechatron-ground-station',
@@ -48,10 +48,10 @@
         ],
         [
             'id' => 'original-parts',
-            'category' => 'Suku Cadang',
+            'category' => __('Suku Cadang'),
             'titlePrefix' => 'ORIGINAL ',
             'titleSuffix' => 'PARTS',
-            'tagline' => 'Suku Cadang Asli dan Berkualitas',
+            'tagline' => __('Suku Cadang Asli dan Berkualitas'),
             'image' => asset('images/sparepart.jpeg'),
             'productInfo' => [
                 'id' => 'mechatron-power-kit',
@@ -135,7 +135,7 @@
                                 href="{{ route('products.show', $card['id']) }}"
                                 class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer bg-white text-[#111111] border border-gray-300 hover:border-[#0070D5] hover:text-[#0070D5] text-decoration-none"
                             >
-                                <span>Lihat Detail</span>
+                                <span>{{ __('Lihat Detail') }}</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
                             </a>
 
@@ -201,7 +201,7 @@
                                 href="{{ route('products.show', $card['id']) }}"
                                 class="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer bg-white text-[#111111] border border-gray-300 hover:border-[#0070D5] hover:text-[#0070D5] text-decoration-none"
                             >
-                                <span>Lihat Detail</span>
+                                <span>{{ __('Lihat Detail') }}</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
                             </a>
 
@@ -227,7 +227,7 @@
         <button
             type="button"
             @click="scrollToTop()"
-            title="Kembali ke atas"
+            title="{{ __('Kembali ke atas') }}"
             aria-label="Back to Top"
             class="w-11 h-11 rounded-full bg-white text-[#444444] shadow-[0_4px_16px_rgba(0,0,0,0.12)] border border-gray-100 flex items-center justify-center hover:text-[#0070D5] hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
         >

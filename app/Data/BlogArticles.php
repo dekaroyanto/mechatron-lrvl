@@ -4,7 +4,22 @@ namespace App\Data;
 
 class BlogArticles
 {
+    /**
+     * @return array<int, array<string, mixed>>
+     */
     public static function all(): array
+    {
+        if (app()->getLocale() === 'en') {
+            return self::allEnglish();
+        }
+
+        return self::allIndonesian();
+    }
+
+    /**
+     * @return array<int, array<string, mixed>>
+     */
+    private static function allIndonesian(): array
     {
         return [
             [
@@ -413,15 +428,430 @@ class BlogArticles
         ];
     }
 
+    /**
+     * @return array<int, array<string, mixed>>
+     */
+    private static function allEnglish(): array
+    {
+        return [
+            [
+                'id' => 1,
+                'slug' => 'mechatron-resmi-menerima-sertifikat-sni-9199-2023-untuk-drone-pertanian',
+                'title' => 'Mechatron Officially Receives SNI 9199:2023 Certification for Agricultural Drones',
+                'excerpt' => 'PT Bandung Mekatronika Teknologi (Mechatron) has officially obtained the SNI 9199:2023 certification for Agricultural Unmanned Aerial Vehicles (Drones) - Spraying - Quality requirements and test methods from the National Standardization Agency (BSN) of the Republic of Indonesia.',
+                'date' => '14 November 2025',
+                'readTime' => '3 min read',
+                'category' => 'SNI Certification',
+                'author' => [
+                    'name' => 'MECHATRON TEAM',
+                    'role' => 'Publication & Agricultural Research Division',
+                    'avatar' => '/images/mechatron_logo.png',
+                ],
+                'image' => '/images/drone-sni.jpeg',
+                'tags' => ['SNI 9199:2023 Certificate', 'Certified Agricultural Drone', 'BSN'],
+                'content' => [
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'PT Bandung Mekatronika Teknologi (BMT) has officially received the SNI 9199:2023 certificate, making Mechatron the first and only Indonesian agricultural drone manufacturer to achieve this prestigious certification. This milestone positions Mechatron as the leading certified agricultural drone solution in Indonesia. The SNI 9199:2023 standard establishes strict quality requirements for agricultural spraying drones, ensuring comprehensive safety, performance, and reliability standards.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Quality and Efficiency Standards Verified by SNI 9199:2023',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'SNI 9199:2023 is Indonesia\'s national quality standard specifically for agricultural spraying drones. It verifies that Mechatron drones meet uniform quality criteria, perform reliably across Indonesia\'s diverse farming environments and tropical climates, distribute pesticides and fertilizers with high precision (±5% variance), operate safely in both normal and challenging conditions, and maintain consistent performance standards.',
+                    ],
+                    [
+                        'type' => 'quote',
+                        'text' => 'This SNI 9199:2023 certificate proves that Mechatron drones have passed the most rigorous quality, safety, and performance testing in Indonesia—not merely a claim, but a nationally verified standard by BSN.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Exclusive Access to Government Procurement and Food Estate Programs',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'As Indonesia\'s first SNI-certified agricultural drone, Mechatron holds a strategic position for government procurement and institutional buyers. SNI certification qualifies Mechatron drones for government agricultural programs, subsidies, Food Estate initiatives, and institutional procurements that mandate SNI compliance.',
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            'Qualified for government agricultural programs and national subsidy initiatives.',
+                            'Priority procurement readiness for Food Estate and national food security projects.',
+                            'Meets SNI compliance mandates for institutional buyers, agricultural agencies, and state-owned enterprises.',
+                            'Quality, safety, and performance nationally validated by BSN.',
+                        ],
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Comprehensive Testing Process with PT TÜV Nord Indonesia',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Achieving SNI 9199:2023 certification required rigorous engineering discipline and extensive testing protocols—covering structural integrity verification, flight stability across tropical conditions, spray system accuracy validation, payload capacity testing, and safety system evaluations conducted with PT TÜV Nord Indonesia.',
+                    ],
+                    [
+                        'type' => 'takeaway',
+                        'title' => 'Key Takeaway',
+                        'text' => 'SNI 9199:2023 certification establishes Mechatron as Indonesia\'s first nationally certified agricultural drone—guaranteeing tested quality, safety, and performance while unlocking full access to government procurement programs.',
+                    ],
+                ],
+            ],
+            [
+                'id' => 2,
+                'slug' => 'mechatron-hadir-dalam-bulan-mutu-nasional-2025',
+                'title' => 'MECHATRON Showcases Innovation at National Quality Month 2025',
+                'excerpt' => 'PT Bandung Mekatronika Teknologi showcased Mechatron Drones—Indonesia\'s first and most advanced domestic agricultural drone solution—demonstrating a culture of quality and national technological independence at National Quality Month 2025.',
+                'date' => '26 November 2025',
+                'readTime' => '2 min read',
+                'category' => 'National Innovation & Quality',
+                'author' => [
+                    'name' => 'MECHATRON TEAM',
+                    'role' => 'Publication & Agricultural Research Division',
+                    'avatar' => '/images/mechatron_logo.png',
+                ],
+                'image' => '/images/bulan-mutu-nasional-2025.jpeg',
+                'tags' => ['National Quality Month 2025', 'Mechatron Drone', 'TKDN', 'Domestic Innovation'],
+                'content' => [
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'PT Bandung Mekatronika Teknologi (BMT) marked a milestone at the prestigious National Quality Month (Bulan Mutu Nasional) 2025 event, showcasing Mechatron Drones—Indonesia\'s pioneering domestic agricultural drone solution. Mechatron represents a paradigm shift in Indonesian precision agriculture, combining advanced automation with strict quality standards and high domestic component integration (TKDN).',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Domestically Engineered Precision: AI Navigation, GPS-RTK, and LiDAR',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Mechatron Drones integrate AI-assisted navigation, real-time crop monitoring, and automated spraying systems that deliver pesticides and nutrients with millimeter precision. Equipped with GPS-RTK for autonomous flight, LiDAR canopy analysis, and IoT connectivity, Mechatron is purpose-built for Indonesia\'s tropical climate and diverse farming terrains.',
+                    ],
+                    [
+                        'type' => 'quote',
+                        'text' => 'Mechatron\'s presence at National Quality Month 2025 proves that Indonesian-made agricultural technology can compete at the highest quality standards while upholding national technological independence.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'High TKDN Rating and Tangible Results in Farmers\' Fields',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'With a high TKDN domestic content rating and SNI 9199:2023 certification, Mechatron delivers cost-effective professional agricultural automation. Early adopters report significant reductions in pesticide usage, higher crop yields, and up to 80% savings in field operating time.',
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            'Leading Domestic Component Level (TKDN) in the Indonesian agricultural drone class.',
+                            'Up to 60–70% reduction in pesticide usage through precision spraying.',
+                            'Up to 40% yield improvement via targeted nutrient application.',
+                            'High daily field coverage compared to traditional manual spraying.',
+                        ],
+                    ],
+                    [
+                        'type' => 'takeaway',
+                        'title' => 'National Innovation Pride',
+                        'text' => 'Mechatron\'s participation in National Quality Month 2025 reaffirms the role of domestically built agricultural drones as tangible proof of Indonesia\'s quality culture and technological self-reliance.',
+                    ],
+                ],
+            ],
+            [
+                'id' => 3,
+                'slug' => 'mechatron-drone-pertama-di-indonesia-yang-meraih-sertifikasi-sni',
+                'title' => 'Mechatron! The First Drone in Indonesia to Achieve SNI Certification',
+                'excerpt' => 'Under the leadership of Hermanu, PT Bandung Mekatronika Teknologi made history as the first domestic agricultural drone manufacturer to earn SNI 9199:2023 certification—a triumph for local Indonesian innovation.',
+                'date' => '17 December 2025',
+                'readTime' => '2 min read',
+                'category' => 'National Innovation & Quality',
+                'author' => [
+                    'name' => 'MECHATRON TEAM',
+                    'role' => 'Publication & Agricultural Research Division',
+                    'avatar' => '/images/mechatron_logo.png',
+                ],
+                'image' => '/images/sertifikat-kesesuaian.jpg',
+                'tags' => ['First SNI Certified Drone', 'Made in Indonesia', 'Hermanu', 'Tech Independence'],
+                'content' => [
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'In December 2025, Indonesia reached a historic milestone in agricultural technology innovation. PT Bandung Mekatronika Teknologi (BMT), under the leadership of Hermanu, announced Indonesia\'s first domestically manufactured agricultural drone to receive SNI 9199:2023 certification.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'The Founder\'s Journey: From Electronics Industry to Founding BMT',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Hermanu\'s path to founding BMT was shaped by 25 years of professional experience—15 years in the electronics industry and 10 years in testing, inspection, and certification (TIC). In 2022, he partnered with university colleagues to establish PT Bandung Mekatronika Teknologi, focusing on designing and manufacturing drones tailored specifically for Indonesia\'s agricultural sector.',
+                    ],
+                    [
+                        'type' => 'quote',
+                        'text' => 'This SNI certification is not merely a technical achievement—it is proof that Indonesian engineers can deliver national-standard agricultural drone technology without relying on imported products.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Ending Dependence on Imported Drones',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Before Mechatron\'s innovation, Indonesia\'s agricultural sector relied heavily on imported drones that came with costly spare parts, limited local technical support, and complex warranty processes. Mechatron bridges this gap with locally manufactured, tropical-ready drones backed by ready spare parts in Indonesia.',
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            'First domestically built agricultural drone certified under SNI 9199:2023.',
+                            'Local spare parts availability and direct technical support without import delays.',
+                            'Engineered specifically for Indonesia\'s tropical climate and diverse soil conditions.',
+                            'Supports national programs for technological independence and food security.',
+                        ],
+                    ],
+                    [
+                        'type' => 'takeaway',
+                        'title' => 'Triumph of Local Innovation',
+                        'text' => 'Mechatron\'s achievement in earning SNI 9199:2023 certification as Indonesia\'s first domestic agricultural drone marks a milestone in national technological self-reliance.',
+                    ],
+                ],
+            ],
+            [
+                'id' => 4,
+                'slug' => 'kemenhub-rilis-koridor-ruang-udara-khusus-permudah-operasional-drone-agrikultur',
+                'title' => 'B4T Capacity Building: Mechatron Takes a Strategic Role in SNI Agricultural Drone Verification',
+                'excerpt' => 'During a capacity building program with B4T, Mechatron was officially selected as a testing verifier partner for SNI Agricultural Drones, strengthening national-standard drone testing and certification in Indonesia.',
+                'date' => '21 February 2026',
+                'readTime' => '2 min read',
+                'category' => 'SNI Certification',
+                'author' => [
+                    'name' => 'MECHATRON TEAM',
+                    'role' => 'Publication & Agricultural Research Division',
+                    'avatar' => '/images/mechatron_logo.png',
+                ],
+                'image' => '/images/capacity-building-b4t.jpeg',
+                'tags' => ['Capacity Building', 'B4T', 'SNI Verification', 'Agricultural Drone'],
+                'content' => [
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Bandung, February 21, 2026 – A capacity building program to expand agricultural drone testing scope was held at the office of PT Bandung Mekatronika Teknologi (BMT). During the event, Mechatron was officially appointed as a testing verifier partner for SNI Agricultural Drones based on its track record as Indonesia\'s first SNI-certified agricultural drone manufacturer.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Strengthening Test Parameters: Payload, Flight Stability, and Operational Safety',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'The B4T technical team and PT BMT engineers conducted in-depth sessions covering payload capacity and flight stability testing, spraying uniformity evaluation, structural and propulsion endurance assessment, and control system safety verification.',
+                    ],
+                    [
+                        'type' => 'quote',
+                        'text' => 'Harmonizing SNI verification procedures is key to ensuring testing methodologies align with national standards while remaining practical for real-world agricultural drone operations.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Hermanu\'s Vision: Responsibility to Strengthen the National Drone Industry',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Director of PT Bandung Mekatronika Teknologi, Hermanu, stated: "As Indonesia\'s first SNI agricultural drone manufacturer, we carry a vital responsibility to ensure testing standards truly reflect technical and operational safety needs in the field."',
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            'Strengthening national SNI testing and certification systems for agricultural drones.',
+                            'Expanding test scope across payload, flight stability, and spraying uniformity.',
+                            'Harmonizing test methodologies with national standards and real-world field requirements.',
+                            'Empowering the domestic agricultural drone industry through comprehensive testing schemes.',
+                        ],
+                    ],
+                    [
+                        'type' => 'takeaway',
+                        'title' => 'Strengthening the Certification Ecosystem',
+                        'text' => 'Mechatron\'s appointment as an SNI Agricultural Drone testing verifier partner underscores the strategic role of domestic manufacturers in building a credible national certification ecosystem.',
+                    ],
+                ],
+            ],
+            [
+                'id' => 5,
+                'slug' => 'mechatron-dan-prof-jamrud-aminuddin-lakukan-serah-terima-unit-drone-riset',
+                'title' => 'Mechatron and Prof. Jamrud Aminuddin Hold Handover of Research Drone Unit',
+                'excerpt' => 'Mechatron handed over a research drone unit to Prof. Jamrud Aminuddin, marking a collaborative industry-academia partnership in developing a domestically built long-range maritime survey drone system.',
+                'date' => '25 October 2025',
+                'readTime' => '2 min read',
+                'category' => 'Research & Collaboration',
+                'author' => [
+                    'name' => 'MECHATRON TEAM',
+                    'role' => 'Publication & Agricultural Research Division',
+                    'avatar' => '/images/mechatron_logo.png',
+                ],
+                'image' => '/images/serahterima-jamrud.jpg',
+                'tags' => ['Research Drone', 'Prof. Jamrud Aminuddin', 'Maritime Drone', 'Academic Collaboration'],
+                'content' => [
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Mechatron officially handed over a research drone unit to Prof. Jamrud Aminuddin, marking an important milestone in their collaborative research partnership and advancing the development of a long-range maritime survey drone system.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Industry and Academia Collaboration for Maritime Drone Technology',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'The partnership between Mechatron and Prof. Jamrud Aminuddin represents a strong synergy between industry and academia—advancing Indonesian drone technology through rigorous research, development, and practical applications in maritime mapping and ocean surveys.',
+                    ],
+                    [
+                        'type' => 'quote',
+                        'text' => 'Research collaboration between industry and academia is the foundation for creating Indonesian-made maritime drone technology that is scientifically tested and field-ready.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Strengthening Mechatron\'s Position as a Domestic Maritime Drone Provider',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Combining the engineering expertise of Mechatron\'s technical team with Prof. Aminuddin\'s academic research capabilities accelerates domestic maritime UAV innovation.',
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            'Development of a domestically built long-range maritime survey drone system.',
+                            'Synergy between Mechatron\'s engineering team and Prof. Jamrud Aminuddin\'s academic research.',
+                            'Strengthening industry-university partnerships in national drone innovation.',
+                            'Practical applications for Indonesian maritime mapping and coastal survey operations.',
+                        ],
+                    ],
+                    [
+                        'type' => 'takeaway',
+                        'title' => 'Research & Industry Synergy',
+                        'text' => 'This research drone handover highlights Mechatron\'s commitment to industry-academia collaboration in advancing domestic maritime drone technology.',
+                    ],
+                ],
+            ],
+            [
+                'id' => 6,
+                'slug' => 'lini-quadcopter-mechatron-lolos-uji-sni',
+                'title' => 'Mechatron Quadcopter Lineup Passes SNI Testing',
+                'excerpt' => 'Mechatron\'s quadcopter lineup from Q5 to Q21 has officially passed Indonesian National Standard (SNI) testing, strengthening its family of quality-, safety-, and reliability-verified agricultural spraying drones.',
+                'date' => '17 April 2026',
+                'readTime' => '2 min read',
+                'category' => 'SNI Certification',
+                'author' => [
+                    'name' => 'MECHATRON TEAM',
+                    'role' => 'Publication & Agricultural Research Division',
+                    'avatar' => '/images/mechatron_logo.png',
+                ],
+                'image' => '/images/sni-quad.jpg',
+                'tags' => ['Quadcopter', 'SNI Testing', 'Spraying Drone', 'Mechatron Q-Series'],
+                'content' => [
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'PT Bandung Mekatronika Teknologi (Mechatron) continues to expand its agricultural drone portfolio with its quadcopter lineup officially passing Indonesian National Standard (SNI) testing.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Four Certified Models: Q5, Q10, Q16, and Q21',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Under the certificate of conformity testing scope, the Mechatron quadcopter models meeting SNI standards include the Q5 (5 liters), Q10 (10 liters), Q16 (16 liters), and Q21 (21 liters). Each model underwent rigorous technical evaluation to verify quality, safety, and operational reliability for agricultural spraying.',
+                    ],
+                    [
+                        'type' => 'quote',
+                        'text' => 'Passing SNI testing across the entire quadcopter lineup proves that every Mechatron model, from Q5 to Q21, meets strict quality, safety, and operational reliability standards in agricultural fields.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Airframe and System Engineering Meeting National Standards',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'This achievement demonstrates that Mechatron\'s quadcopter airframe and flight control systems meet applicable national technical requirements while offering diverse tank capacities tailored to farmers\' operational needs.',
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            'Four certified quadcopter models: Q5 (5L), Q10 (10L), Q16 (16L), and Q21 (21L).',
+                            'Quality, safety, and operational reliability tested specifically for spraying applications.',
+                            'Airframe and avionics engineered to meet SNI testing method standards.',
+                            'Flexible capacity options tailored to diverse field sizes.',
+                        ],
+                    ],
+                    [
+                        'type' => 'takeaway',
+                        'title' => 'Quadcopter Lineup Quality Assurance',
+                        'text' => 'Passing SNI testing across the Mechatron quadcopter lineup underscores the readiness of domestically manufactured agricultural drones with comprehensive capacity choices for Indonesian farmers.',
+                    ],
+                ],
+            ],
+            [
+                'id' => 7,
+                'slug' => 'mechatron-siap-hadir-di-bandung-innovation-week-2026',
+                'title' => 'Driving the Tech Ecosystem: Mechatron Ready to Join Bandung Innovation Week 2026',
+                'excerpt' => 'PT Bandung Mekatronika Teknologi (Mechatron) will participate in Bandung Innovation Week (BIW) 2026 at Summarecon Mall Bandung, showcasing national-standard domestic agricultural drones and integrated flight control systems.',
+                'date' => '2 November 2026',
+                'readTime' => '2 min read',
+                'category' => 'Exhibition & Innovation',
+                'author' => [
+                    'name' => 'MECHATRON TEAM',
+                    'role' => 'Publication Division',
+                    'avatar' => '/images/mechatron_logo.png',
+                ],
+                'image' => '/images/biw.jpeg',
+                'tags' => ['Bandung Innovation Week 2026', 'Agricultural Drone', 'TKDN & SNI', 'Industrial Automation', 'Summarecon Mall Bandung'],
+                'content' => [
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Continuing to drive technology adoption across industrial and public sectors, PT Bandung Mekatronika Teknologi (Mechatron) proudly announces its participation in Bandung Innovation Week (BIW) 2026 at Summarecon Mall Bandung from November 12 to 15, 2026.',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'Initiated by Teknovasi Robotika Seluruh Indonesia, BIW 2026 carries the theme "Innovate, Collaborate, Elevate" as a strategic meeting ground for innovators, industry players, academics, and government institutions.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Agricultural Innovation Spotlight at Koridor Ageung',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'As one of Indonesia\'s drone technology pioneers, Mechatron has been specially invited to exhibit at this national showcase. Visitors can find the Mechatron booth at Koridor Ageung, dedicated to the Innovation Expo & Creative Showcase zone.',
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            'Experience Indonesian-Made Agricultural Drones Firsthand: Spraying and spreading drone fleets purpose-built for Indonesian agricultural terrains with high TKDN and SNI certification.',
+                            'Integrated Hardware & Flight Control Ecosystem: In-house flight control development delivering an intuitive operator interface, seamless navigation, and operational safety.',
+                            'Open Consultation Sessions: Mechatron engineers and specialists ready to discuss technical requirements and agricultural modernization strategies.',
+                        ],
+                    ],
+                    [
+                        'type' => 'quote',
+                        'text' => 'Mechatron\'s presence at BIW 2026 reflects our spirit to grow alongside Indonesia\'s technology ecosystem and drive national agricultural innovation independence.',
+                    ],
+                    [
+                        'type' => 'heading',
+                        'text' => 'Opening Cross-Sector Collaboration Opportunities',
+                    ],
+                    [
+                        'type' => 'paragraph',
+                        'text' => 'We believe agricultural modernization can be accelerated through strong synergy across stakeholders—bringing together engineering innovation and real-world farming needs.',
+                    ],
+                    [
+                        'type' => 'takeaway',
+                        'title' => 'Visit the Mechatron Booth at BIW 2026',
+                        'text' => 'Explore the future of efficient, self-reliant Indonesian agriculture at the Mechatron booth (Koridor Ageung, Summarecon Mall Bandung) on November 12–15, 2026.',
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public static function get(?string $slug): ?array
     {
-        if (!$slug) return null;
+        if (! $slug) {
+            return null;
+        }
         $normalized = strtolower(trim($slug));
         foreach (self::all() as $article) {
             if (strtolower($article['slug']) === $normalized) {
                 return $article;
             }
         }
+
         return null;
     }
 
@@ -429,7 +859,7 @@ class BlogArticles
     {
         $articles = self::all();
 
-        usort($articles, fn($a, $b) => self::dateValue($b['date']) <=> self::dateValue($a['date']));
+        usort($articles, fn ($a, $b) => self::dateValue($b['date']) <=> self::dateValue($a['date']));
 
         return $articles;
     }
@@ -442,9 +872,18 @@ class BlogArticles
     private static function dateValue(string $date): int
     {
         $months = [
-            'januari' => 1, 'februari' => 2, 'maret' => 3, 'april' => 4,
-            'mei' => 5, 'juni' => 6, 'juli' => 7, 'agustus' => 8,
-            'september' => 9, 'oktober' => 10, 'november' => 11, 'desember' => 12,
+            'januari' => 1, 'january' => 1,
+            'februari' => 2, 'february' => 2,
+            'maret' => 3, 'march' => 3,
+            'april' => 4,
+            'mei' => 5, 'may' => 5,
+            'juni' => 6, 'june' => 6,
+            'juli' => 7, 'july' => 7,
+            'agustus' => 8, 'august' => 8,
+            'september' => 9,
+            'oktober' => 10, 'october' => 10,
+            'november' => 11,
+            'desember' => 12, 'december' => 12,
         ];
 
         $parts = preg_split('/\s+/', trim($date));
@@ -460,7 +899,8 @@ class BlogArticles
 
     public static function related(string $currentSlug, int $limit = 3): array
     {
-        $filtered = array_filter(self::all(), fn($a) => $a['slug'] !== $currentSlug);
+        $filtered = array_filter(self::all(), fn ($a) => $a['slug'] !== $currentSlug);
+
         return array_slice($filtered, 0, $limit);
     }
 }

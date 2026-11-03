@@ -10,13 +10,13 @@
                     </div>
                 </a>
                 <p class="text-[13px] sm:text-[14px] text-neutral-400 leading-relaxed max-w-sm">
-                    Pelopor inovasi teknologi drone agrikultur cerdas, drone fotografi presisi tinggi, dan armada pengiriman tangguh untuk modernisasi industri Indonesia.
+                    {{ __('Pelopor inovasi teknologi drone agrikultur cerdas, drone fotografi presisi tinggi, dan armada pengiriman tangguh untuk modernisasi industri Indonesia.') }}
                 </p>
 
                 <!-- Media Sosial Icons Row di bawah deskripsi -->
                 <div class="pt-1">
                     <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-500 block mb-2.5">
-                        Ikuti Kami
+                        {{ __('Ikuti Kami') }}
                     </span>
                     <div class="flex items-center gap-2.5">
                         <!-- Instagram -->
@@ -77,37 +77,37 @@
             <!-- Col 2: Quick Navigation (2 cols on md) -->
             <div class="md:col-span-2">
                 <h4 class="text-[12px] font-bold text-white uppercase tracking-wider mb-4">
-                    Menu
+                    {{ __('Menu') }}
                 </h4>
                 <ul class="space-y-2.5 p-0 m-0 list-none text-[13px]">
                     <li>
                         <a href="{{ route('home') }}" class="text-neutral-400 hover:text-white hover:translate-x-0.5 inline-block transition-all duration-200">
-                            Home
+                            {{ __('Beranda') }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('products.index') }}" class="text-neutral-400 hover:text-white hover:translate-x-0.5 inline-block transition-all duration-200">
-                            Product
+                            {{ __('Produk') }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('services.index') }}" class="text-neutral-400 hover:text-white hover:translate-x-0.5 inline-block transition-all duration-200">
-                            Service
+                            {{ __('Layanan') }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('blog.index') }}" class="text-neutral-400 hover:text-white hover:translate-x-0.5 inline-block transition-all duration-200">
-                            Blog
+                            {{ __('Blog') }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('about') }}" class="text-neutral-400 hover:text-white hover:translate-x-0.5 inline-block transition-all duration-200">
-                            About Us
+                            {{ __('Tentang Kami') }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('contact') }}" class="text-neutral-400 hover:text-white hover:translate-x-0.5 inline-block transition-all duration-200">
-                            Contact Us
+                            {{ __('Hubungi Kami') }}
                         </a>
                     </li>
                 </ul>
@@ -116,7 +116,7 @@
             <!-- Col 3: Contact & Channels (3 cols on md) -->
             <div class="md:col-span-3 space-y-4">
                 <h4 class="text-[12px] font-bold text-white uppercase tracking-wider mb-4">
-                    Hubungi Kami
+                    {{ __('Hubungi Kami') }}
                 </h4>
                 <div class="space-y-2.5 text-[13px] text-neutral-400">
                     <div class="flex items-start gap-2.5">
@@ -142,7 +142,7 @@
             <!-- Col 4: Media Sosial (Di sebelah kanan Hubungi Kami, 3 cols on md) -->
             <div class="md:col-span-3 space-y-4">
                 <h4 class="text-[12px] font-bold text-white uppercase tracking-wider mb-4">
-                    Media Sosial
+                    {{ __('Media Sosial') }}
                 </h4>
                 <ul class="space-y-3 p-0 m-0 list-none text-[13px]">
                     <!-- Instagram -->

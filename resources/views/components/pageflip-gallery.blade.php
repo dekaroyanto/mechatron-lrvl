@@ -4,28 +4,28 @@
             'id' => 1,
             'frontImage' => asset('images/mechatron_kantor_gedung.jpg'),
             'backImage' => asset('images/mechatron_kantor_interior.jpg'),
-            'frontTitle' => 'Kantor Mechatron',
-            'frontSubtitle' => 'Summarecon Bandung',
-            'backTitle' => 'Lobi & Ruang Kantor',
-            'backSubtitle' => 'PT Bandung Mekatronika Teknologi',
+            'frontTitle' => __('Kantor Mechatron'),
+            'frontSubtitle' => __('Summarecon Bandung'),
+            'backTitle' => __('Lobi & Ruang Kantor'),
+            'backSubtitle' => __('PT Bandung Mekatronika Teknologi'),
         ],
         [
             'id' => 2,
             'frontImage' => asset('images/mechatron_pabrik_gudang.jpg'),
             'backImage' => asset('images/mechatron_kantor_gedung.jpg'),
-            'frontTitle' => 'Gudang & Fasilitas Workshop',
-            'frontSubtitle' => 'Sentra Fabrikasi & Perakitan',
-            'backTitle' => 'Tampak Depan Kantor BMT',
-            'backSubtitle' => 'Gedebage, Kota Bandung',
+            'frontTitle' => __('Gudang & Fasilitas Workshop'),
+            'frontSubtitle' => __('Sentra Fabrikasi & Perakitan'),
+            'backTitle' => __('Tampak Depan Kantor BMT'),
+            'backSubtitle' => __('Gedebage, Kota Bandung'),
         ],
         [
             'id' => 3,
             'frontImage' => asset('images/mechatron_kantor_interior.jpg'),
             'backImage' => asset('images/mechatron_pabrik_gudang.jpg'),
-            'frontTitle' => 'Loby Kantor',
-            'frontSubtitle' => 'Mekatronika & Otomasi Cerdas',
-            'backTitle' => 'Workshop Mechatron',
-            'backSubtitle' => 'Karya Nyata Anak Bangsa',
+            'frontTitle' => __('Loby Kantor'),
+            'frontSubtitle' => __('Mekatronika & Otomasi Cerdas'),
+            'backTitle' => __('Workshop Mechatron'),
+            'backSubtitle' => __('Karya Nyata Anak Bangsa'),
         ],
     ];
 @endphp
@@ -102,7 +102,7 @@
     <!-- Section Header -->
     <div class="text-center max-w-2xl mx-auto px-4 mb-10 sm:mb-14">
         <h2 class="text-[26px] sm:text-[38px] md:text-[44px] font-bold text-gray-900 tracking-tight leading-tight">
-            Kantor & Pabrik Mechatron
+            {{ __('Kantor & Pabrik Mechatron') }}
         </h2>
     </div>
 
@@ -266,7 +266,7 @@
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15 19l-7-7 7-7" />
             </svg>
-            <span>Prev</span>
+            <span>{{ __('Prev') }}</span>
         </button>
 
         <!-- Reset Button -->
@@ -280,7 +280,7 @@
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
             </svg>
-            <span class="hidden xs:inline">Reset</span>
+            <span class="hidden xs:inline">{{ __('Reset') }}</span>
         </button>
 
         <!-- Counter Badge -->
@@ -298,7 +298,7 @@
             aria-label="Next Page"
             class="px-3 sm:px-3.5 py-1.5 rounded-xl flex items-center gap-1 sm:gap-1.5 text-xs font-semibold bg-white border border-gray-200 text-gray-800 hover:bg-gray-50 hover:scale-105 active:scale-95 disabled:opacity-35 disabled:pointer-events-none transition-all shadow-xs cursor-pointer"
         >
-            <span>Next</span>
+            <span>{{ __('Next') }}</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7" />
             </svg>

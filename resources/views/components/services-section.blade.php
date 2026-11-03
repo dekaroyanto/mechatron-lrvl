@@ -6,20 +6,20 @@
     $cards = [
         [
             'slug' => 'pelatihanpilot',
-            'title' => $servicesList['pelatihanpilot']['title'] ?? 'Pelatihan Pilot Drone',
-            'subtitle' => 'Program sertifikasi resmi DKUPPU & FASI dari pemahaman regulasi hingga manuver lapangan.',
+            'title' => $servicesList['pelatihanpilot']['title'] ?? __('Pelatihan Pilot Drone'),
+            'subtitle' => __('Program sertifikasi resmi DKUPPU & FASI dari pemahaman regulasi hingga manuver lapangan.'),
             'image' => asset('images/service_pelatihan_pilot.jpg'),
         ],
         [
             'slug' => 'perawatandrone',
-            'title' => $servicesList['perawatandrone']['title'] ?? 'Perawatan Drone',
-            'subtitle' => 'Servis berkala, kalibrasi presisi sensor, dan perbaikan menyeluruh berstandar pabrikan.',
+            'title' => $servicesList['perawatandrone']['title'] ?? __('Perawatan Drone'),
+            'subtitle' => __('Servis berkala, kalibrasi presisi sensor, dan perbaikan menyeluruh berstandar pabrikan.'),
             'image' => asset('images/service_perawatan_drone.jpg'),
         ],
         [
             'slug' => 'sewadrone',
-            'title' => $servicesList['sewadrone']['title'] ?? 'Sewa Drone',
-            'subtitle' => 'Rental armada drone industri & agrikultur terlengkap dengan dukungan unit prima.',
+            'title' => $servicesList['sewadrone']['title'] ?? __('Sewa Drone'),
+            'subtitle' => __('Rental armada drone industri & agrikultur terlengkap dengan dukungan unit prima.'),
             'image' => asset('images/service_sewa_drone.jpg'),
         ],
     ];
@@ -30,7 +30,7 @@
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <h2 class="text-[28px] sm:text-[36px] md:text-[42px] font-bold text-slate-950 tracking-tight leading-tight mb-3">
-                Layanan Kami
+                {{ __('Layanan Kami') }}
             </h2>
         </div>
 
@@ -62,7 +62,7 @@
                         </p>
 
                         <div class="inline-flex items-center gap-1.5 text-white text-[13px] sm:text-[14px] font-semibold group-hover:text-blue-300 transition-all duration-200">
-                            <span>Pelajari Lebih Lanjut</span>
+                            <span>{{ __('Pelajari Lebih Lanjut') }}</span>
                             <span class="text-[16px] leading-none transition-transform duration-300 group-hover:translate-x-1">›</span>
                         </div>
                     </div>

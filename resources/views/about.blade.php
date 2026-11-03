@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'About Us | Mechatron - Pelopor Solusi Drone Indonesia')
-@section('meta_description', 'Mengenal Mechatron: Perusahaan pelopor inovasi teknologi drone pertanian, sistem kendali darat pintar (GCS), dan otomasi aerial presisi tinggi di Indonesia.')
+@section('title', __('Tentang Kami | Mechatron - Pelopor Solusi Drone Indonesia'))
+@section('meta_description', __('Mengenal Mechatron: Perusahaan pelopor inovasi teknologi drone pertanian, sistem kendali darat pintar (GCS), dan otomasi aerial presisi tinggi di Indonesia.'))
 @section('navbar_theme', 'light')
 
 @section('content')
@@ -58,13 +58,13 @@
     <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-                <span class="text-[13px] font-bold text-[#0070D5] uppercase tracking-wider">Tentang Kami</span>
+                <span class="text-[13px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Tentang Kami') }}</span>
                 <h2 class="text-[30px] sm:text-[40px] font-bold text-gray-900 tracking-tight leading-tight mt-2 mb-6">
-                   Mengenal BMT dan Inovasi Teknologi Kami
+                   {{ __('Mengenal BMT dan Inovasi Teknologi Kami') }}
                 </h2>
                 <div class="space-y-4 text-[15px] sm:text-[16px] text-gray-600 leading-relaxed">
                     <p>
-                        BMT didirikan pada tahun 2022 oleh Bapak Hermanu. Awalnya, bisnis ini berfokus pada konsultasi keteknikan, pelatihan manajemen, dan pengadaan suku cadang mekatronika. Kami menerima paling banyak pesanan suku cadang untuk drone dan kendaraan listrik, sehingga kami fokus mengembangkan serta memproduksi drone dan sepeda listrik dengan merek dagang Mechatron dan BMT. Seiring perkembangan waktu, pengembangan drone BMT diperluas untuk berbagai sektor seperti pertanian, perkebunan, perikanan, survei pemetaan, dan bidang lain sesuai kebutuhan pengguna.
+                        {{ __('BMT didirikan pada tahun 2022 oleh Bapak Hermanu. Awalnya, bisnis ini berfokus pada konsultasi keteknikan, pelatihan manajemen, dan pengadaan suku cadang mekatronika. Kami menerima paling banyak pesanan suku cadang untuk drone dan kendaraan listrik, sehingga kami fokus mengembangkan serta memproduksi drone dan sepeda listrik dengan merek dagang Mechatron dan BMT. Seiring perkembangan waktu, pengembangan drone BMT diperluas untuk berbagai sektor seperti pertanian, perkebunan, perikanan, survei pemetaan, dan bidang lain sesuai kebutuhan pengguna.') }}
                     </p>
                 </div>
 
@@ -74,8 +74,8 @@
                             ✓
                         </div>
                         <div>
-                            <h4 class="text-[14px] font-semibold text-gray-900">Teknologi Teruji Nyata</h4>
-                            <p class="text-[12px] text-gray-500">Ribuan jam terbang uji ekstrem tanpa insiden kegagalan sistem.</p>
+                            <h4 class="text-[14px] font-semibold text-gray-900">{{ __('Teknologi Teruji Nyata') }}</h4>
+                            <p class="text-[12px] text-gray-500">{{ __('Ribuan jam terbang uji ekstrem tanpa insiden kegagalan sistem.') }}</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
@@ -83,8 +83,8 @@
                             ✓
                         </div>
                         <div>
-                            <h4 class="text-[14px] font-semibold text-gray-900">Garansi & Suku Cadang Resmi</h4>
-                            <p class="text-[12px] text-gray-500">Stok komponen melimpah tanpa menunggu impor berbulan-bulan.</p>
+                            <h4 class="text-[14px] font-semibold text-gray-900">{{ __('Garansi & Suku Cadang Resmi') }}</h4>
+                            <p class="text-[12px] text-gray-500">{{ __('Stok komponen melimpah tanpa menunggu impor berbulan-bulan.') }}</p>
                         </div>
                     </div>
                 </div>
@@ -99,11 +99,8 @@
                     />
                 </div>
                 <div class="absolute -bottom-6 -left-6 bg-[#0070D5] text-white p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
-                    <p class="text-[14px] font-bold">Kantor Mechatron</p>
-                    <p class="text-[12px] text-blue-100 mt-1">Berlokasi di Ruko Magna Commercial Area, Blok MC-08
-Komplek Summarecon Bandung
-Kecamatan Gedebage, Kota Bandung
-Jawa Barat, 40294.</p>
+                    <p class="text-[14px] font-bold">{{ __('Kantor Mechatron') }}</p>
+                    <p class="text-[12px] text-blue-100 mt-1">{{ __('Berlokasi di Ruko Magna Commercial Area, Blok MC-08 Komplek Summarecon Bandung Kecamatan Gedebage, Kota Bandung Jawa Barat, 40294.') }}</p>
                 </div>
             </div>
         </div>
@@ -114,14 +111,14 @@ Jawa Barat, 40294.</p>
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
                
-                <h2 class="text-[30px] sm:text-[40px] font-bold text-gray-900 tracking-tight mt-1">Visi & Misi Kami</h2>
+                <h2 class="text-[30px] sm:text-[40px] font-bold text-gray-900 tracking-tight mt-1">{{ __('Visi & Misi Kami') }}</h2>
             </div>
 
             <!-- Kartu Utama Visi & Misi BMT -->
             <div class="max-w-4xl mx-auto bg-gradient-to-br from-[#F8FAFC] via-white to-blue-50/40 border border-blue-100 rounded-3xl p-8 sm:p-12 shadow-sm text-center relative overflow-hidden">
                 
                 <blockquote class="text-[17px] sm:text-[21px] md:text-[23px] font-semibold text-gray-900 leading-relaxed tracking-tight max-w-3xl mx-auto">
-                    “BMT berkomitmen untuk menciptakan solusi cerdas yang dapat diakses oleh berbagai kalangan, dengan tujuan memberikan kontribusi nyata terhadap modernisasi dan otomatisasi teknologi yang ramah lingkungan.”
+                    {{ __('“BMT berkomitmen untuk menciptakan solusi cerdas yang dapat diakses oleh berbagai kalangan, dengan tujuan memberikan kontribusi nyata terhadap modernisasi dan otomatisasi teknologi yang ramah lingkungan.”') }}
                 </blockquote>
                 <div class="mt-6 flex items-center justify-center gap-2">
                     <span class="w-6 h-0.5 rounded-full bg-[#0070D5]"></span>
@@ -132,8 +129,8 @@ Jawa Barat, 40294.</p>
         </div>
     </section>
 
-    <!-- 5. Slide Gallery: Kantor & Pabrik Drone Mechatron -->
-    <x-facility-gallery />
+    <!-- 5. Carousel Image Galeri Kantor & Pabrik Mechatron (Horizontal Strip) -->
+    <x-facility-strip-carousel />
 
     <!-- 6. 3D Image Pageflip: Lookbook & Profil Interaktif Mechatron -->
     <x-pageflip-gallery />
@@ -142,23 +139,23 @@ Jawa Barat, 40294.</p>
     <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div class="bg-gradient-to-r from-neutral-900 via-neutral-950 to-neutral-900 text-white rounded-3xl p-10 sm:p-16 relative overflow-hidden shadow-2xl">
             <h2 class="text-[28px] sm:text-[40px] font-extrabold tracking-tight mb-4">
-                Siap Meningkatkan Produktivitas Lahan Anda?
+                {{ __('Siap Meningkatkan Produktivitas Lahan Anda?') }}
             </h2>
             <p class="text-[15px] sm:text-[17px] text-gray-300 max-w-2xl mx-auto mb-8 font-light">
-                Konsultasikan kebutuhan armada atau jadwalkan demonstrasi terbang langsung bersama tim spesialis Mechatron.
+                {{ __('Konsultasikan kebutuhan armada atau jadwalkan demonstrasi terbang langsung bersama tim spesialis Mechatron.') }}
             </p>
             <div class="flex flex-wrap items-center justify-center gap-4">
                 <a
                     href="{{ route('contact') }}"
                     class="bg-[#0070D5] hover:bg-[#005bb5] text-white font-semibold px-8 py-3.5 rounded-full text-[15px] shadow-lg transition-all hover:scale-105"
                 >
-                    Hubungi Mechatron
+                    {{ __('Hubungi Mechatron') }}
                 </a>
                 <a
                     href="{{ route('services.index') }}"
                     class="bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-3.5 rounded-full text-[15px] border border-white/20 transition-all"
                 >
-                    Lihat Seluruh Layanan
+                    {{ __('Lihat Seluruh Layanan') }}
                 </a>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Mechatron')
-@section('meta_description', 'Mechatron menghadirkan inovasi drone pertanian, sistem ground control, dan teknologi otonom pintar mutakhir di Indonesia.')
+@section('meta_description', __('Mechatron menghadirkan inovasi drone pertanian, sistem ground control, dan teknologi otonom pintar mutakhir di Indonesia.'))
 
 @section('content')
     <!-- 1. Flagship Cinematic Hero Banner -->

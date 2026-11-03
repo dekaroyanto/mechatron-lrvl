@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us | Mechatron - Hubungi Tim Kami')
-@section('meta_description', 'Hubungi tim Mechatron Indonesia untuk informasi pengadaan drone, demo produk, atau kunjungi kantor dan pabrik kami di Bandung.')
+@section('title', __('Hubungi Kami | Mechatron - Hubungi Tim Kami'))
+@section('meta_description', __('Hubungi tim Mechatron Indonesia untuk informasi pengadaan drone, demo produk, atau kunjungi kantor dan pabrik kami di Bandung.'))
 @section('navbar_theme', 'light')
 
 @section('content')
@@ -11,10 +11,10 @@
         <!-- 1. Page Header -->
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <h1 class="text-[32px] sm:text-[42px] md:text-[48px] font-extrabold text-slate-950 tracking-tight leading-[1.15] mb-4">
-                Hubungi Kami
+                {{ __('Hubungi Kami') }}
             </h1>
             <p class="text-[15px] sm:text-[17px] text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
-                Silakan hubungi tim Mechatron Indonesia melalui email, telepon, WhatsApp, atau kunjungi langsung kantor dan pabrik kami.
+                {{ __('Silakan hubungi tim Mechatron Indonesia melalui email, telepon, WhatsApp, atau kunjungi langsung kantor dan pabrik kami.') }}
             </p>
         </div>
 
@@ -29,7 +29,7 @@
                 </div>
                 <div class="flex-1 min-w-0">
                     <span class="text-[11px] sm:text-[12px] font-bold text-[#0070D5] uppercase tracking-wider block mb-1">
-                        Email Resmi
+                        {{ __('Email Resmi') }}
                     </span>
                     <a
                         href="mailto:info@mekatronika.co.id"
@@ -38,13 +38,13 @@
                         info@mekatronika.co.id
                     </a>
                     <p class="text-[13px] text-slate-500 mb-3">
-                        Kirimkan pertanyaan resmi, permohonan kerjasama, atau informasi tender pengadaan.
+                        {{ __('Kirimkan pertanyaan resmi, permohonan kerjasama, atau informasi tender pengadaan.') }}
                     </p>
                     <a
                         href="mailto:info@mekatronika.co.id"
                         class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0070D5] hover:text-[#005bb5] transition-colors text-decoration-none"
                     >
-                        <span>Kirim Pesan Email</span>
+                        <span>{{ __('Kirim Pesan Email') }}</span>
                         <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
@@ -62,15 +62,15 @@
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-2 mb-1">
                         <span class="text-[11px] sm:text-[12px] font-bold text-emerald-600 uppercase tracking-wider">
-                            Telepon & WhatsApp
+                            {{ __('Telepon & WhatsApp') }}
                         </span>
                         <span class="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded-full">
                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Online
+                            {{ __('Online') }}
                         </span>
                     </div>
                     <a
-                        href="https://wa.me/6281112143111?text=Halo%20Mechatron,%20saya%20ingin%20konsultasi%20mengenai%20produk%20dan%20layanan%20drone."
+                        href="https://wa.me/6281112143111?text={{ urlencode(__('Halo Mechatron, saya tertarik untuk konsultasi layanan drone.')) }}"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-[17px] sm:text-[19px] font-bold text-slate-900 hover:text-emerald-600 transition-colors block truncate mb-1 text-decoration-none"
@@ -78,16 +78,16 @@
                         +62 811 1214 3111
                     </a>
                     <p class="text-[13px] text-slate-500 mb-3">
-                        Layanan konsultasi cepat dengan staf teknis & penjualan Mechatron.
+                        {{ __('Layanan konsultasi cepat dengan staf teknis & penjualan Mechatron.') }}
                     </p>
                     <div class="flex items-center gap-3">
                         <a
-                            href="https://wa.me/6281112143111?text=Halo%20Mechatron,%20saya%20ingin%20konsultasi%20mengenai%20produk%20dan%20layanan%20drone."
+                            href="https://wa.me/6281112143111?text={{ urlencode(__('Halo Mechatron, saya tertarik untuk konsultasi layanan drone.')) }}"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-emerald-600 hover:text-emerald-700 transition-colors text-decoration-none"
                         >
-                            <span>Chat WhatsApp</span>
+                            <span>{{ __('Chat WhatsApp') }}</span>
                             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                             </svg>
@@ -97,7 +97,7 @@
                             href="tel:+6281112143111"
                             class="text-[13px] font-medium text-slate-600 hover:text-slate-900 transition-colors text-decoration-none"
                         >
-                            Hubungi via Telepon
+                            {{ __('Hubungi via Telepon') }}
                         </a>
                     </div>
                 </div>
@@ -108,13 +108,13 @@
         <div class="mb-14 sm:mb-18">
             <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
                 <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider block mb-1">
-                    Titik Lokasi
+                    {{ __('Titik Lokasi') }}
                 </span>
                 <h2 class="text-[26px] sm:text-[32px] font-bold text-slate-900 tracking-tight">
-                    Lokasi Kantor & Pabrik
+                    {{ __('Lokasi Kantor & Pabrik') }}
                 </h2>
                 <p class="text-[14px] sm:text-[15px] text-slate-500 mt-1.5">
-                    Kunjungi kantor operasional kami di Summarecon Bandung atau pabrik di Tegalluar.
+                    {{ __('Kunjungi kantor operasional kami di Summarecon Bandung atau pabrik di Tegalluar.') }}
                 </p>
             </div>
 
@@ -124,10 +124,8 @@
                     <!-- Header Info -->
                     <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                         <div>
-                           
-
                             <h3 class="text-[20px] sm:text-[22px] font-bold text-slate-900 mb-2">
-                                Kantor Mechatron
+                                {{ __('Kantor Mechatron') }}
                             </h3>
 
                             <div class="flex items-start gap-3 text-slate-600 text-[14px] leading-relaxed mb-4">
@@ -142,14 +140,13 @@
                         </div>
 
                         <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
-                            
                             <a
                                 href="https://maps.app.goo.gl/hJLPozxwp6tp2tar8"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 bg-[#0070D5] hover:bg-[#005bb5] text-white text-[13px] font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all group/btn text-decoration-none"
                             >
-                                <span>Buka Google Maps</span>
+                                <span>{{ __('Buka Google Maps') }}</span>
                                 <svg class="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                                 </svg>
@@ -179,7 +176,7 @@
                     <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="text-[20px] sm:text-[22px] font-bold text-slate-900 mb-2">
-                                Pabrik Mechatron
+                                {{ __('Pabrik Mechatron') }}
                             </h3>
 
                             <div class="flex items-start gap-3 text-slate-600 text-[14px] leading-relaxed mb-4">
@@ -200,7 +197,7 @@
                                 rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-[13px] font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all group/btn text-decoration-none"
                             >
-                                <span>Buka Google Maps</span>
+                                <span>{{ __('Buka Google Maps') }}</span>
                                 <svg class="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                                 </svg>

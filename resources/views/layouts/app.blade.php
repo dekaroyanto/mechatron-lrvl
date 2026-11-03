@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id" class="h-full antialiased">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full antialiased scroll-smooth">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'Mechatron')</title>
-    <meta name="description" content="@yield('meta_description', 'Mechatron menghadirkan inovasi drone pertanian, sistem ground control, dan teknologi otonom pintar mutakhir di Indonesia.')">
+    <meta name="description" content="@yield('meta_description', __('Mechatron menghadirkan inovasi drone pertanian, sistem ground control, dan teknologi otonom pintar mutakhir di Indonesia.'))">
     <link rel="icon" type="image/png" href="{{ asset('images/mechatron_logo.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/mechatron_logo.png') }}">
 
