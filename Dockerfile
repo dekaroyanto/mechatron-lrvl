@@ -39,7 +39,13 @@ COPY --from=assets /var/www/html/public/build /var/www/html/public/build
 # A throwaway .env so build-time artisan can boot. Real values (APP_URL, DB,
 # APP_KEY, ...) are injected at runtime via `docker run --env-file` and win over
 # this file, because env is NOT cached at build (see entrypoint).
-RUN cp .env.example .env
+# The SQLite placeholder is required because the default DB connection in
+# .env.example is SQLite, and database/database.sqlite is git-ignored (so it is
+# absent from the build context). Laravel's SQLite connector throws when the
+# file is missing.
+RUN cp .env.example .env \
+    && mkdir -p database \
+    && touch database/database.sqlite
 
 # Finish composer setup (autoloader + package discovery) now that code is present
 RUN composer dump-autoload --optimize --no-dev \
