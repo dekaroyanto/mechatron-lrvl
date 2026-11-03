@@ -20,7 +20,7 @@ build-app:
     - docker build -t "$CI_REGISTRY_IMAGE:latest" -t "$CI_REGISTRY_IMAGE:$TAG_IMAGE" .
     - docker push "$CI_REGISTRY_IMAGE" --all-tags
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_COMMIT_BRANCH == "dev-siswo"'
 
 # ---------------------------------------------------------------------------
 # Shared SSH deploy logic. Concrete jobs set DEPLOY_HOST / ENV_FILE /
