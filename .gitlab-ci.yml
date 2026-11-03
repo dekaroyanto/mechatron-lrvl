@@ -49,8 +49,7 @@ build-app:
           --restart unless-stopped \
           --env-file '$ENV_FILE' \
           -p '$APP_PORT':8882 \
-          '$CI_REGISTRY_IMAGE:$TAG_IMAGE' \
-          sh -c 'php artisan optimize:clear && php artisan serve --host=0.0.0.0 --port=8882'
+          '$CI_REGISTRY_IMAGE:$TAG_IMAGE'
         docker image prune -f || true
       "
 

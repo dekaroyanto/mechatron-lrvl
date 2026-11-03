@@ -8,11 +8,14 @@ set -e
 
 cd /var/www/html
 
-# Ensure an APP_KEY exists. Prefer the injected one; generate a throwaway only
-# if none was provided (not recommended for production — set APP_KEY per host).
+# Ensure an APP_KEY exists. Prefer the injected one; generate an ephemeral key
+# only if none was provided. The image ships no .env, so we export the key into
+# the environment (not write it to a file) for the cache steps below.
+# NOT recommended for production — set APP_KEY in the server's env file.
 if [ -z "$APP_KEY" ]; then
     echo "[entrypoint] WARNING: APP_KEY not set, generating an ephemeral key."
-    php artisan key:generate --force
+    APP_KEY="$(php artisan key:generate --show)"
+    export APP_KEY
 fi
 
 # Rebuild caches against the runtime environment.

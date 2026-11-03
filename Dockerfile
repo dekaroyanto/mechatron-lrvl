@@ -36,22 +36,20 @@ RUN git config --global --add safe.directory /var/www/html \
 COPY . /var/www/html
 COPY --from=assets /var/www/html/public/build /var/www/html/public/build
 
-# A throwaway .env so build-time artisan can boot. Real values (APP_URL, DB,
-# APP_KEY, ...) are injected at runtime via `docker run --env-file` and win over
-# this file, because env is NOT cached at build (see entrypoint).
-# The SQLite placeholder is required because the default DB connection in
-# .env.example is SQLite, and database/database.sqlite is git-ignored (so it is
-# absent from the build context). Laravel's SQLite connector throws when the
-# file is missing.
+# Build-time ONLY: a throwaway .env + empty SQLite file so `php artisan
+# package:discover` can boot (a service provider probes the DB via hasTable()).
+# Both are deleted in the same layer, so the final image ships NO .env and NO
+# database file — every configuration value comes from `docker run --env-file`
+# at container start (see entrypoint). This prevents .env.example defaults
+# (e.g. APP_ENV=local, APP_DEBUG=true) from leaking as runtime fallbacks.
 RUN cp .env.example .env \
     && mkdir -p database \
-    && touch database/database.sqlite
-
-# Finish composer setup (autoloader + package discovery) now that code is present
-RUN composer dump-autoload --optimize --no-dev \
+    && touch database/database.sqlite \
+    && composer dump-autoload --optimize --no-dev \
     && php artisan package:discover --ansi \
     && php artisan storage:link \
-    && chown -R www-data:www-data storage bootstrap/cache
+    && chown -R www-data:www-data storage bootstrap/cache \
+    && rm -f .env database/database.sqlite
 
 # NOTE: config/route/view caching is intentionally deferred to the entrypoint so
 # that per-environment runtime variables are reflected in the cached config.
