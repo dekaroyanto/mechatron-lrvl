@@ -4,13 +4,10 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 pb-12 border-b border-neutral-800">
             <!-- Col 1: Brand & Identity (5 cols on md) -->
             <div class="md:col-span-5 space-y-4">
-                <a href="{{ route('home') }}" class="inline-flex items-center gap-2.5 group select-none text-decoration-none">
-                    <div class="w-8 h-8 rounded-lg overflow-hidden shadow-sm shrink-0">
-                        <img src="{{ asset('images/mechatron_logo.png') }}" alt="Mechatron Logo" class="w-full h-full object-cover">
+                <a href="{{ route('home') }}" class="flex w-full max-w-sm items-center gap-2.5 group select-none text-decoration-none">
+                    <div class="w-full transition-transform duration-200 group-hover:scale-105">
+                        <img src="{{ asset('images/logo_bmt_dark.png') }}" alt="Mechatron Logo" class="w-full h-auto object-contain">
                     </div>
-                    <span class="font-extrabold text-[18px] text-white tracking-tight group-hover:text-[#0070D5] transition-colors">
-                        MECHATRON
-                    </span>
                 </a>
                 <p class="text-[13px] sm:text-[14px] text-neutral-400 leading-relaxed max-w-sm">
                     Pelopor solusi teknologi drone pertanian cerdas, pemetaan LiDAR presisi tinggi, dan otomasi aerial tangguh untuk modernisasi agribisnis Indonesia.

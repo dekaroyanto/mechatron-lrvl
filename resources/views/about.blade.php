@@ -19,36 +19,31 @@
 
         <div class="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
             <span class="inline-block text-[12px] sm:text-[13px] font-bold uppercase tracking-widest text-[#0070D5] bg-[#0070D5]/10 px-4 py-1.5 rounded-full mb-4 border border-[#0070D5]/20">
-                About Mechatron Indonesia
+                About Mechatron
             </span>
             <h1 class="text-[36px] sm:text-[52px] md:text-[64px] font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
-                Mendefinisikan Ulang Efisiensi & Masa Depan Agrikultur
+                Mendorong Otomasi Udara Cerdas di Indonesia
             </h1>
             <p class="text-[16px] sm:text-[19px] md:text-[21px] text-gray-300 font-light mt-5 max-w-3xl mx-auto leading-relaxed">
-                Kami menggabungkan rekayasa aeronautika kelas dunia, otomasi pintar, dan pemahaman mendalam atas medan agribisnis Indonesia untuk melahirkan era pertanian presisi.
+                Mechatron hadir sebagai pionir manufaktur dan penyedia solusi drone berkapasitas muat tinggi di Indonesia. Kami memadukan riset avionik, material komposit serat karbon berkekuatan tinggi, dan perangkat lunak navigasi cerdas untuk mendukung sektor agrikultur nasional.
             </p>
         </div>
     </section>
 
     <!-- 2. Numbers / Key Stats -->
     <section class="relative -mt-10 z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 sm:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-gray-100 text-center">
-            <div class="pt-4 lg:pt-0">
-                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">50.000+</div>
-                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">Hektar Terlayani</div>
-                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Cakupan semprot & pemetaan di perkebunan nusantara.</p>
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 sm:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100 text-center">
+            <div class="pt-4 md:pt-0">
+                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">46%</div>
+                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">TKDN</div>
+                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Persentase komponen lokal dalam produksi drone.</p>
             </div>
-            <div class="pt-4 lg:pt-0">
-                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">99.8%</div>
-                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">Akurasi Jalur RTK</div>
-                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Navigasi otonom presisi sentimeter tanpa drift berlebih.</p>
+            <div class="pt-4 md:pt-0">
+                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">1ˢᵗ</div>
+                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">SNI</div>
+                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Drone pertama di Indonesia yang memenuhi standar SNI.</p>
             </div>
-            <div class="pt-4 lg:pt-0">
-                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">100+</div>
-                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">Pilot Tersertifikasi</div>
-                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Lulusan akademi pelatihan resmi berlisensi terbang.</p>
-            </div>
-            <div class="pt-4 lg:pt-0">
+            <div class="pt-4 md:pt-0">
                 <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">24/7</div>
                 <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">Dukungan Servis</div>
                 <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Kesiapan suku cadang orisinil dan teknisi ahli lapangan.</p>
@@ -62,14 +57,14 @@
             <div>
                 <span class="text-[13px] font-bold text-[#0070D5] uppercase tracking-wider">Dedikasi Untuk Indonesia</span>
                 <h2 class="text-[30px] sm:text-[40px] font-bold text-gray-900 tracking-tight leading-tight mt-2 mb-6">
-                    Membangun Kedaulatan Pangan Melalui Otomasi Udara Cerdas
+                    Profil Perusahaan
                 </h2>
                 <div class="space-y-4 text-[15px] sm:text-[16px] text-gray-600 leading-relaxed">
                     <p>
-                        Berdiri dengan tekad memajukan sektor agrikultur nasional, <strong>Mechatron</strong> hadir sebagai pionir manufaktur dan penyedia solusi drone berkapasitas muat tinggi di Indonesia. Kami memadukan riset avionik, material komposit serat karbon berkekuatan tinggi, dan perangkat lunak navigasi cerdas.
+                        <strong>PT Bandung Mekatronika Teknologi (BMT)</strong> adalah perusahaan yang bergerak di bidang teknologi mekatronika dan otomatisasi, dengan layanan utama meliputi desain, produksi, perbaikan, serta jasa konsultasi teknis.
                     </p>
                     <p>
-                        Kami memahami tantangan geografis Indonesia — mulai dari perkebunan kelapa sawit skala masif di Sumatera dan Kalimantan, persawahan terasering berlereng di Jawa dan Bali, hingga lahan komoditas pangan di Indonesia Timur. Armada Mechatron dirancang tahan debu, air (IP67), dan terik matahari khatulistiwa.
+                        BMT didirikan pada tahun 2022 oleh Bapak Hermanu. Awalnya, bisnis ini berfokus pada konsultasi keteknikan, pelatihan manajemen, dan pengadaan suku cadang mekatronika. Kami menerima paling banyak pesanan suku cadang untuk drone dan kendaraan listrik, sehingga kami fokus mengembangkan serta memproduksi drone dan sepeda listrik dengan merek dagang Mechatron dan BMT. Seiring perkembangan waktu, pengembangan drone BMT diperluas untuk berbagai sektor seperti pertanian, perkebunan, perikanan, survei pemetaan, dan bidang lain sesuai kebutuhan pengguna.
                     </p>
                 </div>
 
@@ -124,9 +119,9 @@
                     <div class="w-12 h-12 rounded-xl bg-[#0070D5] text-white flex items-center justify-center text-xl font-bold mb-6">
                         01
                     </div>
-                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Inovasi Robotika Mandiri</h3>
+                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Solusi cerdas yang mudah diakses</h3>
                     <p class="text-[14px] text-gray-600 leading-relaxed">
-                        Mengembangkan ekosistem drone pertanian, sistem Ground Control Station (GCS), dan baterai cerdas yang handal, tahan banting, serta mudah dioperasikan di segala kondisi lapangan.
+                        BMT berkomitmen menciptakan solusi cerdas dan inovatif yang dapat diakses oleh berbagai kalangan sesuai kebutuhan mereka.
                     </p>
                 </div>
 
@@ -134,9 +129,9 @@
                     <div class="w-12 h-12 rounded-xl bg-[#0070D5] text-white flex items-center justify-center text-xl font-bold mb-6">
                         02
                     </div>
-                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Edukasi & Standardisasi</h3>
+                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Modernisasi dan otomatisasi teknologi</h3>
                     <p class="text-[14px] text-gray-600 leading-relaxed">
-                        Mencetak talenta pilot drone pertanian bersertifikasi resmi melalui pelatihan intensif, pemahaman regulasi penerbangan sipil, dan tata kelola keselamatan aviasi.
+                        BMT turut mendorong modernisasi dan otomatisasi melalui pemanfaatan teknologi yang tepat guna untuk meningkatkan efisiensi dan produktivitas.
                     </p>
                 </div>
 
@@ -144,9 +139,9 @@
                     <div class="w-12 h-12 rounded-xl bg-[#0070D5] text-white flex items-center justify-center text-xl font-bold mb-6">
                         03
                     </div>
-                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Layanan Purna Jual Terdepan</h3>
+                    <h3 class="text-[18px] font-bold text-gray-900 mb-3">Teknologi ramah lingkungan dan berkelanjutan</h3>
                     <p class="text-[14px] text-gray-600 leading-relaxed">
-                        Menjamin ketersediaan suku cadang cepat, teknisi servis berpengalaman, dan pembaruan firmware berkala agar investasi operasional Anda terus menghasilkan keuntungan maksimal.
+                        BMT menghadirkan teknologi yang ramah lingkungan untuk memberikan kontribusi nyata bagi masyarakat dan pembangunan berkelanjutan.
                     </p>
                 </div>
             </div>

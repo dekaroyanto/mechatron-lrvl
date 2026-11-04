@@ -19,7 +19,7 @@
                 'titlePrefix' => 'SURVEY & PEMETAAN ',
                 'titleSuffix' => 'SERIES',
                 'tagline' => 'Fotogrametri Udara RTK Sentimeter & Pemindaian Laser LiDAR 3D Topografi.',
-                'image' => asset('images/matrice-400-hero.png'),
+                'image' => asset('images/drone_survei.jpeg'),
             ],
             [
                 'id' => 'pengiriman',
@@ -28,7 +28,7 @@
                 'titlePrefix' => 'PENGIRIMAN ',
                 'titleSuffix' => 'SERIES',
                 'tagline' => 'Transportasi Kargo Berat Otonom & Kurir Cepat untuk Wilayah Terpencil dan Industri.',
-                'image' => asset('images/cargo_drone_c50.jpg'),
+                'image' => asset('images/delivH2-3.jpeg'),
             ],
             [
                 'id' => 'suku-cadang',
@@ -37,7 +37,7 @@
                 'titlePrefix' => 'SUKU CADANG',
                 'titleSuffix' => '',
                 'tagline' => 'Baterai Cerdas, Generator Fast Charger Inverter, Remote GCS, & Suku Cadang Orisinal.',
-                'image' => asset('images/featured_combo_kit.jpg'),
+                'image' => asset('images/sparepart.jpeg'),
             ],
         ];
     }

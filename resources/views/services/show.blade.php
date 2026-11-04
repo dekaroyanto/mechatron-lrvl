@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $service['title'] . ' - ' . $service['headline'] . ' | Mechatron Services')
+@section('title', $service['title'] . ' - ' . $service['tagline'] . ' | Mechatron Services')
 @section('meta_description', $service['description'])
 
 @php
@@ -23,7 +23,7 @@
         <!-- Teks di Langit Tengah -->
         <div class="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center pt-16 sm:pt-20">
             <p class="text-[13px] sm:text-[16px] md:text-[18px] font-normal text-white/90 tracking-wide mb-2 sm:mb-3">
-                {{ $service['category'] }}
+                {{ $service['group'] }}
             </p>
 
             <h1 class="text-[36px] sm:text-[56px] md:text-[70px] lg:text-[78px] font-extrabold text-white tracking-tight leading-none uppercase mb-2 sm:mb-3">
@@ -31,7 +31,7 @@
             </h1>
 
             <p class="text-[16px] sm:text-[22px] md:text-[25px] font-medium text-white/95 tracking-tight mb-3 sm:mb-4 max-w-2xl leading-snug">
-                {{ $service['headline'] }}
+                {{ $service['tagline'] }}
             </p>
 
             @if(!empty($service['tagline']))
@@ -104,7 +104,7 @@
                             Fitur Unggulan
                         </span>
                         <h2 class="text-[24px] sm:text-[30px] lg:text-[36px] font-bold text-white tracking-tight leading-tight max-w-md">
-                            {{ $service['deepFeatures'][0]['title'] ?? $service['headline'] }}
+                            {{ $service['deepFeatures'][0]['title'] ?? $service['tagline'] }}
                         </h2>
                         <p class="text-[14px] sm:text-[15px] text-white/90 mt-2.5 max-w-md leading-relaxed">
                             {{ $service['deepFeatures'][0]['description'] ?? $service['description'] }}
@@ -153,7 +153,7 @@
                     <div class="rounded-[24px] sm:rounded-[32px] overflow-hidden relative bg-neutral-900 min-h-[260px] sm:min-h-[295px] flex flex-col justify-start border border-gray-100/80 shadow-sm">
                         <div class="absolute inset-0 z-0">
                             <img
-                                src="{{ $service['image'] }}"
+                                src="{{ $service['deepFeatures'][2]['image'] ?? $service['image'] }}"
                                 alt="{{ $service['title'] }}"
                                 class="w-full h-full object-cover object-center"
                             />
@@ -165,10 +165,10 @@
                                 Regulasi & Keselamatan
                             </span>
                             <h2 class="text-[20px] sm:text-[24px] font-bold text-white tracking-tight leading-snug max-w-xs">
-                                {{ $service['highlights'][1]['title'] ?? 'Spesifikasi & Keamanan Regulasi' }}
+                                {{ $service['deepFeatures'][2]['title'] ?? $service['highlights'][1]['title'] ?? 'Spesifikasi & Keamanan Regulasi' }}
                             </h2>
                             <p class="text-[13px] text-white/90 mt-2 max-w-xs leading-relaxed">
-                                {{ $service['highlights'][1]['desc'] ?? 'Didukung sertifikasi resmi pilot FASI dan jaminan prosedur keselamatan standar CASR.' }}
+                                {{ $service['deepFeatures'][2]['description'] ?? $service['highlights'][1]['desc'] ?? 'Didukung sertifikasi resmi pilot FASI dan jaminan prosedur keselamatan standar CASR.' }}
                             </p>
                         </div>
                     </div>

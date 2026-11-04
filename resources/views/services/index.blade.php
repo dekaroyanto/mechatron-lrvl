@@ -9,7 +9,7 @@
         <!-- Desktop Background -->
         <div class="hidden md:block absolute inset-0 z-0">
             <img
-                src="{{ asset('images/agrikultur-drone-sunset.jpg') }}"
+                src="{{ asset('images/service_sewa_drone.jpg') }}"
                 alt="Mechatron Aerial Services"
                 class="w-full h-full object-cover object-center"
             />
@@ -19,7 +19,7 @@
         <!-- Mobile Background -->
         <div class="block md:hidden absolute inset-0 z-0">
             <img
-                src="{{ asset('images/agrikultur-drone-spraying.jpg') }}"
+                src="{{ asset('images/service_sewa_drone.jpg') }}"
                 alt="Mechatron Aerial Services"
                 class="w-full h-full object-cover object-center"
             />
@@ -88,14 +88,14 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
                     <!-- KARTU 1 (Kiri Besar / Tall Card): FOTOGRAFI -->
                     <a
-                        href="{{ route('services.show', 'fotografi') }}"
+                        href="{{ route('services.show', 'pelatihanpilot') }}"
                         class="group lg:col-span-7 rounded-[24px] sm:rounded-[32px] overflow-hidden relative min-h-[480px] sm:min-h-[560px] lg:min-h-[620px] flex flex-col justify-start transition-all duration-500 hover:shadow-2xl block border border-gray-100/80 bg-neutral-900 text-decoration-none"
                     >
                         <div class="absolute inset-0 z-0">
                             <img
-                                src="https://images.unsplash.com/photo-1533063319369-0de118afe00a?q=80&w=1221&auto=format&fit=crop"
-                                alt="Layanan Fotografi Drone"
-                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                                src="{{ asset('images/service_pelatihan_pilot.jpg') }}"
+                                alt="Pelatihan Pilot Drone"
+                                class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                             />
                             <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/25 to-black/45 group-hover:from-black/85 transition-opacity duration-500"></div>
                         </div>
@@ -121,14 +121,14 @@
                     <div class="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
                         <!-- KARTU 2: LIDAR -->
                         <a
-                            href="{{ route('services.show', 'lidar') }}"
+                            href="{{ route('services.show', 'perawatandrone') }}"
                             class="group rounded-[24px] sm:rounded-[32px] overflow-hidden relative min-h-[260px] sm:min-h-[295px] flex flex-col justify-start transition-all duration-500 hover:shadow-2xl block border border-gray-100/80 bg-neutral-900 text-decoration-none"
                         >
                             <div class="absolute inset-0 z-0">
                                 <img
-                                    src="https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=1400&q=85"
-                                    alt="Pemetaan LiDAR Drone"
-                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                                    src="{{ asset('images/service_perawatan_drone.jpg') }}"
+                                    alt="Perawatan Drone"
+                                    class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
                                 <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/25 group-hover:from-black/85 transition-opacity duration-500"></div>
                             </div>
@@ -152,14 +152,14 @@
 
                         <!-- KARTU 3: AGRIKULTUR -->
                         <a
-                            href="{{ route('services.show', 'agrikultur') }}"
+                            href="{{ route('services.show', 'sewadrone') }}"
                             class="group rounded-[24px] sm:rounded-[32px] overflow-hidden relative min-h-[260px] sm:min-h-[295px] flex flex-col justify-start transition-all duration-500 hover:shadow-2xl block border border-gray-100/80 bg-neutral-900 text-decoration-none"
                         >
                             <div class="absolute inset-0 z-0">
                                 <img
-                                    src="{{ asset('images/agrikultur-drone-sunset.jpg') }}"
-                                    alt="Agrikultur Drone Pintar"
-                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                                    src="{{ asset('images/service_sewa_drone.jpg') }}"
+                                    alt="Sewa Drone"
+                                    class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
                                 <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/25 group-hover:from-black/85 transition-opacity duration-500"></div>
                             </div>
