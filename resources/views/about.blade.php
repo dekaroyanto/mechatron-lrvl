@@ -60,9 +60,12 @@
             <div>
                 <span class="text-[13px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Tentang Kami') }}</span>
                 <h2 class="text-[30px] sm:text-[40px] font-bold text-gray-900 tracking-tight leading-tight mt-2 mb-6">
-                   {{ __('Mengenal BMT dan Inovasi Teknologi Kami') }}
+                   {{ __('Profil Perusahaan') }}
                 </h2>
                 <div class="space-y-4 text-[15px] sm:text-[16px] text-gray-600 leading-relaxed">
+                    <p>
+                        <strong>PT Bandung Mekatronika Teknologi (BMT)</strong> {{ __(' adalah perusahaan yang bergerak di bidang teknologi mekatronika dan otomatisasi, dengan layanan utama meliputi desain, produksi, perbaikan, serta jasa konsultasi teknis.') }}
+                    </p>
                     <p>
                         {{ __('BMT didirikan pada tahun 2022 oleh Bapak Hermanu. Awalnya, bisnis ini berfokus pada konsultasi keteknikan, pelatihan manajemen, dan pengadaan suku cadang mekatronika. Kami menerima paling banyak pesanan suku cadang untuk drone dan kendaraan listrik, sehingga kami fokus mengembangkan serta memproduksi drone dan sepeda listrik dengan merek dagang Mechatron dan BMT. Seiring perkembangan waktu, pengembangan drone BMT diperluas untuk berbagai sektor seperti pertanian, perkebunan, perikanan, survei pemetaan, dan bidang lain sesuai kebutuhan pengguna.') }}
                     </p>
