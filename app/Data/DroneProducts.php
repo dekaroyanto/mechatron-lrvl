@@ -497,62 +497,10 @@ class DroneProducts
                     '/images/sparepart.jpeg',
                 ],
                 'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Asal Barang', 'value' => 'Impor Langsung dari Pabrikan Resmi (Direct OEM)'],
-                    ['label' => 'Jaminan Kualitas', 'value' => '100% Original & Baru (Bukan Rekondisi)'],
-                    ['label' => 'Ketersediaan', 'value' => 'Stok Ready di Gudang Indonesia (Tanpa Inden)'],
-                    ['label' => 'Kategori Komponen', 'value' => 'Propulsi, Elektronik, Sensor, Gimbal, & Mekanikal'],
-                    ['label' => 'Material Utama', 'value' => 'Serat Karbon Aviasi & Logam Presisi Tinggi'],
-                    ['label' => 'Dukungan Armada', 'value' => 'Drone Pertanian, Pengiriman, & Pengawasan'],
-                ],
-                'features' => [
-                    [
-                        'title' => 'Impor Langsung dari Pabrikan',
-                        'desc' => 'Seluruh komponen dijamin 100% original langsung dari produsen resmi. Bebas dari barang palsu atau kualitas rakitan lokal yang berisiko.',
-                    ],
-                    [
-                        'title' => 'Stok Ready di Indonesia (Tanpa Inden)',
-                        'desc' => 'Kami menyetok spare part secara berkala di gudang lokal. Saat drone Anda butuh penggantian part, barang siap dikirim hari itu juga.',
-                    ],
-                    [
-                        'title' => 'Baling-Baling & Motor Karbon Tangguh',
-                        'desc' => 'Tersedia baling-baling serat karbon asli dan motor brushless berkekuatan tinggi yang tahan terhadap beban kerja ekstrem.',
-                    ],
-                    [
-                        'title' => 'Modul Sensor & Kamera Gimbal Asli',
-                        'desc' => 'Menyediakan replacement part untuk sistem kamera, sensor optik, hingga modul navigasi dengan tingkat presisi sesuai bawaan pabrik.',
-                    ],
-                    [
-                        'title' => 'Sistem Kontrol Terbang & Board Utama',
-                        'desc' => 'Komponen vital seperti Flight Controller, ESC, dan Power Board tersedia lengkap dan siap pasang (plug and play).',
-                    ],
-                    [
-                        'title' => 'Dukungan Konsultasi & Garansi Part',
-                        'desc' => 'Tim teknisi kami siap membantu memastikan kompatibilitas suku cadang yang Anda butuhkan sebelum proses pembelian.',
-                    ],
-                ],
-                'packageIncludes' => [
-                    'Baling-Baling (Propeller) Serat Karbon',
-                    'Motor Brushless & ESC Module',
-                    'Kamera Gimbal & Modul Sensor Visual',
-                    'Flight Controller & Modul GPS/Navigasi',
-                    'Servo Motors & Kabel Kelistrikan (Wiring)',
-                    'Rangkaian Frame Karbon & Aksesori Baut Presisi',
-                ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Perawatan Rutin Tanpa Hambatan',
-                        'desc' => 'Menjaga armada drone selalu aman terbang dengan mengganti part wear-and-tear tepat waktu menggunakan barang original.',
-                    ],
-                    [
-                        'title' => 'Perbaikan Cepat Saat Terjadi Kerusakan',
-                        'desc' => 'Meminimalisir waktu henti kerja (downtime) operasional proyek berkat ketersediaan stok komponen yang selalu siap kirim.',
-                    ],
-                    [
-                        'title' => 'Kebutuhan Komponen Cadangan Tim Lapangan',
-                        'desc' => 'Kemudahan bagi tim operasional untuk menyetok part mandiri (seperti baling-baling cadangan) langsung dari distributor resmi.',
-                    ],
-                ],
+                'specifications' => [],
+                'features' => [],
+                'packageIncludes' => [],
+                'fieldApplications' => [],
             ],
         ];
     }
@@ -962,62 +910,99 @@ class DroneProducts
                     '/images/sparepart.jpeg',
                 ],
                 'whatsappNumber' => '6281112143111',
-                'specifications' => [
-                    ['label' => 'Origin', 'value' => 'Direct Import from Official Manufacturer (Direct OEM)'],
-                    ['label' => 'Quality Assurance', 'value' => '100% Genuine & Brand New (Non-Refurbished)'],
-                    ['label' => 'Availability', 'value' => 'Ready Stock at Indonesian Warehouse (No Backorder)'],
-                    ['label' => 'Component Categories', 'value' => 'Propulsion, Electronics, Sensors, Gimbal, & Mechanical'],
-                    ['label' => 'Primary Material', 'value' => 'Aviation Carbon Fiber & High-Precision Alloy'],
-                    ['label' => 'Fleet Support', 'value' => 'Agricultural, Delivery, & Surveillance Drones'],
+                'specifications' => [],
+                'features' => [],
+                'packageIncludes' => [],
+                'fieldApplications' => [],
+            ],
+        ];
+    }
+
+    /**
+     * @return array<string, array<string, mixed>>
+     */
+    public static function allSpareparts(): array
+    {
+        if (app()->getLocale() === 'en') {
+            return self::allSparepartsEnglish();
+        }
+
+        return self::allSparepartsIndonesian();
+    }
+
+    private static function allSparepartsIndonesian(): array
+    {
+        return [
+            'motor' => [
+                'title' => 'Motor',
+                'img' => [
+                    '/images/spareparts/t-motor.jpg',
+                    '/images/spareparts/sunnysky.jpg',
+                    '/images/spareparts/dualsky.jpg',
                 ],
-                'features' => [
-                    [
-                        'title' => 'Direct from Official Manufacturer',
-                        'desc' => 'All components are guaranteed 100% genuine directly from official OEMs—free from counterfeit or risky aftermarket parts.',
-                    ],
-                    [
-                        'title' => 'Ready Stock in Indonesia (Zero Backorder)',
-                        'desc' => 'We maintain regular spare part inventory in our local warehouse so replacement parts can be shipped the very same day.',
-                    ],
-                    [
-                        'title' => 'Heavy-Duty Carbon Propellers & Motors',
-                        'desc' => 'Genuine carbon fiber propellers and high-torque brushless motors built to withstand extreme workloads.',
-                    ],
-                    [
-                        'title' => 'Original Sensor & Gimbal Camera Modules',
-                        'desc' => 'Factory-precision replacement parts for camera systems, optical sensors, and navigation modules.',
-                    ],
-                    [
-                        'title' => 'Flight Controllers & Main Power Boards',
-                        'desc' => 'Critical components including Flight Controllers, ESCs, and Power Distribution Boards ready for plug-and-play installation.',
-                    ],
-                    [
-                        'title' => 'Technical Consultation & Part Warranty',
-                        'desc' => 'Our engineering team helps verify part compatibility before purchase and backs every genuine component.',
-                    ],
+                'desc' => "Kami menyediakan motor berkualitas tinggi dari merek terkenal seperti T-Motor, SunnySky, dan Dual Sky. Motor ini dirancang untuk memberikan dorongan yang kuat, stabilitas, dan daya tahan bagi drone Anda.\n\nDengan sistem pendingin yang efisien, motor ini beroperasi secara optimal tanpa mengalami panas berlebih, mendukung manuver cepat dan penerbangan dalam berbagai kondisi.",
+                'brands' => ['T-Motor', 'SunnySky', 'DualSky'],
+                'link' => ['https://store.tmotor.com/', 'https://sunnyskyusa.com/', 'http://dualsky.com/'],
+            ],
+            'propeller' => [
+                'title' => 'Baling-Baling (Propeller)',
+                'img' => [
+                    '/images/spareparts/falcon-propeller.png',
+                    '/images/spareparts/apc-propeller.jpg',
                 ],
-                'packageIncludes' => [
-                    'Carbon Fiber Propellers',
-                    'Brushless Motors & ESC Modules',
-                    'Gimbal Cameras & Visual Sensor Modules',
-                    'Flight Controllers & GPS/Navigation Modules',
-                    'Servo Motors & Electrical Wiring Harnesses',
-                    'Carbon Frame Assemblies & Precision Hardware',
+                'desc' => "Baling-baling dari merek terkemuka seperti Falcon Propeller dan APC Propellers dirancang untuk memberikan daya angkat dan performa yang efisien bagi drone Anda.\n\nDengan berbagai ukuran dan konfigurasi, baling-baling ini memastikan karakteristik penerbangan yang optimal dalam berbagai kondisi.",
+                'brands' => ['Falcon Propeller', 'APC Propellers'],
+                'link' => ['https://www.falconpropellers.com/', 'https://www.apcprop.com/'],
+            ],
+            'flight-controller' => [
+                'title' => 'Flight Controller',
+                'img' => [
+                    'images/spareparts/pixhawk6c.png',
+                    'images/spareparts/matek_h743.jpg',
                 ],
-                'fieldApplications' => [
-                    [
-                        'title' => 'Seamless Routine Maintenance',
-                        'desc' => 'Keep your drone fleet airworthy by replacing wear-and-tear parts on schedule with genuine components.',
-                    ],
-                    [
-                        'title' => 'Rapid Repair Turnaround',
-                        'desc' => 'Minimize project downtime thanks to ready-to-ship local component availability.',
-                    ],
-                    [
-                        'title' => 'Field Team Spare Inventory',
-                        'desc' => 'Allows field operations teams to stock essential spares (such as backup propellers) directly from an official distributor.',
-                    ],
+                'desc' => "Flight controller dari merek terkemuka seperti Pixhawk dan Matek dirancang untuk mendukung navigasi otonom, manajemen sensor, dan kontrol penerbangan canggih.\n\nDengan kompatibilitas luas dan fitur canggih, flight controller ini ideal untuk berbagai aplikasi drone, mulai dari proyek hobi hingga penggunaan profesional.",
+                'brands' => ['Pixhawk', 'Matek'],
+                'link' => ['https://pixhawk.org/', 'https://mateksys.com/'],
+            ],
+        ];
+    }
+
+    /**
+     * @return array<string, array<string, mixed>>
+     */
+    private static function allSparepartsEnglish(): array
+    {
+        return [
+            'motor' => [
+                'title' => 'Motor',
+                'img' => [
+                    '/images/spareparts/t-motor.jpg',
+                    '/images/spareparts/sunnysky.jpg',
+                    '/images/spareparts/dualsky.jpg',
                 ],
+                'desc' => "We offer high-quality motors from renowned brands such as T-Motor, SunnySky, and Dual Sky. These motors are designed to deliver strong thrust, stability, and durability for your drone.\n\nWith efficient cooling systems, they operate optimally without overheating, supporting swift maneuvers and flights under various conditions.",
+                'brands' => ['T-Motor', 'SunnySky', 'DualSky'],
+                'link' => ['https://store.tmotor.com/', 'https://sunnyskyusa.com/', 'http://dualsky.com/'],
+            ],
+            'propeller' => [
+                'title' => 'Propeller',
+                'img' => [
+                    '/images/spareparts/falcon-propeller.png',
+                    '/images/spareparts/apc-propeller.jpg',
+                ],
+                'desc' => "Propellers from leading brands such as Falcon Propeller and APC Propellers are designed to provide efficient lift and performance for your drone.\n\nWith a wide range of sizes and configurations, these propellers ensure optimal flight characteristics under various conditions.",
+                'brands' => ['Falcon Propeller', 'APC Propellers'],
+                'link' => ['https://www.falconpropellers.com/', 'https://www.apcprop.com/'],
+            ],
+            'flight-controller' => [
+                'title' => 'Flight Controller',
+                'img' => [
+                    'images/spareparts/pixhawk6c.png',
+                    'images/spareparts/matek_h743.jpg',
+                ],
+                'desc' => "Flight controllers from leading brands such as Pixhawk and Matek are designed to support autonomous navigation, sensor management, and advanced flight control.\n\nWith wide compatibility and sophisticated features, they are ideal for a variety of drone applications, from hobbyist projects to professional use.",
+                'brands' => ['Pixhawk', 'Matek'],
+                'link' => ['https://pixhawk.org/', 'https://mateksys.com/'],
             ],
         ];
     }

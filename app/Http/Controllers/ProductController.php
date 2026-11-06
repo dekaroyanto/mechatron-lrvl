@@ -29,6 +29,10 @@ class ProductController extends Controller
         $allProducts = DroneProducts::all();
         $relatedProducts = array_filter($allProducts, fn ($item) => $item['id'] !== $product['id']);
 
-        return view('products.show', compact('product', 'relatedProducts'));
+        $spareparts = $product['id'] === 'original-parts'
+            ? DroneProducts::allSpareparts()
+            : [];
+
+        return view('products.show', compact('product', 'relatedProducts', 'spareparts'));
     }
 }

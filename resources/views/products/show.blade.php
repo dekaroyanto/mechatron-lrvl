@@ -233,6 +233,7 @@
                             <span class="block text-[11px] font-bold uppercase text-slate-400">{{ __('Garansi') }}</span>
                             <span class="text-[13px] font-bold text-slate-800">{{ __('Resmi Mechatron') }}</span>
                         </div>
+                        @if(empty($spareparts))
                         <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
                             <span class="block text-[11px] font-bold uppercase text-slate-400">{{ __('Proteksi') }}</span>
                             <span class="text-[13px] font-bold text-slate-800">{{ __('Tahan Cuaca IP67') }}</span>
@@ -241,6 +242,7 @@
                             <span class="block text-[11px] font-bold uppercase text-slate-400">{{ __('Suku Cadang') }}</span>
                             <span class="text-[13px] font-bold text-slate-800">{{ __('Ready Stock Indonesia') }}</span>
                         </div>
+                        @endif
                     </div>
 
                     <!-- Direct Action Buttons -->
@@ -255,13 +257,14 @@
                             <span>{{ __('Pesan via WhatsApp') }}</span>
                             <span>›</span>
                         </a>
-
+                        @if(empty($spareparts))
                         <a
                             href="{{ route('contact') }}"
                             class="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 px-6 py-3.5 rounded-full text-[14px] sm:text-[15px] font-semibold transition-all hover:scale-[1.02] active:scale-95 text-decoration-none"
                         >
                             <span>{{ __('Jadwalkan Demo Unit') }}</span>
                         </a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -380,6 +383,182 @@
                             <p class="text-[14px] text-slate-600 leading-relaxed">
                                 {{ $app['desc'] }}
                             </p>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        @endif
+
+        <!-- 7b. Section: Katalog Suku Cadang (Alternating Rows / Zig-Zag dengan Smooth Scroll Reveal) -->
+        @if(!empty($spareparts))
+            <section id="suku-cadang" class="mb-16 sm:mb-20 scroll-mt-32">
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Komponen Original') }}</span>
+                    <h2 class="text-[28px] sm:text-[38px] font-bold text-slate-900 tracking-tight mt-1">
+                        {{ __('Katalog Suku Cadang') }}
+                    </h2>
+                    <p class="text-[14px] sm:text-[16px] text-slate-500 mt-2">
+                        {{ __('Komponen asli impor langsung dari pabrikan utama untuk memastikan performa dan keandalan armada drone Anda.') }}
+                    </p>
+                </div>
+
+                <div class="space-y-16 sm:space-y-24 lg:space-y-28">
+                    @foreach($spareparts as $part)
+                        <div
+                            x-data="{
+                                visible: false,
+                                init() {
+                                    const observer = new IntersectionObserver(([entry]) => {
+                                        if (entry.isIntersecting) {
+                                            this.visible = true;
+                                            observer.disconnect();
+                                        }
+                                    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+                                    observer.observe(this.$el);
+                                }
+                            }"
+                            class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center lg:items-start transition-all duration-1000 ease-out transform"
+                            :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'"
+                        >
+                            @php $images = is_array($part['img']) ? $part['img'] : [$part['img']]; @endphp
+
+                            {{-- <!-- Image Column -->
+                            <div class="lg:col-span-7 {{ $loop->even ? 'lg:order-2' : 'lg:order-1' }}">
+                                <div class="grid gap-4 sm:gap-5 {{ count($images) > 1 ? 'grid-cols-2 sm:grid-cols-3' : 'grid-cols-1' }}">
+                                    @foreach($images as $image)
+                                        <div class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-200/90 bg-white aspect-square group transition-all duration-500 flex items-center justify-center p-4 sm:p-6">
+                                            <img
+                                                src="{{ asset($image) }}"
+                                                alt="{{ $part['title'] }}"
+                                                class="w-full h-full object-contain object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div> --}}
+
+                            <!-- Image Carousel -->
+                            <div
+                                x-data="{
+                                    active: 0,
+                                    total: {{ count($images) }},
+                                    next() { this.active = (this.active + 1) % this.total; },
+                                    prev() { this.active = (this.active - 1 + this.total) % this.total; },
+                                    go(i) { this.active = i; }
+                                }"
+                                class="lg:col-span-7 {{ $loop->even ? 'lg:order-2' : 'lg:order-1' }}"
+                            >
+                                <!-- Stage -->
+                                <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200/90 bg-white aspect-[16/10] group">
+                                    @foreach($images as $index => $image)
+                                        <div
+                                            x-show="active === {{ $index }}"
+                                            x-transition:enter="transition ease-out duration-500"
+                                            x-transition:enter-start="opacity-0 scale-[0.98]"
+                                            x-transition:enter-end="opacity-100 scale-100"
+                                            x-transition:leave="transition ease-in duration-200"
+                                            x-transition:leave-start="opacity-100"
+                                            x-transition:leave-end="opacity-0"
+                                            class="absolute inset-0 flex items-center justify-center p-8 sm:p-12"
+                                            @if($index !== 0) style="display: none;" @endif
+                                        >
+                                            <img
+                                                src="{{ asset($image) }}"
+                                                alt="{{ $part['title'] }}"
+                                                class="w-full h-full object-contain object-center"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    @endforeach
+
+                                    @if(count($images) > 1)
+                                        <!-- Prev -->
+                                        <button
+                                            type="button"
+                                            @click="prev()"
+                                            aria-label="{{ __('Gambar sebelumnya') }}"
+                                            class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-md border border-slate-200 opacity-0 group-hover:opacity-100 transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95"
+                                        >
+                                            <svg class="w-5 h-5 -translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                                        </button>
+
+                                        <!-- Next -->
+                                        <button
+                                            type="button"
+                                            @click="next()"
+                                            aria-label="{{ __('Gambar selanjutnya') }}"
+                                            class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-md border border-slate-200 opacity-0 group-hover:opacity-100 transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95"
+                                        >
+                                            <svg class="w-5 h-5 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                                        </button>
+
+                                        <!-- Counter -->
+                                        <div class="absolute top-4 right-4 z-10 bg-black/55 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-semibold text-white/95 shadow-sm pointer-events-none">
+                                            <span x-text="active + 1"></span> / {{ count($images) }}
+                                        </div>
+                                    @endif
+                                </div>
+
+                                @if(count($images) > 1)
+                                    <!-- Thumbnails -->
+                                    <div class="flex items-center justify-center gap-2.5 sm:gap-3 mt-4 flex-wrap">
+                                        @foreach($images as $index => $image)
+                                            <button
+                                                type="button"
+                                                @click="go({{ $index }})"
+                                                :class="active === {{ $index }}
+                                                    ? 'ring-2 ring-[#0070D5] ring-offset-2 border-transparent opacity-100 scale-[1.03]'
+                                                    : 'border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400'"
+                                                class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white border shrink-0 transition-all duration-200 cursor-pointer p-1.5 focus:outline-none"
+                                            >
+                                                <img
+                                                    src="{{ asset($image) }}"
+                                                    alt="{{ $part['title'] }} thumbnail"
+                                                    class="w-full h-full object-contain object-center"
+                                                    loading="lazy"
+                                                />
+                                            </button>
+                                        @endforeach
+                                    </div>
+                                @endif
+                            </div>
+
+                            <!-- Text Column -->
+                            <div class="lg:col-span-5 {{ $loop->even ? 'lg:order-1' : 'lg:order-2' }} flex flex-col justify-start">
+                                <h3 class="text-2xl sm:text-3xl lg:text-[30px] font-bold text-slate-950 tracking-tight leading-snug mb-4">
+                                    {{ $part['title'] }}
+                                </h3>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-6 font-normal whitespace-pre-line">
+                                    {{ $part['desc'] }}
+                                </p>
+
+                                @if(!empty($part['brands']))
+                                    <div>
+                                        <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2.5">{{ __('Merek Tersedia') }}</span>
+                                        <div class="flex flex-wrap gap-2.5">
+                                            @foreach($part['brands'] as $brandIndex => $brand)
+                                                @php $brandLink = $part['link'][$brandIndex] ?? null; @endphp
+                                                @if($brandLink)
+                                                    <a
+                                                        href="{{ $brandLink }}"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-slate-100 hover:bg-[#0070D5] text-slate-800 hover:text-white text-[13px] font-semibold border border-slate-200 hover:border-transparent transition-all hover:scale-[1.03] active:scale-95 text-decoration-none"
+                                                    >
+                                                        <span>{{ $brand }}</span>
+                                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                                    </a>
+                                                @else
+                                                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-800 text-[13px] font-semibold border border-slate-200">
+                                                        {{ $brand }}
+                                                    </span>
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
                         </div>
                     @endforeach
                 </div>
