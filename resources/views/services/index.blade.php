@@ -2,9 +2,12 @@
 
 @section('title', __('Layanan Drone Profesional | Mechatron'))
 @section('meta_description', __('Layanan drone profesional Mechatron: Pelatihan Pilot Drone berlisensi resmi, Perawatan Drone standar pabrikan, dan Sewa Drone armada terlengkap.'))
-@section('navbar_theme', 'light')
+{{-- @section('navbar_theme', 'light') --}}
 
 @section('content')
+
+<x-service-hero-banner />
+
 <div class="bg-[#F8FAFC] min-h-screen pt-24 sm:pt-28 pb-16 sm:pb-24">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         <!-- 1. Header Section -->
@@ -138,7 +141,7 @@
                 </div>
                 <div class="flex items-center justify-center gap-3 flex-wrap shrink-0">
                     <a
-                        href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron Indonesia, kami tertarik untuk berkonsultasi mengenai layanan drone (pelatihan pilot, perawatan unit, atau sewa armada). Mohon informasi lebih lanjut.') }}"
+                        href="https://wa.me/6281112143111?text={{ urlencode(__('Halo Mechatron Indonesia, kami tertarik untuk berkonsultasi mengenai layanan drone (pelatihan pilot, perawatan unit, atau sewa armada). Mohon informasi lebih lanjut.')) }}"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0070D5] hover:bg-[#005bb5] text-white text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer text-decoration-none whitespace-nowrap"

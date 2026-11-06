@@ -2,12 +2,12 @@
 
 @section('title', __('Tentang Kami | Mechatron - Pelopor Solusi Drone Indonesia'))
 @section('meta_description', __('Mengenal Mechatron: Perusahaan pelopor inovasi teknologi drone pertanian, sistem kendali darat pintar (GCS), dan otomasi aerial presisi tinggi di Indonesia.'))
-@section('navbar_theme', 'light')
+{{-- @section('navbar_theme', 'light') --}}
 
 @section('content')
 <div class="bg-[#F8FAFC] min-h-screen">
     <!-- 1. Hero Section -->
-    <!-- <section class="relative w-full bg-neutral-950 py-24 sm:py-32 overflow-hidden text-white">
+    <section class="relative w-full bg-neutral-950 py-24 sm:py-32 overflow-hidden text-white">
         <div class="absolute inset-0 z-0 opacity-30">
             <img
                 src="{{ asset('images/agrikultur-drone-sunset.jpg') }}"
@@ -19,41 +19,36 @@
 
         <div class="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
             <span class="inline-block text-[12px] sm:text-[13px] font-bold uppercase tracking-widest text-[#0070D5] bg-[#0070D5]/10 px-4 py-1.5 rounded-full mb-4 border border-[#0070D5]/20">
-                About Mechatron Indonesia
+                About Mechatron
             </span>
             <h1 class="text-[36px] sm:text-[52px] md:text-[64px] font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
-                Mendefinisikan Ulang Efisiensi & Masa Depan Agrikultur
+                 {{ __('Mendorong Otomasi Udara Cerdas di Indonesia') }}
             </h1>
             <p class="text-[16px] sm:text-[19px] md:text-[21px] text-gray-300 font-light mt-5 max-w-3xl mx-auto leading-relaxed">
-                Kami menggabungkan rekayasa aeronautika kelas dunia, otomasi pintar, dan pemahaman mendalam atas medan agribisnis Indonesia untuk melahirkan era pertanian presisi.
+                {{ __('Mechatron hadir sebagai pionir manufaktur dan penyedia solusi drone berkapasitas muat tinggi di Indonesia. Kami memadukan riset avionik, material komposit serat karbon berkekuatan tinggi, dan perangkat lunak navigasi cerdas untuk mendukung sektor agrikultur nasional.') }}
             </p>
         </div>
     </section>
 
     <section class="relative -mt-10 z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 sm:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-gray-100 text-center">
-            <div class="pt-4 lg:pt-0">
-                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">50.000+</div>
-                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">Hektar Terlayani</div>
-                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Cakupan semprot & pemetaan di perkebunan nusantara.</p>
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 sm:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100 text-center">
+             <div class="pt-4 md:pt-0">
+                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">46%</div>
+                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">TKDN</div>
+                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">{{ __('Persentase komponen lokal dalam produksi drone.') }}</p>
             </div>
-            <div class="pt-4 lg:pt-0">
-                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">99.8%</div>
-                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">Akurasi Jalur RTK</div>
-                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Navigasi otonom presisi sentimeter tanpa drift berlebih.</p>
+            <div class="pt-4 md:pt-0">
+                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">1ˢᵗ</div>
+                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">SNI</div>
+                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">{{ __('Drone pertama di Indonesia yang memenuhi standar SNI.') }}</p>
             </div>
-            <div class="pt-4 lg:pt-0">
-                <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">100+</div>
-                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">Pilot Tersertifikasi</div>
-                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Lulusan akademi pelatihan resmi berlisensi terbang.</p>
-            </div>
-            <div class="pt-4 lg:pt-0">
+            <div class="pt-4 md:pt-0">
                 <div class="text-[34px] sm:text-[44px] font-extrabold text-[#0070D5] tracking-tight">24/7</div>
-                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">Dukungan Servis</div>
-                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">Kesiapan suku cadang orisinil dan teknisi ahli lapangan.</p>
+                <div class="text-[14px] font-semibold text-gray-800 uppercase tracking-wider mt-1">{{ __('Dukungan Servis') }}</div>
+                <p class="text-[12px] text-gray-500 mt-1 max-w-[200px] mx-auto">{{ __('Kesiapan suku cadang orisinil dan teknisi ahli lapangan.') }}</p>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">

@@ -2,21 +2,48 @@
 
 @section('title', __('Hubungi Kami | Mechatron - Hubungi Tim Kami'))
 @section('meta_description', __('Hubungi tim Mechatron Indonesia untuk informasi pengadaan drone, demo produk, atau kunjungi kantor dan pabrik kami di Bandung.'))
-@section('navbar_theme', 'light')
+{{-- @section('navbar_theme', 'light') --}}
 
 @section('content')
-<div class="bg-[#F8FAFC] min-h-screen pt-28 sm:pt-32 pb-20 sm:pb-28">
-    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-[#F8FAFC] min-h-screen">
+
+    <!-- 1. Hero Section -->
+    <section class="relative w-full bg-neutral-950 py-24 sm:py-32 overflow-hidden text-white">
+        <!-- Background Ambient Image with Overlay -->
+        <div class="absolute inset-0 z-0 opacity-25">
+            <img
+                src="{{ asset('images/agrikultur-drone-spraying.jpg') }}"
+                alt="Mechatron Drone Contact"
+                class="w-full h-full object-cover object-center filter grayscale"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-neutral-950/90 to-neutral-950"></div>
+        </div>
+
+        <div class="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
+            <span class="inline-block text-[12px] sm:text-[13px] font-bold uppercase tracking-widest text-[#0070D5] bg-[#0070D5]/10 px-4 py-1.5 rounded-full mb-4 border border-[#0070D5]/20">
+                Contact & Support
+            </span>
+            <h1 class="text-[36px] sm:text-[52px] md:text-[64px] font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
+                {{ __('Terhubung dengan Tim Spesialis Mechatron') }}
+            </h1>
+            <p class="text-[16px] sm:text-[19px] md:text-[21px] text-gray-300 font-light mt-5 max-w-3xl mx-auto leading-relaxed">
+                {{ __('Apakah Anda ingin menjadwalkan demo terbang di perkebunan Anda, memesan armada baru, atau membutuhkan layanan purna jual? Kami siap membantu.') }}
+            </p>
+        </div>
+    </section>
+
+    {{-- <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8"> --}}
+    <div class="relative -mt-10 z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- 1. Page Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        {{-- <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <h1 class="text-[32px] sm:text-[42px] md:text-[48px] font-extrabold text-slate-950 tracking-tight leading-[1.15] mb-4">
                 {{ __('Hubungi Kami') }}
             </h1>
             <p class="text-[15px] sm:text-[17px] text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
                 {{ __('Silakan hubungi tim Mechatron Indonesia melalui email, telepon, WhatsApp, atau kunjungi langsung kantor dan pabrik kami.') }}
             </p>
-        </div>
+        </div> --}}
 
         <!-- 2. Fast Contact Cards (Email & Telepon) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-14 sm:mb-18">
@@ -223,5 +250,7 @@
             </div>
         </div>
     </div>
+
+    <x-contact-form-section />
 </div>
 @endsection

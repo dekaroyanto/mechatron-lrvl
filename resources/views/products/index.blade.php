@@ -2,7 +2,7 @@
 
 @section('title', __('Katalog Produk Drone & Ekosistem Teknologi | Mechatron'))
 @section('meta_description', __('Eksplorasi lini produk drone pertanian Mechatron Agri, drone pengawasan, armada drone kargo pengiriman logistik, dan suku cadang resmi.'))
-@section('navbar_theme', 'light')
+{{-- @section('navbar_theme', 'light') --}}
 
 @php
     $categories = \App\Data\DroneProducts::categories();
@@ -14,6 +14,9 @@
 @endphp
 
 @section('content')
+
+<x-product-hero-banner />
+
 <!-- Interactive Product Catalogue & Category Filters -->
 <div
     id="catalog"
@@ -187,7 +190,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             @foreach($allProducts as $product)
                 @php
-                    $waText = urlencode('Halo Mechatron Indonesia, saya tertarik untuk konsultasi dan pemesanan unit ' . $product['name'] . ' (' . $product['modelCode'] . '). Mohon informasi ketersediaan unit dan penawaran harga resmi.');
+                    $waText = urlencode(__('Halo Mechatron Indonesia, saya tertarik untuk konsultasi dan pemesanan unit :name (:code). Mohon informasi ketersediaan unit dan penawaran harga resmi.', ['name' => $product['name'], 'code' => $product['modelCode']]));
                     $waUrl = 'https://wa.me/' . ($product['whatsappNumber'] ?? '6281112143111') . '?text=' . $waText;
                 @endphp
                 <div
@@ -293,7 +296,7 @@
                 </p>
                 <div class="flex items-center justify-center gap-4 flex-wrap">
                     <a
-                        href="https://wa.me/6281112143111?text={{ urlencode('Halo Mechatron Indonesia, kami tertarik untuk mendiskusikan pengadaan unit drone dan jadwal demo lapangan langsung.') }}"
+                        href="https://wa.me/6281112143111?text={{ urlencode(__('Halo Mechatron Indonesia, kami tertarik untuk mendiskusikan pengadaan unit drone dan jadwal demo lapangan langsung.')) }}"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#0070D5] hover:bg-[#005bb5] text-white text-[14px] sm:text-[15px] font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"

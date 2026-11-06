@@ -7,7 +7,7 @@
     } else {
         // Default: Home, Services Detail have dark hero banners.
         // Blog, Product, Services Index, About Us, Contact Us have clean white/light backgrounds.
-        $hasDarkHero = request()->routeIs(['home', 'services.show']);
+        $hasDarkHero = request()->routeIs(['home', 'products.index', 'services.*', 'about', 'contact']);
     }
     $currentLocale = app()->getLocale();
 @endphp
