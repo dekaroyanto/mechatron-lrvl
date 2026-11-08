@@ -5,7 +5,7 @@
             nama: '',
             email: '',
             telepon: '',
-            kebutuhan: '{{ __('Pembelian Drone Mechatron (H-30 / H-15)') }}',
+            kebutuhan: '{{ __('Pembelian Drone Mechatron') }}',
             pesan: '',
             submitted: false,
             kirimPesan() {
@@ -71,7 +71,7 @@
                         x-model="kebutuhan"
                         class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#0070D5] focus:ring-2 focus:ring-[#0070D5]/20 text-[14px] bg-white transition-all"
                     >
-                        <option value="{{ __('Pembelian Drone Mechatron (H-30 / H-15)') }}">{{ __('Pembelian Drone (H-30 / H-15)') }}</option>
+                        <option value="{{ __('Pembelian Drone') }}">{{ __('Pembelian Drone') }}</option>
                         <option value="{{ __('Jasa Penyemprotan & Pemupukan Presisi') }}">{{ __('Jasa Penyemprotan & Pemupukan') }}</option>
                         <option value="{{ __('Jasa Pemetaan LiDAR & Kontur 3D') }}">{{ __('Jasa Pemetaan LiDAR & Kontur 3D') }}</option>
                         <option value="{{ __('Pelatihan & Sertifikasi Pilot Drone') }}">{{ __('Pelatihan & Sertifikasi Pilot') }}</option>
