@@ -43,7 +43,7 @@
         </div>
 
         <!-- Center: Desktop Navigation Links (Only 6 Items) -->
-        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Main Navigation">
+        <nav class="hidden lg:flex items-center space-x-1 lg:space-x-2" aria-label="Main Navigation">
             <!-- 1. Home -->
             <a
                 href="{{ route('home') }}"
@@ -222,6 +222,18 @@
                 </div>
             </div>
 
+            <!-- Store Button (Desktop) -->
+            <a
+                href="https://katalog.inaproc.id/bandung-mekatronika-teknologi"
+                :class="isLightNav
+                    ? 'border-[#0070D5] text-[#0070D5] hover:bg-[#0070D5] hover:text-white'
+                    : 'border-white/70 text-white hover:bg-white hover:text-[#0070D5]'"
+                class="hidden sm:inline-flex items-center gap-1.5 border text-[13px] font-semibold px-4 py-2 rounded-full transition-all text-decoration-none"
+            >
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1 1 0 0 0 5.256 3.6H3a1 1 0 0 0 0 2h1.59l3.483 8.359A1 1 0 0 0 9 14.6h8a1 1 0 0 0 .929-.628l4-10a1 1 0 0 0-.107-.941zM10 19a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+                <span>{{ __('Toko') }}</span>
+            </a>
+
             <!-- Direct WhatsApp Button (Desktop) -->
             <a
                 href="https://wa.me/6281112143111?text={{ urlencode(__('Halo Mechatron, saya tertarik untuk konsultasi layanan drone.')) }}"
@@ -238,7 +250,7 @@
                 type="button"
                 @click="mobileMenuOpen = !mobileMenuOpen"
                 :class="isLightNav ? 'text-[#111] hover:text-[#0070D5]' : 'text-white hover:text-[#0070D5]'"
-                class="md:hidden p-1.5 transition-colors focus:outline-none"
+                class="lg:hidden p-1.5 transition-colors focus:outline-none"
                 aria-label="Toggle Menu"
             >
                 <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -261,7 +273,7 @@
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-2"
         :class="isLightNav ? 'bg-white border-gray-200 text-gray-900 shadow-xl' : 'bg-[#0F151F]/98 border-white/10 text-white shadow-2xl'"
-        class="md:hidden border-t px-6 py-5 space-y-3 max-h-[85vh] overflow-y-auto"
+        class="lg:hidden border-t px-6 py-5 space-y-3 max-h-[85vh] overflow-y-auto"
         style="display: none;"
     >
         <div class="space-y-1">
@@ -338,7 +350,16 @@
             </a>
         </div>
 
-        <div class="pt-3 border-t space-y-3" :class="isLightNav ? 'border-gray-100' : 'border-white/10'">
+        <div class="pt-3 border-t space-y-3 min-[426px]:hidden" :class="isLightNav ? 'border-gray-100' : 'border-white/10'">
+            <a
+                href="https://katalog.inaproc.id/bandung-mekatronika-teknologi"
+                @click="mobileMenuOpen = false"
+                :class="isLightNav ? 'border-[#0070D5] text-[#0070D5]' : 'border-white/50 text-white'"
+                class="w-full border text-center py-3 rounded-xl text-[14px] font-semibold flex items-center justify-center gap-2 text-decoration-none"
+            >
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1 1 0 0 0 5.256 3.6H3a1 1 0 0 0 0 2h1.59l3.483 8.359A1 1 0 0 0 9 14.6h8a1 1 0 0 0 .929-.628l4-10a1 1 0 0 0-.107-.941zM10 19a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+                <span>{{ __('Toko') }}</span>
+            </a>
             <a
                 href="https://wa.me/6281112143111?text={{ urlencode(__('Halo Mechatron, saya tertarik untuk konsultasi layanan drone.')) }}"
                 target="_blank"
