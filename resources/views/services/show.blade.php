@@ -12,14 +12,26 @@
     <section class="relative w-full h-screen min-h-[640px] flex items-center justify-center overflow-hidden bg-neutral-950">
         <!-- Background Image Edge-to-Edge with Gentle Zoom Effect -->
         <div class="absolute inset-0 z-0">
-            <img
-                src="{{ $service['image'] }}"
-                alt="{{ $service['title'] }}"
-                class="w-full h-full object-cover object-center scale-100 transition-transform duration-1000 ease-out"
-                x-data="{ loaded: false }"
-                x-init="setTimeout(() => loaded = true, 50)"
-                :class="loaded ? 'scale-100' : 'scale-105'"
-            />
+            @if(!empty($service['video']))
+                <video
+                    src="{{ $service['video'] }}"
+                    @if(!empty($service['image'])) poster="{{ $service['image'] }}" @endif
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    class="w-full h-full object-cover object-center"
+                ></video>
+            @else
+                <img
+                    src="{{ $service['image'] }}"
+                    alt="{{ $service['title'] }}"
+                    class="w-full h-full object-cover object-center scale-100 transition-transform duration-1000 ease-out"
+                    x-data="{ loaded: false }"
+                    x-init="setTimeout(() => loaded = true, 50)"
+                    :class="loaded ? 'scale-100' : 'scale-105'"
+                />
+            @endif
             <!-- Dark Vignette Overlay -->
             <div class="absolute inset-0 bg-black/45"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent to-black/80"></div>

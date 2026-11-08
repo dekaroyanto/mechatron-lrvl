@@ -38,12 +38,12 @@
             'titlePrefix' => 'MECHATRON ',
             'titleSuffix' => 'SENTINEL',
             'tagline' => __('Pemantauan Keamanan Udara Real-time'),
-            'image' => asset('images/drone_survei.jpeg'),
+            'image' => asset('images/drone_survei_cinematic.jpg'),
             'productInfo' => [
                 'id' => 'mechatron-ground-station',
                 'title' => 'Mechatron Smart Ground Control Station',
                 'tagline' => 'Remote Kontrol Presisi Tinggi dengan Modul Dual-Antena & Tas Khusus',
-                'image' => asset('images/drone_survei.jpeg'),
+                'image' => asset('images/drone_survei_cinematic.jpg'),
             ],
         ],
         [

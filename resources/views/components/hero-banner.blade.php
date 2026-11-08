@@ -136,7 +136,7 @@
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                     <!-- 1. Learn More Button -->
                     <a
-                        href="{{ $slide['id'] === 'agri-series' ? (request()->routeIs('products.*') ? '#catalog' : route('home') . '#products') : route('products.show', $slide['id']) }}"
+                        href="{{ $slide['id'] === 'agri-series' ? (request()->routeIs('products.*') ? '#catalog' : route('home') . '#products') : ($slide['id'] === 'sewa-drone' ? route('services.show', $slide['id']) : route('products.show', $slide['id'])) }}"
                         class="group inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-transparent hover:bg-[#0070D5] text-white border-2 border-white hover:border-[#0070D5] text-[13px] sm:text-[14px] font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-decoration-none"
                     >
                         <span>{{ __('Pelajari Detailnya') }}</span>

@@ -38,6 +38,7 @@ class ServicesData
                 'description' => 'Pelatihan pilot drone untuk meningkatkan keterampilan terbang dan pengoperasian secara profesional',
                 'longDescription' => 'Mengoperasikan drone berstandar industri memerlukan keterampilan khusus, pemahaman mendalam tentang keselamatan ruang udara, serta prosedur darurat. Mechatron Drone Academy menyelenggarakan program pelatihan terstruktur bagi individu maupun tim korporat untuk mencetak penerbang drone yang kompeten, bersertifikat, dan siap kerja di sektor pertanian, survei, maupun industri kreatif.',
                 'image' => '/images/service_pelatihan_pilot.jpg',
+                'video' => '',
                 'deepFeatures' => [
                     [
                         'tag' => 'Kurikulum Berstandar Nasional',
@@ -114,10 +115,10 @@ class ServicesData
                 ],
             ],
 
-            'perawatandrone' => [
-                'id' => 'perawatandrone',
-                'slug' => 'perawatandrone',
-                'path' => '/services/perawatandrone',
+            'servicedrone' => [
+                'id' => 'servicedrone',
+                'slug' => 'servicedrone',
+                'path' => '/services/servicedrone',
                 'group' => 'Layanan Utama Mechatron',
                 'groupSubtitle' => 'Perawatan & Servis Pabrikan',
                 'title' => 'Perawatan Drone',
@@ -125,6 +126,7 @@ class ServicesData
                 'description' => 'Layanan perbaikan dan perawatan drone untuk menjaga kinerja optimal melalui penggantian komponen, kalibrasi, dan pembaruan perangkat lunak',
                 'longDescription' => 'Armada drone yang beroperasi secara konsisten memerlukan pemeliharaan berkala untuk mencegah kegagalan terbang mendadak. Divisi Servis Mechatron didukung oleh teknisi berpengalaman dan laboratorium diagnostik modern untuk menangani perbaikan struktural, pembaruan subsistem avionik, kalibrasi gimbal IMU, hingga uji coba terbang (flight test) komprehensif.',
                 'image' => '/images/service_perawatan_drone.jpg',
+                'video' => '/videos/service-drone.webm',
                 'deepFeatures' => [
                     [
                         'tag' => 'Standar Perbaikan Memadai',
@@ -213,6 +215,7 @@ class ServicesData
                 'description' => 'Sewa drone untuk pengguna profesional dengan pilihan spesifikasi yang sesuai kebutuhan kerja Anda',
                 'longDescription' => 'Kebutuhan proyek seringkali membutuhkan drone berspesifikasi khusus tanpa harus mengeluarkan investasi kapital besar di awal. Mechatron menyediakan rental armada drone terlengkap — mulai dari drone pertanian berkapasitas tangki besar (Mechatron Agri H30 & H15) hingga drone fotografi profesional — lengkap dengan set baterai cadangan, generator, dan opsi operator standby.',
                 'image' => '/images/service_sewa_drone.jpg',
+                'video' => '',
                 'highlights' => [
                     [
                         'stat' => 'Ready Fleet',
@@ -331,6 +334,7 @@ class ServicesData
                 'description' => 'Professional drone pilot training to elevate flight skills and safe operational mastery',
                 'longDescription' => 'Operating industrial-grade drones requires specialized skills, deep understanding of airspace safety, and emergency procedures. Mechatron Drone Academy delivers structured training programs for both individuals and corporate teams to produce competent, certified, and field-ready drone pilots across agriculture, surveying, and creative industries.',
                 'image' => '/images/service_pelatihan_pilot.jpg',
+                'video' => '',
                 'deepFeatures' => [
                     [
                         'tag' => 'National Standard Curriculum',
@@ -407,10 +411,10 @@ class ServicesData
                 ],
             ],
 
-            'perawatandrone' => [
-                'id' => 'perawatandrone',
-                'slug' => 'perawatandrone',
-                'path' => '/services/perawatandrone',
+            'servicedrone' => [
+                'id' => 'servicedrone',
+                'slug' => 'servicedrone',
+                'path' => '/services/servicedrone',
                 'group' => 'Mechatron Core Services',
                 'groupSubtitle' => 'Factory-Standard Maintenance & Repair',
                 'title' => 'Drone Maintenance',
@@ -418,6 +422,7 @@ class ServicesData
                 'description' => 'Comprehensive drone repair and maintenance services to sustain peak performance through component replacement, calibration, and firmware updates',
                 'longDescription' => 'Drone fleets operating consistently require scheduled maintenance to prevent unexpected in-flight failures. Mechatron\'s Service Division is backed by experienced avionics technicians and a modern diagnostic laboratory to handle structural repairs, avionics subsystem updates, IMU gimbal calibration, and comprehensive flight testing.',
                 'image' => '/images/service_perawatan_drone.jpg',
+                'video' => '/videos/service-drone.webm',
                 'deepFeatures' => [
                     [
                         'tag' => 'Rigorous Repair Standards',
@@ -506,6 +511,7 @@ class ServicesData
                 'description' => 'Professional drone fleet rental with tailored specifications to match your operational workload',
                 'longDescription' => 'Project demands often require specialized high-performance drones without heavy upfront capital expenditure. Mechatron provides a complete drone rental fleet—ranging from heavy-lift agricultural sprayers (Mechatron Agri H30 & H15) to professional photography drones—complete with backup battery sets, generators, and standby pilot options.',
                 'image' => '/images/service_sewa_drone.jpg',
+                'video' => '',
                 'highlights' => [
                     [
                         'stat' => 'Ready Fleet',

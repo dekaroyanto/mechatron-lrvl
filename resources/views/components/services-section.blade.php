@@ -11,8 +11,8 @@
             'image' => asset('images/service_pelatihan_pilot.jpg'),
         ],
         [
-            'slug' => 'perawatandrone',
-            'title' => $servicesList['perawatandrone']['title'] ?? __('Perawatan Drone'),
+            'slug' => 'servicedrone',
+            'title' => $servicesList['servicedrone']['title'] ?? __('Perawatan Drone'),
             'subtitle' => __('Servis berkala, kalibrasi presisi sensor, dan perbaikan menyeluruh berstandar pabrikan.'),
             'image' => asset('images/service_perawatan_drone.jpg'),
         ],

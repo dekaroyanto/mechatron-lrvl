@@ -11,6 +11,7 @@
                 'titleSuffix' => 'SERIES',
                 'tagline' => __('Solusi Drone Penyemprotan & Penebaran Pupuk Presisi untuk Perkebunan Skala Besar.'),
                 'image' => asset('images/heromecha1.jpg'),
+                'video' => asset('videos/full-agri.webm')
             ],
             [
                 'id' => 'survey-pemetaan',
@@ -19,7 +20,8 @@
                 'titlePrefix' => __('SURVEY & PEMETAAN') . ' ',
                 'titleSuffix' => 'SERIES',
                 'tagline' => __('Fotogrametri Udara RTK Sentimeter & Pemindaian Laser LiDAR 3D Topografi.'),
-                'image' => asset('images/drone_survei.jpeg'),
+                'image' => asset('images/drone_survei_cinematic.jpg'),
+                'video' => ''
             ],
             [
                 'id' => 'pengiriman',
@@ -29,6 +31,7 @@
                 'titleSuffix' => 'SERIES',
                 'tagline' => __('Transportasi Kargo Berat Otonom & Kurir Cepat untuk Wilayah Terpencil dan Industri.'),
                 'image' => asset('images/delivH2-3.jpeg'),
+                'video' => ''
             ],
             [
                 'id' => 'suku-cadang',
@@ -38,6 +41,7 @@
                 'titleSuffix' => '',
                 'tagline' => __('Baterai Cerdas, Generator Fast Charger Inverter, Remote GCS, & Suku Cadang Orisinal.'),
                 'image' => asset('images/sparepart.jpeg'),
+                'video' => ''
             ],
         ];
     }
@@ -65,9 +69,14 @@
             this.restartTimer();
         },
         startTimer() {
-            if (this.timer) clearInterval(this.timer);
-            this.timer = setInterval(() => {
-                this.currentIndex = (this.currentIndex + 1) % this.total;
+            if (this.timer) clearTimeout(this.timer);
+            this.timer = null;
+            // Slide dengan video berganti saat video selesai (lihat @ended). Slide gambar pakai timer tetap.
+            if (this.slides[this.currentIndex] && this.slides[this.currentIndex].video) {
+                return;
+            }
+            this.timer = setTimeout(() => {
+                this.nextSlide();
             }, 5500);
         },
         restartTimer() {
@@ -105,11 +114,24 @@
             style="display: none;"
         >
             <div class="relative w-full h-full overflow-hidden bg-slate-950">
-                <img
-                    src="{{ $slide['image'] }}"
-                    alt="{{ $slide['titlePrefix'] }}{{ $slide['titleSuffix'] }}"
-                    class="w-full h-full object-cover object-center filter brightness-[0.84] contrast-[1.03]"
-                />
+                @if(!empty($slide['video']))
+                    <video
+                        src="{{ $slide['video'] }}"
+                        poster="{{ $slide['image'] }}"
+                        muted
+                        playsinline
+                        preload="metadata"
+                        @ended="nextSlide()"
+                        x-effect="if (currentIndex === {{ $idx }}) { $el.currentTime = 0; $el.play().catch(() => {}); } else { $el.pause(); }"
+                        class="w-full h-full object-cover object-center filter brightness-[0.84] contrast-[1.03]"
+                    ></video>
+                @else
+                    <img
+                        src="{{ $slide['image'] }}"
+                        alt="{{ $slide['titlePrefix'] }}{{ $slide['titleSuffix'] }}"
+                        class="w-full h-full object-cover object-center filter brightness-[0.84] contrast-[1.03]"
+                    />
+                @endif
                 <!-- Cinematic Vignette Gradients for Text Legibility -->
                 <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/35 to-black/85 pointer-events-none z-10"></div>
             </div>

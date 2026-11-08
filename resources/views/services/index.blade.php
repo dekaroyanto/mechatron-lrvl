@@ -63,9 +63,9 @@
             <!-- Right Column: Stacked Cards (2 & 3) -->
             <div class="flex flex-col gap-6 sm:gap-7 lg:gap-8 h-full">
                 <!-- SERVICE 2: PERAWATAN DRONE (Right Top Card) -->
-                @php $s = $allServices['perawatandrone'] ?? []; @endphp
+                @php $s = $allServices['servicedrone'] ?? []; @endphp
                 <a
-                    href="{{ route('services.show', 'perawatandrone') }}"
+                    href="{{ route('services.show', 'servicedrone') }}"
                     class="group relative block w-full rounded-[28px] sm:rounded-[32px] overflow-hidden bg-slate-100 border border-slate-200/70 shadow-sm hover:shadow-2xl transition-all duration-300 min-h-[240px] sm:min-h-[280px] lg:min-h-[290px] flex-1 text-decoration-none"
                 >
                     <!-- Background Image -->
