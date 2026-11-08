@@ -13,10 +13,10 @@
         <!-- 1. Header Section -->
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <h1 class="text-[32px] sm:text-[42px] md:text-[50px] font-extrabold text-slate-950 tracking-tight leading-[1.12] mb-4">
-                {{ __('Layanan Drone Profesional') }}
+                {{ __('Dukungan Operasional') }}
             </h1>
             <p class="text-[15px] sm:text-[17px] md:text-[18px] text-slate-600 font-normal leading-relaxed">
-                {{ __('Dukungan menyeluruh untuk kebutuhan drone Anda, mulai dari pelatihan pilot drone berlisensi resmi, perawatan unit standar pabrikan, hingga penyewaan armada drone terlengkap.') }}
+                {{ __('Maksimalkan kinerja armada Anda dengan layanan purna jual dan dukungan teknis dari Mechatron') }}
             </p>
         </div>
 
@@ -71,7 +71,7 @@
                     <!-- Background Image -->
                     <img
                         src="{{ asset('images/service_perawatan_drone.jpg') }}"
-                        alt="Perawatan Drone"
+                        alt="Perbaikan Drone"
                         class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
 
@@ -81,7 +81,7 @@
                     <!-- Content -->
                     <div class="absolute inset-0 z-10 p-7 sm:p-9 h-full flex flex-col justify-end max-w-[340px] sm:max-w-[400px]">
                         <h2 class="text-xl sm:text-2xl lg:text-[26px] font-bold text-white group-hover:text-blue-400 tracking-tight leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)] transition-colors duration-200 mb-2">
-                            {{ $s['title'] ?? 'Perawatan Drone' }}
+                            {{ $s['title'] ?? 'Perbaikan Drone' }}
                         </h2>
                          <p class="text-[13px] sm:text-[14px] text-slate-200 font-normal leading-relaxed max-w-md mb-4 line-clamp-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
                         {{ $s['description'] ?? '' }}

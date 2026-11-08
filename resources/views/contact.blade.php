@@ -59,16 +59,16 @@
                         {{ __('Email Resmi') }}
                     </span>
                     <a
-                        href="mailto:info@mekatronika.co.id"
+                        href="mailto:info@mechatron.id"
                         class="text-[17px] sm:text-[19px] font-bold text-slate-900 hover:text-[#0070D5] transition-colors block truncate mb-1 text-decoration-none"
                     >
-                        info@mekatronika.co.id
+                        info@mechatron.id
                     </a>
                     <p class="text-[13px] text-slate-500 mb-3">
                         {{ __('Kirimkan pertanyaan resmi, permohonan kerjasama, atau informasi tender pengadaan.') }}
                     </p>
                     <a
-                        href="mailto:info@mekatronika.co.id"
+                        href="mailto:info@mechatron.id"
                         class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0070D5] hover:text-[#005bb5] transition-colors text-decoration-none"
                     >
                         <span>{{ __('Kirim Pesan Email') }}</span>
@@ -212,7 +212,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 </svg>
                                 <p class="m-0">
-                                    Jalan Sapan No.7 , RT 01, RW 01 Desa Tegal Luar, Kecamatan Bojong SoangKabupaten Bandung, Jawa Barat, 40287
+                                    Jalan Sapan No.7 , RT 01, RW 01 Desa Tegal Luar, Kecamatan Bojong Soang, Kabupaten Bandung, Jawa Barat, 40287
                                 </p>
                             </div>
                         </div>

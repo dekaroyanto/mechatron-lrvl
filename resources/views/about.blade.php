@@ -147,7 +147,7 @@
                     href="{{ route('contact') }}"
                     class="bg-[#0070D5] hover:bg-[#005bb5] text-white font-semibold px-8 py-3.5 rounded-full text-[15px] shadow-lg transition-all hover:scale-105"
                 >
-                    {{ __('Hubungi Mechatron') }}
+                    {{ __('Hubungi Kami') }}
                 </a>
                 <a
                     href="{{ route('services.index') }}"
