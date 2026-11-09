@@ -9,7 +9,7 @@
                 'tickerLabel' => __('Pertanian'),
                 'titlePrefix' => __('MECHATRON') . ' ',
                 'titleSuffix' => 'AGRI SERIES',
-                'tagline' => __('Solusi Cerdas untuk Pertanian Presisi.'),
+                'tagline' => __('Solusi Cerdas untuk Pertanian Modern.'),
                 'image' => asset('images/heromecha1.jpg'),
                 'video' => asset('videos/full-agri.webm')
             ],
@@ -37,9 +37,9 @@
                 'id' => 'suku-cadang',
                 'categorySlug' => 'suku-cadang',
                 'tickerLabel' => __('Suku Cadang'),
-                'titlePrefix' => __('ORIGINAL') . ' ',
-                'titleSuffix' => 'PARTS',
-                'tagline' => __('Suku Cadang Asli dan Berkualitas'),
+                'titlePrefix' => __('High Quality') . ' ',
+                'titleSuffix' => 'SPARE PARTS',
+                'tagline' => __('Suku Cadang Berkualitas'),
                 'image' => asset('images/sparepart.jpeg'),
                 'video' => ''
             ],

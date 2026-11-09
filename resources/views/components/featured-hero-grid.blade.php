@@ -7,7 +7,7 @@
             'category' => __('Drone Pertanian'),
             'titlePrefix' => 'MECHATRON ',
             'titleSuffix' => 'AGRI SERIES',
-            'tagline' => __('Solusi Cerdas untuk Pertanian Presisi.'),
+            'tagline' => __('Solusi Cerdas untuk Pertanian Modern.'),
             'image' => asset('images/featured_drone_h30.jpg'),
             'productInfo' => $products['agri-h30'] ?? [
                 'id' => 'agri-h30',
@@ -37,7 +37,7 @@
             'category' => __('Drone Pengawasan'),
             'titlePrefix' => 'MECHATRON ',
             'titleSuffix' => 'SENTINEL',
-            'tagline' => __('Pemantauan Keamanan Udara Real-time'),
+            'tagline' => __('Pengawasan Real-Time dan Pemetaan Presisi'),
             'image' => asset('images/drone_survei.jpg'),
             'productInfo' => [
                 'id' => 'mechatron-ground-station',
@@ -49,9 +49,9 @@
         [
             'id' => 'original-parts',
             'category' => __('Suku Cadang'),
-            'titlePrefix' => 'ORIGINAL ',
-            'titleSuffix' => 'PARTS',
-            'tagline' => __('Suku Cadang Asli dan Berkualitas'),
+            'titlePrefix' => 'HIGH QUALITY ',
+            'titleSuffix' => 'SPARE PARTS',
+            'tagline' => __('Suku Cadang Berkualitas'),
             'image' => asset('images/sparepart.jpeg'),
             'productInfo' => [
                 'id' => 'mechatron-power-kit',

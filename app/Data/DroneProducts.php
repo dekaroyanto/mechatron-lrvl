@@ -48,22 +48,22 @@ class DroneProducts
             'agrikultur' => [
                 'slug' => 'pertanian',
                 'name' => 'Drone Pertanian',
-                'description' => 'Solusi Cerdas untuk Pertanian Presisi.',
+                'description' => 'Solusi Cerdas untuk Pertanian Modern.',
             ],
             'pengawasan' => [
                 'slug' => 'pengawasan',
                 'name' => 'Drone Pengawasan',
-                'description' => 'Pemantauan Keamanan Udara Real-time',
+                'description' => 'Pengawasan Real-Time dan Pemetaan Presisi',
             ],
             'pengiriman' => [
-                'slug' => 'Pengiriman',
-                'name' => 'Drone Pengiriman',
+                'slug' => 'Kargo',
+                'name' => 'Drone Kargo',
                 'description' => 'Pengiriman Cepat dan Efisien Melalui Udara.',
             ],
             'suku-cadang' => [
                 'slug' => 'suku-cadang',
                 'name' => 'Suku Cadang',
-                'description' => 'Suku Cadang Asli dan Berkualitas.',
+                'description' => 'Suku Cadang Berkualitas.',
             ],
         ];
     }
@@ -187,7 +187,7 @@ class DroneProducts
                 'categorySlug' => 'agrikultur',
                 'categoryDetail' => 'Drone Pertanian Hexacopter 15 Liter',
                 'subtitle' => 'Drone Pertanian Kapasitas 15 Liter',
-                'tagline' => 'Solusi Cerdas untuk Setiap Misi — Ringkas, Lincah, & Efisiensi Maksimal untuk Segala Medan Pertanian.',
+                'tagline' => 'Solusi Cerdas untuk Pertanian Modern — Ringkas, Lincah, & Efisiensi Maksimal untuk Segala Medan Pertanian.',
                 'capacity' => '15 Liter',
                 'image' => '/images/featured_drone_h15.jpg',
                 'gallery' => [
@@ -265,7 +265,7 @@ class DroneProducts
                 'category' => 'Pengawasan',
                 'categorySlug' => 'pengawasan',
                 'categoryDetail' => 'Drone Pengawasan Data Real-Time',
-                'subtitle' => 'Drone Pengawasan Real-Time Siang dan Malam',
+                'subtitle' => 'Pengawasan Real-Time dan Pemetaan Presisi',
                 'tagline' => 'Solusi Pengawasan Cerdas — Pemantauan udara dengan data real-time dan kemudahan pengoperasian.',
                 'capacity' => 'Radius 3 km / 20 Menit',
                 'image' => '/images/drone_survei_cinematic.jpg',
@@ -493,13 +493,13 @@ class DroneProducts
             'original-parts' => [
                 'id' => 'original-parts',
                 'modelCode' => 'PARTS-ORIGINAL',
-                'name' => 'Suku Cadang & Komponen Drone Original',
+                'name' => 'Suku Cadang & Komponen Drone Berkualitas',
                 'category' => 'Suku Cadang',
                 'categorySlug' => 'suku-cadang',
-                'categoryDetail' => 'Komponen Asli Impor Langsung dari Pabrikan',
-                'subtitle' => 'Jaminan 100% Barang Original & Stok Ready di Indonesia',
-                'tagline' => 'Impor Langsung dari Pabrikan Utama — Kami menyetok komponen asli untuk memastikan perbaikan dan perawatan armada drone Anda berjalan tanpa inden.',
-                'capacity' => 'Stok Lokal Siap Kirim',
+                'categoryDetail' => 'Komponen  Berkualitas Tinggi',
+                'subtitle' => 'Jaminan 100% Barang Berkualitas & Stok Tersedia di Indonesia',
+                'tagline' => 'Kami menyetok komponen berkualitas untuk memastikan perbaikan dan perawatan armada drone Anda berjalan tanpa hambatan.',
+                'capacity' => 'Stok Tersedia Siap Kirim',
                 'image' => '/images/sparepart.jpeg',
                 'gallery' => [
                     '/images/sparepart.jpeg',
@@ -903,15 +903,15 @@ class DroneProducts
                 ],
             ],
 
-            'original-parts' => [
-                'id' => 'original-parts',
-                'modelCode' => 'PARTS-ORIGINAL',
-                'name' => 'Genuine Drone Spare Parts & Components',
+            'quality-parts' => [
+                'id' => 'quality-parts',
+                'modelCode' => 'PARTS-QUALITY',
+                'name' => 'High Quality Drone Spare Parts & Components',
                 'category' => 'Spare Parts',
                 'categorySlug' => 'suku-cadang',
-                'categoryDetail' => 'Genuine Factory-Direct OEM Components',
+                'categoryDetail' => 'High Quality Factory-Direct OEM Components',
                 'subtitle' => '100% Genuine Guarantee & Ready Stock in Indonesia',
-                'tagline' => 'Direct from Primary Manufacturers — We stock genuine components locally to ensure your drone fleet maintenance and repairs run without backorder delays.',
+                'tagline' => 'Direct from Primary Manufacturers — We stock high quality components locally to ensure your drone fleet maintenance and repairs run without backorder delays.',
                 'capacity' => 'Ready Local Stock',
                 'image' => '/images/sparepart.jpeg',
                 'gallery' => [
@@ -942,13 +942,13 @@ class DroneProducts
     {
         return [
             'motor' => [
-                'title' => 'Motor',
+                'title' => 'Motor BLDC',
                 'img' => [
                     '/images/spareparts/t-motor.jpg',
                     '/images/spareparts/sunnysky.jpg',
                     '/images/spareparts/dualsky.jpg',
                 ],
-                'desc' => "Kami menyediakan motor berkualitas tinggi dari merek terkenal seperti T-Motor, SunnySky, dan Dual Sky. Motor ini dirancang untuk memberikan dorongan yang kuat, stabilitas, dan daya tahan bagi drone Anda.\n\nDengan sistem pendingin yang efisien, motor ini beroperasi secara optimal tanpa mengalami panas berlebih, mendukung manuver cepat dan penerbangan dalam berbagai kondisi.",
+                'desc' => "Kami menyediakan motor BLDC berkualitas tinggi dari merek terkenal seperti T-Motor, SunnySky, dan Dual Sky. Motor ini dirancang untuk memberikan dorongan yang kuat, stabilitas, dan daya tahan bagi drone Anda.\n\nDengan sistem pendingin yang efisien, motor ini beroperasi secara optimal tanpa mengalami panas berlebih, mendukung manuver cepat dan penerbangan dalam berbagai kondisi.",
                 'brands' => ['T-Motor', 'SunnySky', 'DualSky'],
                 'link' => ['https://store.tmotor.com/', 'https://sunnyskyusa.com/', 'http://dualsky.com/'],
             ],

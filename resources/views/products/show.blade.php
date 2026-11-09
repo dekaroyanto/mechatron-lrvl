@@ -393,12 +393,12 @@
         @if(!empty($spareparts))
             <section id="suku-cadang" class="mb-16 sm:mb-20 scroll-mt-32">
                 <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Komponen Original') }}</span>
+                    <span class="text-[12px] font-bold text-[#0070D5] uppercase tracking-wider">{{ __('Komponen Berkualitas') }}</span>
                     <h2 class="text-[28px] sm:text-[38px] font-bold text-slate-900 tracking-tight mt-1">
                         {{ __('Katalog Suku Cadang') }}
                     </h2>
                     <p class="text-[14px] sm:text-[16px] text-slate-500 mt-2">
-                        {{ __('Komponen asli impor langsung dari pabrikan utama untuk memastikan performa dan keandalan armada drone Anda.') }}
+                        {{ __('Komponen berkualitas untuk memastikan performa dan keandalan armada drone Anda.') }}
                     </p>
                 </div>
 

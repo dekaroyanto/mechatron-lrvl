@@ -201,7 +201,7 @@ class BlogArticles
             [
                 'id' => 4,
                 'slug' => 'kemenhub-rilis-koridor-ruang-udara-khusus-permudah-operasional-drone-agrikultur',
-                'title' => 'Capacity Building B4T: Mechatron Ambil Peran Strategis dalam Verifikasi Drone Pertanian SNI',
+                'title' => 'Capacity Building Balai Besar Bahan dan Barang Teknik (B4T): Mechatron Ambil Peran Strategis dalam Verifikasi Drone Pertanian SNI',
                 'excerpt' => 'Dalam kegiatan capacity building bersama B4T, Mechatron resmi dipilih sebagai mitra verifikator pengujian Drone Pertanian SNI, memperkuat sistem pengujian dan sertifikasi drone pertanian berstandar nasional di Indonesia.',
                 'date' => '21 Februari 2026',
                 'readTime' => '2 menit baca',
