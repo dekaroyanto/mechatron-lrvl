@@ -132,7 +132,7 @@ class ServicesData
                         'tag' => 'Standar Perbaikan Memadai',
                         'title' => 'Perbaikan Presisi dengan Toolkit Standar dan SOP Ketat',
                         'description' => 'Kegagalan sistem di udara dapat berakibat fatal. Setiap perbaikan dikerjakan dengan toolkit standar dan berkualitas serta mengikuti prosedur dan SOP yang ketat. Tim teknisi Mechatron melakukan pembacaan log penerbangan (Flight Black Box Log Analysis) untuk mendeteksi anomali sinyal, voltase baterai, dan getaran motor secara ilmiah.',
-                        'image' => '/images/service_perawatan_drone_toolkit.jpg',
+                        'image' => '/images/servis-dji2.jpg',
                         'bullets' => [
                             'Penggantian arm serat karbon dan motor brushless dengan toolkit standar pabrikan',
                             'Penyolderan sirkuit motherboard dan perbaikan modul transmisi daya sesuai SOP ketat',
@@ -154,7 +154,7 @@ class ServicesData
                         'tag' => 'Teknisi Berpengalaman & Expertise',
                         'title' => 'Teknisi Tersertifikasi & Kalibrasi Uji Terbang',
                         'description' => 'Ditangani langsung oleh teknisi avionik bersertifikasi dengan fasilitas uji terbang khusus (flight test area). Kami memastikan setiap sensor, kompas IMU, dan sistem failsafe bekerja dengan toleransi nol sebelum unit diserahkan kembali.',
-                        'image' => '/images/service_perawatan_drone_hati.jpg',
+                        'image' => '/images/servis-dji.jpg',
                         'bullets' => [
                             'Kalibrasi IMU 6-axis, kompas elektronik, dan sensor obstacle avoidance',
                             'Simulasi penerbangan fail-safe, return-to-home, dan payload drop test',
@@ -428,7 +428,7 @@ class ServicesData
                         'tag' => 'Rigorous Repair Standards',
                         'title' => 'Precision Repairs with Standardized Toolkits and Strict SOPs',
                         'description' => 'In-flight system failures can be costly. Every repair is performed using high-grade standardized toolkits and strict Standard Operating Procedures. Mechatron engineers perform Flight Black Box Log Analysis to scientifically detect signal anomalies, battery voltage drops, and motor vibrations.',
-                        'image' => '/images/service_perawatan_drone_toolkit.jpg',
+                        'image' => '/images/servis-dji2.jpg',
                         'bullets' => [
                             'Carbon fiber arm and brushless motor replacement using factory-standard toolkits',
                             'Motherboard circuit micro-soldering and power distribution module repairs under strict SOPs',
@@ -450,7 +450,7 @@ class ServicesData
                         'tag' => 'Certified Technicians & Expertise',
                         'title' => 'Certified Avionics Technicians & Flight Test Calibration',
                         'description' => 'Handled directly by certified avionics technicians with a dedicated flight test area. We verify that every sensor, IMU compass, and failsafe system operates with zero tolerance before the unit is handed back.',
-                        'image' => '/images/service_perawatan_drone_hati.jpg',
+                        'image' => '/images/servis-dji.jpg',
                         'bullets' => [
                             '6-axis IMU, electronic compass, and obstacle avoidance sensor calibration',
                             'Fail-safe flight simulation, return-to-home verification, and payload drop testing',

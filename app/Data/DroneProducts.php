@@ -102,6 +102,11 @@ class DroneProducts
                 'image' => '/images/featured_drone_h30.jpg',
                 'gallery' => [
                     '/images/featured_drone_h30.jpg',
+                    '/images/IMG_2250.JPG',
+                    '/images/IMG_8841.JPG',
+                    '/images/IMG_8951.JPG',
+                    '/images/IMG_9050.JPG',
+                    '/images/IMG_9150.JPG',
                     '/images/featured_remote_kit.jpg',
                 ],
                 'whatsappNumber' => '6281112143111',
@@ -187,7 +192,10 @@ class DroneProducts
                 'image' => '/images/featured_drone_h15.jpg',
                 'gallery' => [
                     '/images/featured_drone_h15.jpg',
-                    '/images/carbon_propellers.jpg',
+                    '/images/IMG_2286.JPG',
+                    '/images/IMG_2281.JPG',
+                    '/images/IMG_2270.JPG',
+                    '/images/IMG_2294.JPG',
                 ],
                 'whatsappNumber' => '6281112143111',
                 'specifications' => [

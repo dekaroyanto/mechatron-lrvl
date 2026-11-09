@@ -29,7 +29,7 @@
             'tag' => 'Diagnostic & Precision Tools',
             'title' => 'Laboratorium Servis & Toolkit',
             'description' => 'Peralatan diagnostik terkalibrasi dan toolkit standar pabrikan untuk perawatan drone.',
-            'src' => asset('images/service_perawatan_drone_toolkit.jpg'),
+            'src' => asset('images/servis-dji2.jpg'),
             'alt' => 'Toolkit dan Lab Diagnostic Servis Mechatron',
         ],
         [
@@ -45,7 +45,7 @@
             'tag' => 'Flight Test & Calibration Area',
             'title' => 'Sentra Kalibrasi & Uji Terbang',
             'description' => 'Kalibrasi presisi IMU 6-axis dan simulasi kestabilan terbang di area uji Mechatron.',
-            'src' => asset('images/service_perawatan_drone_hati.jpg'),
+            'src' => asset('images/servis-dji.jpg'),
             'alt' => 'Teknisi dan Kalibrasi Uji Terbang Mechatron',
         ],
     ];

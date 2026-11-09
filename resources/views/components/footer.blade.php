@@ -10,7 +10,7 @@
                     </div>
                 </a>
                 <p class="text-[13px] sm:text-[14px] text-neutral-400 leading-relaxed max-w-sm">
-                    {{ __('Pelopor inovasi teknologi drone agrikultur cerdas, drone fotografi presisi tinggi, dan armada pengiriman tangguh untuk modernisasi industri Indonesia.') }}
+                    {{ __('Pelopor inovasi teknologi drone pertanian cerdas, sistem pengawasan presisi tinggi, dan armada pengiriman tangguh untuk modernisasi industri Indonesia.') }}
                 </p>
 
                 <!-- Media Sosial Icons Row di bawah deskripsi -->
@@ -60,7 +60,7 @@
 
                         <!-- YouTube -->
                         <a
-                            href="https://youtube.com/@mechatron.official"
+                            href="https://www.youtube.com/@bandungdrone"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="YouTube Mechatron"
@@ -185,7 +185,7 @@
                         </a>
                     </li>
 
-                    <!-- Facebook -->
+                    <!-- Facebook
                     <li>
                         <a
                             href="https://facebook.com/mechatron.id"
@@ -203,12 +203,12 @@
                                 <span class="text-[11px] text-neutral-500">Mechatron Indonesia</span>
                             </div>
                         </a>
-                    </li>
+                    </li> -->
 
                     <!-- YouTube -->
                     <li>
                         <a
-                            href="https://youtube.com/@mechatron.official"
+                            href="https://www.youtube.com/@bandungdrone"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="flex items-center gap-3 text-neutral-400 hover:text-white transition-all group"
@@ -220,7 +220,7 @@
                             </div>
                             <div class="flex flex-col">
                                 <span class="font-medium text-white group-hover:text-[#60A5FA] transition-colors">YouTube</span>
-                                <span class="text-[11px] text-neutral-500">Mechatron Official</span>
+                                <span class="text-[11px] text-neutral-500">Drone Bandung</span>
                             </div>
                         </a>
                     </li>
