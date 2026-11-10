@@ -8,18 +8,53 @@
             'image' => asset('images/sertifikat/sertifikat_sni.jpg'),
         ],
         [
-            'id' => 'tkdn-hexa',
-            'title' => __('Sertifikasi TKDN Drone Hexacopter Mechatron'),
+            'id' => 'Hexa-BMT-1323',
+            'title' => __('Sertifikasi TKDN Drone Hexacopter 15 Liter'),
             'issuer' => __('Kementerian Perindustrian RI'),
             'regNo' => 'Kode HS: 88062400',
-            'image' => asset('images/sertifikat/sertifikat_tkdn_hexa.jpg'),
+            'image' => asset('images/sertifikat/sertifikat-Hexa-BMT-1323.jpg'),
         ],
         [
-            'id' => 'tkdn-quad',
-            'title' => __('Sertifikasi TKDN Drone Quadcopter Mechatron'),
+            'id' => 'Hexa-BMT-1424',
+            'title' => __('Sertifikasi TKDN Drone Hexacopter 20 Liter'),
             'issuer' => __('Kementerian Perindustrian RI'),
             'regNo' => 'Kode HS: 88062400',
-            'image' => asset('images/sertifikat/sertifikat_tkdn_quad.jpg'),
+            'image' => asset('images/sertifikat/sertifikat-Hexa-BMT-1424.jpg'),
+        ],
+        [
+            'id' => 'Hexa-BMT-1525d',
+            'title' => __('Sertifikasi TKDN Drone Hexacopter 30 Liter'),
+            'issuer' => __('Kementerian Perindustrian RI'),
+            'regNo' => 'Kode HS: 88062400',
+            'image' => asset('images/sertifikat/sertifikat-Hexa-BMT-1525.jpg'),
+        ],
+        [
+            'id' => 'Quad-BMT-11',
+            'title' => __('Sertifikasi TKDN Drone Quadcopter 5 Liter'),
+            'issuer' => __('Kementerian Perindustrian RI'),
+            'regNo' => 'Kode HS: 88062400',
+            'image' => asset('images/sertifikat/sertifikat-Quad-BMT-11.jpg'),
+        ],
+        [
+            'id' => 'Quad-BMT-12',
+            'title' => __('Sertifikasi TKDN Drone Quadcopter 10 Liter'),
+            'issuer' => __('Kementerian Perindustrian RI'),
+            'regNo' => 'Kode HS: 88062400',
+            'image' => asset('images/sertifikat/sertifikat-Quad-BMT-12.jpg'),
+        ],
+        [
+            'id' => 'Quad-BMT-1323',
+            'title' => __('Sertifikasi TKDN Drone Quadcopter 16 Liter'),
+            'issuer' => __('Kementerian Perindustrian RI'),
+            'regNo' => 'Kode HS: 88062400',
+            'image' => asset('images/sertifikat/sertifikat-Quad-BMT-1323.jpg'),
+        ],
+        [
+            'id' => 'Quad-BMT-1424',
+            'title' => __('Sertifikasi TKDN Drone Quadcopter 21 Liter'),
+            'issuer' => __('Kementerian Perindustrian RI'),
+            'regNo' => 'Kode HS: 88062400',
+            'image' => asset('images/sertifikat/sertifikat-Quad-BMT-1424.jpg'),
         ],
     ];
 @endphp
@@ -72,20 +107,34 @@
                     <div
                         class="absolute w-[290px] sm:w-[380px] md:w-[440px] lg:w-[480px] h-[460px] sm:h-[520px] md:h-[580px] rounded-[26px] sm:rounded-[34px] overflow-hidden shadow-2xl origin-center transition-all duration-500 ease-out"
                         :style="(() => {
-                            let diff = (index - currentIndex) % total;
-                            if (diff < -1) diff += total;
-                            if (diff > 1) diff -= total;
-                            const isCenter = diff === 0;
-                            const isLeft = diff === -1 || (total === 2 && diff === 1 && index === 0);
-                            const isRight = diff === 1;
-
-                            if (isCenter) {
+                            // Mencari jarak kartu ini dari kartu utama (tengah)
+                            let diff = index - currentIndex;
+                            let half = Math.floor(total / 2);
+                            
+                            // Normalisasi agar susunan kartunya memutar (loop) tanpa putus
+                            if (diff > half) diff -= total;
+                            if (diff < -half) diff += total;
+                            
+                            let absDiff = Math.abs(diff); // Jarak absolut (0, 1, 2, 3...)
+                            let direction = diff < 0 ? -1 : 1; // -1 untuk kiri, 1 untuk kanan
+                            
+                            // 1. Jika ini Kartu Utama (Tengah)
+                            if (absDiff === 0) {
                                 return 'transform: translate3d(0%, 0, 0) scale(1) rotateY(0deg); z-index: 30; opacity: 1; filter: brightness(100%); cursor: default;';
-                            } else if (isLeft) {
-                                return 'transform: translate3d(-62%, 0, 0) scale(0.82) rotateY(24deg); z-index: 15; opacity: 0.65; filter: brightness(75%); cursor: pointer;';
-                            } else if (isRight) {
-                                return 'transform: translate3d(62%, 0, 0) scale(0.82) rotateY(-24deg); z-index: 15; opacity: 0.65; filter: brightness(75%); cursor: pointer;';
-                            } else {
+                            } 
+                            // 2. Tampilkan maksimal 2 kartu di kiri dan 2 di kanan (Total 5 kartu)
+                            else if (absDiff <= 2) {
+                                let translateX = direction * (45 + (absDiff * 17)); // Jarak geser
+                                let scale = 1 - (absDiff * 0.18); // Efek mengecil
+                                let rotateY = direction * -24; // Sudut kemiringan
+                                let zIndex = 30 - absDiff; // Semakin jauh, layernya semakin di belakang
+                                let opacity = 1;
+                                let brightness = 100 - (absDiff * 25); // Semakin jauh semakin gelap
+                                
+                                return `transform: translate3d(${translateX}%, 0, 0) scale(${scale}) rotateY(${rotateY}deg); z-index: ${zIndex}; opacity: ${opacity}; filter: brightness(${brightness}%); cursor: pointer;`;
+                            } 
+                            // 3. Sembunyikan sisa kartu lainnya (Kartu ke 6, 7, 8...)
+                            else {
                                 return 'opacity: 0; transform: scale(0.6); z-index: 5; pointer-events: none;';
                             }
                         })()"

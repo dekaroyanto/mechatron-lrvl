@@ -21,13 +21,13 @@
             'tickerLabel' => 'AGRI H15',
             'title' => 'Mechatron AGRI H15',
             'tagline' => __('Desain ringkas dan mudah dilipat, andal bermanuver di lahan terbatas'),
-            'image' => asset('images/heromecha2.jpg'),
+            'image' => asset('images/H15-sawah.jpg'),
             'productInfo' => $products['agri-h15'] ?? [
                 'id' => 'agri-h15',
                 'modelCode' => 'BMT-1323',
                 'title' => 'Mechatron AGRI H15 (BMT-1323)',
                 'tagline' => '15-Litre Hexacopter Agriculture Drone',
-                'image' => asset('images/heromecha2.jpg'),
+                'image' => asset('images/H15-sawah.jpg'),
             ],
         ],
         [

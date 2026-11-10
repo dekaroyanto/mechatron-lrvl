@@ -30,7 +30,7 @@
                 'titlePrefix' => __('MECHATRON') . ' ',
                 'titleSuffix' => 'AERO LOGISTIK',
                 'tagline' => __('Pengiriman Cepat dan Efisien Melalui Udara'),
-                'image' => asset('images/delivH2-3.jpeg'),
+                'image' => asset('images/delivH2-1.jpeg'),
                 'video' => ''
             ],
             [

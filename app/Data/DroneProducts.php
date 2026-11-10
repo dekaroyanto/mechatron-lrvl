@@ -268,7 +268,7 @@ class DroneProducts
                 'subtitle' => 'Pengawasan Real-Time dan Pemetaan Presisi',
                 'tagline' => 'Solusi Pengawasan Cerdas — Pemantauan udara dengan data real-time dan kemudahan pengoperasian.',
                 'capacity' => 'Radius 3 km / 20 Menit',
-                'image' => '/images/drone_survei_cinematic.jpg',
+                'image' => '/images/drone_survei.jpg',
                 'gallery' => [
                     '/images/surv-Q1-2.jpg',
                     '/images/surv-Q1-1.jpg',
@@ -687,7 +687,7 @@ class DroneProducts
                 'subtitle' => 'Day & Night Real-Time Surveillance Drone',
                 'tagline' => 'Smart Surveillance Solution — Real-time aerial monitoring with effortless operation.',
                 'capacity' => '3 km Radius / 20 Mins',
-                'image' => '/images/drone_survei_cinematic.jpg',
+                'image' => '/images/drone_survei.jpg',
                 'gallery' => [
                     '/images/surv-Q1-2.jpg',
                     '/images/surv-Q1-1.jpg',
